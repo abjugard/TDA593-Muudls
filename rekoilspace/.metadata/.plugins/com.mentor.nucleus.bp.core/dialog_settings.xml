@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="652" key="DIALOG_WIDTH"/>
+	<item value="39" key="DIALOG_Y_ORIGIN"/>
+	<item value="393" key="DIALOG_X_ORIGIN"/>
+	<item value="603" key="DIALOG_HEIGHT"/>
+	<item value="1|Cantarell|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	<section name="com.mentor.nucleus.bp.core.ui.dialogs.ElementSelectionFlatView">
+		<item value="" key="CACHED_SEARCH_PATTERN"/>
+		<item value="false" key="CACHED_REGEX_USAGE"/>
+		<item value="false" key="CACHED_VISIBILITY_FILTER"/>
+		<item value="01756a25-fbe0-498d-a872-d2e6b537c053" key="CACHED_ELEMENT_SELECTION"/>
+		<item value="false" key="CACHED_CASE_SENSITIVE"/>
+	</section>
+</section>

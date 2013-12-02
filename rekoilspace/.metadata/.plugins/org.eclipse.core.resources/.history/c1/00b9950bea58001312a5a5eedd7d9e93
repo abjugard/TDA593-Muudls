@@ -1,0 +1,68 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("1efeba6e-0315-442d-8e70-729b05561bea",
+	'Service',
+	1,
+	'SERVICE',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("94d24ba7-e81b-4033-ab80-f5b46aa981a3",
+	"1efeba6e-0315-442d-8e70-729b05561bea");
+INSERT INTO O_BATTR
+	VALUES ("94d24ba7-e81b-4033-ab80-f5b46aa981a3",
+	"1efeba6e-0315-442d-8e70-729b05561bea");
+INSERT INTO O_ATTR
+	VALUES ("94d24ba7-e81b-4033-ab80-f5b46aa981a3",
+	"1efeba6e-0315-442d-8e70-729b05561bea",
+	"f3b73f8a-d0a1-475e-9c5a-2c0b958d674d",
+	'description',
+	'',
+	'',
+	'description',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("f3b73f8a-d0a1-475e-9c5a-2c0b958d674d",
+	"1efeba6e-0315-442d-8e70-729b05561bea");
+INSERT INTO O_BATTR
+	VALUES ("f3b73f8a-d0a1-475e-9c5a-2c0b958d674d",
+	"1efeba6e-0315-442d-8e70-729b05561bea");
+INSERT INTO O_ATTR
+	VALUES ("f3b73f8a-d0a1-475e-9c5a-2c0b958d674d",
+	"1efeba6e-0315-442d-8e70-729b05561bea",
+	"00000000-0000-0000-0000-000000000000",
+	'independent',
+	'',
+	'',
+	'independent',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (2,
+	"1efeba6e-0315-442d-8e70-729b05561bea");
+INSERT INTO O_ID
+	VALUES (1,
+	"1efeba6e-0315-442d-8e70-729b05561bea");
+INSERT INTO O_ID
+	VALUES (0,
+	"1efeba6e-0315-442d-8e70-729b05561bea");
+INSERT INTO PE_PE
+	VALUES ("1efeba6e-0315-442d-8e70-729b05561bea",
+	1,
+	"960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Hotel',
+	'',
+	0,
+	'../Hotel.xtuml');

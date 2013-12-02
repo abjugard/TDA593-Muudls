@@ -1,0 +1,50 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("55ae8fc4-9ef4-4ddf-87c4-72213a1c708a",
+	'Club',
+	21,
+	'CLUB',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("e1a6c237-b39f-4449-89f4-ceeb4a8d65cc",
+	"55ae8fc4-9ef4-4ddf-87c4-72213a1c708a");
+INSERT INTO O_BATTR
+	VALUES ("e1a6c237-b39f-4449-89f4-ceeb4a8d65cc",
+	"55ae8fc4-9ef4-4ddf-87c4-72213a1c708a");
+INSERT INTO O_ATTR
+	VALUES ("e1a6c237-b39f-4449-89f4-ceeb4a8d65cc",
+	"55ae8fc4-9ef4-4ddf-87c4-72213a1c708a",
+	"00000000-0000-0000-0000-000000000000",
+	'clubName',
+	'',
+	'',
+	'clubName',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"55ae8fc4-9ef4-4ddf-87c4-72213a1c708a");
+INSERT INTO O_ID
+	VALUES (1,
+	"55ae8fc4-9ef4-4ddf-87c4-72213a1c708a");
+INSERT INTO O_ID
+	VALUES (2,
+	"55ae8fc4-9ef4-4ddf-87c4-72213a1c708a");
+INSERT INTO PE_PE
+	VALUES ("55ae8fc4-9ef4-4ddf-87c4-72213a1c708a",
+	1,
+	"08644b1f-a992-4e52-8ec3-1f5eff4dec19",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("08644b1f-a992-4e52-8ec3-1f5eff4dec19",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Hotel',
+	'',
+	0,
+	'../Hotel.xtuml');

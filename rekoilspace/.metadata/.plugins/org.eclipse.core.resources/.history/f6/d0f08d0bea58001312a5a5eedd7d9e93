@@ -1,0 +1,32 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("80f12c98-ccb7-4bab-acab-351f7970a5eb",
+	'Cash',
+	16,
+	'CASH',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_ID
+	VALUES (2,
+	"80f12c98-ccb7-4bab-acab-351f7970a5eb");
+INSERT INTO O_ID
+	VALUES (1,
+	"80f12c98-ccb7-4bab-acab-351f7970a5eb");
+INSERT INTO O_ID
+	VALUES (0,
+	"80f12c98-ccb7-4bab-acab-351f7970a5eb");
+INSERT INTO PE_PE
+	VALUES ("80f12c98-ccb7-4bab-acab-351f7970a5eb",
+	1,
+	"960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Hotel',
+	'',
+	0,
+	'../Hotel.xtuml');

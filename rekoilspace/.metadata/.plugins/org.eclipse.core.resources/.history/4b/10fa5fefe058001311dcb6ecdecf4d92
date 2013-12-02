@@ -1,0 +1,50 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("4f1d8973-f845-4ff9-b9e4-6448ddeb7cbe",
+	'Staff',
+	8,
+	'STAFF',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("637d4f4c-e832-48f4-b35f-ce945dbf3cfe",
+	"4f1d8973-f845-4ff9-b9e4-6448ddeb7cbe");
+INSERT INTO O_BATTR
+	VALUES ("637d4f4c-e832-48f4-b35f-ce945dbf3cfe",
+	"4f1d8973-f845-4ff9-b9e4-6448ddeb7cbe");
+INSERT INTO O_ATTR
+	VALUES ("637d4f4c-e832-48f4-b35f-ce945dbf3cfe",
+	"4f1d8973-f845-4ff9-b9e4-6448ddeb7cbe",
+	"00000000-0000-0000-0000-000000000000",
+	'name',
+	'',
+	'',
+	'name',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"4f1d8973-f845-4ff9-b9e4-6448ddeb7cbe");
+INSERT INTO O_ID
+	VALUES (1,
+	"4f1d8973-f845-4ff9-b9e4-6448ddeb7cbe");
+INSERT INTO O_ID
+	VALUES (2,
+	"4f1d8973-f845-4ff9-b9e4-6448ddeb7cbe");
+INSERT INTO PE_PE
+	VALUES ("4f1d8973-f845-4ff9-b9e4-6448ddeb7cbe",
+	1,
+	"08644b1f-a992-4e52-8ec3-1f5eff4dec19",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("08644b1f-a992-4e52-8ec3-1f5eff4dec19",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Hotel',
+	'',
+	0,
+	'../Hotel.xtuml');

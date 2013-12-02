@@ -1,0 +1,50 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("83354fb8-0461-4904-8b93-eaefa73d4bf9",
+	'Invoice',
+	17,
+	'INVOICE',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("f56b0a06-fb63-43ef-8473-afeaf4ddbe29",
+	"83354fb8-0461-4904-8b93-eaefa73d4bf9");
+INSERT INTO O_BATTR
+	VALUES ("f56b0a06-fb63-43ef-8473-afeaf4ddbe29",
+	"83354fb8-0461-4904-8b93-eaefa73d4bf9");
+INSERT INTO O_ATTR
+	VALUES ("f56b0a06-fb63-43ef-8473-afeaf4ddbe29",
+	"83354fb8-0461-4904-8b93-eaefa73d4bf9",
+	"00000000-0000-0000-0000-000000000000",
+	'sentDate',
+	'',
+	'',
+	'sentDate',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000010",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"83354fb8-0461-4904-8b93-eaefa73d4bf9");
+INSERT INTO O_ID
+	VALUES (1,
+	"83354fb8-0461-4904-8b93-eaefa73d4bf9");
+INSERT INTO O_ID
+	VALUES (2,
+	"83354fb8-0461-4904-8b93-eaefa73d4bf9");
+INSERT INTO PE_PE
+	VALUES ("83354fb8-0461-4904-8b93-eaefa73d4bf9",
+	1,
+	"08644b1f-a992-4e52-8ec3-1f5eff4dec19",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("08644b1f-a992-4e52-8ec3-1f5eff4dec19",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Hotel',
+	'',
+	0,
+	'../Hotel.xtuml');

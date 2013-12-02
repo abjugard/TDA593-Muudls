@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="26" version="2.0">
+<workbenchAdvisor/>
+<window height="883" width="1438" x="0" y="15">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="182" y="36"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.amalgam.discovery.modeling.toolbars.sampleToolbar" itemType="typeToolBarContribution" x="48" y="36"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="56" y="36"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="86" y="36"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="78" y="36"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="200" y="36"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.mentor.nucleus.bp.ui.text.description.DescriptionEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" itemType="typeToolBarContribution" x="592" y="36"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1385720464203" focus="true" label="Workspace - xtUML Modeling">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="BookingSession: Class State Machine" partName="BookingSession: Class State Machine" path="/home/rekoil/Dropbox/skolarbete/TDA593 Muuuuuuuudles/Muuudels/rekoilspace/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" title="xtUML Graphical Editor" tooltip="BookingSession: Class State Machine" workbook="DefaultEditorWorkbook">
+<input componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="10" ooaId="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ooaType="40"/>
+</editor>
+<editor id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" partName="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" path="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/UserInterface__requestAvailableBookables_in_Standby_to_Standby__Transition.oal" title="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" tooltip="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" workbook="DefaultEditorWorkbook">
+<input ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="89aa1c62-cd75-4251-9314-e751d42eb203" ModelElementID1="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ModelElementIDCount="2" ModelElementLastName="UserInterface::requestAvailableBookables in Standby to Standby: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="207" selectionTopPixel="0"/>
+</editor>
+<editor id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="Hotel: Package Diagram" partName="Hotel: Package Diagram" path="/home/rekoil/Dropbox/skolarbete/TDA593 Muuuuuuuudles/Muuudels/rekoilspace/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel.xtuml" title="xtUML Graphical Editor" tooltip="Hotel::Library::HotelComponent::Hotel" workbook="DefaultEditorWorkbook">
+<input componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="960454f9-cf5f-4331-88bf-8023709586b1" ooaType="108"/>
+</editor>
+<editor id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="ExternalDataTypes: Package Diagram" partName="ExternalDataTypes: Package Diagram" path="/home/rekoil/Dropbox/skolarbete/TDA593 Muuuuuuuudles/Muuudels/rekoilspace/Hotel/models/Hotel/Library/ExternalDataTypes/ExternalDataTypes.xtuml" title="xtUML Graphical Editor" tooltip="Hotel::Library::ExternalDataTypes" workbook="DefaultEditorWorkbook">
+<input componentPath="/Hotel/models/Hotel/Library/ExternalDataTypes/ExternalDataTypes.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="5708b889-c5ba-4ee9-bc4a-dc6f2dc55ce1" ooaType="108"/>
+</editor>
+<editor id="com.mentor.nucleus.bp.ui.text.description.DescriptionEditor" name="BookingProvider: Interface Description" partName="BookingProvider: Interface Description" path="/Hotel/models/Hotel/Library/Interfaces/BookingProvider/BookingProvider__Interface.dsc" title="BookingProvider: Interface Description" tooltip="BookingProvider: Interface Description" workbook="DefaultEditorWorkbook">
+<input ModelComponentPath="/Hotel/models/Hotel/Library/Interfaces/BookingProvider/BookingProvider.xtuml" ModelElementID0="708e7060-3f4e-41ab-94ce-7b712ad36251" ModelElementIDCount="1" ModelElementLastName="BookingProvider: Interface" ModelElementType="com.mentor.nucleus.bp.core.Interface_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.description.factory"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="Interfaces: Package Diagram" partName="Interfaces: Package Diagram" path="/home/rekoil/Dropbox/skolarbete/TDA593 Muuuuuuuudles/Muuudels/rekoilspace/Hotel/models/Hotel/Library/Interfaces/Interfaces.xtuml" title="xtUML Graphical Editor" tooltip="Hotel::Library::Interfaces" workbook="DefaultEditorWorkbook">
+<input componentPath="/Hotel/models/Hotel/Library/Interfaces/Interfaces.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="182dfb43-4b42-4388-a888-adc923ffd180" ooaType="108"/>
+</editor>
+<editor id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="UserInterface::requestSession in Standby to Standby: Transition Activity" partName="UserInterface::requestSession in Standby to Standby: Transition Activity" path="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/UserInterface__requestSession_in_Standby_to_Standby__Transition.oal" title="UserInterface::requestSession in Standby to Standby: Transition Activity" tooltip="UserInterface::requestSession in Standby to Standby: Transition Activity" workbook="DefaultEditorWorkbook">
+<input ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="86a0d005-f343-4f7e-95cb-13f38e31c77d" ModelElementID1="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ModelElementIDCount="2" ModelElementLastName="UserInterface::requestSession in Standby to Standby: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="166" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="getBookableRepresentation: Operation Activity" partName="getBookableRepresentation: Operation Activity" path="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Bookable/getBookableRepresentation__Operation.oal" title="getBookableRepresentation: Operation Activity" tooltip="getBookableRepresentation: Operation Activity" workbook="DefaultEditorWorkbook">
+<input ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Bookable/Bookable.xtuml" ModelElementID0="f5d8d2fd-312b-4ac1-b4e3-55f4241a2d58" ModelElementIDCount="1" ModelElementLastName="getBookableRepresentation: Operation" ModelElementType="com.mentor.nucleus.bp.core.Operation_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory"/>
+<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="2" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="com.mentor.nucleus.bp.ui.explorer.ExplorerView" partName="Model Explorer">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="342" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.gef.ui.palette_view" partName="Palette">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="com.mentor.nucleus.bp.ui.explorer.ExplorerView" activePerspective="com.mentor.nucleus.bp.core.perspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.mentor.nucleus.bp.core.ui.perspective.BridgePointPerspective" id="com.mentor.nucleus.bp.core.perspective" label="xtUML Modeling"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="com.mentor.nucleus.bp.utilities.actionSet"/>
+<show_view_action id="com.mentor.nucleus.bp.ui.explorer.ExplorerView"/>
+<show_view_action id="org.eclipse.ui.views.BookmarkView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<new_wizard_action id="com.mentor.nucleus.bp.NewWizardSystem"/>
+<new_wizard_action id="com.mentor.nucleus.bp.NewWizardDomain"/>
+<perspective_action id="com.mentor.nucleus.bp.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.cdt.ui.CPerspective"/>
+<perspective_action id="org.eclipse.egit.ui.GitRepositoryExploring"/>
+<perspective_action id="org.eclipse.team.cvs.ui.cvsPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="com.mentor.nucleus.bp.ui.explorer.ExplorerView"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.gef.ui.palette_view"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder activePageID="com.mentor.nucleus.bp.ui.explorer.ExplorerView" appearance="2" expanded="2">
+<page content="com.mentor.nucleus.bp.ui.explorer.ExplorerView" label="Model Explorer"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1226fe1" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.26559216" ratioLeft="379" ratioRight="1048" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottomRight" ratio="0.5993266" ratioLeft="356" ratioRight="238" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@4ef207" ratio="0.68399453" ratioLeft="500" ratioRight="231" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.PropertySheet" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@2bf4a9" ratio="0.7497621" ratioLeft="788" ratioRight="263" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.gef.ui.palette_view" appearance="2" expanded="2">
+<page content="org.eclipse.gef.ui.palette_view" label="Palette"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="10" ooaId="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ooaType="40"/>
+<editor componentPath="/Hotel/models/Hotel/Library/UserComponent/UserComponent.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="111" ooaId="0968771f-8553-4274-be70-86a03e4e6267" ooaType="98"/>
+<editor componentPath="/Hotel/models/Hotel/System/System.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/System/System.xtuml" modelType="112" ooaId="83d1f9e7-250e-4a5d-ba9a-b668467be094" ooaType="108"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/Interfaces/BookingProvider/BookingProvider.xtuml" ModelElementID0="708e7060-3f4e-41ab-94ce-7b712ad36251" ModelElementIDCount="1" ModelElementLastName="BookingProvider: Interface" ModelElementType="com.mentor.nucleus.bp.core.Interface_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.description.factory" id="com.mentor.nucleus.bp.ui.text.description.DescriptionEditor"/>
+<editor componentPath="/GPS Watch/models/GPS Watch/Library/HeartRateMonitor/HeartRateMonitor/HeartRateMonitor/ClassStateMachine/ClassStateMachine.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/GPS Watch/models/GPS Watch/Library/Library.xtuml" modelType="10" ooaId="208abec5-b869-4f5f-acff-7b0940ddda2b" ooaType="40"/>
+<editor ModelComponentPath="/GPS Watch/models/GPS Watch/Library/HeartRateMonitor/HeartRateMonitor/HeartRateMonitor/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="208abec5-b869-4f5f-acff-7b0940ddda2b" ModelElementID1="4502dd3d-8627-4d95-8cd8-4635ad16dbd5" ModelElementIDCount="2" ModelElementLastName="monitoring: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/GPS Watch/models/GPS Watch/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="960454f9-cf5f-4331-88bf-8023709586b1" ooaType="108"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="86a0d005-f343-4f7e-95cb-13f38e31c77d" ModelElementID1="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ModelElementIDCount="2" ModelElementLastName="UserInterface::requestSession in Standby to Standby: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="89aa1c62-cd75-4251-9314-e751d42eb203" ModelElementID1="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ModelElementIDCount="2" ModelElementLastName="UserInterface::requestAvailableBookables in Standby to Standby: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor componentPath="/GPS Watch/models/GPS Watch/Library/HeartRateMonitor/HeartRateMonitor/HeartRateMonitor/ClassStateMachine/ClassStateMachine.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/GPS Watch/models/GPS Watch/Library/Library.xtuml" modelType="10" ooaId="208abec5-b869-4f5f-acff-7b0940ddda2b" ooaType="40"/>
+<editor ModelComponentPath="/GPS Watch/models/GPS Watch/Library/HeartRateMonitor/HeartRateMonitor/HeartRateMonitor/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="208abec5-b869-4f5f-acff-7b0940ddda2b" ModelElementID1="4502dd3d-8627-4d95-8cd8-4635ad16dbd5" ModelElementIDCount="2" ModelElementLastName="monitoring: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/GPS Watch/models/GPS Watch/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor componentPath="/GPS Watch/models/GPS Watch/Library/Tracking/Tracking/Tracking.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/GPS Watch/models/GPS Watch/Library/Library.xtuml" modelType="112" ooaId="a09220a4-d685-4338-83fd-0d42f7c7e308" ooaType="108"/>
+<editor componentPath="/GPS Watch/models/GPS Watch/Library/Tracking/Tracking/WorkoutTimer/InstanceStateMachine/InstanceStateMachine.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/GPS Watch/models/GPS Watch/Library/Library.xtuml" modelType="8" ooaId="10cfb66a-d3d5-44c3-90d0-a7a1537252ab" ooaType="40"/>
+<editor ModelComponentPath="/GPS Watch/models/GPS Watch/Library/Tracking/Tracking/WorkoutTimer/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="693f897f-b0a0-43a9-98bb-ef3f5bb14f9e" ModelElementID1="10cfb66a-d3d5-44c3-90d0-a7a1537252ab" ModelElementIDCount="2" ModelElementLastName="WorkoutTimer1: startStopPressed in stopped to running: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/GPS Watch/models/GPS Watch/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" path="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="89aa1c62-cd75-4251-9314-e751d42eb203" ModelElementID1="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ModelElementIDCount="2" ModelElementLastName="UserInterface::requestAvailableBookables in Standby to Standby: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="960454f9-cf5f-4331-88bf-8023709586b1" ooaType="108"/>
+<editor componentPath="/Hotel/models/Hotel/Library/ExternalDataTypes/ExternalDataTypes.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="5708b889-c5ba-4ee9-bc4a-dc6f2dc55ce1" ooaType="108"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/Interfaces/BookingProvider/BookingProvider.xtuml" ModelElementID0="708e7060-3f4e-41ab-94ce-7b712ad36251" ModelElementIDCount="1" ModelElementLastName="BookingProvider: Interface" ModelElementType="com.mentor.nucleus.bp.core.Interface_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.description.factory" id="com.mentor.nucleus.bp.ui.text.description.DescriptionEditor"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/Interfaces/BookingProvider/BookingProvider.xtuml" ModelElementID0="8500002a-94f3-4a61-bfa8-32f8fd7d89b4" ModelElementIDCount="1" ModelElementLastName="requestAvailableBookables: Interface Signal" ModelElementType="com.mentor.nucleus.bp.core.InterfaceSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.description.factory" id="com.mentor.nucleus.bp.ui.text.description.DescriptionEditor"/>
+<editor componentPath="/Hotel/models/Hotel/Library/Interfaces/Interfaces.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="182dfb43-4b42-4388-a888-adc923ffd180" ooaType="108"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="86a0d005-f343-4f7e-95cb-13f38e31c77d" ModelElementID1="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ModelElementIDCount="2" ModelElementLastName="UserInterface::requestSession in Standby to Standby: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Bookable/Bookable.xtuml" ModelElementID0="f5d8d2fd-312b-4ac1-b4e3-55f4241a2d58" ModelElementIDCount="1" ModelElementLastName="getBookableRepresentation: Operation" ModelElementType="com.mentor.nucleus.bp.core.Operation_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+</editors>
+<item historyLabel="xtUML Graphical Editor" index="1"/>
+<item historyLabel="xtUML Graphical Editor" index="2"/>
+<item historyLabel="BookingProvider: Interface Description" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="2"/>
+<item historyLabel="xtUML Graphical Editor" index="0"/>
+<item historyLabel="xtUML Graphical Editor" index="0"/>
+<item historyLabel="xtUML Graphical Editor" index="0"/>
+<item historyLabel="xtUML Graphical Editor" index="4"/>
+<item historyLabel="monitoring: State Machine State Activity" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="4"/>
+<item historyLabel="xtUML Graphical Editor" index="6"/>
+<item historyLabel="xtUML Graphical Editor" index="6"/>
+<item historyLabel="xtUML Graphical Editor" index="6"/>
+<item historyLabel="xtUML Graphical Editor" index="4"/>
+<item historyLabel="monitoring: State Machine State Activity" index="5">
+<position info="not_deleted" x="55" y="77"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="4"/>
+<item historyLabel="monitoring: State Machine State Activity" index="5">
+<position info="not_deleted" x="55" y="77"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="0"/>
+<item historyLabel="xtUML Graphical Editor" index="0"/>
+<item historyLabel="UserInterface::requestSession in Standby to Standby: Transition Activity" index="7">
+<position info="not_deleted" x="219" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="0"/>
+<item historyLabel="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" index="8">
+<position info="not_deleted" x="223" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="0"/>
+<item historyLabel="UserInterface::requestSession in Standby to Standby: Transition Activity" index="7">
+<position info="not_deleted" x="166" y="53"/>
+</item>
+<item historyLabel="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" index="8">
+<position info="not_deleted" x="152" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="9"/>
+<item historyLabel="monitoring: State Machine State Activity" index="10">
+<position info="not_deleted" x="55" y="77"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="9"/>
+<item historyLabel="xtUML Graphical Editor" index="11"/>
+<item historyLabel="xtUML Graphical Editor" index="12"/>
+<item historyLabel="WorkoutTimer1: startStopPressed in stopped to running: Transition Activity" index="13">
+<position info="not_deleted" x="80" y="8"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="14"/>
+<item historyLabel="xtUML Graphical Editor" index="14"/>
+<item historyLabel="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" index="15">
+<position/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="14"/>
+<item historyLabel="xtUML Graphical Editor" index="16"/>
+<item historyLabel="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" index="15">
+<position info="not_deleted" x="166" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="17"/>
+<item historyLabel="BookingProvider: Interface Description" index="18">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="requestAvailableBookables: Interface Signal Description" index="19">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="20"/>
+<item historyLabel="xtUML Graphical Editor" index="17"/>
+<item historyLabel="xtUML Graphical Editor" index="20"/>
+<item historyLabel="requestAvailableBookables: Interface Signal Description" index="19">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="20"/>
+<item historyLabel="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" index="15">
+<position info="not_deleted" x="300" y="64"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="14"/>
+<item historyLabel="UserInterface::requestSession in Standby to Standby: Transition Activity" index="21">
+<position info="not_deleted" x="166" y="0"/>
+</item>
+<item historyLabel="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" index="15">
+<position info="not_deleted" x="207" y="0"/>
+</item>
+<item active="true" historyLabel="getBookableRepresentation: Operation Activity" index="22">
+<position info="not_deleted" x="52" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+<trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="getBookableRepresentation: Operation Activity" tooltip="getBookableRepresentation: Operation Activity">
+<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Bookable/Bookable.xtuml" ModelElementID0="f5d8d2fd-312b-4ac1-b4e3-55f4241a2d58" ModelElementIDCount="1" ModelElementLastName="getBookableRepresentation: Operation" ModelElementType="com.mentor.nucleus.bp.core.Operation_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="UserInterface::requestSession in Standby to Standby: Transition Activity" tooltip="UserInterface::requestSession in Standby to Standby: Transition Activity">
+<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="86a0d005-f343-4f7e-95cb-13f38e31c77d" ModelElementID1="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ModelElementIDCount="2" ModelElementLastName="UserInterface::requestSession in Standby to Standby: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="Interfaces: Package Diagram" tooltip="Interfaces: Package Diagram">
+<persistable componentPath="/Hotel/models/Hotel/Library/Interfaces/Interfaces.xtuml" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="182dfb43-4b42-4388-a888-adc923ffd180" ooaType="108"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.text.description.factory" id="com.mentor.nucleus.bp.ui.text.description.DescriptionEditor" name="requestAvailableBookables: Interface Signal Description" tooltip="requestAvailableBookables: Interface Signal Description">
+<persistable ModelComponentPath="/Hotel/models/Hotel/Library/Interfaces/BookingProvider/BookingProvider.xtuml" ModelElementID0="8500002a-94f3-4a61-bfa8-32f8fd7d89b4" ModelElementIDCount="1" ModelElementLastName="requestAvailableBookables: Interface Signal" ModelElementType="com.mentor.nucleus.bp.core.InterfaceSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.text.description.factory" id="com.mentor.nucleus.bp.ui.text.description.DescriptionEditor" name="BookingProvider: Interface Description" tooltip="BookingProvider: Interface Description">
+<persistable ModelComponentPath="/Hotel/models/Hotel/Library/Interfaces/BookingProvider/BookingProvider.xtuml" ModelElementID0="708e7060-3f4e-41ab-94ce-7b712ad36251" ModelElementIDCount="1" ModelElementLastName="BookingProvider: Interface" ModelElementType="com.mentor.nucleus.bp.core.Interface_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="ExternalDataTypes: Package Diagram" tooltip="ExternalDataTypes: Package Diagram">
+<persistable componentPath="/Hotel/models/Hotel/Library/ExternalDataTypes/ExternalDataTypes.xtuml" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="5708b889-c5ba-4ee9-bc4a-dc6f2dc55ce1" ooaType="108"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="Hotel: Package Diagram" tooltip="Hotel: Package Diagram">
+<persistable componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel.xtuml" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="960454f9-cf5f-4331-88bf-8023709586b1" ooaType="108"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" tooltip="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity">
+<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="89aa1c62-cd75-4251-9314-e751d42eb203" ModelElementID1="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ModelElementIDCount="2" ModelElementLastName="UserInterface::requestAvailableBookables in Standby to Standby: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="BookingSession: Class State Machine" tooltip="BookingSession: Class State Machine">
+<persistable componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="10" ooaId="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ooaType="40"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="WorkoutTimer1: startStopPressed in stopped to running: Transition Activity" tooltip="WorkoutTimer1: startStopPressed in stopped to running: Transition Activity">
+<persistable ModelComponentPath="/GPS Watch/models/GPS Watch/Library/Tracking/Tracking/WorkoutTimer/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="693f897f-b0a0-43a9-98bb-ef3f5bb14f9e" ModelElementID1="10cfb66a-d3d5-44c3-90d0-a7a1537252ab" ModelElementIDCount="2" ModelElementLastName="WorkoutTimer1: startStopPressed in stopped to running: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/GPS Watch/models/GPS Watch/Library/Library.xtuml"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="WorkoutTimer: Instance State Machine" tooltip="WorkoutTimer: Instance State Machine">
+<persistable componentPath="/GPS Watch/models/GPS Watch/Library/Tracking/Tracking/WorkoutTimer/InstanceStateMachine/InstanceStateMachine.xtuml" modelRootId="/GPS Watch/models/GPS Watch/Library/Library.xtuml" modelType="8" ooaId="10cfb66a-d3d5-44c3-90d0-a7a1537252ab" ooaType="40"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="Tracking: Package Diagram" tooltip="Tracking: Package Diagram">
+<persistable componentPath="/GPS Watch/models/GPS Watch/Library/Tracking/Tracking/Tracking.xtuml" modelRootId="/GPS Watch/models/GPS Watch/Library/Library.xtuml" modelType="112" ooaId="a09220a4-d685-4338-83fd-0d42f7c7e308" ooaType="108"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="monitoring: State Machine State Activity" tooltip="monitoring: State Machine State Activity">
+<persistable ModelComponentPath="/GPS Watch/models/GPS Watch/Library/HeartRateMonitor/HeartRateMonitor/HeartRateMonitor/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="208abec5-b869-4f5f-acff-7b0940ddda2b" ModelElementID1="4502dd3d-8627-4d95-8cd8-4635ad16dbd5" ModelElementIDCount="2" ModelElementLastName="monitoring: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/GPS Watch/models/GPS Watch/Library/Library.xtuml"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="idle: State Machine State Activity" tooltip="idle: State Machine State Activity">
+<persistable ModelComponentPath="/GPS Watch/models/GPS Watch/Library/HeartRateMonitor/HeartRateMonitor/HeartRateMonitor/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="208abec5-b869-4f5f-acff-7b0940ddda2b" ModelElementID1="493764c1-db39-4945-85b4-65a7376db8aa" ModelElementIDCount="2" ModelElementLastName="idle: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/GPS Watch/models/GPS Watch/Library/Library.xtuml"/>
+</file>
+</mruList>
+</workbench>

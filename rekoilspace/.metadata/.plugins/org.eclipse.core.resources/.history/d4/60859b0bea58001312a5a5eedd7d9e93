@@ -1,0 +1,54 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("224ecf93-c3c4-4f87-9179-84df7707fe75",
+	"00000000-0000-0000-0000-000000000000",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'System1',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("0c63c9d3-ac08-4667-9ef8-167b693e810c",
+	112,
+	"224ecf93-c3c4-4f87-9179-84df7707fe75",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'Hotel::System::System1');
+INSERT INTO DIM_DIA
+	VALUES ("0c63c9d3-ac08-4667-9ef8-167b693e810c",
+	'',
+	1.000000,
+	4000.000000,
+	3000.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO PE_PE
+	VALUES ("224ecf93-c3c4-4f87-9179-84df7707fe75",
+	1,
+	"08644b1f-a992-4e52-8ec3-1f5eff4dec19",
+	"00000000-0000-0000-0000-000000000000",
+	7);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("08644b1f-a992-4e52-8ec3-1f5eff4dec19",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'System',
+	'',
+	0,
+	'../System.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Hotel',
+	1,
+	'../../Hotel.xtuml');

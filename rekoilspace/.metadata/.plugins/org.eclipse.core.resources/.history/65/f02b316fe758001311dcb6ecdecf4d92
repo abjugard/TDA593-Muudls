@@ -1,0 +1,119 @@
+-- BP 7.1.6 content: Interface syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_I
+	VALUES ("708e7060-3f4e-41ab-94ce-7b712ad36251",
+	"00000000-0000-0000-0000-000000000000",
+	'BookingProvider',
+	'');
+INSERT INTO C_EP
+	VALUES ("8500002a-94f3-4a61-bfa8-32f8fd7d89b4",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'requestAvailableBookables',
+	'');
+INSERT INTO C_AS
+	VALUES ("8500002a-94f3-4a61-bfa8-32f8fd7d89b4",
+	'requestAvailableBookables',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("a1e36c91-fcea-4f5e-8a97-10343bb823c9",
+	"8500002a-94f3-4a61-bfa8-32f8fd7d89b4",
+	"16c73b97-6415-44c2-910f-7bf149f05505",
+	'filter',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("16c73b97-6415-44c2-910f-7bf149f05505",
+	"00000000-0000-0000-0000-000000000000",
+	'Filter',
+	'',
+	'',
+	'../../ExternalDataTypes/ExternalDataTypes.xtuml');
+INSERT INTO C_EP
+	VALUES ("54d1cfcd-e847-40b5-be88-ddf038c56595",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'available',
+	'');
+INSERT INTO C_AS
+	VALUES ("54d1cfcd-e847-40b5-be88-ddf038c56595",
+	'available',
+	'',
+	1,
+	"8500002a-94f3-4a61-bfa8-32f8fd7d89b4");
+INSERT INTO C_PP
+	VALUES ("06bd3dca-8c6f-4b49-9317-0328e2c96e9a",
+	"54d1cfcd-e847-40b5-be88-ddf038c56595",
+	"0bc5c46f-75d1-4977-a11c-0d9d382c9d7d",
+	'availables',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("0bc5c46f-75d1-4977-a11c-0d9d382c9d7d",
+	"00000000-0000-0000-0000-000000000000",
+	'Availables',
+	'',
+	'',
+	'../../ExternalDataTypes/ExternalDataTypes.xtuml');
+INSERT INTO C_EP
+	VALUES ("55b848f9-d68a-4698-bf86-446ac83e49f5",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'select',
+	'');
+INSERT INTO C_AS
+	VALUES ("55b848f9-d68a-4698-bf86-446ac83e49f5",
+	'select',
+	'',
+	0,
+	"54d1cfcd-e847-40b5-be88-ddf038c56595");
+INSERT INTO C_PP
+	VALUES ("9e138e25-187d-45e0-b2e3-b5230d2a8883",
+	"55b848f9-d68a-4698-bf86-446ac83e49f5",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'id',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_EP
+	VALUES ("10d65452-16c4-45b0-ad3e-4dec03bb99a7",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'extraServices',
+	'');
+INSERT INTO C_AS
+	VALUES ("10d65452-16c4-45b0-ad3e-4dec03bb99a7",
+	'extraServices',
+	'',
+	1,
+	"55b848f9-d68a-4698-bf86-446ac83e49f5");
+INSERT INTO C_PP
+	VALUES ("65cdf3b3-e2af-455a-95b3-c8ac1f35411c",
+	"10d65452-16c4-45b0-ad3e-4dec03bb99a7",
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'extras',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO PE_PE
+	VALUES ("708e7060-3f4e-41ab-94ce-7b712ad36251",
+	1,
+	"182dfb43-4b42-4388-a888-adc923ffd180",
+	"00000000-0000-0000-0000-000000000000",
+	6);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("182dfb43-4b42-4388-a888-adc923ffd180",
+	"00000000-0000-0000-0000-000000000000",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Interfaces',
+	'',
+	0,
+	'../Interfaces.xtuml');

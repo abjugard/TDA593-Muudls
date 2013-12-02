@@ -1,0 +1,68 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("1e991515-ba9e-43b3-9f4b-ab0ab79da049",
+	'FacilityType',
+	2,
+	'FACILITYTYPE',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("0355bc69-8e9b-4bcd-990c-8251602c296a",
+	"1e991515-ba9e-43b3-9f4b-ab0ab79da049",
+	'getPossibleExtras',
+	'',
+	"f5117959-9da2-4688-a3d6-801eaf2d76c1",
+	1,
+	'',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("f5117959-9da2-4688-a3d6-801eaf2d76c1",
+	"00000000-0000-0000-0000-000000000000",
+	'inst_ref_set<Bookable>',
+	'',
+	'',
+	'../Hotel.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("7f38147b-885a-4c04-b33a-4313dedf83f0",
+	"1e991515-ba9e-43b3-9f4b-ab0ab79da049");
+INSERT INTO O_BATTR
+	VALUES ("7f38147b-885a-4c04-b33a-4313dedf83f0",
+	"1e991515-ba9e-43b3-9f4b-ab0ab79da049");
+INSERT INTO O_ATTR
+	VALUES ("7f38147b-885a-4c04-b33a-4313dedf83f0",
+	"1e991515-ba9e-43b3-9f4b-ab0ab79da049",
+	"00000000-0000-0000-0000-000000000000",
+	'approximateArea',
+	'',
+	'',
+	'approximateArea',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"1e991515-ba9e-43b3-9f4b-ab0ab79da049");
+INSERT INTO O_ID
+	VALUES (1,
+	"1e991515-ba9e-43b3-9f4b-ab0ab79da049");
+INSERT INTO O_ID
+	VALUES (2,
+	"1e991515-ba9e-43b3-9f4b-ab0ab79da049");
+INSERT INTO PE_PE
+	VALUES ("1e991515-ba9e-43b3-9f4b-ab0ab79da049",
+	1,
+	"08644b1f-a992-4e52-8ec3-1f5eff4dec19",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("08644b1f-a992-4e52-8ec3-1f5eff4dec19",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Hotel',
+	'',
+	0,
+	'../Hotel.xtuml');

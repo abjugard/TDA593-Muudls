@@ -1,0 +1,86 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("4b839513-bd70-4d73-85ed-c06b10ee091a",
+	'Facility',
+	3,
+	'FACILITY',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("f68e319f-09bf-4974-af63-20ff8c0aa86d",
+	"4b839513-bd70-4d73-85ed-c06b10ee091a");
+INSERT INTO O_BATTR
+	VALUES ("f68e319f-09bf-4974-af63-20ff8c0aa86d",
+	"4b839513-bd70-4d73-85ed-c06b10ee091a");
+INSERT INTO O_ATTR
+	VALUES ("f68e319f-09bf-4974-af63-20ff8c0aa86d",
+	"4b839513-bd70-4d73-85ed-c06b10ee091a",
+	"c291b39a-a3ce-4de8-94c2-657b168ceedd",
+	'checkedOut',
+	'',
+	'',
+	'checkedOut',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000010",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("c291b39a-a3ce-4de8-94c2-657b168ceedd",
+	"4b839513-bd70-4d73-85ed-c06b10ee091a");
+INSERT INTO O_BATTR
+	VALUES ("c291b39a-a3ce-4de8-94c2-657b168ceedd",
+	"4b839513-bd70-4d73-85ed-c06b10ee091a");
+INSERT INTO O_ATTR
+	VALUES ("c291b39a-a3ce-4de8-94c2-657b168ceedd",
+	"4b839513-bd70-4d73-85ed-c06b10ee091a",
+	"e22cda36-25e1-4b81-aef1-d74c43020c14",
+	'checkedIn',
+	'',
+	'',
+	'checkedIn',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000010",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("e22cda36-25e1-4b81-aef1-d74c43020c14",
+	"4b839513-bd70-4d73-85ed-c06b10ee091a");
+INSERT INTO O_BATTR
+	VALUES ("e22cda36-25e1-4b81-aef1-d74c43020c14",
+	"4b839513-bd70-4d73-85ed-c06b10ee091a");
+INSERT INTO O_ATTR
+	VALUES ("e22cda36-25e1-4b81-aef1-d74c43020c14",
+	"4b839513-bd70-4d73-85ed-c06b10ee091a",
+	"00000000-0000-0000-0000-000000000000",
+	'facilityID',
+	'',
+	'',
+	'facilityID',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (2,
+	"4b839513-bd70-4d73-85ed-c06b10ee091a");
+INSERT INTO O_ID
+	VALUES (1,
+	"4b839513-bd70-4d73-85ed-c06b10ee091a");
+INSERT INTO O_ID
+	VALUES (0,
+	"4b839513-bd70-4d73-85ed-c06b10ee091a");
+INSERT INTO PE_PE
+	VALUES ("4b839513-bd70-4d73-85ed-c06b10ee091a",
+	1,
+	"960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Hotel',
+	'',
+	0,
+	'../Hotel.xtuml');
