@@ -176,7 +176,8 @@ INSERT INTO O_TFR
 	'',
 	"ebb6007c-c361-40c7-ad5b-5b07d6a01d41",
 	1,
-	'',
+	'select many b from instances of FACILITYTYPE;
+return b;',
 	1,
 	'',
 	"00000000-0000-0000-0000-000000000000");
@@ -230,6 +231,24 @@ INSERT INTO O_ATTR
 	'ID',
 	0,
 	"ba5eda7a-def5-0000-0000-000000000005",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("3a14ca04-48d1-4f7a-ae3f-730f9dcf0f47",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_BATTR
+	VALUES ("3a14ca04-48d1-4f7a-ae3f-730f9dcf0f47",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_ATTR
+	VALUES ("3a14ca04-48d1-4f7a-ae3f-730f9dcf0f47",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	"df46d3b5-7060-4611-8908-d535d035865a",
+	'current_state',
+	'',
+	'',
+	'current_state',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000006",
 	'',
 	'');
 INSERT INTO O_ID

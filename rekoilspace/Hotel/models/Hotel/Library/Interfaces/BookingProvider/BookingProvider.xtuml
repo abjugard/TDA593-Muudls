@@ -375,7 +375,7 @@ INSERT INTO C_AS
 	VALUES ("89169ec3-d50b-4b5b-95fa-d95fb15c3f98",
 	'errorSignal',
 	'',
-	0,
+	1,
 	"19aa6808-338c-45b0-8a31-1b3efb70b47a");
 INSERT INTO C_PP
 	VALUES ("ed7f9ed0-5d21-4eea-b033-d488f64972b9",

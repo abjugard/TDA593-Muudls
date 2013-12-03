@@ -214,8 +214,28 @@ INSERT INTO SPR_PS
 	VALUES ("ad67a789-a0d9-4e09-8c1b-cc137ff39554",
 	'requestAvailableBookables',
 	'',
-	'',
-	3);
+	'select any session from instances of BOOKINGSESSION where (selected.ID == param.sessionID);
+
+if (not_empty session)
+	result = session.search(fromDate: param.fromDate, 
+							toDate: param.toDate,
+							facilityType: param.facilityType);
+	if(empty result)
+		send BookingProvider::errorSignal(message: "No rooms found");
+	end if;
+							
+	for each ft in result		
+		select one b related by ft->BOOKABLE[R2];
+		send BookingProvider::available(id: ft.id , 
+										price: b.price , 
+										description: b.description,
+										aproximateArea: ft.approximateArea,
+										independent: false);
+	end for;
+else
+	send BookingProvider::errorSignal(message: "Session not found");
+end if;',
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("8500002a-94f3-4a61-bfa8-32f8fd7d89b4",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
