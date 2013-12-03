@@ -28,25 +28,25 @@ INSERT INTO SM_EVT
 	'BOOKINGSESSION_A1',
 	'');
 INSERT INTO SM_SGEVT
-	VALUES ("8a3baead-a9b2-490c-a9fd-b545855a6075",
+	VALUES ("58a64f76-28e2-4982-ab22-73c9243d6565",
 	"1cceaf51-6f2a-4dbc-806e-afb09371f60a",
 	"00000000-0000-0000-0000-000000000000",
-	"ca0d2e64-32a1-4c8c-827a-78550dd80503",
+	"52f59bac-a1c2-4318-a901-bbe93808d139",
 	"00000000-0000-0000-0000-000000000000",
 	'UserInterface::requestSession');
 INSERT INTO SPR_PS_PROXY
-	VALUES ("ca0d2e64-32a1-4c8c-827a-78550dd80503",
+	VALUES ("52f59bac-a1c2-4318-a901-bbe93808d139",
 	'requestSession',
 	'',
 	'',
 	3,
 	'../../../HotelComponent.xtuml');
 INSERT INTO SM_SEVT
-	VALUES ("8a3baead-a9b2-490c-a9fd-b545855a6075",
+	VALUES ("58a64f76-28e2-4982-ab22-73c9243d6565",
 	"1cceaf51-6f2a-4dbc-806e-afb09371f60a",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_EVT
-	VALUES ("8a3baead-a9b2-490c-a9fd-b545855a6075",
+	VALUES ("58a64f76-28e2-4982-ab22-73c9243d6565",
 	"1cceaf51-6f2a-4dbc-806e-afb09371f60a",
 	"00000000-0000-0000-0000-000000000000",
 	2,
@@ -56,25 +56,25 @@ INSERT INTO SM_EVT
 	'UserInterface::requestSession',
 	'');
 INSERT INTO SM_SGEVT
-	VALUES ("9647cc6a-f433-452f-840f-f3494b947f5d",
+	VALUES ("dcc5efa7-e25d-42ca-946b-7c6041eb2c06",
 	"1cceaf51-6f2a-4dbc-806e-afb09371f60a",
 	"00000000-0000-0000-0000-000000000000",
-	"cc01bda1-0962-4b31-b446-9af486116651",
+	"ad67a789-a0d9-4e09-8c1b-cc137ff39554",
 	"00000000-0000-0000-0000-000000000000",
 	'UserInterface::requestAvailableBookables');
 INSERT INTO SPR_PS_PROXY
-	VALUES ("cc01bda1-0962-4b31-b446-9af486116651",
+	VALUES ("ad67a789-a0d9-4e09-8c1b-cc137ff39554",
 	'requestAvailableBookables',
 	'',
 	'',
 	3,
 	'../../../HotelComponent.xtuml');
 INSERT INTO SM_SEVT
-	VALUES ("9647cc6a-f433-452f-840f-f3494b947f5d",
+	VALUES ("dcc5efa7-e25d-42ca-946b-7c6041eb2c06",
 	"1cceaf51-6f2a-4dbc-806e-afb09371f60a",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_EVT
-	VALUES ("9647cc6a-f433-452f-840f-f3494b947f5d",
+	VALUES ("dcc5efa7-e25d-42ca-946b-7c6041eb2c06",
 	"1cceaf51-6f2a-4dbc-806e-afb09371f60a",
 	"00000000-0000-0000-0000-000000000000",
 	3,
@@ -103,19 +103,19 @@ INSERT INTO SM_SEME
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_SEME
 	VALUES ("41cae87c-efc9-4d47-82ed-23030b389384",
-	"8a3baead-a9b2-490c-a9fd-b545855a6075",
+	"58a64f76-28e2-4982-ab22-73c9243d6565",
 	"1cceaf51-6f2a-4dbc-806e-afb09371f60a",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_SEME
 	VALUES ("41cae87c-efc9-4d47-82ed-23030b389384",
-	"9647cc6a-f433-452f-840f-f3494b947f5d",
+	"dcc5efa7-e25d-42ca-946b-7c6041eb2c06",
 	"1cceaf51-6f2a-4dbc-806e-afb09371f60a",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_NSTXN
 	VALUES ("86a0d005-f343-4f7e-95cb-13f38e31c77d",
 	"1cceaf51-6f2a-4dbc-806e-afb09371f60a",
 	"41cae87c-efc9-4d47-82ed-23030b389384",
-	"8a3baead-a9b2-490c-a9fd-b545855a6075",
+	"58a64f76-28e2-4982-ab22-73c9243d6565",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_TXN
 	VALUES ("86a0d005-f343-4f7e-95cb-13f38e31c77d",
@@ -126,7 +126,7 @@ INSERT INTO SM_NSTXN
 	VALUES ("89aa1c62-cd75-4251-9314-e751d42eb203",
 	"1cceaf51-6f2a-4dbc-806e-afb09371f60a",
 	"41cae87c-efc9-4d47-82ed-23030b389384",
-	"9647cc6a-f433-452f-840f-f3494b947f5d",
+	"dcc5efa7-e25d-42ca-946b-7c6041eb2c06",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_TXN
 	VALUES ("89aa1c62-cd75-4251-9314-e751d42eb203",
@@ -143,7 +143,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("45ab631e-8185-492b-b854-b894e9f7cb06",
 	"1cceaf51-6f2a-4dbc-806e-afb09371f60a",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_TAH
@@ -177,13 +177,20 @@ INSERT INTO SM_ACT
 	VALUES ("748dc689-a4ff-47f9-b951-9cb693c8a841",
 	"1cceaf51-6f2a-4dbc-806e-afb09371f60a",
 	1,
-	'
-select any session from instances of BOOKINGSESSION where (selected.ID == param.sessionID);
+	'select any session from instances of BOOKINGSESSION where (selected.ID == param.sessionID);
 
 if (not_empty session)
-	result = session.search(filter: param.filter);
+	result = session.search(fromDate: param.fromDate, 
+							toDate: param.toDate,
+							facilityType: param.facilityType);
 	//BookableRepresentation[] bookables = []
-	for each b in result
+	for each ft in result
+		select one b related by ft->BOOKABLE[R2];
+		send BookingProvider::available(id: ft.id , 
+										price: b.price , 
+										description: b.description,
+										aproximateArea: ft.approximateArea,
+										independent: false);;
 		// add data type to array as BookableRepresentation
 	end for;
 else

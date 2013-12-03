@@ -174,28 +174,46 @@ INSERT INTO O_TFR
 	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
 	'search',
 	'',
-	"df204ffe-8ba5-4335-839a-3b03a55091e7",
+	"ebb6007c-c361-40c7-ad5b-5b07d6a01d41",
 	1,
 	'',
 	1,
 	'',
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO O_TPARM
-	VALUES ("64dd2f66-31dd-44f0-a3c4-540d8d8d45ce",
+	VALUES ("0ef9b8e6-8616-49fc-a1c9-9dac1dafd37d",
 	"ad7ec6a1-0909-48cc-8bb1-e07002fbff5e",
-	'filter',
-	"16c73b97-6415-44c2-910f-7bf149f05505",
+	'fromDate',
+	"ba5eda7a-def5-0000-0000-000000000010",
 	0,
 	'',
 	"00000000-0000-0000-0000-000000000000",
 	'');
+INSERT INTO O_TPARM
+	VALUES ("9aa4b7ff-c6de-49d7-9abf-090bc4abfc47",
+	"ad7ec6a1-0909-48cc-8bb1-e07002fbff5e",
+	'toDate',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"0ef9b8e6-8616-49fc-a1c9-9dac1dafd37d",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("1e0989d6-5c1c-4a30-a265-acb6695e117b",
+	"ad7ec6a1-0909-48cc-8bb1-e07002fbff5e",
+	'facilityType',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	0,
+	'',
+	"9aa4b7ff-c6de-49d7-9abf-090bc4abfc47",
+	'');
 INSERT INTO S_DT_PROXY
-	VALUES ("16c73b97-6415-44c2-910f-7bf149f05505",
+	VALUES ("ebb6007c-c361-40c7-ad5b-5b07d6a01d41",
 	"00000000-0000-0000-0000-000000000000",
-	'Filter',
+	'inst_ref_set<FacilityType>',
 	'',
 	'',
-	'../../../ExternalDataTypes/ExternalDataTypes.xtuml');
+	'../Hotel.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("df46d3b5-7060-4611-8908-d535d035865a",
 	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");

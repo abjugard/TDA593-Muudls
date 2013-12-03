@@ -1,0 +1,417 @@
+-- BP 7.1.6 content: Interface syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_I
+	VALUES ("708e7060-3f4e-41ab-94ce-7b712ad36251",
+	"00000000-0000-0000-0000-000000000000",
+	'BookingProvider',
+	'');
+INSERT INTO C_EP
+	VALUES ("8500002a-94f3-4a61-bfa8-32f8fd7d89b4",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'requestAvailableBookables',
+	'');
+INSERT INTO C_AS
+	VALUES ("8500002a-94f3-4a61-bfa8-32f8fd7d89b4",
+	'requestAvailableBookables',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("440d61eb-481a-4ea0-b89c-0bc624d141a3",
+	"8500002a-94f3-4a61-bfa8-32f8fd7d89b4",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'sessionID',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("bb7fca6d-dbf4-4e65-bf71-bad1b55fe0c7",
+	"8500002a-94f3-4a61-bfa8-32f8fd7d89b4",
+	"ba5eda7a-def5-0000-0000-000000000010",
+	'from',
+	'',
+	0,
+	'',
+	"440d61eb-481a-4ea0-b89c-0bc624d141a3");
+INSERT INTO C_EP
+	VALUES ("54d1cfcd-e847-40b5-be88-ddf038c56595",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'available',
+	'');
+INSERT INTO C_AS
+	VALUES ("54d1cfcd-e847-40b5-be88-ddf038c56595",
+	'available',
+	'',
+	1,
+	"8500002a-94f3-4a61-bfa8-32f8fd7d89b4");
+INSERT INTO C_PP
+	VALUES ("b99356fc-5e76-4f1f-9eda-76579565e657",
+	"54d1cfcd-e847-40b5-be88-ddf038c56595",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'id',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("5304459a-0f6b-48c5-b818-bc584864f61f",
+	"54d1cfcd-e847-40b5-be88-ddf038c56595",
+	"ba5eda7a-def5-0000-0000-000000000003",
+	'price',
+	'',
+	0,
+	'',
+	"b99356fc-5e76-4f1f-9eda-76579565e657");
+INSERT INTO C_PP
+	VALUES ("56da61d1-d010-4a41-87cd-1b1b11d8b828",
+	"54d1cfcd-e847-40b5-be88-ddf038c56595",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'description',
+	'',
+	0,
+	'',
+	"5304459a-0f6b-48c5-b818-bc584864f61f");
+INSERT INTO C_PP
+	VALUES ("b79bff53-be30-45a5-8923-7a3f5ab4710d",
+	"54d1cfcd-e847-40b5-be88-ddf038c56595",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'aproximateArea',
+	'',
+	0,
+	'',
+	"56da61d1-d010-4a41-87cd-1b1b11d8b828");
+INSERT INTO C_PP
+	VALUES ("9a07908f-2d90-4fab-90c0-6d3e67ee8616",
+	"54d1cfcd-e847-40b5-be88-ddf038c56595",
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'independent',
+	'',
+	0,
+	'',
+	"b79bff53-be30-45a5-8923-7a3f5ab4710d");
+INSERT INTO C_EP
+	VALUES ("55b848f9-d68a-4698-bf86-446ac83e49f5",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'select',
+	'');
+INSERT INTO C_AS
+	VALUES ("55b848f9-d68a-4698-bf86-446ac83e49f5",
+	'select',
+	'',
+	0,
+	"54d1cfcd-e847-40b5-be88-ddf038c56595");
+INSERT INTO C_PP
+	VALUES ("9e138e25-187d-45e0-b2e3-b5230d2a8883",
+	"55b848f9-d68a-4698-bf86-446ac83e49f5",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'id',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("eee16ca7-f592-4209-868f-d6a58e473aee",
+	"55b848f9-d68a-4698-bf86-446ac83e49f5",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'sessionID',
+	'',
+	0,
+	'',
+	"9e138e25-187d-45e0-b2e3-b5230d2a8883");
+INSERT INTO C_EP
+	VALUES ("10d65452-16c4-45b0-ad3e-4dec03bb99a7",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'extraServices',
+	'');
+INSERT INTO C_AS
+	VALUES ("10d65452-16c4-45b0-ad3e-4dec03bb99a7",
+	'extraServices',
+	'',
+	1,
+	"55b848f9-d68a-4698-bf86-446ac83e49f5");
+INSERT INTO C_PP
+	VALUES ("3d2fc28f-324a-4e94-b3b6-330584f78523",
+	"10d65452-16c4-45b0-ad3e-4dec03bb99a7",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'id',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("785bb700-66e1-4fa9-9694-b929474e55ff",
+	"10d65452-16c4-45b0-ad3e-4dec03bb99a7",
+	"ba5eda7a-def5-0000-0000-000000000003",
+	'price',
+	'',
+	0,
+	'',
+	"3d2fc28f-324a-4e94-b3b6-330584f78523");
+INSERT INTO C_PP
+	VALUES ("67bb21b4-4919-4a78-b72f-8b69e2cf5f97",
+	"10d65452-16c4-45b0-ad3e-4dec03bb99a7",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'description',
+	'',
+	0,
+	'',
+	"785bb700-66e1-4fa9-9694-b929474e55ff");
+INSERT INTO C_PP
+	VALUES ("82ccc6c0-4b2c-4e41-b127-716f6e516d19",
+	"10d65452-16c4-45b0-ad3e-4dec03bb99a7",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'aproximateArea',
+	'',
+	0,
+	'',
+	"67bb21b4-4919-4a78-b72f-8b69e2cf5f97");
+INSERT INTO C_PP
+	VALUES ("32560363-913f-4fe4-863c-37fa358ec8c0",
+	"10d65452-16c4-45b0-ad3e-4dec03bb99a7",
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'independent',
+	'',
+	0,
+	'',
+	"82ccc6c0-4b2c-4e41-b127-716f6e516d19");
+INSERT INTO C_EP
+	VALUES ("87ed1c56-1bee-4041-bca4-056967095bc2",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'addServices',
+	'');
+INSERT INTO C_AS
+	VALUES ("87ed1c56-1bee-4041-bca4-056967095bc2",
+	'addServices',
+	'',
+	0,
+	"10d65452-16c4-45b0-ad3e-4dec03bb99a7");
+INSERT INTO C_PP
+	VALUES ("074cc4f4-819e-47a2-9f21-e95a11815a59",
+	"87ed1c56-1bee-4041-bca4-056967095bc2",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'sessionID',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("d5983e81-05ed-401f-bccd-625543d07d85",
+	"87ed1c56-1bee-4041-bca4-056967095bc2",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'desiredID',
+	'',
+	0,
+	'',
+	"074cc4f4-819e-47a2-9f21-e95a11815a59");
+INSERT INTO C_EP
+	VALUES ("57eb1124-4a29-48ad-8677-d8760788067a",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'customerDetails',
+	'');
+INSERT INTO C_AS
+	VALUES ("57eb1124-4a29-48ad-8677-d8760788067a",
+	'customerDetails',
+	'',
+	0,
+	"87ed1c56-1bee-4041-bca4-056967095bc2");
+INSERT INTO C_PP
+	VALUES ("9f35fb46-9c6b-4202-8310-888981c424af",
+	"57eb1124-4a29-48ad-8677-d8760788067a",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'sessionID',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("c2367ced-24e1-4602-a7c5-4001bd1043d4",
+	"57eb1124-4a29-48ad-8677-d8760788067a",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'name',
+	'',
+	0,
+	'',
+	"9f35fb46-9c6b-4202-8310-888981c424af");
+INSERT INTO C_PP
+	VALUES ("180912be-1f82-4ef3-9fc2-a2acbf555b77",
+	"57eb1124-4a29-48ad-8677-d8760788067a",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'phoneNumber',
+	'',
+	0,
+	'',
+	"c2367ced-24e1-4602-a7c5-4001bd1043d4");
+INSERT INTO C_EP
+	VALUES ("275df8ce-b628-4b96-85dd-66e9224fc9df",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'addGuest',
+	'');
+INSERT INTO C_AS
+	VALUES ("275df8ce-b628-4b96-85dd-66e9224fc9df",
+	'addGuest',
+	'',
+	0,
+	"57eb1124-4a29-48ad-8677-d8760788067a");
+INSERT INTO C_PP
+	VALUES ("5813d0b6-e9b6-4d9c-83b2-7539947713a0",
+	"275df8ce-b628-4b96-85dd-66e9224fc9df",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'sessionID',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("07e12052-ec30-46ab-97bd-53e1562e42b5",
+	"275df8ce-b628-4b96-85dd-66e9224fc9df",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'facility',
+	'',
+	0,
+	'',
+	"5813d0b6-e9b6-4d9c-83b2-7539947713a0");
+INSERT INTO C_PP
+	VALUES ("f2081eb7-638b-479f-bdef-a8d3d2aeb082",
+	"275df8ce-b628-4b96-85dd-66e9224fc9df",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'guestName',
+	'',
+	0,
+	'',
+	"07e12052-ec30-46ab-97bd-53e1562e42b5");
+INSERT INTO C_PP
+	VALUES ("41edc071-08b3-4da2-a6d0-cab5122398ca",
+	"275df8ce-b628-4b96-85dd-66e9224fc9df",
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'guestAge',
+	'',
+	0,
+	'',
+	"f2081eb7-638b-479f-bdef-a8d3d2aeb082");
+INSERT INTO C_EP
+	VALUES ("40e06920-24e2-499d-b1c8-deb66c9637ec",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'paymentInfo',
+	'');
+INSERT INTO C_AS
+	VALUES ("40e06920-24e2-499d-b1c8-deb66c9637ec",
+	'paymentInfo',
+	'',
+	0,
+	"275df8ce-b628-4b96-85dd-66e9224fc9df");
+INSERT INTO C_PP
+	VALUES ("8aff4a0e-3cc5-4dad-93f0-c1749ecf9471",
+	"40e06920-24e2-499d-b1c8-deb66c9637ec",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'sessionID',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("78e48b64-919d-466a-bb65-ba1cb83b002f",
+	"40e06920-24e2-499d-b1c8-deb66c9637ec",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'info',
+	'',
+	0,
+	'',
+	"8aff4a0e-3cc5-4dad-93f0-c1749ecf9471");
+INSERT INTO C_EP
+	VALUES ("19aa6808-338c-45b0-8a31-1b3efb70b47a",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'bookingConfirmation',
+	'');
+INSERT INTO C_AS
+	VALUES ("19aa6808-338c-45b0-8a31-1b3efb70b47a",
+	'bookingConfirmation',
+	'',
+	1,
+	"40e06920-24e2-499d-b1c8-deb66c9637ec");
+INSERT INTO C_PP
+	VALUES ("a3b665ee-74eb-4b72-82bd-d6fa5f6917b3",
+	"19aa6808-338c-45b0-8a31-1b3efb70b47a",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'message',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_EP
+	VALUES ("0a736126-e9c1-4d79-8803-acf1e9179ea4",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'requestSession',
+	'');
+INSERT INTO C_AS
+	VALUES ("0a736126-e9c1-4d79-8803-acf1e9179ea4",
+	'requestSession',
+	'',
+	0,
+	"19aa6808-338c-45b0-8a31-1b3efb70b47a");
+INSERT INTO C_EP
+	VALUES ("eeed77eb-0aff-4ad1-b41b-e0a30e3d6cbb",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'session',
+	'');
+INSERT INTO C_AS
+	VALUES ("eeed77eb-0aff-4ad1-b41b-e0a30e3d6cbb",
+	'session',
+	'',
+	1,
+	"0a736126-e9c1-4d79-8803-acf1e9179ea4");
+INSERT INTO C_PP
+	VALUES ("dfa7bd0c-5267-44e4-bf0e-b63e4a1bcc01",
+	"eeed77eb-0aff-4ad1-b41b-e0a30e3d6cbb",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'sessionID',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_EP
+	VALUES ("89169ec3-d50b-4b5b-95fa-d95fb15c3f98",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'errorSignal',
+	'');
+INSERT INTO C_AS
+	VALUES ("89169ec3-d50b-4b5b-95fa-d95fb15c3f98",
+	'errorSignal',
+	'',
+	0,
+	"eeed77eb-0aff-4ad1-b41b-e0a30e3d6cbb");
+INSERT INTO C_PP
+	VALUES ("ed7f9ed0-5d21-4eea-b033-d488f64972b9",
+	"89169ec3-d50b-4b5b-95fa-d95fb15c3f98",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'message',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO PE_PE
+	VALUES ("708e7060-3f4e-41ab-94ce-7b712ad36251",
+	1,
+	"182dfb43-4b42-4388-a888-adc923ffd180",
+	"00000000-0000-0000-0000-000000000000",
+	6);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("182dfb43-4b42-4388-a888-adc923ffd180",
+	"00000000-0000-0000-0000-000000000000",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Interfaces',
+	'',
+	0,
+	'../Interfaces.xtuml');
