@@ -1,0 +1,45 @@
+-- BP 7.1.6 content: ClassStateMachine syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO SM_ASM
+	VALUES ("96895ef9-6c20-43e9-ac42-4a9d9b10dc18",
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
+INSERT INTO SM_SM
+	VALUES ("96895ef9-6c20-43e9-ac42-4a9d9b10dc18",
+	'',
+	0);
+INSERT INTO SM_MOORE
+	VALUES ("96895ef9-6c20-43e9-ac42-4a9d9b10dc18");
+INSERT INTO GD_MD
+	VALUES ("0ba64b2b-0671-458f-9931-170d1cc5259c",
+	10,
+	"96895ef9-6c20-43e9-ac42-4a9d9b10dc18",
+	40,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Class State Machine');
+INSERT INTO DIM_DIA
+	VALUES ("0ba64b2b-0671-458f-9931-170d1cc5259c",
+	'',
+	1.000000,
+	4000.000000,
+	3000.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_OBJ_PROXY
+	VALUES ("6daee5e1-aefd-49c8-b18d-234fb0eb1928",
+	'SimpleTest',
+	1,
+	'RequestAvailableBookingsTest',
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'../SimpleTest.xtuml');

@@ -1,0 +1,29 @@
+
+**** Build of configuration Debug for project GPS Watch ****
+
+**** Internal Builder is used for build               ****
+****  WARNING: The "Debug" Configuration may not build  ****
+****  because it uses the "MinGW GCC"  ****
+****  tool-chain that is unsupported on this system.  ****
+
+****  Attempting to build...  **** 
+
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/HeartRateMonitor.o ../src/HeartRateMonitor.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/HeartRateMonitor_HeartRateMonitor_class.o ../src/HeartRateMonitor_HeartRateMonitor_class.c
+../src/HeartRateMonitor_HeartRateMonitor_class.c: In function ‘HeartRateMonitor_HeartRateMonitor_CB_xact2’:
+../src/HeartRateMonitor_HeartRateMonitor_class.c:101:55: warning: variable ‘res’ set but not used [-Wunused-but-set-variable]
+   HeartRateMonitor_HeartRateMonitor * monitor=0; bool res; 
+                                                       ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/sys_xtuml.o ../src/sys_xtuml.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/sys_user_co.o ../src/sys_user_co.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/Tracking_HeartRateSample_class.o ../src/Tracking_HeartRateSample_class.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/Tracking_TrackPoint_class.o ../src/Tracking_TrackPoint_class.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/UI.o ../src/UI.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/Tracking_LapMarker_class.o ../src/Tracking_LapMarker_class.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/UI_GuiBridge_bridge.o ../src/UI_GuiBridge_bridge.c
+../src/UI_GuiBridge_bridge.c:19:21: fatal error: windows.h: No such file or directory
+ #include <windows.h>
+                     ^
+compilation terminated.
+Build error occurred, build is stopped
+Time consumed: 553  ms.  

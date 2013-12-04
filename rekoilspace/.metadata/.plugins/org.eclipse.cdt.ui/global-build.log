@@ -1,0 +1,119 @@
+
+**** Rebuild of configuration Debug for project GPS Watch ****
+
+**** Internal Builder is used for build               ****
+****  WARNING: The "Debug" Configuration may not build  ****
+****  because it uses the "MinGW GCC"  ****
+****  tool-chain that is unsupported on this system.  ****
+
+****  Attempting to build...  **** 
+
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/Location.o ../src/Location.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/Tracking_Display_class.o ../src/Tracking_Display_class.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/UI_UI_class.o ../src/UI_UI_class.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/GPSWatch_sys_main.o ../src/GPSWatch_sys_main.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/LOG_bridge.o ../src/LOG_bridge.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/UI_GuiBridge_bridge.o ../src/UI_GuiBridge_bridge.c
+../src/UI_GuiBridge_bridge.c:19:21: fatal error: windows.h: No such file or directory
+ #include <windows.h>
+                     ^
+compilation terminated.
+Build error occurred, build is stopped
+Time consumed: 492  ms.  
+
+**** Rebuild of configuration Debug for project Hotel ****
+
+**** Internal Builder is used for build               ****
+****  WARNING: The "Debug" Configuration may not build  ****
+****  because it uses the "MinGW GCC"  ****
+****  tool-chain that is unsupported on this system.  ****
+
+****  Attempting to build...  **** 
+
+Nothing to build for Hotel
+
+**** Rebuild of configuration Debug for project GPS Watch ****
+
+**** Internal Builder is used for build               ****
+****  WARNING: The "Debug" Configuration may not build  ****
+****  because it uses the "MinGW GCC"  ****
+****  tool-chain that is unsupported on this system.  ****
+
+****  Attempting to build...  **** 
+
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/TIM_bridge.o ../src/TIM_bridge.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/Tracking_WorkoutTimer_class.o ../src/Tracking_WorkoutTimer_class.c
+../src/Tracking_WorkoutTimer_class.c: In function ‘Tracking_WorkoutTimer_op_deactivate’:
+../src/Tracking_WorkoutTimer_class.c:43:8: warning: variable ‘res’ set but not used [-Wunused-but-set-variable]
+   bool res; 
+        ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/Tracking.o ../src/Tracking.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/Location_GPS_class.o ../src/Location_GPS_class.c
+../src/Location_GPS_class.c: In function ‘Location_GPS_CB_act1’:
+../src/Location_GPS_class.c:43:30: warning: variable ‘res’ set but not used [-Wunused-but-set-variable]
+   Location_GPS * gps=0; bool res; 
+                              ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/Location.o ../src/Location.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/UI_TestCase_class.o ../src/UI_TestCase_class.c
+../src/UI_TestCase_class.c: In function ‘UI_TestCase_act2’:
+../src/UI_TestCase_class.c:71:60: warning: variable ‘handle’ set but not used [-Wunused-but-set-variable]
+     Escher_xtUMLEvent_t * evt;  /* evt */ Escher_Timer_t * handle; 
+                                                            ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/UI_GuiBridge_bridge.o ../src/UI_GuiBridge_bridge.c
+../src/UI_GuiBridge_bridge.c:19:21: fatal error: windows.h: No such file or directory
+ #include <windows.h>
+                     ^
+compilation terminated.
+Build error occurred, build is stopped
+Time consumed: 461  ms.  
+
+**** Rebuild of configuration Debug for project Hotel ****
+
+**** Internal Builder is used for build               ****
+****  WARNING: The "Debug" Configuration may not build  ****
+****  because it uses the "MinGW GCC"  ****
+****  tool-chain that is unsupported on this system.  ****
+
+****  Attempting to build...  **** 
+
+Nothing to build for Hotel
+
+**** Build of configuration Debug for project GPS Watch ****
+
+**** Internal Builder is used for build               ****
+****  WARNING: The "Debug" Configuration may not build  ****
+****  because it uses the "MinGW GCC"  ****
+****  tool-chain that is unsupported on this system.  ****
+
+****  Attempting to build...  **** 
+
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/HeartRateMonitor.o ../src/HeartRateMonitor.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/HeartRateMonitor_HeartRateMonitor_class.o ../src/HeartRateMonitor_HeartRateMonitor_class.c
+../src/HeartRateMonitor_HeartRateMonitor_class.c: In function ‘HeartRateMonitor_HeartRateMonitor_CB_xact2’:
+../src/HeartRateMonitor_HeartRateMonitor_class.c:101:55: warning: variable ‘res’ set but not used [-Wunused-but-set-variable]
+   HeartRateMonitor_HeartRateMonitor * monitor=0; bool res; 
+                                                       ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/sys_xtuml.o ../src/sys_xtuml.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/sys_user_co.o ../src/sys_user_co.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/Tracking_HeartRateSample_class.o ../src/Tracking_HeartRateSample_class.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/Tracking_TrackPoint_class.o ../src/Tracking_TrackPoint_class.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/UI.o ../src/UI.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/Tracking_LapMarker_class.o ../src/Tracking_LapMarker_class.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/UI_GuiBridge_bridge.o ../src/UI_GuiBridge_bridge.c
+../src/UI_GuiBridge_bridge.c:19:21: fatal error: windows.h: No such file or directory
+ #include <windows.h>
+                     ^
+compilation terminated.
+Build error occurred, build is stopped
+Time consumed: 553  ms.  
+
+**** Build of configuration Debug for project Hotel ****
+
+**** Internal Builder is used for build               ****
+****  WARNING: The "Debug" Configuration may not build  ****
+****  because it uses the "MinGW GCC"  ****
+****  tool-chain that is unsupported on this system.  ****
+
+****  Attempting to build...  **** 
+
+Nothing to build for Hotel

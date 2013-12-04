@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="26" version="2.0">
+<workbench progressCount="28" version="2.0">
 <workbenchAdvisor/>
 <window height="883" width="1438" x="0" y="15">
 <fastViewData fastViewLocation="1024"/>
@@ -38,31 +38,16 @@
 <part id="5"/>
 <part id="6"/>
 <part id="7"/>
-<part id="8"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="BookingSession: Class State Machine" partName="BookingSession: Class State Machine" path="/home/rekoil/src/bearded-adventure/rekoilspace/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" title="xtUML Graphical Editor" tooltip="BookingSession: Class State Machine" workbook="DefaultEditorWorkbook">
-<input componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="10" ooaId="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ooaType="40"/>
+<editor id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="Hotel: System Model Package Diagram" partName="Hotel: System Model Package Diagram" path="/home/rekoil/src/bearded-adventure/rekoilspace/Hotel/models/Hotel/Hotel.xtuml" title="xtUML Graphical Editor" tooltip="Hotel: System Model Package Diagram" workbook="DefaultEditorWorkbook">
+<input componentPath="/Hotel/models/Hotel/Hotel.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" modelRootId="__default_root" modelType="108" ooaId="77552e13-265a-4a67-beca-bb6af5f15d0b" ooaType="92"/>
 </editor>
-<editor id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="Hotel: Package Diagram" partName="Hotel: Package Diagram" path="/home/rekoil/src/bearded-adventure/rekoilspace/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel.xtuml" title="xtUML Graphical Editor" tooltip="Hotel::Library::HotelComponent::Hotel" workbook="DefaultEditorWorkbook">
-<input componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="960454f9-cf5f-4331-88bf-8023709586b1" ooaType="108"/>
-</editor>
-<editor id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="BookingSession: Instance State Machine" partName="BookingSession: Instance State Machine" path="/home/rekoil/src/bearded-adventure/rekoilspace/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/InstanceStateMachine/InstanceStateMachine.xtuml" title="xtUML Graphical Editor" tooltip="BookingSession: Instance State Machine" workbook="DefaultEditorWorkbook">
-<input componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/InstanceStateMachine/InstanceStateMachine.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="8" ooaId="c87b2dab-d00f-4d32-a5d3-d1e5b01c9cb3" ooaType="40"/>
-</editor>
-<editor id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="addGuest: Provided Signal Activity" partName="addGuest: Provided Signal Activity" path="/Hotel/models/Hotel/Library/HotelComponent/addGuest__Provided_Signal.oal" title="addGuest: Provided Signal Activity" tooltip="addGuest: Provided Signal Activity" workbook="DefaultEditorWorkbook">
-<input ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/HotelComponent.xtuml" ModelElementID0="0c0df819-2738-4521-8efe-cfb0e7d5f5ac" ModelElementIDCount="1" ModelElementLastName="addGuest: Provided Signal" ModelElementType="com.mentor.nucleus.bp.core.ProvidedSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="requestAvailableBookables: Provided Signal Activity" partName="requestAvailableBookables: Provided Signal Activity" path="/Hotel/models/Hotel/Library/HotelComponent/requestAvailableBookables__Provided_Signal.oal" title="requestAvailableBookables: Provided Signal Activity" tooltip="requestAvailableBookables: Provided Signal Activity" workbook="DefaultEditorWorkbook">
-<input ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/HotelComponent.xtuml" ModelElementID0="ad67a789-a0d9-4e09-8c1b-cc137ff39554" ModelElementIDCount="1" ModelElementLastName="requestAvailableBookables: Provided Signal" ModelElementType="com.mentor.nucleus.bp.core.ProvidedSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="337" selectionTopPixel="0"/>
-</editor>
-<editor id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="search: Operation Activity" partName="search: Operation Activity" path="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/search__Operation.oal" title="search: Operation Activity" tooltip="search: Operation Activity" workbook="DefaultEditorWorkbook">
-<input ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/BookingSession.xtuml" ModelElementID0="ad7ec6a1-0909-48cc-8bb1-e07002fbff5e" ModelElementIDCount="1" ModelElementLastName="search: Operation" ModelElementType="com.mentor.nucleus.bp.core.Operation_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="55" selectionTopPixel="0"/>
+<editor id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="UserInterface::requestSession in Standby to Standby: Transition Activity" partName="UserInterface::requestSession in Standby to Standby: Transition Activity" path="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/UserInterface__requestSession_in_Standby_to_Standby__Transition.oal" title="UserInterface::requestSession in Standby to Standby: Transition Activity" tooltip="UserInterface::requestSession in Standby to Standby: Transition Activity" workbook="DefaultEditorWorkbook">
+<input ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="86a0d005-f343-4f7e-95cb-13f38e31c77d" ModelElementID1="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ModelElementIDCount="2" ModelElementLastName="UserInterface::requestSession in Standby to Standby: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="219" selectionTopPixel="0"/>
 </editor>
 <editor id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="UserComponent: Component Diagram" partName="UserComponent: Component Diagram" path="/home/rekoil/src/bearded-adventure/rekoilspace/Hotel/models/Hotel/Library/UserComponent/UserComponent.xtuml" title="xtUML Graphical Editor" tooltip="UserComponent: Component Diagram" workbook="DefaultEditorWorkbook">
 <input componentPath="/Hotel/models/Hotel/Library/UserComponent/UserComponent.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="111" ooaId="0968771f-8553-4274-be70-86a03e4e6267" ooaType="98"/>
@@ -70,9 +55,20 @@
 <editor id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="TestCases: Package Diagram" partName="TestCases: Package Diagram" path="/home/rekoil/src/bearded-adventure/rekoilspace/Hotel/models/Hotel/Library/UserComponent/TestCases/TestCases.xtuml" title="xtUML Graphical Editor" tooltip="Hotel::Library::UserComponent::TestCases" workbook="DefaultEditorWorkbook">
 <input componentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/TestCases.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="dcd45889-1e8f-44ce-a0ac-90e67ced68c3" ooaType="108"/>
 </editor>
-<editor activePart="true" focus="true" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="PopulateFacilityTypes: Function Activity" partName="PopulateFacilityTypes: Function Activity" path="/Hotel/models/Hotel/Library/HotelComponent/Hotel/PopulateFacilityTypes__Function.oal" title="PopulateFacilityTypes: Function Activity" tooltip="PopulateFacilityTypes: Function Activity" workbook="DefaultEditorWorkbook">
-<input ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel.xtuml" ModelElementID0="19b27525-ef50-4d33-ab2c-8b7895f454e1" ModelElementIDCount="1" ModelElementLastName="PopulateFacilityTypes: Function" ModelElementType="com.mentor.nucleus.bp.core.Function_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="484" selectionTopPixel="0"/>
+<editor id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="SimpleTest: Instance State Machine" partName="SimpleTest: Instance State Machine" path="/home/rekoil/src/bearded-adventure/rekoilspace/Hotel/models/Hotel/Library/UserComponent/TestCases/SimpleTest/InstanceStateMachine/InstanceStateMachine.xtuml" title="xtUML Graphical Editor" tooltip="SimpleTest: Instance State Machine" workbook="DefaultEditorWorkbook">
+<input componentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/SimpleTest/InstanceStateMachine/InstanceStateMachine.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="8" ooaId="ff73a57e-de54-43da-89b9-7fc18e7e85a5" ooaType="40"/>
+</editor>
+<editor id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="startSimpleTest: Function Activity" partName="startSimpleTest: Function Activity" path="/Hotel/models/Hotel/Library/UserComponent/TestCases/startSimpleTest__Function.oal" title="startSimpleTest: Function Activity" tooltip="startSimpleTest: Function Activity" workbook="DefaultEditorWorkbook">
+<input ModelComponentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/TestCases.xtuml" ModelElementID0="68467367-5409-4c38-b4e4-909abfbab8a5" ModelElementIDCount="1" ModelElementLastName="startSimpleTest: Function" ModelElementType="com.mentor.nucleus.bp.core.Function_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="109" selectionTopPixel="0"/>
+</editor>
+<editor id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="requestSession: State Machine State Activity" partName="requestSession: State Machine State Activity" path="/Hotel/models/Hotel/Library/UserComponent/TestCases/SimpleTest/InstanceStateMachine/requestSession__State_Machine_State.oal" title="requestSession: State Machine State Activity" tooltip="requestSession: State Machine State Activity" workbook="DefaultEditorWorkbook">
+<input ModelComponentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/SimpleTest/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="ff73a57e-de54-43da-89b9-7fc18e7e85a5" ModelElementID1="69ed6288-8a7a-4a78-8509-c5afa7b80900" ModelElementIDCount="2" ModelElementLastName="requestSession: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="requestSession: Provided Signal Activity" partName="requestSession: Provided Signal Activity" path="/Hotel/models/Hotel/Library/HotelComponent/requestSession__Provided_Signal.oal" title="requestSession: Provided Signal Activity" tooltip="requestSession: Provided Signal Activity" workbook="DefaultEditorWorkbook">
+<input ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/HotelComponent.xtuml" ModelElementID0="52f59bac-a1c2-4318-a901-bbe93808d139" ModelElementIDCount="1" ModelElementLastName="requestSession: Provided Signal" ModelElementType="com.mentor.nucleus.bp.core.ProvidedSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -88,8 +84,7 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors (29 items)"/>
+<expanded>&#x0A;<category IMemento.internal.id="Errors (27 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="342" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="282" org.eclipse.ui.ide.severityAndDescriptionField="900"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -98,6 +93,9 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
 </view>
 <view id="com.mentor.nucleus.bp.ui.explorer.MonitorExplorerView" partName="Spotlight"/>
 <view id="com.mentor.nucleus.bp.ui.session.views.SessionExplorerView" partName="Session Explorer">
@@ -147,8 +145,13 @@
 <view id="org.eclipse.ui.views.PropertySheet"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="org.eclipse.gef.ui.palette_view"/>
-<fastViewBars/>
+<fastViewBars>
+<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@2bf4a9" orientation="512" selectedTabId="org.eclipse.gef.ui.palette_view" style="0">
+<fastViews>
+<view id="org.eclipse.gef.ui.palette_view" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
 <layout>
 <mainWindow>
 <info folder="true" part="topLeft">
@@ -188,11 +191,9 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@2bf4a9" ratio="0.7497621" ratioLeft="788" ratioRight="263" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.gef.ui.palette_view" appearance="2" expanded="2">
-<page content="org.eclipse.gef.ui.palette_view" label="Palette"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.gef.ui.palette_view" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </mainWindow>
@@ -234,6 +235,7 @@
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="com.mentor.nucleus.bp.ui.explorer.MonitorExplorerView"/>
 <view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -253,7 +255,7 @@
 </folder>
 </info>
 <info folder="true" part="projectExplorerFolder" ratio="0.24931881" ratioLeft="183" ratioRight="551" relationship="4" relative="debugFolder">
-<folder activePageID="com.mentor.nucleus.bp.ui.explorer.ExplorerView" appearance="2" expanded="2">
+<folder activePageID="com.mentor.nucleus.bp.ui.session.views.SessionExplorerView" appearance="2" expanded="2">
 <page content="com.mentor.nucleus.bp.ui.explorer.ExplorerView" label="Model Explorer"/>
 <page content="com.mentor.nucleus.bp.ui.session.views.SessionExplorerView" label="Session Explorer"/>
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
@@ -268,11 +270,13 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.24965034" ratioLeft="357" ratioRight="1073" relationship="2" relative="projectExplorerFolder"/>
 <info folder="true" part="commandFolder" ratio="0.6987296" ratioLeft="385" ratioRight="166" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.PropertySheet" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
@@ -295,132 +299,139 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="89aa1c62-cd75-4251-9314-e751d42eb203" ModelElementID1="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ModelElementIDCount="2" ModelElementLastName="UserInterface::requestAvailableBookables in Standby to Standby: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/SimpleTest/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="ff73a57e-de54-43da-89b9-7fc18e7e85a5" ModelElementID1="ff3aa0df-09b3-4d91-b2a7-212ccf415d16" ModelElementIDCount="2" ModelElementLastName="entryPoint: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor componentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/SimpleTest/InstanceStateMachine/InstanceStateMachine.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="8" ooaId="ff73a57e-de54-43da-89b9-7fc18e7e85a5" ooaType="40"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/TestCases.xtuml" ModelElementID0="68467367-5409-4c38-b4e4-909abfbab8a5" ModelElementIDCount="1" ModelElementLastName="startSimpleTest: Function" ModelElementType="com.mentor.nucleus.bp.core.Function_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/SimpleTest/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="ff73a57e-de54-43da-89b9-7fc18e7e85a5" ModelElementID1="69ed6288-8a7a-4a78-8509-c5afa7b80900" ModelElementIDCount="2" ModelElementLastName="requestSession: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
 <editor componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="10" ooaId="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ooaType="40"/>
 <editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="86a0d005-f343-4f7e-95cb-13f38e31c77d" ModelElementID1="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ModelElementIDCount="2" ModelElementLastName="UserInterface::requestSession in Standby to Standby: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
-<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Bookable/Bookable.xtuml" ModelElementID0="803702ba-1594-4405-b96a-8c76b6ef1c69" ModelElementIDCount="1" ModelElementLastName="Bookable: Model Class" ModelElementType="com.mentor.nucleus.bp.core.ModelClass_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.description.factory" id="com.mentor.nucleus.bp.ui.text.description.DescriptionEditor"/>
-<editor componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="960454f9-cf5f-4331-88bf-8023709586b1" ooaType="108"/>
-<editor componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="10" ooaId="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ooaType="40"/>
-<editor componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/InstanceStateMachine/InstanceStateMachine.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="8" ooaId="c87b2dab-d00f-4d32-a5d3-d1e5b01c9cb3" ooaType="40"/>
-<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="c87b2dab-d00f-4d32-a5d3-d1e5b01c9cb3" ModelElementID1="9fee36df-cfe0-4663-93c6-14edffbbab94" ModelElementIDCount="2" ModelElementLastName="No Event Assigned to creation state: ready: Creation Transition" ModelElementType="com.mentor.nucleus.bp.core.CreationTransition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
-<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="c87b2dab-d00f-4d32-a5d3-d1e5b01c9cb3" ModelElementID1="abba5c5c-cc80-413e-acaf-3b88d5e3c3c6" ModelElementIDCount="2" ModelElementLastName="ready: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
-<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="c87b2dab-d00f-4d32-a5d3-d1e5b01c9cb3" ModelElementID1="379a455a-c9de-4de3-9d42-47151db4b5c1" ModelElementIDCount="2" ModelElementLastName="customerProvided: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
-<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/HotelComponent.xtuml" ModelElementID0="0c0df819-2738-4521-8efe-cfb0e7d5f5ac" ModelElementIDCount="1" ModelElementLastName="addGuest: Provided Signal" ModelElementType="com.mentor.nucleus.bp.core.ProvidedSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
-<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/HotelComponent.xtuml" ModelElementID0="ad67a789-a0d9-4e09-8c1b-cc137ff39554" ModelElementIDCount="1" ModelElementLastName="requestAvailableBookables: Provided Signal" ModelElementType="com.mentor.nucleus.bp.core.ProvidedSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
-<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/BookingSession.xtuml" ModelElementID0="ad7ec6a1-0909-48cc-8bb1-e07002fbff5e" ModelElementIDCount="1" ModelElementLastName="search: Operation" ModelElementType="com.mentor.nucleus.bp.core.Operation_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/HotelComponent.xtuml" ModelElementID0="52f59bac-a1c2-4318-a901-bbe93808d139" ModelElementIDCount="1" ModelElementLastName="requestSession: Provided Signal" ModelElementType="com.mentor.nucleus.bp.core.ProvidedSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/HotelComponent.xtuml" ModelElementID0="9a412571-97a5-4764-873e-18ee296bab0f" ModelElementIDCount="1" ModelElementLastName="session: Provided Signal" ModelElementType="com.mentor.nucleus.bp.core.ProvidedSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
 <editor componentPath="/Hotel/models/Hotel/Library/UserComponent/UserComponent.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="111" ooaId="0968771f-8553-4274-be70-86a03e4e6267" ooaType="98"/>
 <editor componentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/TestCases.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="dcd45889-1e8f-44ce-a0ac-90e67ced68c3" ooaType="108"/>
-<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel.xtuml" ModelElementID0="19b27525-ef50-4d33-ab2c-8b7895f454e1" ModelElementIDCount="1" ModelElementLastName="PopulateFacilityTypes: Function" ModelElementType="com.mentor.nucleus.bp.core.Function_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
-<editor componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="10" ooaId="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ooaType="40"/>
-<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="86a0d005-f343-4f7e-95cb-13f38e31c77d" ModelElementID1="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ModelElementIDCount="2" ModelElementLastName="UserInterface::requestSession in Standby to Standby: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
-<editor componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="960454f9-cf5f-4331-88bf-8023709586b1" ooaType="108"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/UserComponent/UserComponent.xtuml" ModelElementID0="8a7f3173-16b8-460c-b31e-aab059b3d85e" ModelElementIDCount="1" ModelElementLastName="session: Required Signal" ModelElementType="com.mentor.nucleus.bp.core.RequiredSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/SimpleTest/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="ff73a57e-de54-43da-89b9-7fc18e7e85a5" ModelElementID1="8fac4aec-97cb-4a48-8f6e-ef08889c723a" ModelElementIDCount="2" ModelElementLastName="requestAvailableBookables: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor componentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/SimpleTest/InstanceStateMachine/InstanceStateMachine.xtuml" factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="8" ooaId="ff73a57e-de54-43da-89b9-7fc18e7e85a5" ooaType="40"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/SimpleTest/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="ff73a57e-de54-43da-89b9-7fc18e7e85a5" ModelElementID1="69ed6288-8a7a-4a78-8509-c5afa7b80900" ModelElementIDCount="2" ModelElementLastName="requestSession: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
+<editor ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/HotelComponent.xtuml" ModelElementID0="52f59bac-a1c2-4318-a901-bbe93808d139" ModelElementIDCount="1" ModelElementLastName="requestSession: Provided Signal" ModelElementType="com.mentor.nucleus.bp.core.ProvidedSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml" factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor"/>
 </editors>
-<item historyLabel="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" index="0">
+<item historyLabel="requestSession: Provided Signal Activity" index="6">
+<position info="not_deleted" x="221" y="15"/>
+</item>
+<item historyLabel="session: Provided Signal Activity" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="8"/>
+<item historyLabel="xtUML Graphical Editor" index="9"/>
+<item historyLabel="session: Provided Signal Activity" index="7">
 <position/>
+</item>
+<item historyLabel="requestSession: Provided Signal Activity" index="6">
+<position info="not_deleted" x="214" y="0"/>
+</item>
+<item historyLabel="session: Provided Signal Activity" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="9"/>
+<item historyLabel="session: Provided Signal Activity" index="7">
+<position/>
+</item>
+<item historyLabel="requestSession: Provided Signal Activity" index="6">
+<position info="not_deleted" x="214" y="0"/>
+</item>
+<item historyLabel="session: Provided Signal Activity" index="7">
+<position/>
+</item>
+<item historyLabel="requestSession: Provided Signal Activity" index="6">
+<position info="not_deleted" x="214" y="0"/>
+</item>
+<item historyLabel="session: Required Signal Activity" index="10">
+<position info="not_deleted" x="126" y="0"/>
+</item>
+<item historyLabel="requestSession: Provided Signal Activity" index="6">
+<position info="not_deleted" x="214" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="9"/>
+<item historyLabel="session: Required Signal Activity" index="10">
+<position info="not_deleted" x="126" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="9"/>
+<item historyLabel="startSimpleTest: Function Activity" index="2">
+<position info="not_deleted" x="122" y="0"/>
 </item>
 <item historyLabel="xtUML Graphical Editor" index="1"/>
-<item historyLabel="UserInterface::requestSession in Standby to Standby: Transition Activity" index="2">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="startSimpleTest: Function Activity" index="2">
+<position info="not_deleted" x="119" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="9"/>
+<item historyLabel="xtUML Graphical Editor" index="4"/>
+<item historyLabel="xtUML Graphical Editor" index="9"/>
+<item historyLabel="startSimpleTest: Function Activity" index="2">
+<position info="not_deleted" x="119" y="0"/>
 </item>
 <item historyLabel="xtUML Graphical Editor" index="1"/>
-<item historyLabel="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" index="0">
-<position info="not_deleted" x="681" y="0"/>
+<item historyLabel="session: Required Signal Activity" index="10">
+<position info="not_deleted" x="126" y="0"/>
 </item>
-<item historyLabel="Bookable: Model Class Description" index="3">
-<position/>
+<item historyLabel="entryPoint: State Machine State Activity" index="0">
+<position info="not_deleted" x="0" y="57"/>
 </item>
-<item historyLabel="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" index="0">
-<position info="not_deleted" x="681" y="0"/>
+<item historyLabel="session: Required Signal Activity" index="10">
+<position info="not_deleted" x="126" y="0"/>
 </item>
-<item historyLabel="xtUML Graphical Editor" index="4"/>
-<item historyLabel="Bookable: Model Class Description" index="3">
+<item historyLabel="requestSession: State Machine State Activity" index="3">
+<position info="not_deleted" x="108" y="0"/>
+</item>
+<item historyLabel="UserInterface::requestSession in Standby to Standby: Transition Activity" index="5">
+<position info="not_deleted" x="219" y="0"/>
+</item>
+<item historyLabel="requestSession: State Machine State Activity" index="3">
+<position info="not_deleted" x="108" y="0"/>
+</item>
+<item historyLabel="UserInterface::requestSession in Standby to Standby: Transition Activity" index="5">
+<position info="not_deleted" x="219" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="8"/>
+<item historyLabel="xtUML Graphical Editor" index="9"/>
+<item historyLabel="xtUML Graphical Editor" index="1"/>
+<item historyLabel="requestSession: State Machine State Activity" index="3">
+<position info="not_deleted" x="0" y="68"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="1"/>
+<item historyLabel="requestAvailableBookables: State Machine State Activity" index="11">
+<position info="not_deleted" x="42" y="0"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="1"/>
+<item historyLabel="requestAvailableBookables: State Machine State Activity" index="11">
+<position info="not_deleted" x="42" y="0"/>
+</item>
+<item historyLabel="startSimpleTest: Function Activity" index="2">
+<position info="not_deleted" x="0" y="47"/>
+</item>
+<item historyLabel="requestSession: Provided Signal Activity" index="6">
+<position info="not_deleted" x="79" y="0"/>
+</item>
+<item historyLabel="session: Required Signal Activity" index="10">
+<position info="not_deleted" x="37" y="0"/>
+</item>
+<item historyLabel="requestSession: Provided Signal Activity" index="6">
+<position info="not_deleted" x="79" y="0"/>
+</item>
+<item historyLabel="startSimpleTest: Function Activity" index="2">
+<position info="not_deleted" x="0" y="47"/>
+</item>
+<item historyLabel="requestAvailableBookables: State Machine State Activity" index="11">
+<position info="not_deleted" x="42" y="0"/>
+</item>
+<item historyLabel="startSimpleTest: Function Activity" index="2">
+<position info="not_deleted" x="0" y="47"/>
+</item>
+<item historyLabel="xtUML Graphical Editor" index="12"/>
+<item historyLabel="requestSession: State Machine State Activity" index="13">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="xtUML Graphical Editor" index="4"/>
-<item historyLabel="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" index="0">
-<position info="not_deleted" x="681" y="0"/>
-</item>
-<item historyLabel="xtUML Graphical Editor" index="5"/>
-<item historyLabel="xtUML Graphical Editor" index="6"/>
-<item historyLabel="No Event Assigned to creation state: ready: Creation Transition Activity" index="7">
+<item active="true" historyLabel="requestSession: Provided Signal Activity" index="14">
 <position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="xtUML Graphical Editor" index="6"/>
-<item historyLabel="ready: State Machine State Activity" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="xtUML Graphical Editor" index="6"/>
-<item historyLabel="unprovided customer: State Machine State Activity" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="xtUML Graphical Editor" index="6"/>
-<item historyLabel="xtUML Graphical Editor" index="5"/>
-<item historyLabel="xtUML Graphical Editor" index="6"/>
-<item historyLabel="xtUML Graphical Editor" index="5"/>
-<item historyLabel="addGuest: Provided Signal Activity" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="requestAvailableBookables: Provided Signal Activity" index="11">
-<position info="not_deleted" x="586" y="0"/>
-</item>
-<item historyLabel="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" index="0">
-<position info="not_deleted" x="93" y="588"/>
-</item>
-<item historyLabel="addGuest: Provided Signal Activity" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="requestAvailableBookables: Provided Signal Activity" index="11">
-<position/>
-</item>
-<item historyLabel="UserInterface::requestAvailableBookables in Standby to Standby: Transition Activity" index="0">
-<position info="not_deleted" x="0" y="91"/>
-</item>
-<item historyLabel="requestAvailableBookables: Provided Signal Activity" index="11">
-<position/>
-</item>
-<item historyLabel="search: Operation Activity" index="12">
-<position info="not_deleted" x="55" y="0"/>
-</item>
-<item historyLabel="requestAvailableBookables: Provided Signal Activity" index="11">
-<position info="not_deleted" x="1" y="90"/>
-</item>
-<item historyLabel="search: Operation Activity" index="12">
-<position info="not_deleted" x="55" y="0"/>
-</item>
-<item historyLabel="requestAvailableBookables: Provided Signal Activity" index="11">
-<position info="not_deleted" x="527" y="0"/>
-</item>
-<item historyLabel="search: Operation Activity" index="12">
-<position info="not_deleted" x="55" y="0"/>
-</item>
-<item historyLabel="requestAvailableBookables: Provided Signal Activity" index="11">
-<position info="not_deleted" x="527" y="0"/>
-</item>
-<item historyLabel="xtUML Graphical Editor" index="13"/>
-<item historyLabel="xtUML Graphical Editor" index="14"/>
-<item historyLabel="PopulateFacilityTypes: Function Activity" index="15">
-<position info="not_deleted" x="493" y="0"/>
-</item>
-<item historyLabel="xtUML Graphical Editor" index="16"/>
-<item historyLabel="xtUML Graphical Editor" index="16"/>
-<item historyLabel="UserInterface::requestSession in Standby to Standby: Transition Activity" index="17">
-<position info="not_deleted" x="84" y="80"/>
-</item>
-<item historyLabel="xtUML Graphical Editor" index="16"/>
-<item historyLabel="PopulateFacilityTypes: Function Activity" index="15">
-<position/>
-</item>
-<item historyLabel="xtUML Graphical Editor" index="18"/>
-<item historyLabel="PopulateFacilityTypes: Function Activity" index="15">
-<position info="not_deleted" x="114" y="0"/>
-</item>
-<item historyLabel="xtUML Graphical Editor" index="18"/>
-<item historyLabel="PopulateFacilityTypes: Function Activity" index="15">
-<position/>
-</item>
-<item historyLabel="xtUML Graphical Editor" index="18"/>
-<item active="true" historyLabel="PopulateFacilityTypes: Function Activity" index="15">
-<position/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -428,6 +439,9 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@2bf4a9"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 <trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
@@ -440,50 +454,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="PopulateFacilityTypes: Function Activity" tooltip="PopulateFacilityTypes: Function Activity">
-<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel.xtuml" ModelElementID0="19b27525-ef50-4d33-ab2c-8b7895f454e1" ModelElementIDCount="1" ModelElementLastName="PopulateFacilityTypes: Function" ModelElementType="com.mentor.nucleus.bp.core.Function_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="requestSession: Provided Signal Activity" tooltip="requestSession: Provided Signal Activity">
+<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/HotelComponent.xtuml" ModelElementID0="52f59bac-a1c2-4318-a901-bbe93808d139" ModelElementIDCount="1" ModelElementLastName="requestSession: Provided Signal" ModelElementType="com.mentor.nucleus.bp.core.ProvidedSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="requestSession: State Machine State Activity" tooltip="requestSession: State Machine State Activity">
+<persistable ModelComponentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/SimpleTest/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="ff73a57e-de54-43da-89b9-7fc18e7e85a5" ModelElementID1="69ed6288-8a7a-4a78-8509-c5afa7b80900" ModelElementIDCount="2" ModelElementLastName="requestSession: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="startSimpleTest: Function Activity" tooltip="startSimpleTest: Function Activity">
+<persistable ModelComponentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/TestCases.xtuml" ModelElementID0="68467367-5409-4c38-b4e4-909abfbab8a5" ModelElementIDCount="1" ModelElementLastName="startSimpleTest: Function" ModelElementType="com.mentor.nucleus.bp.core.Function_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="requestAvailableBookables: State Machine State Activity" tooltip="requestAvailableBookables: State Machine State Activity">
+<persistable ModelComponentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/SimpleTest/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="ff73a57e-de54-43da-89b9-7fc18e7e85a5" ModelElementID1="8fac4aec-97cb-4a48-8f6e-ef08889c723a" ModelElementIDCount="2" ModelElementLastName="requestAvailableBookables: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="SimpleTest: Instance State Machine" tooltip="SimpleTest: Instance State Machine">
+<persistable componentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/SimpleTest/InstanceStateMachine/InstanceStateMachine.xtuml" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="8" ooaId="ff73a57e-de54-43da-89b9-7fc18e7e85a5" ooaType="40"/>
 </file>
 <file factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="TestCases: Package Diagram" tooltip="TestCases: Package Diagram">
 <persistable componentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/TestCases.xtuml" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="dcd45889-1e8f-44ce-a0ac-90e67ced68c3" ooaType="108"/>
 </file>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="session: Required Signal Activity" tooltip="session: Required Signal Activity">
+<persistable ModelComponentPath="/Hotel/models/Hotel/Library/UserComponent/UserComponent.xtuml" ModelElementID0="8a7f3173-16b8-460c-b31e-aab059b3d85e" ModelElementIDCount="1" ModelElementLastName="session: Required Signal" ModelElementType="com.mentor.nucleus.bp.core.RequiredSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
+</file>
 <file factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="UserComponent: Component Diagram" tooltip="UserComponent: Component Diagram">
 <persistable componentPath="/Hotel/models/Hotel/Library/UserComponent/UserComponent.xtuml" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="111" ooaId="0968771f-8553-4274-be70-86a03e4e6267" ooaType="98"/>
 </file>
-<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="search: Operation Activity" tooltip="search: Operation Activity">
-<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/BookingSession.xtuml" ModelElementID0="ad7ec6a1-0909-48cc-8bb1-e07002fbff5e" ModelElementIDCount="1" ModelElementLastName="search: Operation" ModelElementType="com.mentor.nucleus.bp.core.Operation_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
-</file>
-<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="requestAvailableBookables: Provided Signal Activity" tooltip="requestAvailableBookables: Provided Signal Activity">
-<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/HotelComponent.xtuml" ModelElementID0="ad67a789-a0d9-4e09-8c1b-cc137ff39554" ModelElementIDCount="1" ModelElementLastName="requestAvailableBookables: Provided Signal" ModelElementType="com.mentor.nucleus.bp.core.ProvidedSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
-</file>
-<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="addGuest: Provided Signal Activity" tooltip="addGuest: Provided Signal Activity">
-<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/HotelComponent.xtuml" ModelElementID0="0c0df819-2738-4521-8efe-cfb0e7d5f5ac" ModelElementIDCount="1" ModelElementLastName="addGuest: Provided Signal" ModelElementType="com.mentor.nucleus.bp.core.ProvidedSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
-</file>
-<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="customerProvided: State Machine State Activity" tooltip="customerProvided: State Machine State Activity">
-<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="c87b2dab-d00f-4d32-a5d3-d1e5b01c9cb3" ModelElementID1="379a455a-c9de-4de3-9d42-47151db4b5c1" ModelElementIDCount="2" ModelElementLastName="customerProvided: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
-</file>
-<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="ready: State Machine State Activity" tooltip="ready: State Machine State Activity">
-<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="c87b2dab-d00f-4d32-a5d3-d1e5b01c9cb3" ModelElementID1="abba5c5c-cc80-413e-acaf-3b88d5e3c3c6" ModelElementIDCount="2" ModelElementLastName="ready: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
-</file>
-<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="No Event Assigned to creation state: ready: Creation Transition Activity" tooltip="No Event Assigned to creation state: ready: Creation Transition Activity">
-<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="c87b2dab-d00f-4d32-a5d3-d1e5b01c9cb3" ModelElementID1="9fee36df-cfe0-4663-93c6-14edffbbab94" ModelElementIDCount="2" ModelElementLastName="No Event Assigned to creation state: ready: Creation Transition" ModelElementType="com.mentor.nucleus.bp.core.CreationTransition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
-</file>
-<file factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="BookingSession: Instance State Machine" tooltip="BookingSession: Instance State Machine">
-<persistable componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/InstanceStateMachine/InstanceStateMachine.xtuml" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="8" ooaId="c87b2dab-d00f-4d32-a5d3-d1e5b01c9cb3" ooaType="40"/>
-</file>
-<file factoryID="com.mentor.nucleus.bp.ui.text.description.factory" id="com.mentor.nucleus.bp.ui.text.description.DescriptionEditor" name="Bookable: Model Class Description" tooltip="Bookable: Model Class Description">
-<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Bookable/Bookable.xtuml" ModelElementID0="803702ba-1594-4405-b96a-8c76b6ef1c69" ModelElementIDCount="1" ModelElementLastName="Bookable: Model Class" ModelElementType="com.mentor.nucleus.bp.core.ModelClass_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
-</file>
-<file factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="Hotel: Package Diagram" tooltip="Hotel: Package Diagram">
-<persistable componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel.xtuml" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="112" ooaId="960454f9-cf5f-4331-88bf-8023709586b1" ooaType="108"/>
-</file>
-<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="UserInterface::requestSession in Standby to Standby: Transition Activity" tooltip="UserInterface::requestSession in Standby to Standby: Transition Activity">
-<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="86a0d005-f343-4f7e-95cb-13f38e31c77d" ModelElementID1="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ModelElementIDCount="2" ModelElementLastName="UserInterface::requestSession in Standby to Standby: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="session: Provided Signal Activity" tooltip="session: Provided Signal Activity">
+<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/HotelComponent.xtuml" ModelElementID0="9a412571-97a5-4764-873e-18ee296bab0f" ModelElementIDCount="1" ModelElementLastName="session: Provided Signal" ModelElementType="com.mentor.nucleus.bp.core.ProvidedSignal_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
 </file>
 <file factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="BookingSession: Class State Machine" tooltip="BookingSession: Class State Machine">
 <persistable componentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="10" ooaId="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ooaType="40"/>
 </file>
-<file factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="HotelComponent: Component Diagram" tooltip="HotelComponent: Component Diagram">
-<persistable componentPath="/Hotel/models/Hotel/Library/HotelComponent/HotelComponent.xtuml" modelRootId="/Hotel/models/Hotel/Library/Library.xtuml" modelType="111" ooaId="ab2192c8-8390-4631-9e2c-fca2a1f30c08" ooaType="98"/>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="UserInterface::requestSession in Standby to Standby: Transition Activity" tooltip="UserInterface::requestSession in Standby to Standby: Transition Activity">
+<persistable ModelComponentPath="/Hotel/models/Hotel/Library/HotelComponent/Hotel/BookingSession/ClassStateMachine/ClassStateMachine.xtuml" ModelElementID0="86a0d005-f343-4f7e-95cb-13f38e31c77d" ModelElementID1="1cceaf51-6f2a-4dbc-806e-afb09371f60a" ModelElementIDCount="2" ModelElementLastName="UserInterface::requestSession in Standby to Standby: Transition" ModelElementType="com.mentor.nucleus.bp.core.Transition_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.graphics.editorFactory" id="com.mentor.nucleus.bp.ui.graphics.editor.ModelEditor" name="Hotel: System Model Package Diagram" tooltip="Hotel: System Model Package Diagram">
+<persistable componentPath="/Hotel/models/Hotel/Hotel.xtuml" modelRootId="__default_root" modelType="108" ooaId="77552e13-265a-4a67-beca-bb6af5f15d0b" ooaType="92"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="entryPoint: State Machine State Activity" tooltip="entryPoint: State Machine State Activity">
+<persistable ModelComponentPath="/Hotel/models/Hotel/Library/UserComponent/TestCases/SimpleTest/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="ff73a57e-de54-43da-89b9-7fc18e7e85a5" ModelElementID1="ff3aa0df-09b3-4d91-b2a7-212ccf415d16" ModelElementIDCount="2" ModelElementLastName="entryPoint: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/Hotel/models/Hotel/Library/Library.xtuml"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="pressStartStop: State Machine State Activity" tooltip="pressStartStop: State Machine State Activity">
+<persistable ModelComponentPath="/GPS Watch/models/GPS Watch/Library/UI/UI/TestCase/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="424af756-01fa-45af-adae-776bfaf64479" ModelElementID1="9256f8f6-e3c1-42a2-9d40-3e3b9ef0e714" ModelElementIDCount="2" ModelElementLastName="pressStartStop: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/GPS Watch/models/GPS Watch/Library/Library.xtuml"/>
+</file>
+<file factoryID="com.mentor.nucleus.bp.ui.text.activity.factory" id="com.mentor.nucleus.bp.ui.text.activity.ActivityEditor" name="testCaseFinished: State Machine State Activity" tooltip="testCaseFinished: State Machine State Activity">
+<persistable ModelComponentPath="/GPS Watch/models/GPS Watch/Library/UI/UI/TestCase/InstanceStateMachine/InstanceStateMachine.xtuml" ModelElementID0="424af756-01fa-45af-adae-776bfaf64479" ModelElementID1="99723a1b-ad7b-4915-8423-c20e14660eca" ModelElementIDCount="2" ModelElementLastName="testCaseFinished: State Machine State" ModelElementType="com.mentor.nucleus.bp.core.StateMachineState_c" ModelRootID="/GPS Watch/models/GPS Watch/Library/Library.xtuml"/>
 </file>
 </mruList>
 </workbench>

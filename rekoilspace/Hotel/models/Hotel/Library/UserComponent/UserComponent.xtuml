@@ -64,7 +64,7 @@ INSERT INTO GD_GE
 	"59710e0c-1d62-4800-a82b-b80bbaed4667",
 	93,
 	0,
-	'Hotel::Library::UserComponent::Port1::BookingProvider');
+	'Hotel::Library::UserComponent::UserInterface::BookingProvider');
 INSERT INTO GD_CON
 	VALUES ("1f36a874-df12-475e-9d32-55219d81be8e",
 	"00000000-0000-0000-0000-000000000000");
@@ -98,8 +98,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"8af12003-932a-48d2-9c59-5059b24fc38a");
 INSERT INTO DIM_GE
-	VALUES (3945.000000,
-	3159.000000,
+	VALUES (3876.000000,
+	3162.000000,
 	"8af12003-932a-48d2-9c59-5059b24fc38a",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -140,7 +140,7 @@ INSERT INTO DIM_WAY
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_WAY
 	VALUES ("1e12600a-d4bc-4b11-86b4-86451ec6ce67",
-	3960.000000,
+	3912.000000,
 	3204.000000,
 	"1f36a874-df12-475e-9d32-55219d81be8e",
 	"00000000-0000-0000-0000-000000000000",
@@ -192,7 +192,7 @@ INSERT INTO DIM_DIA
 INSERT INTO C_PO
 	VALUES ("187ffcd4-1a0a-4d08-9368-d7eb60024fef",
 	"0968771f-8553-4274-be70-86a03e4e6267",
-	'Port1',
+	'UserInterface',
 	0,
 	0);
 INSERT INTO C_IR
@@ -205,7 +205,7 @@ INSERT INTO C_R
 	'BookingProvider',
 	'',
 	'Unnamed Interface',
-	'UserComponent::Port1::BookingProvider');
+	'UserComponent::UserInterface::BookingProvider');
 INSERT INTO SPR_REP
 	VALUES ("0f4f0c74-9081-4693-8692-8e7887366c52",
 	"8500002a-94f3-4a61-bfa8-32f8fd7d89b4",
@@ -215,7 +215,7 @@ INSERT INTO SPR_RS
 	'requestAvailableBookables',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("8500002a-94f3-4a61-bfa8-32f8fd7d89b4",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
@@ -232,7 +232,7 @@ INSERT INTO SPR_RS
 	'available',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("54d1cfcd-e847-40b5-be88-ddf038c56595",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
@@ -249,7 +249,7 @@ INSERT INTO SPR_RS
 	'select',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("55b848f9-d68a-4698-bf86-446ac83e49f5",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
@@ -266,7 +266,7 @@ INSERT INTO SPR_RS
 	'extraServices',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("10d65452-16c4-45b0-ad3e-4dec03bb99a7",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
@@ -283,7 +283,7 @@ INSERT INTO SPR_RS
 	'addServices',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("87ed1c56-1bee-4041-bca4-056967095bc2",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
@@ -300,7 +300,7 @@ INSERT INTO SPR_RS
 	'customerDetails',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("57eb1124-4a29-48ad-8677-d8760788067a",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
@@ -317,7 +317,7 @@ INSERT INTO SPR_RS
 	'addGuest',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("275df8ce-b628-4b96-85dd-66e9224fc9df",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
@@ -334,7 +334,7 @@ INSERT INTO SPR_RS
 	'paymentInfo',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("40e06920-24e2-499d-b1c8-deb66c9637ec",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
@@ -351,7 +351,7 @@ INSERT INTO SPR_RS
 	'bookingConfirmation',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("19aa6808-338c-45b0-8a31-1b3efb70b47a",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
@@ -368,7 +368,7 @@ INSERT INTO SPR_RS
 	'errorSignal',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("89169ec3-d50b-4b5b-95fa-d95fb15c3f98",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
@@ -385,7 +385,7 @@ INSERT INTO SPR_RS
 	'requestSession',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("b21fad1b-897b-424f-84f8-01bdab76de49",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
@@ -401,8 +401,12 @@ INSERT INTO SPR_RS
 	VALUES ("8a7f3173-16b8-460c-b31e-aab059b3d85e",
 	'session',
 	'',
-	'',
-	3);
+	'LOG::LogInfo(message: "Got session ID");
+select any st from instances of SIMPLETEST;
+
+generate SIMPLETEST2:sessionEvent to st;
+',
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("0a31b7ea-b3a4-43b3-bfab-1e664637468e",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",

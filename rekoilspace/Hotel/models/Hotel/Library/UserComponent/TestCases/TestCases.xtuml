@@ -32,7 +32,7 @@ INSERT INTO GD_GE
 	"6daee5e1-aefd-49c8-b18d-234fb0eb1928",
 	21,
 	0,
-	'Hotel::Library::UserComponent::TestCases::RequestAvailableBookingsTest');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest');
 INSERT INTO GD_SHP
 	VALUES ("fb581ded-8eb0-405d-9fd1-9d621b9a5b31");
 INSERT INTO GD_NCS
@@ -57,6 +57,63 @@ INSERT INTO DIM_DIA
 	4000.000000,
 	3000.000000,
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT
+	VALUES ("9db8c033-ff94-41f2-bd5c-36e5cdae0e4b",
+	"00000000-0000-0000-0000-000000000000",
+	'inst_ref<SimpleTest>',
+	'',
+	'');
+INSERT INTO S_IRDT
+	VALUES ("9db8c033-ff94-41f2-bd5c-36e5cdae0e4b",
+	0,
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
+INSERT INTO O_OBJ_PROXY
+	VALUES ("6daee5e1-aefd-49c8-b18d-234fb0eb1928",
+	'SimpleTest',
+	1,
+	'SIMPLETEST',
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'./SimpleTest/SimpleTest.xtuml');
+INSERT INTO PE_PE
+	VALUES ("9db8c033-ff94-41f2-bd5c-36e5cdae0e4b",
+	1,
+	"dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
+	"00000000-0000-0000-0000-000000000000",
+	3);
+INSERT INTO S_DT
+	VALUES ("3b6ab3cd-ea6e-4950-b3b5-4414cd4a5d43",
+	"00000000-0000-0000-0000-000000000000",
+	'inst_ref_set<SimpleTest>',
+	'',
+	'');
+INSERT INTO S_IRDT
+	VALUES ("3b6ab3cd-ea6e-4950-b3b5-4414cd4a5d43",
+	1,
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
+INSERT INTO PE_PE
+	VALUES ("3b6ab3cd-ea6e-4950-b3b5-4414cd4a5d43",
+	1,
+	"dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
+	"00000000-0000-0000-0000-000000000000",
+	3);
+INSERT INTO S_SYNC
+	VALUES ("68467367-5409-4c38-b4e4-909abfbab8a5",
+	"00000000-0000-0000-0000-000000000000",
+	'startSimpleTest',
+	'',
+	'LOG::LogInfo(message: "Starting simpleTest ;");
+create object instance st of SIMPLETEST;
+generate SIMPLETEST1:start to st;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'');
+INSERT INTO PE_PE
+	VALUES ("68467367-5409-4c38-b4e4-909abfbab8a5",
+	1,
+	"dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
+	"00000000-0000-0000-0000-000000000000",
+	1);
 INSERT INTO PE_PE
 	VALUES ("dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
 	1,
