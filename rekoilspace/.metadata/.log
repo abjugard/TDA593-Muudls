@@ -2346,3 +2346,423 @@ org.eclipse.core.internal.resources.ResourceException: Resource is out of sync w
 
 !ENTRY BridgePoint Text Plug-in 4 4 2013-12-03 16:44:02.625
 !MESSAGE The memento data could not be loaded
+!SESSION 2013-12-04 13:26:16.119 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_35
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_GB
+Framework arguments:  -product com.mentor.nucleus.bp.pkg.BridgePoint
+Command-line arguments:  -os linux -ws gtk -arch x86 -product com.mentor.nucleus.bp.pkg.BridgePoint
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.078
+!MESSAGE Can't load some required project files
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Billing/getCost__Operation.1.oal'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.mentor.nucleus.bp.ui.text.ModelElementID.createInstance(ModelElementID.java:341)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.initializeFor(PlaceHolderManager.java:212)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.access$100(PlaceHolderManager.java:57)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager$PlaceHolderStateSynchronizer.handleComponentLoaded(PlaceHolderManager.java:441)
+	at com.mentor.nucleus.bp.ui.text.AbstractModelElementListener.modelElementLoaded(AbstractModelElementListener.java:82)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$8.invoke(ModelRoot.java:420)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$ListenerMethodInvoker.run(ModelRoot.java:253)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2013-12-04 13:26:25.079
+!MESSAGE Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Billing/getCost__Operation.1.oal'.
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.083
+!MESSAGE The memento data could not be loaded
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.263
+!MESSAGE Can't load some required project files
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Billing/isPayed__Operation.1.oal'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.mentor.nucleus.bp.ui.text.ModelElementID.createInstance(ModelElementID.java:341)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.initializeFor(PlaceHolderManager.java:212)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.access$100(PlaceHolderManager.java:57)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager$PlaceHolderStateSynchronizer.handleComponentLoaded(PlaceHolderManager.java:441)
+	at com.mentor.nucleus.bp.ui.text.AbstractModelElementListener.modelElementLoaded(AbstractModelElementListener.java:82)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$8.invoke(ModelRoot.java:420)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$ListenerMethodInvoker.run(ModelRoot.java:253)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2013-12-04 13:26:25.263
+!MESSAGE Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Billing/isPayed__Operation.1.oal'.
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.263
+!MESSAGE The memento data could not be loaded
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.277
+!MESSAGE Can't load some required project files
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Guest/setFacility__Operation.oal'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.mentor.nucleus.bp.ui.text.ModelElementID.createInstance(ModelElementID.java:341)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.initializeFor(PlaceHolderManager.java:212)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.access$100(PlaceHolderManager.java:57)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager$PlaceHolderStateSynchronizer.handleComponentLoaded(PlaceHolderManager.java:441)
+	at com.mentor.nucleus.bp.ui.text.AbstractModelElementListener.modelElementLoaded(AbstractModelElementListener.java:82)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$8.invoke(ModelRoot.java:420)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$ListenerMethodInvoker.run(ModelRoot.java:253)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2013-12-04 13:26:25.278
+!MESSAGE Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Guest/setFacility__Operation.oal'.
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.278
+!MESSAGE The memento data could not be loaded
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.281
+!MESSAGE Can't load some required project files
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel/addBooking__Operation.oal'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.mentor.nucleus.bp.ui.text.ModelElementID.createInstance(ModelElementID.java:341)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.initializeFor(PlaceHolderManager.java:212)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.access$100(PlaceHolderManager.java:57)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager$PlaceHolderStateSynchronizer.handleComponentLoaded(PlaceHolderManager.java:441)
+	at com.mentor.nucleus.bp.ui.text.AbstractModelElementListener.modelElementLoaded(AbstractModelElementListener.java:82)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$8.invoke(ModelRoot.java:420)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$ListenerMethodInvoker.run(ModelRoot.java:253)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2013-12-04 13:26:25.281
+!MESSAGE Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel/addBooking__Operation.oal'.
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.282
+!MESSAGE The memento data could not be loaded
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.282
+!MESSAGE Can't load some required project files
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel/availableBookables__Operation.oal'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.mentor.nucleus.bp.ui.text.ModelElementID.createInstance(ModelElementID.java:341)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.initializeFor(PlaceHolderManager.java:212)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.access$100(PlaceHolderManager.java:57)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager$PlaceHolderStateSynchronizer.handleComponentLoaded(PlaceHolderManager.java:441)
+	at com.mentor.nucleus.bp.ui.text.AbstractModelElementListener.modelElementLoaded(AbstractModelElementListener.java:82)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$8.invoke(ModelRoot.java:420)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$ListenerMethodInvoker.run(ModelRoot.java:253)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2013-12-04 13:26:25.282
+!MESSAGE Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel/availableBookables__Operation.oal'.
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.282
+!MESSAGE The memento data could not be loaded
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.282
+!MESSAGE Can't load some required project files
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel/createFacilityGroup__Operation.oal'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.mentor.nucleus.bp.ui.text.ModelElementID.createInstance(ModelElementID.java:341)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.initializeFor(PlaceHolderManager.java:212)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.access$100(PlaceHolderManager.java:57)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager$PlaceHolderStateSynchronizer.handleComponentLoaded(PlaceHolderManager.java:441)
+	at com.mentor.nucleus.bp.ui.text.AbstractModelElementListener.modelElementLoaded(AbstractModelElementListener.java:82)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$8.invoke(ModelRoot.java:420)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$ListenerMethodInvoker.run(ModelRoot.java:253)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2013-12-04 13:26:25.283
+!MESSAGE Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel/createFacilityGroup__Operation.oal'.
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.283
+!MESSAGE The memento data could not be loaded
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.283
+!MESSAGE Can't load some required project files
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel/createFacility__Operation.oal'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.mentor.nucleus.bp.ui.text.ModelElementID.createInstance(ModelElementID.java:341)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.initializeFor(PlaceHolderManager.java:212)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.access$100(PlaceHolderManager.java:57)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager$PlaceHolderStateSynchronizer.handleComponentLoaded(PlaceHolderManager.java:441)
+	at com.mentor.nucleus.bp.ui.text.AbstractModelElementListener.modelElementLoaded(AbstractModelElementListener.java:82)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$8.invoke(ModelRoot.java:420)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$ListenerMethodInvoker.run(ModelRoot.java:253)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2013-12-04 13:26:25.283
+!MESSAGE Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel/createFacility__Operation.oal'.
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.283
+!MESSAGE The memento data could not be loaded
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.284
+!MESSAGE Can't load some required project files
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel/createService__Operation.oal'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.mentor.nucleus.bp.ui.text.ModelElementID.createInstance(ModelElementID.java:341)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.initializeFor(PlaceHolderManager.java:212)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.access$100(PlaceHolderManager.java:57)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager$PlaceHolderStateSynchronizer.handleComponentLoaded(PlaceHolderManager.java:441)
+	at com.mentor.nucleus.bp.ui.text.AbstractModelElementListener.modelElementLoaded(AbstractModelElementListener.java:82)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$8.invoke(ModelRoot.java:420)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$ListenerMethodInvoker.run(ModelRoot.java:253)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2013-12-04 13:26:25.284
+!MESSAGE Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel/createService__Operation.oal'.
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.284
+!MESSAGE The memento data could not be loaded
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.284
+!MESSAGE Can't load some required project files
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel/createStaff__Operation.oal'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.mentor.nucleus.bp.ui.text.ModelElementID.createInstance(ModelElementID.java:341)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.initializeFor(PlaceHolderManager.java:212)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.access$100(PlaceHolderManager.java:57)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager$PlaceHolderStateSynchronizer.handleComponentLoaded(PlaceHolderManager.java:441)
+	at com.mentor.nucleus.bp.ui.text.AbstractModelElementListener.modelElementLoaded(AbstractModelElementListener.java:82)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$8.invoke(ModelRoot.java:420)
+	at com.mentor.nucleus.bp.core.common.ModelRoot$ListenerMethodInvoker.run(ModelRoot.java:253)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2013-12-04 13:26:25.284
+!MESSAGE Resource is out of sync with the file system: '/Hotel/models/Hotel/Library/HotelComponent/Hotel/Hotel/createStaff__Operation.oal'.
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:26:25.285
+!MESSAGE The memento data could not be loaded
+
+!ENTRY BridgePoint Text Plug-in 4 4 2013-12-04 13:55:46.952
+!MESSAGE Internal parser error.  Parsing thread interrupted pre-maturely.  OAL in this action home caused an exception in the parser.
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.als.oal.Oal_validate.Create_object_statement_end(Oal_validate.java:18014)
+	at com.mentor.nucleus.bp.als.oal.OalParser.create_object_statement(OalParser.java:1425)
+	at com.mentor.nucleus.bp.als.oal.OalParser.statement(OalParser.java:384)
+	at com.mentor.nucleus.bp.als.oal.OalParser.block(OalParser.java:190)
+	at com.mentor.nucleus.bp.als.oal.OalParser.while_statement(OalParser.java:2814)
+	at com.mentor.nucleus.bp.als.oal.OalParser.statement(OalParser.java:314)
+	at com.mentor.nucleus.bp.als.oal.OalParser.block(OalParser.java:190)
+	at com.mentor.nucleus.bp.als.oal.OalParser.action(OalParser.java:102)
+	at com.mentor.nucleus.bp.ui.text.activity.TextParser.action(TextParser.java:178)
+	at com.mentor.nucleus.bp.ui.text.activity.ActivityEditor$ParseRunnable.run(ActivityEditor.java:170)
+	at java.lang.Thread.run(Unknown Source)
+	at com.mentor.nucleus.bp.ui.text.activity.ActivityEditor$TolerantThread.run(ActivityEditor.java:341)

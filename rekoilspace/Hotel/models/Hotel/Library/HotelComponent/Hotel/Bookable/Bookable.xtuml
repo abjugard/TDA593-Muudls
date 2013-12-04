@@ -32,7 +32,7 @@ INSERT INTO O_TFR
 	"803702ba-1594-4405-b96a-8c76b6ef1c69",
 	'getBookableRepresentation',
 	'',
-	"01756a25-fbe0-498d-a872-d2e6b537c053",
+	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'
 
@@ -43,13 +43,6 @@ BookingRepresentation.price = self.price;
 	1,
 	'',
 	"3a9b4376-648e-4e0e-91f4-8c8ff2abb7f5");
-INSERT INTO S_DT_PROXY
-	VALUES ("01756a25-fbe0-498d-a872-d2e6b537c053",
-	"00000000-0000-0000-0000-000000000000",
-	'BookableRepresentation',
-	'',
-	'',
-	'../../../ExternalDataTypes/ExternalDataTypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("7edb737c-eda0-435c-ab44-20ad0293ebdb",
 	"803702ba-1594-4405-b96a-8c76b6ef1c69");

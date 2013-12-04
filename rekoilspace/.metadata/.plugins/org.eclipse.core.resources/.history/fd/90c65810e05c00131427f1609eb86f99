@@ -1,0 +1,292 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("7ab991a5-3958-4a50-bf82-5b2da16ecd76",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Shared EEs',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("e92d8f7f-36ce-48c3-96bc-851f02a71c88",
+	112,
+	"7ab991a5-3958-4a50-bf82-5b2da16ecd76",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	200,
+	150,
+	0,
+	'',
+	'Hotel::Shared EEs');
+INSERT INTO GD_GE
+	VALUES ("6565c6fd-89b8-4f8f-afed-ba4b33915a15",
+	"e92d8f7f-36ce-48c3-96bc-851f02a71c88",
+	"9e34f9a4-8e50-4187-afa5-b9ff40821aa5",
+	12,
+	0,
+	'Hotel::Shared EEs::Architecture');
+INSERT INTO GD_SHP
+	VALUES ("6565c6fd-89b8-4f8f-afed-ba4b33915a15");
+INSERT INTO GD_NCS
+	VALUES ("6565c6fd-89b8-4f8f-afed-ba4b33915a15");
+INSERT INTO DIM_ND
+	VALUES (200.000000,
+	150.000000,
+	"6565c6fd-89b8-4f8f-afed-ba4b33915a15");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"6565c6fd-89b8-4f8f-afed-ba4b33915a15",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("6565c6fd-89b8-4f8f-afed-ba4b33915a15",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_GE
+	VALUES ("6ef7106a-8640-4e4c-9bf2-e811b876a99f",
+	"e92d8f7f-36ce-48c3-96bc-851f02a71c88",
+	"fad39749-df67-43e1-8b90-799862a3757c",
+	12,
+	0,
+	'Hotel::Shared EEs::Logging');
+INSERT INTO GD_SHP
+	VALUES ("6ef7106a-8640-4e4c-9bf2-e811b876a99f");
+INSERT INTO GD_NCS
+	VALUES ("6ef7106a-8640-4e4c-9bf2-e811b876a99f");
+INSERT INTO DIM_ND
+	VALUES (200.000000,
+	150.000000,
+	"6ef7106a-8640-4e4c-9bf2-e811b876a99f");
+INSERT INTO DIM_GE
+	VALUES (220.000000,
+	0.000000,
+	"6ef7106a-8640-4e4c-9bf2-e811b876a99f",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("6ef7106a-8640-4e4c-9bf2-e811b876a99f",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_DIA
+	VALUES ("e92d8f7f-36ce-48c3-96bc-851f02a71c88",
+	'',
+	1.000000,
+	4000.000000,
+	3000.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_EE
+	VALUES ("9e34f9a4-8e50-4187-afa5-b9ff40821aa5",
+	'Architecture',
+	'',
+	'ARCH',
+	"00000000-0000-0000-0000-000000000000",
+	'',
+	'Architecture');
+INSERT INTO S_BRG
+	VALUES ("4669736f-8ca6-4c43-9bd1-15e90b02c9f4",
+	"9e34f9a4-8e50-4187-afa5-b9ff40821aa5",
+	'shutdown',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'control stop;',
+	1,
+	'');
+INSERT INTO PE_PE
+	VALUES ("9e34f9a4-8e50-4187-afa5-b9ff40821aa5",
+	1,
+	"7ab991a5-3958-4a50-bf82-5b2da16ecd76",
+	"00000000-0000-0000-0000-000000000000",
+	5);
+INSERT INTO S_EE
+	VALUES ("fad39749-df67-43e1-8b90-799862a3757c",
+	'Logging',
+	'',
+	'LOG',
+	"00000000-0000-0000-0000-000000000000",
+	'',
+	'Logging');
+INSERT INTO S_BRG
+	VALUES ("21801458-b22d-439e-a399-3ef5384aaf91",
+	"fad39749-df67-43e1-8b90-799862a3757c",
+	'LogSuccess',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'',
+	1,
+	'');
+INSERT INTO S_BPARM
+	VALUES ("4f3dc2d0-bef8-43e0-8748-16ddb80b9ebc",
+	"21801458-b22d-439e-a399-3ef5384aaf91",
+	'message',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_BRG
+	VALUES ("43685d54-3033-4e04-b853-5510e9a6781b",
+	"fad39749-df67-43e1-8b90-799862a3757c",
+	'LogFailure',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'',
+	1,
+	'');
+INSERT INTO S_BPARM
+	VALUES ("fa599f4c-fe9c-4b1e-815d-c98ebdc65d9f",
+	"43685d54-3033-4e04-b853-5510e9a6781b",
+	'message',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_BRG
+	VALUES ("768e1cca-7403-495c-9b22-afd11a473eb6",
+	"fad39749-df67-43e1-8b90-799862a3757c",
+	'LogInfo',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'',
+	1,
+	'');
+INSERT INTO S_BPARM
+	VALUES ("f676d1cb-709e-45ec-b3cd-5cd645f64b51",
+	"768e1cca-7403-495c-9b22-afd11a473eb6",
+	'message',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_BRG
+	VALUES ("badb0c1c-59d4-4171-b6dc-4d014c05a69b",
+	"fad39749-df67-43e1-8b90-799862a3757c",
+	'LogDate',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'',
+	1,
+	'');
+INSERT INTO S_BPARM
+	VALUES ("2bd39248-c021-4cd4-bee9-0d1d6e7eb9aa",
+	"badb0c1c-59d4-4171-b6dc-4d014c05a69b",
+	'd',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_BPARM
+	VALUES ("83234d50-594b-458b-a62b-f47b31effc32",
+	"badb0c1c-59d4-4171-b6dc-4d014c05a69b",
+	'message',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"2bd39248-c021-4cd4-bee9-0d1d6e7eb9aa",
+	'');
+INSERT INTO S_BRG
+	VALUES ("0b1d27b9-3158-473f-bb9b-8c8be6e0634e",
+	"fad39749-df67-43e1-8b90-799862a3757c",
+	'LogTime',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'',
+	1,
+	'');
+INSERT INTO S_BPARM
+	VALUES ("a06921df-e610-47e1-8e10-8486d9032cbc",
+	"0b1d27b9-3158-473f-bb9b-8c8be6e0634e",
+	't',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"faac3627-d51c-4ea8-bc3a-2111aa687e5d",
+	'');
+INSERT INTO S_BPARM
+	VALUES ("faac3627-d51c-4ea8-bc3a-2111aa687e5d",
+	"0b1d27b9-3158-473f-bb9b-8c8be6e0634e",
+	'message',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_BRG
+	VALUES ("7ef21ad9-927c-4b1b-92a2-85003af84ab1",
+	"fad39749-df67-43e1-8b90-799862a3757c",
+	'LogReal',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'',
+	1,
+	'');
+INSERT INTO S_BPARM
+	VALUES ("648d875e-c1c6-4f8b-83f7-353ca551df2d",
+	"7ef21ad9-927c-4b1b-92a2-85003af84ab1",
+	'r',
+	"ba5eda7a-def5-0000-0000-000000000003",
+	0,
+	'',
+	"cf3ad5fd-6bd3-443d-bdee-959aedc60b72",
+	'');
+INSERT INTO S_BPARM
+	VALUES ("cf3ad5fd-6bd3-443d-bdee-959aedc60b72",
+	"7ef21ad9-927c-4b1b-92a2-85003af84ab1",
+	'message',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_BRG
+	VALUES ("f042e0db-8b5c-46dd-910f-2c376ca7fb93",
+	"fad39749-df67-43e1-8b90-799862a3757c",
+	'LogInteger',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'',
+	0,
+	'');
+INSERT INTO S_BPARM
+	VALUES ("10aa8954-4293-4341-bbfe-cc1a144eceb4",
+	"f042e0db-8b5c-46dd-910f-2c376ca7fb93",
+	'message',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO PE_PE
+	VALUES ("fad39749-df67-43e1-8b90-799862a3757c",
+	1,
+	"7ab991a5-3958-4a50-bf82-5b2da16ecd76",
+	"00000000-0000-0000-0000-000000000000",
+	5);
+INSERT INTO PE_PE
+	VALUES ("7ab991a5-3958-4a50-bf82-5b2da16ecd76",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	7);
+INSERT INTO S_SYS_PROXY
+	VALUES ("77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Hotel',
+	1,
+	'../Hotel.xtuml');
