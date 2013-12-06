@@ -11,6 +11,7 @@
 
 #include "Hotel_sys_types.h"
 #include "LOG_bridge.h"
+#include "TIM_bridge.h"
 #include "LOG_bridge.h"
 #include "Hotel_sys_types.h"
 

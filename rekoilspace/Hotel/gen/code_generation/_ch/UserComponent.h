@@ -21,10 +21,13 @@ void UserComponent_UserInterface_customerDetails( c_t[ESCHER_SYS_MAX_STRING_LEN]
 void UserComponent_UserInterface_errorSignal( c_t[ESCHER_SYS_MAX_STRING_LEN] );
 void UserComponent_UserInterface_extraServices( c_t[ESCHER_SYS_MAX_STRING_LEN], c_t[ESCHER_SYS_MAX_STRING_LEN], Escher_UniqueID_t, const bool, const r_t );
 void UserComponent_UserInterface_paymentInfo( c_t[ESCHER_SYS_MAX_STRING_LEN], Escher_UniqueID_t );
-void UserComponent_UserInterface_requestAvailableBookables( const i_t, Escher_TimeStamp_t, Escher_UniqueID_t, Escher_TimeStamp_t );
+void UserComponent_UserInterface_requestAvailableBookables( const i_t, Escher_Date_t, Escher_UniqueID_t, Escher_Date_t );
 void UserComponent_UserInterface_requestSession( void );
 void UserComponent_UserInterface_select( Escher_UniqueID_t, Escher_UniqueID_t );
 void UserComponent_UserInterface_session( Escher_UniqueID_t );
+void UserComponent_Port1_addFacility( c_t[ESCHER_SYS_MAX_STRING_LEN], Escher_UniqueID_t );
+void UserComponent_Port1_addFacilityType( c_t[ESCHER_SYS_MAX_STRING_LEN], c_t[ESCHER_SYS_MAX_STRING_LEN], c_t[ESCHER_SYS_MAX_STRING_LEN], const r_t );
+void UserComponent_Port1_sendFacilityType( Escher_UniqueID_t, c_t[ESCHER_SYS_MAX_STRING_LEN] );
 
 
 #ifdef	__cplusplus

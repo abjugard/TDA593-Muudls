@@ -9,6 +9,7 @@
 
 #include "Hotel_sys_types.h"
 #include "LOG_bridge.h"
+#include "TIM_bridge.h"
 #include "HotelComponent_classes.h"
 
 /* Note:  R3.'has' never related (or not needed).  */

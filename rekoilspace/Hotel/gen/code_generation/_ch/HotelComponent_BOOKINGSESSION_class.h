@@ -51,21 +51,6 @@ extern Escher_Extent_t pG_HotelComponent_BOOKINGSESSION_extent;
  * warning:  Event is not used in application - no code generated.
  */
 
-/*
- * class-based event:  UserInterface::requestSession:'requestSession'
- */
-typedef struct {
-  EVENT_BASE_ATTRIBUTE_LIST         /* base attributes of all event classes */
-  /* Note:  no supplemental data for this event */
-} HotelComponent_BOOKINGSESSION_CBevent2;
-extern const Escher_xtUMLEventConstant_t HotelComponent_BOOKINGSESSION_CBevent2c;
-
-/*
- * union of events targeted towards 'BOOKINGSESSION' state machine
- */
-typedef union {
-  HotelComponent_BOOKINGSESSION_CBevent2 bookingsession21;  
-} HotelComponent_BOOKINGSESSION_CB_Events_u;
 
 /*
  * enumeration of state model states for class
@@ -75,7 +60,6 @@ typedef union {
 /*
  * enumeration of state model event numbers
  */
-#define HOTELCOMPONENT_BOOKINGSESSION_CBEVENT2NUM 0  /* UserInterface::requestSession:'requestSession' */
 
 extern void HotelComponent_BOOKINGSESSION_CBDispatch( Escher_xtUMLEvent_t * );
 

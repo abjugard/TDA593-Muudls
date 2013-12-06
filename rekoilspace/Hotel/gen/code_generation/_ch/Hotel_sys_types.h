@@ -26,7 +26,7 @@
  * PersistLinkCacheDepth:  128
  *
  * Component Name:  UserComponent
- * MaxObjExtent:  10
+ * MaxObjExtent:  20
  * MaxRelExtent:  0
  * MaxSelectExtent:  10
  * MaxSelfEvents:  0
@@ -312,6 +312,7 @@ void Escher_thread_shutdown( void );
 #define pthread_mutex_lock( X ) 0
 #define pthread_mutex_unlock( X ) 0
 #endif
+#include "TIM_bridge.h"
 
 
 

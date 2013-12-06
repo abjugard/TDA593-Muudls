@@ -9,6 +9,7 @@
 
 #include "Hotel_sys_types.h"
 #include "LOG_bridge.h"
+#include "TIM_bridge.h"
 #include "HotelComponent_classes.h"
 
 /*
@@ -229,31 +230,6 @@ HotelComponent_BOOKINGSESSION_CB_act1( HotelComponent_BOOKINGSESSION * self, con
 {
 }
 
-/*
- */
-static void HotelComponent_BOOKINGSESSION_CB_xact1( HotelComponent_BOOKINGSESSION *, const Escher_xtUMLEvent_t * const );
-static void
-HotelComponent_BOOKINGSESSION_CB_xact1( HotelComponent_BOOKINGSESSION * self, const Escher_xtUMLEvent_t * const event )
-{
-  HotelComponent_BOOKING * booking;HotelComponent_BOOKINGSESSION * session;
-  /* CREATE OBJECT INSTANCE session OF BOOKINGSESSION */
-  XTUML_OAL_STMT_TRACE( 1, "CREATE OBJECT INSTANCE session OF BOOKINGSESSION" );
-  session = (HotelComponent_BOOKINGSESSION *) Escher_CreateInstance( HotelComponent_DOMAIN_ID, HotelComponent_BOOKINGSESSION_CLASS_NUMBER );
-  /* CREATE OBJECT INSTANCE booking OF BOOKING */
-  XTUML_OAL_STMT_TRACE( 1, "CREATE OBJECT INSTANCE booking OF BOOKING" );
-  booking = (HotelComponent_BOOKING *) Escher_CreateInstance( HotelComponent_DOMAIN_ID, HotelComponent_BOOKING_CLASS_NUMBER );
-  /* RELATE session TO booking ACROSS R26 */
-  XTUML_OAL_STMT_TRACE( 1, "RELATE session TO booking ACROSS R26" );
-  HotelComponent_BOOKINGSESSION_R26_Link( booking, session );
-  /* SEND UserInterface::session(sessionID:session.ID) */
-  XTUML_OAL_STMT_TRACE( 1, "SEND UserInterface::session(sessionID:session.ID)" );
-  HotelComponent_UserInterface_session( session->ID );
-}
-
-
-const Escher_xtUMLEventConstant_t HotelComponent_BOOKINGSESSION_CBevent2c = {
-  HotelComponent_DOMAIN_ID, HotelComponent_BOOKINGSESSION_CLASS_NUMBER_CB, HOTELCOMPONENT_BOOKINGSESSION_CBEVENT2NUM,
-  ESCHER_IS_ASSIGNER_EVENT };
 
 
 
@@ -263,11 +239,11 @@ const Escher_xtUMLEventConstant_t HotelComponent_BOOKINGSESSION_CBevent2c = {
  * Row zero is the uninitialized state (e.g., for creation event transitions).
  * Column index is (MC enumerated) state machine events.
  */
-static const Escher_SEMcell_t HotelComponent_BOOKINGSESSION_CB_StateEventMatrix[ 1 + 1 ][ 1 ] = {
+static const Escher_SEMcell_t HotelComponent_BOOKINGSESSION_CB_StateEventMatrix[ 1 + 1 ][ 0 ] = {
   /* row 0:  uninitialized state (for creation events) */
-  { EVENT_CANT_HAPPEN },
+  {  },
   /* row 1:  HotelComponent_BOOKINGSESSION_CB_STATE_1 (Standby) */
-  { (1<<8) + HotelComponent_BOOKINGSESSION_CB_STATE_1 }
+  {  }
 };
 
   /*
@@ -288,49 +264,13 @@ static const Escher_SEMcell_t HotelComponent_BOOKINGSESSION_CB_StateEventMatrix[
     "Standby"
   };
 
-  /*
-   * Array of pointers to the class transition action procedures.
-   * Index is the (MC enumerated) number of the transition action to execute.
-   */
-  static const StateAction_t HotelComponent_BOOKINGSESSION_CB_xacts[ 1 ] = {
-    (StateAction_t) HotelComponent_BOOKINGSESSION_CB_xact1
-  };
-
 /*
- * class-based state machine event dispatching
+ * There are either no events defined for this state machine,
+ * no transitions, or no states.  So we will ignore _all_ events.
  */
 void
 HotelComponent_BOOKINGSESSION_CBDispatch( Escher_xtUMLEvent_t * event )
-{
-  static Escher_InstanceBase_t class_based_singleton = { HotelComponent_BOOKINGSESSION_CB_STATE_1 };
-  Escher_EventNumber_t event_number = GetOoaEventNumber( event );
-  Escher_StateNumber_t current_state = class_based_singleton.current_state;
-  Escher_SEMcell_t next_state = HotelComponent_BOOKINGSESSION_CB_StateEventMatrix[ current_state ][ event_number ];
-
-  if ( next_state <= 1 ) {
-    STATE_TXN_START_TRACE( "BOOKINGSESSION", current_state, state_name_strings_CB[ current_state ] );
-    /* Execute the state action and update the current state.  */
-    ( *HotelComponent_BOOKINGSESSION_CB_acts[ next_state ] )( &class_based_singleton, event );
-    class_based_singleton.current_state = next_state;
-    STATE_TXN_END_TRACE( "BOOKINGSESSION", next_state, state_name_strings_CB[ next_state ] );
-  } else {
-    if ( EVENT_CANT_HAPPEN == next_state ) {
-      /* Event cannot happen.  */
-      UserEventCantHappenCallout( current_state, next_state, event_number );
-      STATE_TXN_CH_TRACE( "BOOKINGSESSION", current_state );
-    } else if ( EVENT_IS_IGNORED == next_state ) {
-      /* Event ignored */
-      STATE_TXN_IG_TRACE( "BOOKINGSESSION", current_state );
-    } else {
-      STATE_TXN_START_TRACE( "BOOKINGSESSION", current_state, state_name_strings_CB[ current_state ] );
-      ( *HotelComponent_BOOKINGSESSION_CB_xacts[ (next_state>>8)-1 ] )( &class_based_singleton, event );
-      next_state = next_state & 0x00ff;
-      class_based_singleton.current_state = next_state;
-      ( *HotelComponent_BOOKINGSESSION_CB_acts[ next_state ] )( &class_based_singleton, event );
-      STATE_TXN_END_TRACE( "BOOKINGSESSION", next_state, state_name_strings_CB[ next_state ] );
-    }
-  }
-}
+{}
 
 
 

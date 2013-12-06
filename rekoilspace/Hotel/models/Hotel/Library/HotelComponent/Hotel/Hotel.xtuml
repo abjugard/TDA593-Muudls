@@ -6075,11 +6075,11 @@ f1.facilityID = "Room1";
 
 create object instance f2 of FACILITY;
 relate f2 to ft across R1;
-f1.facilityID = "Room2";
+f2.facilityID = "Room2";
 
 create object instance f3 of FACILITY;
 relate f3 to ft across R1;
-f1.facilityID = "Room3";
+f3.facilityID = "Room3";
 
 
 

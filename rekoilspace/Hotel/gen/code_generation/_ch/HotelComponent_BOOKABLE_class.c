@@ -9,6 +9,7 @@
 
 #include "Hotel_sys_types.h"
 #include "LOG_bridge.h"
+#include "TIM_bridge.h"
 #include "HotelComponent_classes.h"
 
 /*
@@ -36,6 +37,20 @@ HotelComponent_BOOKABLE_op_getBookableRepresentation( HotelComponent_BOOKABLE * 
 
 /* Accessors to BOOKABLE[R2] subtypes */
 
+
+/*
+ * RELATE HOTEL TO BOOKABLE ACROSS R9
+ */
+void
+HotelComponent_BOOKABLE_R9_Link( HotelComponent_HOTEL * part, HotelComponent_BOOKABLE * form )
+{
+  if ( (part == 0) || (form == 0) ) {
+    XTUML_EMPTY_HANDLE_TRACE( "BOOKABLE", "HotelComponent_BOOKABLE_R9_Link" );
+    return;
+  }
+  /* Note:  BOOKABLE->HOTEL[R9] not navigated */
+  /* Note:  HOTEL->BOOKABLE[R9] not navigated */
+}
 
 
 /*----------------------------------------------------------------------------

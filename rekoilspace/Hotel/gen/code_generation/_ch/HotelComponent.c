@@ -9,6 +9,7 @@
 
 #include "Hotel_sys_types.h"
 #include "HotelComponent.h"
+#include "TIM_bridge.h"
 #include "LOG_bridge.h"
 #include "UserComponent.h"
 #include "HotelComponent_classes.h"
@@ -103,7 +104,7 @@ HotelComponent_UserInterface_paymentInfo( c_t p_info[ESCHER_SYS_MAX_STRING_LEN],
  * To Provider Message:  requestAvailableBookables
  */
 void
-HotelComponent_UserInterface_requestAvailableBookables( const i_t p_facilityType, Escher_TimeStamp_t p_fromDate, Escher_UniqueID_t p_sessionID, Escher_TimeStamp_t p_toDate )
+HotelComponent_UserInterface_requestAvailableBookables( const i_t p_facilityType, Escher_Date_t p_fromDate, Escher_UniqueID_t p_sessionID, Escher_Date_t p_toDate )
 {
   HotelComponent_BOOKINGSESSION * session=0;
   /* SELECT any session FROM INSTANCES OF BOOKINGSESSION WHERE ( SELECTED.ID == PARAM.sessionID ) */
@@ -178,13 +179,9 @@ HotelComponent_UserInterface_requestSession()
   /* RELATE session TO booking ACROSS R26 */
   XTUML_OAL_STMT_TRACE( 1, "RELATE session TO booking ACROSS R26" );
   HotelComponent_BOOKINGSESSION_R26_Link( booking, session );
-  /* SEND UserInterface::bookingConfirmation(message:Hej) */
-  XTUML_OAL_STMT_TRACE( 1, "SEND UserInterface::bookingConfirmation(message:Hej)" );
-  HotelComponent_UserInterface_bookingConfirmation( "Hej" );
-  { Escher_xtUMLEvent_t * e = Escher_NewxtUMLEvent( (void *) 0, &HotelComponent_BOOKINGSESSION_CBevent2c );
-    Escher_SendEvent( e );
-  }
-
+  /* SEND UserInterface::session(sessionID:session.ID) */
+  XTUML_OAL_STMT_TRACE( 1, "SEND UserInterface::session(sessionID:session.ID)" );
+  HotelComponent_UserInterface_session( session->ID );
 }
 
 /*
@@ -206,6 +203,106 @@ void
 HotelComponent_UserInterface_session( Escher_UniqueID_t p_sessionID )
 {
   UserComponent_UserInterface_session(  p_sessionID );
+}
+
+/*
+ * Interface:  StaffInterface
+ * Provided Port:  Port1
+ * To Provider Message:  addFacility
+ */
+void
+HotelComponent_Port1_addFacility( c_t p_facilityID[ESCHER_SYS_MAX_STRING_LEN], Escher_UniqueID_t p_facilityType )
+{
+  HotelComponent_FACILITY * f;HotelComponent_FACILITYTYPE * ft=0;
+  /* CREATE OBJECT INSTANCE f OF FACILITY */
+  XTUML_OAL_STMT_TRACE( 1, "CREATE OBJECT INSTANCE f OF FACILITY" );
+  f = (HotelComponent_FACILITY *) Escher_CreateInstance( HotelComponent_DOMAIN_ID, HotelComponent_FACILITY_CLASS_NUMBER );
+  /* SELECT any ft FROM INSTANCES OF FACILITYTYPE WHERE ( SELECTED.id == PARAM.facilityType ) */
+  XTUML_OAL_STMT_TRACE( 1, "SELECT any ft FROM INSTANCES OF FACILITYTYPE WHERE ( SELECTED.id == PARAM.facilityType )" );
+  ft = 0;
+  { HotelComponent_FACILITYTYPE * selected;
+    Escher_Iterator_s iterftHotelComponent_FACILITYTYPE;
+    Escher_IteratorReset( &iterftHotelComponent_FACILITYTYPE, &pG_HotelComponent_FACILITYTYPE_extent.active );
+    while ( (selected = (HotelComponent_FACILITYTYPE *) Escher_IteratorNext( &iterftHotelComponent_FACILITYTYPE )) != 0 ) {
+      if ( ( selected->id == p_facilityType ) ) {
+        ft = selected;
+        break;
+      }
+    }
+  }
+  /* IF ( not_empty ft ) */
+  XTUML_OAL_STMT_TRACE( 1, "IF ( not_empty ft )" );
+  if ( ( 0 != ft ) ) {
+    /* RELATE f TO ft ACROSS R1 */
+    XTUML_OAL_STMT_TRACE( 2, "RELATE f TO ft ACROSS R1" );
+    HotelComponent_FACILITYTYPE_R1_Link_is_instance_of( f, ft );
+    /* ASSIGN f.facilityID = PARAM.facilityID */
+    XTUML_OAL_STMT_TRACE( 2, "ASSIGN f.facilityID = PARAM.facilityID" );
+    Escher_strcpy( f->facilityID, p_facilityID );
+  }
+}
+
+/*
+ * Interface:  StaffInterface
+ * Provided Port:  Port1
+ * To Provider Message:  addFacilityType
+ */
+void
+HotelComponent_Port1_addFacilityType( c_t p_approximateArea[ESCHER_SYS_MAX_STRING_LEN], c_t p_description[ESCHER_SYS_MAX_STRING_LEN], c_t p_name[ESCHER_SYS_MAX_STRING_LEN], const r_t p_price )
+{
+  HotelComponent_BOOKABLE * b;HotelComponent_FACILITYTYPE * ft;HotelComponent_HOTEL * h=0;
+  /* CREATE OBJECT INSTANCE ft OF FACILITYTYPE */
+  XTUML_OAL_STMT_TRACE( 1, "CREATE OBJECT INSTANCE ft OF FACILITYTYPE" );
+  ft = (HotelComponent_FACILITYTYPE *) Escher_CreateInstance( HotelComponent_DOMAIN_ID, HotelComponent_FACILITYTYPE_CLASS_NUMBER );
+  /* CREATE OBJECT INSTANCE b OF BOOKABLE */
+  XTUML_OAL_STMT_TRACE( 1, "CREATE OBJECT INSTANCE b OF BOOKABLE" );
+  b = (HotelComponent_BOOKABLE *) Escher_CreateInstance( HotelComponent_DOMAIN_ID, HotelComponent_BOOKABLE_CLASS_NUMBER );
+  /* RELATE ft TO b ACROSS R2 */
+  XTUML_OAL_STMT_TRACE( 1, "RELATE ft TO b ACROSS R2" );
+  HotelComponent_FACILITYTYPE_R2_Link( b, ft );
+  /* SELECT any h FROM INSTANCES OF HOTEL */
+  XTUML_OAL_STMT_TRACE( 1, "SELECT any h FROM INSTANCES OF HOTEL" );
+  h = (HotelComponent_HOTEL *) Escher_SetGetAny( &pG_HotelComponent_HOTEL_extent.active );
+  /* IF ( empty h ) */
+  XTUML_OAL_STMT_TRACE( 1, "IF ( empty h )" );
+  if ( ( 0 == h ) ) {
+    /* CREATE OBJECT INSTANCE h OF HOTEL */
+    XTUML_OAL_STMT_TRACE( 2, "CREATE OBJECT INSTANCE h OF HOTEL" );
+    h = (HotelComponent_HOTEL *) Escher_CreateInstance( HotelComponent_DOMAIN_ID, HotelComponent_HOTEL_CLASS_NUMBER );
+  }
+  /* IF ( not_empty h ) */
+  XTUML_OAL_STMT_TRACE( 1, "IF ( not_empty h )" );
+  if ( ( 0 != h ) ) {
+    /* RELATE b TO h ACROSS R9 */
+    XTUML_OAL_STMT_TRACE( 2, "RELATE b TO h ACROSS R9" );
+    HotelComponent_BOOKABLE_R9_Link( h, b );
+    /* ASSIGN b.price = PARAM.price */
+    XTUML_OAL_STMT_TRACE( 2, "ASSIGN b.price = PARAM.price" );
+    b->price = p_price;
+    /* ASSIGN b.description = PARAM.description */
+    XTUML_OAL_STMT_TRACE( 2, "ASSIGN b.description = PARAM.description" );
+    Escher_strcpy( b->description, p_description );
+    /* ASSIGN ft.approximateArea = PARAM.approximateArea */
+    XTUML_OAL_STMT_TRACE( 2, "ASSIGN ft.approximateArea = PARAM.approximateArea" );
+    Escher_strcpy( ft->approximateArea, p_approximateArea );
+    /* ASSIGN b.name = PARAM.name */
+    XTUML_OAL_STMT_TRACE( 2, "ASSIGN b.name = PARAM.name" );
+    Escher_strcpy( b->name, p_name );
+  }
+  /* SEND Port1::sendFacilityType(facilityTypeID:ft.id, name:b.name) */
+  XTUML_OAL_STMT_TRACE( 1, "SEND Port1::sendFacilityType(facilityTypeID:ft.id, name:b.name)" );
+  HotelComponent_Port1_sendFacilityType( ft->id, b->name );
+}
+
+/*
+ * Interface:  StaffInterface
+ * Provided Port:  Port1
+ * From Provider Message:  sendFacilityType
+ */
+void
+HotelComponent_Port1_sendFacilityType( Escher_UniqueID_t p_facilityTypeID, c_t p_name[ESCHER_SYS_MAX_STRING_LEN] )
+{
+  UserComponent_Port1_sendFacilityType(  p_facilityTypeID, p_name );
 }
 
 /*
@@ -252,18 +349,18 @@ HotelComponent_PopulateFacilityTypes()
   /* RELATE f2 TO ft ACROSS R1 */
   XTUML_OAL_STMT_TRACE( 1, "RELATE f2 TO ft ACROSS R1" );
   HotelComponent_FACILITYTYPE_R1_Link_is_instance_of( f2, ft );
-  /* ASSIGN f1.facilityID = Room2 */
-  XTUML_OAL_STMT_TRACE( 1, "ASSIGN f1.facilityID = Room2" );
-  Escher_strcpy( f1->facilityID, "Room2" );
+  /* ASSIGN f2.facilityID = Room2 */
+  XTUML_OAL_STMT_TRACE( 1, "ASSIGN f2.facilityID = Room2" );
+  Escher_strcpy( f2->facilityID, "Room2" );
   /* CREATE OBJECT INSTANCE f3 OF FACILITY */
   XTUML_OAL_STMT_TRACE( 1, "CREATE OBJECT INSTANCE f3 OF FACILITY" );
   f3 = (HotelComponent_FACILITY *) Escher_CreateInstance( HotelComponent_DOMAIN_ID, HotelComponent_FACILITY_CLASS_NUMBER );
   /* RELATE f3 TO ft ACROSS R1 */
   XTUML_OAL_STMT_TRACE( 1, "RELATE f3 TO ft ACROSS R1" );
   HotelComponent_FACILITYTYPE_R1_Link_is_instance_of( f3, ft );
-  /* ASSIGN f1.facilityID = Room3 */
-  XTUML_OAL_STMT_TRACE( 1, "ASSIGN f1.facilityID = Room3" );
-  Escher_strcpy( f1->facilityID, "Room3" );
+  /* ASSIGN f3.facilityID = Room3 */
+  XTUML_OAL_STMT_TRACE( 1, "ASSIGN f3.facilityID = Room3" );
+  Escher_strcpy( f3->facilityID, "Room3" );
 
 }
 

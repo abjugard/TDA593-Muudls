@@ -9,8 +9,8 @@ Action statement tracing enabled for component UserComponent.
 Enabling state transition tracing for component(s) *.
 Analyzing model and making optimizations....
 Instance event queue needed.
-6 attributes read
-4 attributes written
+8 attributes read
+6 attributes written
 translating control statements
 translating other statements
 rolling up statements into action bodies

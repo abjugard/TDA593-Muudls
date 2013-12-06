@@ -24,6 +24,7 @@ struct HotelComponent_BOOKABLE {
   i_t price;  /* - price */
   c_t description[ESCHER_SYS_MAX_STRING_LEN];  /* - description */
   Escher_UniqueID_t id;  /* - id */
+  c_t name[ESCHER_SYS_MAX_STRING_LEN];  /* - name */
 
   /* relationship storage */
   void * R2_subtype;
@@ -50,7 +51,7 @@ void HotelComponent_BOOKABLE_op_getBookableRepresentation( HotelComponent_BOOKAB
 
 /* xtUML WARNING:  PACKAGE<-R8->>BOOKABLE never related!  */
 /* Note:  PACKAGE<-R8->>BOOKABLE unrelate accessor not needed */
-/* xtUML WARNING:  HOTEL<-R9->>BOOKABLE never related!  */
+void HotelComponent_BOOKABLE_R9_Link( HotelComponent_HOTEL *, HotelComponent_BOOKABLE * );
 /* Note:  HOTEL<-R9->>BOOKABLE unrelate accessor not needed */
 /* Note:  BOOKABLE->BOOKING[R12] not navigated */
 /* Note:  BOOKABLE->BENEFIT[R25] not navigated */

@@ -89,6 +89,7 @@ typedef struct HotelComponent_PRIVILEGE HotelComponent_PRIVILEGE;
 void HotelComponent_PopulateFacilityTypes( void );
 
 
+#include "TIM_bridge.h"
 #include "LOG_bridge.h"
 #include "HotelComponent.h"
 #include "HotelComponent_BOOKING_class.h"
@@ -112,13 +113,6 @@ void HotelComponent_PopulateFacilityTypes( void );
 #include "HotelComponent_HOTEL_class.h"
 #include "HotelComponent_STAFF_class.h"
 #include "HotelComponent_PRIVILEGE_class.h"
-/*
- * roll-up of all events (with their parameters) for component HotelComponent
- */
-typedef union {
-  HotelComponent_BOOKINGSESSION_CB_Events_u HotelComponent_BOOKINGSESSION_CB_Events_u_namespace;
-} HotelComponent_DomainEvents_u;
-
 #ifdef	__cplusplus
 }
 #endif

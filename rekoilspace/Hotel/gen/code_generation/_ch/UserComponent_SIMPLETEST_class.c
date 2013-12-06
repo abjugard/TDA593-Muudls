@@ -9,6 +9,7 @@
 
 #include "Hotel_sys_types.h"
 #include "LOG_bridge.h"
+#include "TIM_bridge.h"
 #include "UserComponent_classes.h"
 
 
@@ -67,9 +68,25 @@ static void UserComponent_SIMPLETEST_act3( UserComponent_SIMPLETEST *, const Esc
 static void
 UserComponent_SIMPLETEST_act3( UserComponent_SIMPLETEST * self, const Escher_xtUMLEvent_t * const event )
 {
+  UserComponent_SIMPLETESTevent2 * rcvd_evt = (UserComponent_SIMPLETESTevent2 *) event;
   /* LOG::LogInfo( message:Session recieved ) */
   XTUML_OAL_STMT_TRACE( 1, "LOG::LogInfo( message:Session recieved )" );
   LOG_LogInfo( "Session recieved" );
+  /* SEND UserInterface::requestAvailableBookables(facilityType:1, TIM::create_date(day:1, hour:4, minute:12, month:1, second:8, year:2010), sessionID:PARAM.sessionID, TIM::create_date(day:1, hour:4, minute:12, month:1, second:8, year:2010)) */
+  XTUML_OAL_STMT_TRACE( 1, "SEND UserInterface::requestAvailableBookables(facilityType:1, TIM::create_date(day:1, hour:4, minute:12, month:1, second:8, year:2010), sessionID:PARAM.sessionID, TIM::create_date(day:1, hour:4, minute:12, month:1, second:8, year:2010))" );
+  UserComponent_UserInterface_requestAvailableBookables( 1, TIM_create_date( 1, 4, 12, 1, 8, 2010 ), rcvd_evt->p_sessionID, TIM_create_date( 1, 4, 12, 1, 8, 2010 ) );
+}
+
+/*
+ */
+static void UserComponent_SIMPLETEST_xact1( UserComponent_SIMPLETEST *, const Escher_xtUMLEvent_t * const );
+static void
+UserComponent_SIMPLETEST_xact1( UserComponent_SIMPLETEST * self, const Escher_xtUMLEvent_t * const event )
+{
+  UserComponent_SIMPLETESTevent2 * rcvd_evt = (UserComponent_SIMPLETESTevent2 *) event;
+  /* ASSIGN self.sessionID = PARAM.sessionID */
+  XTUML_OAL_STMT_TRACE( 1, "ASSIGN self.sessionID = PARAM.sessionID" );
+  self->sessionID = rcvd_evt->p_sessionID;
 }
 
 
@@ -112,7 +129,7 @@ static const Escher_SEMcell_t UserComponent_SIMPLETEST_StateEventMatrix[ 3 + 1 ]
   /* row 1:  UserComponent_SIMPLETEST_STATE_1 (entryPoint) */
   { UserComponent_SIMPLETEST_STATE_2, EVENT_CANT_HAPPEN },
   /* row 2:  UserComponent_SIMPLETEST_STATE_2 (requestSession) */
-  { EVENT_CANT_HAPPEN, UserComponent_SIMPLETEST_STATE_3 },
+  { EVENT_CANT_HAPPEN, (1<<8) + UserComponent_SIMPLETEST_STATE_3 },
   /* row 3:  UserComponent_SIMPLETEST_STATE_3 (requestAvailableBookables) */
   { EVENT_CANT_HAPPEN, EVENT_CANT_HAPPEN }
 };
@@ -139,6 +156,14 @@ static const Escher_SEMcell_t UserComponent_SIMPLETEST_StateEventMatrix[ 3 + 1 ]
     "requestAvailableBookables"
   };
 
+  /*
+   * Array of pointers to the class transition action procedures.
+   * Index is the (MC enumerated) number of the transition action to execute.
+   */
+  static const StateAction_t UserComponent_SIMPLETEST_xacts[ 1 ] = {
+    (StateAction_t) UserComponent_SIMPLETEST_xact1
+  };
+
 /*
  * instance state machine event dispatching
  */
@@ -148,7 +173,7 @@ UserComponent_SIMPLETEST_Dispatch( Escher_xtUMLEvent_t * event )
   Escher_iHandle_t instance = GetEventTargetInstance( event );
   Escher_EventNumber_t event_number = GetOoaEventNumber( event );
   Escher_StateNumber_t current_state;
-  Escher_StateNumber_t next_state;
+  Escher_SEMcell_t next_state;
   
   if ( 0 != instance ) {
     current_state = instance->current_state;
@@ -168,7 +193,12 @@ UserComponent_SIMPLETEST_Dispatch( Escher_xtUMLEvent_t * event )
           UserEventCantHappenCallout( current_state, next_state, event_number );
           STATE_TXN_CH_TRACE( "SIMPLETEST", current_state );
       } else {
-        /* empty else */
+        STATE_TXN_START_TRACE( "SIMPLETEST", current_state, state_name_strings[ current_state ] );
+        ( *UserComponent_SIMPLETEST_xacts[ (next_state>>8)-1 ] )( instance, event );
+        next_state = next_state & 0x00ff;
+        instance->current_state = next_state;
+        ( *UserComponent_SIMPLETEST_acts[ next_state ] )( instance, event );
+        STATE_TXN_END_TRACE( "SIMPLETEST", next_state, state_name_strings[ next_state ] );
       }
     }
   }

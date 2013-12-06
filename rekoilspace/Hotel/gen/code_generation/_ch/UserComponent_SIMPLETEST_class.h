@@ -21,6 +21,7 @@ extern	"C"	{
 struct UserComponent_SIMPLETEST {
   Escher_StateNumber_t current_state;
   /* application analysis class attributes */
+  Escher_UniqueID_t sessionID;  /* - sessionID */
 
 };
 
@@ -51,7 +52,7 @@ extern const Escher_xtUMLEventConstant_t UserComponent_SIMPLETESTevent1c;
  */
 typedef struct {
   EVENT_BASE_ATTRIBUTE_LIST         /* base attributes of all event classes */
-  /* Note:  no supplemental data for this event */
+  Escher_UniqueID_t p_sessionID; /* sessionID */
 } UserComponent_SIMPLETESTevent2;
 extern const Escher_xtUMLEventConstant_t UserComponent_SIMPLETESTevent2c;
 

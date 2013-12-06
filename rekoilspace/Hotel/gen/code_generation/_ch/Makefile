@@ -61,7 +61,9 @@ USER_OBJ_TARGETS = \
 	${OBJ_PATH}LOG_bridge.o \
 	${OBJ_PATH}sys_user_co.o \
 	${OBJ_PATH}sys_xtuml.o \
+	${OBJ_PATH}TIM_bridge.o \
 	${OBJ_PATH}UserComponent.o \
+	${OBJ_PATH}UserComponent_SETUP_class.o \
 	${OBJ_PATH}UserComponent_SIMPLETEST_class.o \
 
 #=============================================================================
@@ -171,7 +173,15 @@ ${OBJ_PATH}sys_xtuml.o : ${SRC_PATH}sys_xtuml.c
 	${CMD_TARGET_COMPILE}
 	${CMD_TARGET_ASSEMBLE}
 
+${OBJ_PATH}TIM_bridge.o : ${SRC_PATH}TIM_bridge.c
+	${CMD_TARGET_COMPILE}
+	${CMD_TARGET_ASSEMBLE}
+
 ${OBJ_PATH}UserComponent.o : ${SRC_PATH}UserComponent.c
+	${CMD_TARGET_COMPILE}
+	${CMD_TARGET_ASSEMBLE}
+
+${OBJ_PATH}UserComponent_SETUP_class.o : ${SRC_PATH}UserComponent_SETUP_class.c
 	${CMD_TARGET_COMPILE}
 	${CMD_TARGET_ASSEMBLE}
 

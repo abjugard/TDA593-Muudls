@@ -58,6 +58,11 @@ INSERT INTO DIM_CON
 	4713.000000,
 	3180.000000,
 	"ab764a5a-dd38-4fc0-85ce-ae92aa743990");
+INSERT INTO DIM_CON
+	VALUES ("c8798a65-806a-407b-b7a8-52cfe08ca830",
+	4713.000000,
+	3251.000000,
+	"ab764a5a-dd38-4fc0-85ce-ae92aa743990");
 INSERT INTO GD_GE
 	VALUES ("55444e0a-a08b-4ecb-8a86-96fe136c3701",
 	"846b2303-6b52-4914-8188-85dc5951f45b",
@@ -182,6 +187,106 @@ INSERT INTO DIM_ED
 	VALUES ("902c8784-0c66-4fe5-b55d-b0fdf378009e",
 	"00000000-0000-0000-0000-000000000000",
 	"2df49237-814e-40de-a046-59de057c75e4");
+INSERT INTO GD_GE
+	VALUES ("2f9c0f5d-981d-4424-a609-749a8d089678",
+	"846b2303-6b52-4914-8188-85dc5951f45b",
+	"9d173fe3-55ba-463f-a9f9-a5b42dd200a2",
+	94,
+	0,
+	'Hotel::Library::HotelComponent::Port1::StaffInterface');
+INSERT INTO GD_CON
+	VALUES ("2f9c0f5d-981d-4424-a609-749a8d089678",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("b2dab9de-b42a-4433-8896-c7c7fb57a76c",
+	"2f9c0f5d-981d-4424-a609-749a8d089678",
+	1,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"b2dab9de-b42a-4433-8896-c7c7fb57a76c");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"b2dab9de-b42a-4433-8896-c7c7fb57a76c",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("b2dab9de-b42a-4433-8896-c7c7fb57a76c",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("47492783-4832-450e-9ef3-c6343d423e80",
+	"2f9c0f5d-981d-4424-a609-749a8d089678",
+	3,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"47492783-4832-450e-9ef3-c6343d423e80");
+INSERT INTO DIM_GE
+	VALUES (4706.000000,
+	3211.000000,
+	"47492783-4832-450e-9ef3-c6343d423e80",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("47492783-4832-450e-9ef3-c6343d423e80",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("ae67c238-bdfd-4706-8d5c-2104fe25afc9",
+	"2f9c0f5d-981d-4424-a609-749a8d089678",
+	2,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"ae67c238-bdfd-4706-8d5c-2104fe25afc9");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"ae67c238-bdfd-4706-8d5c-2104fe25afc9",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("ae67c238-bdfd-4706-8d5c-2104fe25afc9",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_LS
+	VALUES ("1443a990-fffc-4bf7-9612-2ea46eb3a324",
+	"2f9c0f5d-981d-4424-a609-749a8d089678",
+	"00000000-0000-0000-0000-000000000000",
+	"a324d6fb-2ad7-460b-898c-01f740d60755",
+	"d27b8dc1-724f-4cb0-a492-66767a48b786");
+INSERT INTO DIM_WAY
+	VALUES ("a324d6fb-2ad7-460b-898c-01f740d60755",
+	4713.000000,
+	3251.000000,
+	"2f9c0f5d-981d-4424-a609-749a8d089678",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_WAY
+	VALUES ("d27b8dc1-724f-4cb0-a492-66767a48b786",
+	4800.000000,
+	3251.000000,
+	"2f9c0f5d-981d-4424-a609-749a8d089678",
+	"00000000-0000-0000-0000-000000000000",
+	"a324d6fb-2ad7-460b-898c-01f740d60755");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"2f9c0f5d-981d-4424-a609-749a8d089678",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("2f9c0f5d-981d-4424-a609-749a8d089678",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ED
+	VALUES ("c8798a65-806a-407b-b7a8-52cfe08ca830",
+	"00000000-0000-0000-0000-000000000000",
+	"2f9c0f5d-981d-4424-a609-749a8d089678");
 INSERT INTO DIM_DIA
 	VALUES ("846b2303-6b52-4914-8188-85dc5951f45b",
 	'',
@@ -411,8 +516,7 @@ create object instance session of BOOKINGSESSION;
 create object instance booking of BOOKING;
 relate session to booking across R26;
 
-send BookingProvider::session(sessionID: session.ID);
-send BookingProvider::bookingConfirmation(message: "Hej");',
+send BookingProvider::session(sessionID: session.ID);',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("b21fad1b-897b-424f-84f8-01bdab76de49",
@@ -444,6 +548,105 @@ INSERT INTO C_I_PROXY
 	'BookingProvider',
 	'',
 	'../Interfaces/BookingProvider/BookingProvider.xtuml');
+INSERT INTO C_PO
+	VALUES ("60bda041-6be5-4a74-9de4-1a56d08a5972",
+	"ab2192c8-8390-4631-9e2c-fca2a1f30c08",
+	'Port1',
+	0,
+	0);
+INSERT INTO C_IR
+	VALUES ("9d173fe3-55ba-463f-a9f9-a5b42dd200a2",
+	"7af64316-7236-4637-9c49-e47d2784ce9e",
+	"00000000-0000-0000-0000-000000000000",
+	"60bda041-6be5-4a74-9de4-1a56d08a5972");
+INSERT INTO C_P
+	VALUES ("9d173fe3-55ba-463f-a9f9-a5b42dd200a2",
+	'StaffInterface',
+	'Unnamed Interface',
+	'',
+	'HotelComponent::Port1::StaffInterface');
+INSERT INTO SPR_PEP
+	VALUES ("5d4a4780-fc7a-4f75-b9f9-6ee7a5043833",
+	"c86ea0b4-abc2-4994-bee2-500e130b8b73",
+	"9d173fe3-55ba-463f-a9f9-a5b42dd200a2");
+INSERT INTO SPR_PS
+	VALUES ("5d4a4780-fc7a-4f75-b9f9-6ee7a5043833",
+	'addFacility',
+	'',
+	'create object instance f of FACILITY;
+select any ft from instances of FACILITYTYPE where (selected.id == param.facilityType);
+if(not_empty ft)
+	relate f to ft across R1;
+	f.facilityID = param.facilityID;
+end if;',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("c86ea0b4-abc2-4994-bee2-500e130b8b73",
+	"7af64316-7236-4637-9c49-e47d2784ce9e",
+	-1,
+	'addFacility',
+	'',
+	'../Interfaces/StaffInterface/StaffInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("1aee11b8-e562-4626-acc6-35cc36201bb3",
+	"19f06228-e268-4733-9af7-92f3f313ceff",
+	"9d173fe3-55ba-463f-a9f9-a5b42dd200a2");
+INSERT INTO SPR_PS
+	VALUES ("1aee11b8-e562-4626-acc6-35cc36201bb3",
+	'addFacilityType',
+	'',
+	'create object instance ft of FACILITYTYPE;
+create object instance b of BOOKABLE;
+
+relate ft to b across R2;
+
+select any h from instances of HOTEL;
+
+if(empty h)
+	create object instance h of HOTEL;
+end if;
+
+if(not_empty h)
+	relate b to h across R9;
+	b.price = param.price;
+	b.description = param.description;
+	ft.approximateArea = param.approximateArea;
+	b.name = param.name;
+	
+end if;
+
+send StaffInterface::sendFacilityType(facilityTypeID: ft.id, name: b.name);',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("19f06228-e268-4733-9af7-92f3f313ceff",
+	"7af64316-7236-4637-9c49-e47d2784ce9e",
+	-1,
+	'addFacilityType',
+	'',
+	'../Interfaces/StaffInterface/StaffInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("feb554a9-891f-4263-acc6-9505d061cdea",
+	"cd0882a7-a468-425e-a99e-c9480ba64c90",
+	"9d173fe3-55ba-463f-a9f9-a5b42dd200a2");
+INSERT INTO SPR_PS
+	VALUES ("feb554a9-891f-4263-acc6-9505d061cdea",
+	'sendFacilityType',
+	'',
+	'',
+	3);
+INSERT INTO C_EP_PROXY
+	VALUES ("cd0882a7-a468-425e-a99e-c9480ba64c90",
+	"7af64316-7236-4637-9c49-e47d2784ce9e",
+	-1,
+	'sendFacilityType',
+	'',
+	'../Interfaces/StaffInterface/StaffInterface.xtuml');
+INSERT INTO C_I_PROXY
+	VALUES ("7af64316-7236-4637-9c49-e47d2784ce9e",
+	"00000000-0000-0000-0000-000000000000",
+	'StaffInterface',
+	'',
+	'../Interfaces/StaffInterface/StaffInterface.xtuml');
 INSERT INTO PE_PE
 	VALUES ("ab2192c8-8390-4631-9e2c-fca2a1f30c08",
 	1,

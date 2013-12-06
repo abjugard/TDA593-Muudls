@@ -457,7 +457,6 @@ bool Escher_run_flag = true; /* Turn this off to exit dispatch loop(s).  */
  * size of any xtUML event in the system.  */
 typedef union {
   Escher_xtUMLEvent_t mc_event_base;
-  HotelComponent_DomainEvents_u mc_events_in_domain_HotelComponent;
   UserComponent_DomainEvents_u mc_events_in_domain_UserComponent;
 } Escher_systemxtUMLevents_t;
 
