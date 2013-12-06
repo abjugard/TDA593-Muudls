@@ -411,7 +411,8 @@ create object instance session of BOOKINGSESSION;
 create object instance booking of BOOKING;
 relate session to booking across R26;
 
-send BookingProvider::session(sessionID: session.ID);',
+send BookingProvider::session(sessionID: session.ID);
+send BookingProvider::bookingConfirmation(message: "Hej");',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("b21fad1b-897b-424f-84f8-01bdab76de49",

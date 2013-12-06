@@ -350,7 +350,7 @@ INSERT INTO SPR_RS
 	VALUES ("562d9bef-da1e-4569-aa14-e81b3c6803b7",
 	'bookingConfirmation',
 	'',
-	'',
+	'LOG::LogInfo(message: param.message);',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("19aa6808-338c-45b0-8a31-1b3efb70b47a",
