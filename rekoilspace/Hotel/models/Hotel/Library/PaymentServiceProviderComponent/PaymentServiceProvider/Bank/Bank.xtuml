@@ -1,0 +1,32 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("b44a76ae-afc0-4d98-9919-aa9b86f43aa0",
+	'Bank',
+	1,
+	'BANK',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_ID
+	VALUES (0,
+	"b44a76ae-afc0-4d98-9919-aa9b86f43aa0");
+INSERT INTO O_ID
+	VALUES (1,
+	"b44a76ae-afc0-4d98-9919-aa9b86f43aa0");
+INSERT INTO O_ID
+	VALUES (2,
+	"b44a76ae-afc0-4d98-9919-aa9b86f43aa0");
+INSERT INTO PE_PE
+	VALUES ("b44a76ae-afc0-4d98-9919-aa9b86f43aa0",
+	1,
+	"dcb27040-a506-4d06-8daf-9a61e7a3e940",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("dcb27040-a506-4d06-8daf-9a61e7a3e940",
+	"00000000-0000-0000-0000-000000000000",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'PaymentServiceProvider',
+	'',
+	0,
+	'../PaymentServiceProvider.xtuml');

@@ -1,0 +1,21 @@
+-- BP 7.1.6 content: Interface syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_I
+	VALUES ("868f2b41-a6e3-411b-a5ca-d9316c3fb5bc",
+	"00000000-0000-0000-0000-000000000000",
+	'CustomerInterface',
+	'');
+INSERT INTO PE_PE
+	VALUES ("868f2b41-a6e3-411b-a5ca-d9316c3fb5bc",
+	1,
+	"960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	6);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Hotel',
+	'',
+	0,
+	'../Hotel.xtuml');

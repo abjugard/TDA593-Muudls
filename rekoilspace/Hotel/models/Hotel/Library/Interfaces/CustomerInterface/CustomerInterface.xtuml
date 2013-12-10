@@ -9,14 +9,32 @@ INSERT INTO C_EP
 	VALUES ("5a79bc11-70d7-456a-8187-45d268168aef",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's1',
+	'confirmSignal',
 	'');
 INSERT INTO C_AS
 	VALUES ("5a79bc11-70d7-456a-8187-45d268168aef",
-	's1',
+	'confirmSignal',
 	'',
 	0,
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("0c370872-4365-46c5-b66f-fb3edc2ab789",
+	"5a79bc11-70d7-456a-8187-45d268168aef",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'sessionID',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("a7ee52ac-1079-402e-9ca3-ec1b366efe2e",
+	"5a79bc11-70d7-456a-8187-45d268168aef",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'message',
+	'',
+	0,
+	'',
+	"0c370872-4365-46c5-b66f-fb3edc2ab789");
 INSERT INTO C_EP
 	VALUES ("b6421df2-c058-463a-8282-eefa32587ce7",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
