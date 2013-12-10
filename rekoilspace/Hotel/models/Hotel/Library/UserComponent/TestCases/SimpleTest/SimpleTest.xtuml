@@ -5,7 +5,10 @@ INSERT INTO O_OBJ
 	'SimpleTest',
 	1,
 	'SIMPLETEST',
-	'',
+	'
+
+This test is a (hopefully) success scenario of the Use Case "Customer creates a Booking"
+',
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO O_NBATTR
 	VALUES ("fa000d2e-0253-4293-bd82-1e0913c0904f",

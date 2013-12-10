@@ -336,7 +336,17 @@ INSERT INTO SPR_RS
 	VALUES ("3680a2b1-7282-4b1a-ac97-358f023efa4b",
 	'available',
 	'',
-	'',
+	'select any st from instances of SIMPLETEST where selected.sessionID == param.sessionID;
+
+if (not_empty st)
+	generate SIMPLETEST3:availableEvent(id:param.id,
+										price:param.price,
+										description:param.description,
+										aproximateArea:param.aproximateArea,
+										independent:param.independent) to st;
+else;
+	LOG::LogInfo(message: "Error, no user session found");
+end if;',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("54d1cfcd-e847-40b5-be88-ddf038c56595",
@@ -351,7 +361,7 @@ INSERT INTO SPR_REP
 	"59710e0c-1d62-4800-a82b-b80bbaed4667");
 INSERT INTO SPR_RS
 	VALUES ("a0805044-494e-48af-9a28-d1e60266c9e8",
-	'select',
+	'selectBookable',
 	'',
 	'',
 	1);
@@ -359,7 +369,7 @@ INSERT INTO C_EP_PROXY
 	VALUES ("55b848f9-d68a-4698-bf86-446ac83e49f5",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
 	-1,
-	'select',
+	'selectBookable',
 	'',
 	'../Interfaces/BookingProvider/BookingProvider.xtuml');
 INSERT INTO SPR_REP
@@ -453,15 +463,24 @@ INSERT INTO SPR_REP
 	"59710e0c-1d62-4800-a82b-b80bbaed4667");
 INSERT INTO SPR_RS
 	VALUES ("562d9bef-da1e-4569-aa14-e81b3c6803b7",
-	'bookingConfirmation',
+	'confirmSignal',
 	'',
-	'LOG::LogInfo(message: param.message);',
+	'LOG::LogInfo(message: "UC confSig: " + param.message);
+select any st from instances of SIMPLETEST where selected.sessionID == param.sessionID;
+
+if(not_empty st)
+	
+	generate SIMPLETEST4:confirmEvent(message: param.message) to st;
+
+else
+	LOG::LogInfo(message: "UC confSig: session not found");
+end if;',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("19aa6808-338c-45b0-8a31-1b3efb70b47a",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
 	-1,
-	'bookingConfirmation',
+	'confirmSignal',
 	'',
 	'../Interfaces/BookingProvider/BookingProvider.xtuml');
 INSERT INTO SPR_REP
@@ -551,7 +570,7 @@ INSERT INTO SPR_RS
 	'addFacility',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("c86ea0b4-abc2-4994-bee2-500e130b8b73",
 	"7af64316-7236-4637-9c49-e47d2784ce9e",
@@ -568,7 +587,7 @@ INSERT INTO SPR_RS
 	'addFacilityType',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("19f06228-e268-4733-9af7-92f3f313ceff",
 	"7af64316-7236-4637-9c49-e47d2784ce9e",

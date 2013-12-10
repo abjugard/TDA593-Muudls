@@ -110,15 +110,24 @@ INSERT INTO C_PP
 	0,
 	'',
 	"b79bff53-be30-45a5-8923-7a3f5ab4710d");
+INSERT INTO C_PP
+	VALUES ("17a9f7ea-28a3-4e6d-b3f3-f63e218c3b1a",
+	"54d1cfcd-e847-40b5-be88-ddf038c56595",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'sessionID',
+	'',
+	0,
+	'',
+	"9a07908f-2d90-4fab-90c0-6d3e67ee8616");
 INSERT INTO C_EP
 	VALUES ("55b848f9-d68a-4698-bf86-446ac83e49f5",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
 	-1,
-	'select',
+	'selectBookable',
 	'');
 INSERT INTO C_AS
 	VALUES ("55b848f9-d68a-4698-bf86-446ac83e49f5",
-	'select',
+	'selectBookable',
 	'',
 	0,
 	"54d1cfcd-e847-40b5-be88-ddf038c56595");
@@ -288,15 +297,6 @@ INSERT INTO C_PP
 	'',
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO C_PP
-	VALUES ("07e12052-ec30-46ab-97bd-53e1562e42b5",
-	"275df8ce-b628-4b96-85dd-66e9224fc9df",
-	"ba5eda7a-def5-0000-0000-000000000005",
-	'facility',
-	'',
-	0,
-	'',
-	"5813d0b6-e9b6-4d9c-83b2-7539947713a0");
-INSERT INTO C_PP
 	VALUES ("f2081eb7-638b-479f-bdef-a8d3d2aeb082",
 	"275df8ce-b628-4b96-85dd-66e9224fc9df",
 	"ba5eda7a-def5-0000-0000-000000000004",
@@ -304,7 +304,7 @@ INSERT INTO C_PP
 	'',
 	0,
 	'',
-	"07e12052-ec30-46ab-97bd-53e1562e42b5");
+	"5813d0b6-e9b6-4d9c-83b2-7539947713a0");
 INSERT INTO C_PP
 	VALUES ("41edc071-08b3-4da2-a6d0-cab5122398ca",
 	"275df8ce-b628-4b96-85dd-66e9224fc9df",
@@ -348,11 +348,11 @@ INSERT INTO C_EP
 	VALUES ("19aa6808-338c-45b0-8a31-1b3efb70b47a",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
 	-1,
-	'bookingConfirmation',
+	'confirmSignal',
 	'');
 INSERT INTO C_AS
 	VALUES ("19aa6808-338c-45b0-8a31-1b3efb70b47a",
-	'bookingConfirmation',
+	'confirmSignal',
 	'',
 	1,
 	"40e06920-24e2-499d-b1c8-deb66c9637ec");
@@ -365,6 +365,15 @@ INSERT INTO C_PP
 	0,
 	'',
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("72b44e45-7f11-4d56-b05a-ba5d1c400822",
+	"19aa6808-338c-45b0-8a31-1b3efb70b47a",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'sessionID',
+	'',
+	0,
+	'',
+	"a3b665ee-74eb-4b72-82bd-d6fa5f6917b3");
 INSERT INTO C_EP
 	VALUES ("89169ec3-d50b-4b5b-95fa-d95fb15c3f98",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
@@ -386,6 +395,15 @@ INSERT INTO C_PP
 	0,
 	'',
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("b7eec5b3-9293-44d8-a8e2-b9f70df8f0cd",
+	"89169ec3-d50b-4b5b-95fa-d95fb15c3f98",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'sessionID',
+	'',
+	0,
+	'',
+	"ed7f9ed0-5d21-4eea-b033-d488f64972b9");
 INSERT INTO C_EP
 	VALUES ("b21fad1b-897b-424f-84f8-01bdab76de49",
 	"708e7060-3f4e-41ab-94ce-7b712ad36251",
