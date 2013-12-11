@@ -141,6 +141,220 @@ INSERT INTO S_DT_PROXY
 	'',
 	'',
 	'../Hotel.xtuml');
+INSERT INTO O_TFR
+	VALUES ("4607eedb-0ca4-43c8-aec8-28b9eb9efb11",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'searchFacility',
+	'',
+	"bd43dc09-3be2-4ae8-806d-bedb08b1e03c",
+	1,
+	'LOG::LogInfo(message: "H: searchFacility: start of operation");
+select any ft from instances of FACILITYTYPE where selected.id == param.facilityType;
+LOG::LogInfo(message: "H: searchFacility: start of asdasdasdasd");
+//select many hb related by self->BOOKING[R13] 
+//				where 
+//				(((selected.toDate < param.toDate) 
+//				and (selected.toDate > param.fromDate))
+//				or ((selected.fromDate > param.toDate) 
+//				and (selected.fromDate < param.fromDate)));
+//select many bss from instances of BOOKINGSESSION;
+//
+//select many bsb related by bss->BOOKING[R26] 
+//				where 
+//				(((selected.toDate < param.toDate) 
+//				and (selected.toDate > param.fromDate))
+//				or ((selected.fromDate > param.toDate) 
+//				and (selected.fromDate < param.fromDate)));
+				
+select many allBookings from instances of BOOKING;
+			//where
+			//	(
+			//	((selected.toDate < param.toDate)));// and (selected.toDate > param.fromDate)))
+			//	or 
+			//	((selected.fromDate > param.toDate) and (selected.fromDate < param.fromDate))
+			//	);
+
+LOG::LogInfo(message: "H: searchFacility: select of d00000m");
+
+//conflictingBookings = hb + bsb;
+
+
+select many facilities related by ft->FACILITY[R1];
+LOG::LogInfo(message: "H: searchFacility: start of looooop");
+for each fc in facilities
+	take = true;
+	for each booking in allBookings
+		if( (0 >= ::compDate(d0: booking.toDate, d1:param.toDate)
+			and
+			0 <= ::compDate(d0: booking.toDate, d1:param.fromDate))
+			or
+			(0 <= ::compDate(d0: booking.fromDate, d1:param.toDate)
+			and
+			0 >= ::compDate(d0: booking.fromDate, d1:param.fromDate))
+		)
+			break;
+		end if;
+		select many fs related by booking->FACILITY[R14];
+		for each f in fs
+			if(f==fc)
+				take = false;
+				break;
+			end if;
+		end for;
+		if(not take)
+			LOG::LogInfo(message: "H: searchFacility: not take");
+			break;
+		end if;
+	end for;
+	if(take)
+		LOG::LogInfo(message: "H: searchFacility: return of loooooop");
+		return fc;
+	end if; 
+end for;
+LOG::LogInfo(message: "H: searchFacility: end of loooooop");
+nullCon = TIM::create_date(day:-1, month:-1, year:-1, second:-1,minute:-1,hour:-1);
+select any null from instances of FACILITY 
+	where selected.checkedIn == nullCon;
+return null;
+',
+	1,
+	'',
+	"e805ee2f-c747-462d-bf85-43728d65e110");
+INSERT INTO O_TPARM
+	VALUES ("edcbf21b-eeb0-49b3-b58e-9f4db5495c53",
+	"4607eedb-0ca4-43c8-aec8-28b9eb9efb11",
+	'fromDate',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("330961fc-e14a-4f4d-9839-d9485db515f8",
+	"4607eedb-0ca4-43c8-aec8-28b9eb9efb11",
+	'toDate',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"edcbf21b-eeb0-49b3-b58e-9f4db5495c53",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("cf64f946-cb6f-4340-b481-2229190c1340",
+	"4607eedb-0ca4-43c8-aec8-28b9eb9efb11",
+	'facilityType',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	0,
+	'',
+	"330961fc-e14a-4f4d-9839-d9485db515f8",
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("bd43dc09-3be2-4ae8-806d-bedb08b1e03c",
+	"00000000-0000-0000-0000-000000000000",
+	'inst_ref<Facility>',
+	'',
+	'',
+	'../Hotel.xtuml');
+INSERT INTO O_TFR
+	VALUES ("bc1f21df-7746-48d7-8508-3fbe480f6fb1",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'compareDate',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	1,
+	'y0 = TIM::get_year(date:param.d0);
+y1 = TIM::get_year(date:param.d1);
+if(y0 == y1)
+	m0 = TIM::get_month(date:param.d0);
+	m1 = TIM::get_month(date:param.d1);
+	if(m0 == m1)
+		day0 = TIM::get_day(date:param.d0);
+		day1 = TIM::get_day(date:param.d1);
+		if(day0 == day1)
+			h0 = TIM::get_hour(date:param.d0);
+			h1 = TIM::get_hour(date:param.d1);
+			if(h0 == h1)
+				return 0;
+			else
+				return h0 - h1;
+			end if;
+		else
+			return day0 - day1;
+		end if;
+	else
+		return m0 - m1;
+	end if;
+else
+	return y0 - y1;
+end if;
+
+',
+	1,
+	'',
+	"4607eedb-0ca4-43c8-aec8-28b9eb9efb11");
+INSERT INTO O_TPARM
+	VALUES ("d74060cb-209b-4518-92c2-d29b9eb37d9e",
+	"bc1f21df-7746-48d7-8508-3fbe480f6fb1",
+	'd0',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("3bba6ec1-4fbe-4261-9a29-87241b6dcb81",
+	"bc1f21df-7746-48d7-8508-3fbe480f6fb1",
+	'd1',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"d74060cb-209b-4518-92c2-d29b9eb37d9e",
+	'');
+INSERT INTO O_TFR
+	VALUES ("0cc47a0b-bb48-479c-ba44-ff9a0520b24e",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'searchFacilityTypes',
+	'',
+	"ebb6007c-c361-40c7-ad5b-5b07d6a01d41",
+	1,
+	'
+
+//Should take toDate and fromDate into considiration... in next iteration?
+select many ft from instances of FACILITYTYPE;
+return ft;
+
+
+
+
+
+',
+	1,
+	'',
+	"bc1f21df-7746-48d7-8508-3fbe480f6fb1");
+INSERT INTO O_TPARM
+	VALUES ("1970dbbb-58b9-4420-a8f6-ac912307a8ab",
+	"0cc47a0b-bb48-479c-ba44-ff9a0520b24e",
+	'fromDate',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("75b29513-1cdb-4c23-ab12-468c310b2e05",
+	"0cc47a0b-bb48-479c-ba44-ff9a0520b24e",
+	'toDate',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"1970dbbb-58b9-4420-a8f6-ac912307a8ab",
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("ebb6007c-c361-40c7-ad5b-5b07d6a01d41",
+	"00000000-0000-0000-0000-000000000000",
+	'inst_ref_set<FacilityType>',
+	'',
+	'',
+	'../Hotel.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("dd0944e9-2b79-4b67-b2d3-6a3f90157086",
 	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");

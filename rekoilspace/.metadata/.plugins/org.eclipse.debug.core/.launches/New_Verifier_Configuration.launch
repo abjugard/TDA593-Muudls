@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.mentor.nucleus.bp.debug.ui.BPApplication">
-<booleanAttribute key="com.mentor.nucleus.bp.debug.ui.BPApplication.activity" value="false"/>
+<booleanAttribute key="com.mentor.nucleus.bp.debug.ui.BPApplication.activity" value="true"/>
 <booleanAttribute key="com.mentor.nucleus.bp.debug.ui.BPApplication.deterministic" value="true"/>
 <mapAttribute key="com.mentor.nucleus.bp.debug.ui.BPApplication.models">
 <mapEntry key="Hotel" value="b87fa9df-8932-48e6-af31-9da765dda9b6_INTERNALTOKEN_1_INTERNALTOKEN_None_INTERNALTOKEN_enabled_TOKEN_bbe11919-26ee-49b9-aa56-ab2e61e7277d_INTERNALTOKEN_1_INTERNALTOKEN_None_INTERNALTOKEN_enabled_TOKEN_2efbdf33-133e-4e63-96fc-dd2955bd0db4_INTERNALTOKEN_1_INTERNALTOKEN_None_INTERNALTOKEN_enabled_TOKEN_"/>

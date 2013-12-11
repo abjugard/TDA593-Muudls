@@ -254,3 +254,34 @@ Time consumed: 62  ms.
 **** Build of configuration Debug for project Hotel ****
 
 Nothing to build for project Hotel
+
+**** Rebuild of configuration Debug for project GPS Watch ****
+
+**** Internal Builder is used for build               ****
+****  WARNING: The "Debug" Configuration may not build  ****
+****  because it uses the "MinGW GCC"  ****
+****  tool-chain that is unsupported on this system.  ****
+
+****  Attempting to build...  **** 
+
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/LOG_bridge.o ../src/LOG_bridge.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/UI_TestCase_class.o ../src/UI_TestCase_class.c
+../src/UI_TestCase_class.c: In function ‘UI_TestCase_act2’:
+../src/UI_TestCase_class.c:71:60: warning: variable ‘handle’ set but not used [-Wunused-but-set-variable]
+     Escher_xtUMLEvent_t * evt;  /* evt */ Escher_Timer_t * handle; 
+                                                            ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/UI_UI_class.o ../src/UI_UI_class.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/TIM_bridge.o ../src/TIM_bridge.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/Tracking.o ../src/Tracking.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/Tracking_Display_class.o ../src/Tracking_Display_class.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/UI_GuiBridge_bridge.o ../src/UI_GuiBridge_bridge.c
+../src/UI_GuiBridge_bridge.c:19:21: fatal error: windows.h: No such file or directory
+ #include <windows.h>
+                     ^
+compilation terminated.
+Build error occurred, build is stopped
+Time consumed: 422  ms.  
+
+**** Build of configuration Debug for project Hotel ****
+
+Nothing to build for project Hotel

@@ -532,8 +532,9 @@ INSERT INTO SPR_PS
 	'select any session from instances of BOOKINGSESSION where (selected.ID == param.sessionID);
 
 if (not_empty session)
-	result = session.search(fromDate: param.fromDate, 
-							toDate: param.toDate);
+	select one hotel related by session->HOTEL[R17];
+	result = hotel.searchFacilityTypes(fromDate: param.fromDate, 
+									   toDate: param.toDate);
 	if(empty result)
 		send BookingProvider::errorSignal(message: "H: requestAvail: No rooms found",
 											sessionID:param.sessionID);

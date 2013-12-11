@@ -6122,6 +6122,113 @@ INSERT INTO PE_PE
 	"960454f9-cf5f-4331-88bf-8023709586b1",
 	"00000000-0000-0000-0000-000000000000",
 	1);
+INSERT INTO S_SYNC
+	VALUES ("f225c177-c732-48ac-9a07-38cf87d924ac",
+	"00000000-0000-0000-0000-000000000000",
+	'TestDateCompare',
+	'',
+	'select any b from instances of BOOKING;
+
+select any bb from instances of BOOKING;
+
+LOG::LogInfo(message: "Less success");
+LOG::LogDate(d:b.toDate, message: "herp");
+LOG::LogDate(d:bb.toDate, message: "herp1");
+
+if(0 == ::compDate(d0:b.toDate,d1:bb.toDate))
+
+	LOG::LogInfo(message: "our success");
+
+end if;
+
+LOG::LogInfo(message: "after our or not success");
+
+if(b.toDate <= bb.toDate)
+
+	LOG::LogInfo(message: "Less success");
+
+end if;
+
+	LOG::LogInfo(message: "derp  success");
+
+select many testbs from instances of BOOKING;
+			//where
+			//	(
+			//	((selected.toDate < b.toDate)));// and (selected.toDate > param.fromDate)))
+			//	or 
+			//	((selected.fromDate > param.toDate) and (selected.fromDate < param.fromDate))
+			//	);
+
+LOG::LogInfo(message: "after quarrrrrry success");
+	',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'');
+INSERT INTO PE_PE
+	VALUES ("f225c177-c732-48ac-9a07-38cf87d924ac",
+	1,
+	"960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("52572cbd-c389-40eb-b763-ffc8f3afbb15",
+	"00000000-0000-0000-0000-000000000000",
+	'compDate',
+	'',
+	'y0 = TIM::get_year(date:param.d0);
+y1 = TIM::get_year(date:param.d1);
+if(y0 == y1)
+	m0 = TIM::get_month(date:param.d0);
+	m1 = TIM::get_month(date:param.d1);
+	if(m0 == m1)
+		day0 = TIM::get_day(date:param.d0);
+		day1 = TIM::get_day(date:param.d1);
+		if(day0 == day1)
+			h0 = TIM::get_hour(date:param.d0);
+			h1 = TIM::get_hour(date:param.d1);
+			if(h0 == h1)
+				return 0;
+			else
+				return h0 - h1;
+			end if;
+		else
+			return day0 - day1;
+		end if;
+	else
+		return m0 - m1;
+	end if;
+else
+	return y0 - y1;
+end if;
+
+',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	1,
+	'');
+INSERT INTO S_SPARM
+	VALUES ("16113742-523c-4539-adbc-8bb7583eebcd",
+	"52572cbd-c389-40eb-b763-ffc8f3afbb15",
+	'd0',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_SPARM
+	VALUES ("ed922384-934e-4911-a21c-849e7ab1a27a",
+	"52572cbd-c389-40eb-b763-ffc8f3afbb15",
+	'd1',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"16113742-523c-4539-adbc-8bb7583eebcd",
+	'');
+INSERT INTO PE_PE
+	VALUES ("52572cbd-c389-40eb-b763-ffc8f3afbb15",
+	1,
+	"960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	1);
 INSERT INTO PE_PE
 	VALUES ("960454f9-cf5f-4331-88bf-8023709586b1",
 	1,

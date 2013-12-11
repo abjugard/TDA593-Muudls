@@ -1,0 +1,345 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'Hotel',
+	7,
+	'HOTEL',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("e805ee2f-c747-462d-bf85-43728d65e110",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'createFacilityGroup',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'',
+	1,
+	'',
+	"314bfd58-83f9-4991-98e8-ce0b92f901a4");
+INSERT INTO O_TPARM
+	VALUES ("bb08cb75-a1ac-4076-a950-d298e9c33a1b",
+	"e805ee2f-c747-462d-bf85-43728d65e110",
+	'name',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TFR
+	VALUES ("314bfd58-83f9-4991-98e8-ce0b92f901a4",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'createStaff',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'',
+	1,
+	'',
+	"a9d35b92-3364-4384-95f0-07b45f1a6ac2");
+INSERT INTO O_TPARM
+	VALUES ("fd291d23-a18f-4184-8351-7d2208f8d37f",
+	"314bfd58-83f9-4991-98e8-ce0b92f901a4",
+	'name',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TFR
+	VALUES ("a9d35b92-3364-4384-95f0-07b45f1a6ac2",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'createService',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'',
+	1,
+	'',
+	"dcf32531-3848-47b9-921b-32e4d9282f80");
+INSERT INTO O_TPARM
+	VALUES ("e9957c9d-da65-489d-a71a-803e10832999",
+	"a9d35b92-3364-4384-95f0-07b45f1a6ac2",
+	'description',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TFR
+	VALUES ("dcf32531-3848-47b9-921b-32e4d9282f80",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'createFacility',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'',
+	1,
+	'',
+	"ccf03a92-529e-4e4e-9ad4-39e811fe957b");
+INSERT INTO O_TPARM
+	VALUES ("ee8d99a4-2851-4f34-af88-1ba65acd387e",
+	"dcf32531-3848-47b9-921b-32e4d9282f80",
+	'facilityID',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TFR
+	VALUES ("ccf03a92-529e-4e4e-9ad4-39e811fe957b",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'availableBookables',
+	'',
+	"df204ffe-8ba5-4335-839a-3b03a55091e7",
+	1,
+	'',
+	1,
+	'',
+	"e63532ba-8f8f-46c0-9029-316eba07a309");
+INSERT INTO O_TPARM
+	VALUES ("80ae5404-e78a-4c3f-ae1a-c46137121f3b",
+	"ccf03a92-529e-4e4e-9ad4-39e811fe957b",
+	'filter',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("df204ffe-8ba5-4335-839a-3b03a55091e7",
+	"00000000-0000-0000-0000-000000000000",
+	'inst_ref_set<Bookable>',
+	'',
+	'',
+	'../Hotel.xtuml');
+INSERT INTO O_TFR
+	VALUES ("e63532ba-8f8f-46c0-9029-316eba07a309",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'addBooking',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TPARM
+	VALUES ("e87d143c-b35e-4000-9b94-7b4b3902cb9f",
+	"e63532ba-8f8f-46c0-9029-316eba07a309",
+	'booking',
+	"433f7688-7b95-4f9c-89f1-cf076d691ab7",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("433f7688-7b95-4f9c-89f1-cf076d691ab7",
+	"00000000-0000-0000-0000-000000000000",
+	'inst_ref<Booking>',
+	'',
+	'',
+	'../Hotel.xtuml');
+INSERT INTO O_TFR
+	VALUES ("4607eedb-0ca4-43c8-aec8-28b9eb9efb11",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'searchFacility',
+	'',
+	"bd43dc09-3be2-4ae8-806d-bedb08b1e03c",
+	1,
+	'select any ft from instances of FACILITYTYPE where selected.id == param.facilityType;
+select many hb related by self->BOOKING[R13] 
+				where 
+				(((selected.toDate < param.toDate) 
+				and (selected.toDate > param.fromDate))
+				or ((selected.fromDate > param.toDate) 
+				and (selected.fromDate < param.fromDate)));
+select many bss from instances of BOOKINGSESSION;
+
+select many bsb related by bss->BOOKING[R26] 
+				where 
+				(((selected.toDate < param.toDate) 
+				and (selected.toDate > param.fromDate))
+				or ((selected.fromDate > param.toDate) 
+				and (selected.fromDate < param.fromDate)));
+
+
+
+conflictingBookings = hb + bsb;
+
+
+select many facilities related by ft->FACILITY[R1];
+
+for each fc in facilities
+	take = true;
+	for each booking in conflictingBookings
+		select many fs related by booking->FACILITY[R14];
+		for each f in fs
+			if(f==fc)
+				take = false;
+				break;
+			end if;
+		end for;
+		if(not take)
+			break;
+		end if;
+	end for;
+	if(take)
+		return fc;
+	end if; 
+end for;
+select any ffff from instance of FACILITY where id=-9999;
+return ffff;
+',
+	1,
+	'',
+	"e805ee2f-c747-462d-bf85-43728d65e110");
+INSERT INTO O_TPARM
+	VALUES ("edcbf21b-eeb0-49b3-b58e-9f4db5495c53",
+	"4607eedb-0ca4-43c8-aec8-28b9eb9efb11",
+	'fromDate',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("330961fc-e14a-4f4d-9839-d9485db515f8",
+	"4607eedb-0ca4-43c8-aec8-28b9eb9efb11",
+	'toDate',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"edcbf21b-eeb0-49b3-b58e-9f4db5495c53",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("cf64f946-cb6f-4340-b481-2229190c1340",
+	"4607eedb-0ca4-43c8-aec8-28b9eb9efb11",
+	'facilityType',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	0,
+	'',
+	"330961fc-e14a-4f4d-9839-d9485db515f8",
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("bd43dc09-3be2-4ae8-806d-bedb08b1e03c",
+	"00000000-0000-0000-0000-000000000000",
+	'inst_ref<Facility>',
+	'',
+	'',
+	'../Hotel.xtuml');
+INSERT INTO O_TFR
+	VALUES ("bc1f21df-7746-48d7-8508-3fbe480f6fb1",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'compareDate',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	1,
+	'y0 = TIM::get_year(date:param.d0);
+y1 = TIM::get_year(date:param.d1);
+if(y0 == y1)
+	m0 = TIM::get_month(date:param.d0);
+	m1 = TIM::get_month(date:param.d1);
+	if(m0 == m1)
+		day0 = TIM::get_day(date:param.d0);
+		day1 = TIM::get_day(date:param.d1);
+		if(day0 == day1)
+			h0 = TIM::get_hour(date:param.d0);
+			h1 = TIM::get_hour(date:param.d1);
+			if(h0 == h1)
+				return 0;
+			else
+				return h0 - h1;
+			end if;
+		else
+			return day0 - day1;
+		end if;
+	else
+		return m0 - m1;
+	end if;
+else
+	return y0 - y1;
+end if;
+
+',
+	1,
+	'',
+	"4607eedb-0ca4-43c8-aec8-28b9eb9efb11");
+INSERT INTO O_TPARM
+	VALUES ("d74060cb-209b-4518-92c2-d29b9eb37d9e",
+	"bc1f21df-7746-48d7-8508-3fbe480f6fb1",
+	'd0',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("3bba6ec1-4fbe-4261-9a29-87241b6dcb81",
+	"bc1f21df-7746-48d7-8508-3fbe480f6fb1",
+	'd1',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"d74060cb-209b-4518-92c2-d29b9eb37d9e",
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("dd0944e9-2b79-4b67-b2d3-6a3f90157086",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_BATTR
+	VALUES ("dd0944e9-2b79-4b67-b2d3-6a3f90157086",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_ATTR
+	VALUES ("dd0944e9-2b79-4b67-b2d3-6a3f90157086",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	"40bf02d7-fb68-44d4-98e2-ed5237db8d14",
+	'description',
+	'',
+	'',
+	'description',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("40bf02d7-fb68-44d4-98e2-ed5237db8d14",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_BATTR
+	VALUES ("40bf02d7-fb68-44d4-98e2-ed5237db8d14",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_ATTR
+	VALUES ("40bf02d7-fb68-44d4-98e2-ed5237db8d14",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	"00000000-0000-0000-0000-000000000000",
+	'adress',
+	'',
+	'',
+	'adress',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (2,
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_ID
+	VALUES (1,
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_ID
+	VALUES (0,
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO PE_PE
+	VALUES ("daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	1,
+	"960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Hotel',
+	'',
+	0,
+	'../Hotel.xtuml');

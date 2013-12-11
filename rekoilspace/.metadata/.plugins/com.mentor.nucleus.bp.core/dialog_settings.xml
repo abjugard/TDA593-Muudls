@@ -2,14 +2,14 @@
 <section name="Workbench">
 	<item value="652" key="DIALOG_WIDTH"/>
 	<item value="39" key="DIALOG_Y_ORIGIN"/>
-	<item value="603" key="DIALOG_HEIGHT"/>
 	<item value="393" key="DIALOG_X_ORIGIN"/>
+	<item value="603" key="DIALOG_HEIGHT"/>
 	<item value="1|Cantarell|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	<section name="com.mentor.nucleus.bp.core.ui.dialogs.ElementSelectionFlatView">
-		<item value="false" key="CACHED_REGEX_USAGE"/>
 		<item value="" key="CACHED_SEARCH_PATTERN"/>
-		<item value="ba5eda7a-def5-0000-0000-000000000002" key="CACHED_ELEMENT_SELECTION"/>
+		<item value="false" key="CACHED_REGEX_USAGE"/>
 		<item value="false" key="CACHED_VISIBILITY_FILTER"/>
+		<item value="ba5eda7a-def5-0000-0000-00000000000e" key="CACHED_ELEMENT_SELECTION"/>
 		<item value="false" key="CACHED_CASE_SENSITIVE"/>
 	</section>
 </section>

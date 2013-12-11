@@ -1085,9 +1085,9 @@ INSERT INTO SM_ACT
 
 id = rcvd_evt.id;
 
-LOG::LogInteger(message: id);
+
 if (id == self.desiredType)
-	send BookingProvider::selectBookable(id:id,sessionID:self.sessionID);
+	LOG::LogInteger(message: id);
 	generate SIMPLETEST6:foundDesiredRoomEvent to self;
 end if;',
 	'');
@@ -1240,6 +1240,8 @@ INSERT INTO SM_ACT
 	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
 	1,
 	'LOG::LogInfo(message: "UC: EndOfListState found desired facilitytype");
+	send BookingProvider::selectBookable(id:self.desiredType,
+										sessionID:self.sessionID);
 ',
 	'');
 INSERT INTO SM_TAH
@@ -2533,8 +2535,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"50479da7-5120-4751-b5ab-ddd9ccd77939");
 INSERT INTO DIM_GE
-	VALUES (4501.000000,
-	4026.000000,
+	VALUES (4493.000000,
+	3998.000000,
 	"50479da7-5120-4751-b5ab-ddd9ccd77939",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -2867,8 +2869,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"49a80d80-e0d2-4a48-8dcd-ba5282628f90");
 INSERT INTO DIM_GE
-	VALUES (4596.000000,
-	3931.000000,
+	VALUES (4537.000000,
+	3954.000000,
 	"49a80d80-e0d2-4a48-8dcd-ba5282628f90",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
