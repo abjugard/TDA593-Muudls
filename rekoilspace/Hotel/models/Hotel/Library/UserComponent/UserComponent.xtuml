@@ -631,8 +631,8 @@ INSERT INTO SPR_RS
 	'session',
 	'',
 	'LOG::LogInfo(message: "Got session ID");
-select any st from instances of SIMPLETEST;
-
+select any st from instances of SIMPLETEST where selected.active==false;
+st.active=true;
 generate SIMPLETEST2:sessionEvent(sessionID: param.sessionID) to st;
 ',
 	1);
@@ -751,7 +751,7 @@ INSERT INTO SPR_RS
 	'confirmSignal',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("5a79bc11-70d7-456a-8187-45d268168aef",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -765,15 +765,19 @@ INSERT INTO SPR_REP
 	"76f56aa8-4b72-455e-9cb5-fde86fd2a663");
 INSERT INTO SPR_RS
 	VALUES ("f25fe22e-4b26-417b-8f3d-fc99f1b1135a",
-	's2',
+	'endOfList',
 	'',
-	'',
-	3);
+	'
+select any st from instances of SIMPLETEST
+	where selected.sessionID==param.sessionID;
+	
+generate SIMPLETEST5:endOfListEvent() to st;',
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("b6421df2-c058-463a-8282-eefa32587ce7",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's2',
+	'endOfList',
 	'',
 	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_REP
@@ -785,7 +789,7 @@ INSERT INTO SPR_RS
 	's1',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("da9dc9a3-9bf8-4e9e-8d76-0469a00019ef",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -802,7 +806,7 @@ INSERT INTO SPR_RS
 	's2',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("895459b4-8cad-487c-ac02-41f7392c1417",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -819,7 +823,7 @@ INSERT INTO SPR_RS
 	's1',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("b0219670-df70-4ff6-984b-04f391308d00",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -836,7 +840,7 @@ INSERT INTO SPR_RS
 	's2',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("cb5b5b24-04f0-4601-b19b-0cf189cea793",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -853,7 +857,7 @@ INSERT INTO SPR_RS
 	's1',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("8328ef36-07dc-427a-b0b8-9f12e1b984b7",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -870,7 +874,7 @@ INSERT INTO SPR_RS
 	's2',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("81dc0de0-c0d1-40f4-b861-04e7a9398949",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -887,7 +891,7 @@ INSERT INTO SPR_RS
 	's1',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("748bf7ad-3d75-40b6-9747-281878d13d6b",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -904,7 +908,7 @@ INSERT INTO SPR_RS
 	's2',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("c446a9a5-de06-4b24-a8cc-957599ee3e34",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -921,7 +925,7 @@ INSERT INTO SPR_RS
 	's1',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("fa304608-7681-41c3-ad76-a0f6e8611f35",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -938,7 +942,7 @@ INSERT INTO SPR_RS
 	's2',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("0184b93d-0963-496f-b323-26d0404529d6",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -955,7 +959,7 @@ INSERT INTO SPR_RS
 	's1',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("b6137a20-d83a-4130-90cf-4bbff803d680",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -972,7 +976,7 @@ INSERT INTO SPR_RS
 	's2',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("4955e92a-9d9e-450c-aa80-bb592becd350",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -989,7 +993,7 @@ INSERT INTO SPR_RS
 	's1',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("e13258fc-6b0d-44ea-8ef2-7a156ee15593",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -1006,7 +1010,7 @@ INSERT INTO SPR_RS
 	's2',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("83944b64-b858-449a-8fc8-e20614b23693",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -1023,7 +1027,7 @@ INSERT INTO SPR_RO
 	'o1',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("6849e51f-02ea-4e23-9ba2-af67a12531d4",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -1040,7 +1044,7 @@ INSERT INTO SPR_RO
 	'o2',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("1a8e5c38-7020-4123-ba0e-67897534dc19",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -1057,7 +1061,7 @@ INSERT INTO SPR_RO
 	'o1',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("83e74f67-f572-4d64-bf5f-6e4117a48ac4",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -1074,7 +1078,7 @@ INSERT INTO SPR_RO
 	'o2',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("ab21eaf4-6f87-4d16-adcd-35b43eab657c",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -1091,7 +1095,7 @@ INSERT INTO SPR_RO
 	'o1',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("249da9fe-e7f0-4173-8e09-ca48a3cd7d3c",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -1108,7 +1112,7 @@ INSERT INTO SPR_RO
 	'o2',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("1bdb7028-c766-4634-b100-e21c9da8a53a",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -1125,7 +1129,7 @@ INSERT INTO SPR_RO
 	'o1',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("c1390e36-a425-496e-8f3a-2c42ea4f65e0",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -1142,7 +1146,7 @@ INSERT INTO SPR_RO
 	'o2',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("ca27b2e6-6400-41c8-a5a6-65e00a685cfb",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -1159,7 +1163,7 @@ INSERT INTO SPR_RO
 	'o1',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("f4160a28-9e80-4907-a5b7-dd7069143dd9",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
@@ -1176,7 +1180,7 @@ INSERT INTO SPR_RO
 	'o2',
 	'',
 	'',
-	3);
+	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("df0ef208-77f8-42fc-9ff9-dc714e539856",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",

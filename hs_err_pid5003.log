@@ -1,0 +1,840 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0xf6cce070, pid=5003, tid=4149307136
+#
+# JRE version: 6.0_35-b10
+# Java VM: Java HotSpot(TM) Client VM (20.10-b01 mixed mode linux-x86 )
+# Problematic frame:
+# V  [libjvm.so+0x262070]  unsigned+0xe0
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x097a2c00):  JavaThread "main" [_thread_in_vm, id=5003, stack(0xffc36000,0xffc86000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x00000000
+
+Registers:
+EAX=0x00000000, EBX=0xf6f6e570, ECX=0x097a2c00, EDX=0xffc83954
+ESP=0xffc83914, EBP=0xffc8399c, ESI=0xffc83924, EDI=0x00000000
+EIP=0xf6cce070, EFLAGS=0x00210246, CR2=0x00000000
+
+Top of Stack: (sp=0xffc83914)
+0xffc83914:   a2e3c000 a2e3c000 ffc83954 097a2c00
+0xffc83924:   00000001 a3a7e000 a3718160 f6d1766f
+0xffc83934:   f6f6e570 097a2c00 ffc8399c f6cc79a5
+0xffc83944:   0000000a 00000000 00000ffc 00000ffc
+0xffc83954:   097a2c00 00000000 a37ff000 00000000
+0xffc83964:   097a2c00 a37ff000 ffc8399c f6ced1fb
+0xffc83974:   097a2c00 09fd6660 09918954 a2e3c000
+0xffc83984:   a3a5ee30 098b7d38 00000000 a252a5dc 
+
+Instructions: (pc=0xf6cce070)
+0xf6cce050:   b8 c7 45 bc 00 00 00 00 8b 78 04 85 ff 0f 85 2d
+0xf6cce060:   02 00 00 8b 45 10 8d 75 88 c7 45 a8 0a 00 00 00
+0xf6cce070:   8b 08 8d 7d a8 8b 41 08 8b 51 0c 83 c2 28 66 8b
+0xf6cce080:   40 2a 51 25 ff ff 00 00 8b 04 82 50 8b 45 84 50 
+
+Register to memory mapping:
+
+EAX=0x00000000 is an unknown value
+EBX=0xf6f6e570: <offset 0x502570> in /home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386/client/libjvm.so at 0xf6a6c000
+ECX=0x097a2c00 is a thread
+EDX=0xffc83954 is pointing into the stack for thread: 0x097a2c00
+ESP=0xffc83914 is pointing into the stack for thread: 0x097a2c00
+EBP=0xffc8399c is pointing into the stack for thread: 0x097a2c00
+ESI=0xffc83924 is pointing into the stack for thread: 0x097a2c00
+EDI=0x00000000 is an unknown value
+
+
+Stack: [0xffc36000,0xffc86000],  sp=0xffc83914,  free space=310k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x262070]  unsigned+0xe0
+C  [libswt-gtk-3740.so+0x23f8]  char+0x22c
+C  0xa251ded8
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J  org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(I)V
+J  org.eclipse.swt.widgets.Display.eventProc(II)I
+v  ~StubRoutines::call_stub
+J  org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(IZ)Z
+J  org.eclipse.swt.widgets.Display.readAndDispatch()Z
+j  org.eclipse.swt.widgets.Display.release()V+67
+j  org.eclipse.swt.graphics.Device.dispose()V+50
+j  org.eclipse.ui.internal.ide.application.IDEApplication.start(Lorg/eclipse/equinox/app/IApplicationContext;)Ljava/lang/Object;+129
+j  org.eclipse.equinox.internal.app.EclipseAppHandle.run(Ljava/lang/Object;)Ljava/lang/Object;+135
+j  org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(Ljava/lang/Object;)Ljava/lang/Object;+103
+j  org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(Ljava/lang/Object;)Ljava/lang/Object;+29
+j  org.eclipse.core.runtime.adaptor.EclipseStarter.run(Ljava/lang/Object;)Ljava/lang/Object;+149
+j  org.eclipse.core.runtime.adaptor.EclipseStarter.run([Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Object;+183
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+87
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+161
+j  org.eclipse.equinox.launcher.Main.invokeFramework([Ljava/lang/String;[Ljava/net/URL;)V+211
+j  org.eclipse.equinox.launcher.Main.basicRun([Ljava/lang/String;)V+126
+j  org.eclipse.equinox.launcher.Main.run([Ljava/lang/String;)I+4
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x9c280400 JavaThread "Verifier (Hotel)" [_thread_blocked, id=7219, stack(0xa0aaf000,0xa0b00000)]
+  0x9c26b800 JavaThread "Worker-55" [_thread_blocked, id=7046, stack(0xa1e10000,0xa1e61000)]
+  0xa0790800 JavaThread "Worker-54" [_thread_blocked, id=7045, stack(0x9c10d000,0x9c15e000)]
+  0xa416d000 JavaThread "Worker-42" [_thread_blocked, id=6438, stack(0xa0a34000,0xa0a85000)]
+  0xa41fa800 JavaThread "Java indexing" daemon [_thread_blocked, id=5809, stack(0xa168d000,0xa16de000)]
+  0xa3e0c000 JavaThread "[ThreadPool Manager] - Idle Thread" daemon [_thread_blocked, id=5270, stack(0xa125e000,0xa12af000)]
+  0x09acdc00 JavaThread "Timer-0" [_thread_blocked, id=5264, stack(0xa14af000,0xa1500000)]
+  0xa3809400 JavaThread "Bundle File Closer" daemon [_thread_blocked, id=5263, stack(0xa163c000,0xa168d000)]
+  0xa3957c00 JavaThread "Worker-JM" [_thread_blocked, id=5254, stack(0xa25e0000,0xa2631000)]
+  0xa3959c00 JavaThread "[Timer] - Main Queue Handler" daemon [_thread_blocked, id=5253, stack(0xa2631000,0xa2682000)]
+  0xa3914800 JavaThread "Framework Event Dispatcher" daemon [_thread_blocked, id=5251, stack(0xa26d3000,0xa2724000)]
+  0x09979800 JavaThread "Start Level Event Dispatcher" daemon [_thread_blocked, id=5250, stack(0xa2724000,0xa2775000)]
+  0x0995d800 JavaThread "State Data Manager" daemon [_thread_blocked, id=5249, stack(0xa2775000,0xa27c6000)]
+  0x09940400 JavaThread "Framework Active Thread" [_thread_blocked, id=5248, stack(0xa27c6000,0xa2817000)]
+  0x09800c00 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=5246, stack(0xa400d000,0xa405e000)]
+  0x097ff000 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=5245, stack(0xa3d7f000,0xa3e00000)]
+  0x097fd400 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=5244, stack(0xa405e000,0xa40af000)]
+  0x097f0800 JavaThread "Finalizer" daemon [_thread_blocked, id=5243, stack(0xa40af000,0xa4100000)]
+  0x097ef400 JavaThread "Reference Handler" daemon [_thread_blocked, id=5242, stack(0xa422a000,0xa427b000)]
+=>0x097a2c00 JavaThread "main" [_thread_in_vm, id=5003, stack(0xffc36000,0xffc86000)]
+
+Other Threads:
+  0x097eb800 VMThread [stack: 0xa427b000,0xa42fc000] [id=5241]
+  0x09803000 WatcherThread [stack: 0xa3a7f000,0xa3b00000] [id=5247]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 78784K, used 29371K [0xa4920000, 0xa9e90000, 0xb9e70000)
+  eden space 70080K,  39% used [0xa4920000, 0xa63ecb78, 0xa8d90000)
+  from space 8704K,  22% used [0xa9610000, 0xa97f2338, 0xa9e90000)
+  to   space 8704K,   0% used [0xa8d90000, 0xa8d90000, 0xa9610000)
+ tenured generation   total 174784K, used 31207K [0xb9e70000, 0xc4920000, 0xe4920000)
+   the space 174784K,  17% used [0xb9e70000, 0xbbce9f80, 0xbbcea000, 0xc4920000)
+ compacting perm gen  total 89344K, used 89139K [0xe4920000, 0xea060000, 0xf4920000)
+   the space 89344K,  99% used [0xe4920000, 0xea02ce08, 0xea02d000, 0xea060000)
+No shared spaces configured.
+
+Code Cache  [0xf49a1000, 0xf5919000, 0xf69a1000)
+ total_blobs=6734 nmethods=6485 adapters=179 free_code_cache=17347456 largest_free_block=384
+
+Dynamic libraries:
+08048000-0804c000 r-xp 00000000 08:05 464075                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/eclipse
+0804c000-0804d000 rw-p 00003000 08:05 464075                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/eclipse
+0979b000-0a57f000 rw-p 00000000 00:00 0                                  [heap]
+9bdc9000-9bdcc000 ---p 00000000 00:00 0 
+9bdcc000-9be1a000 rwxp 00000000 00:00 0 
+9be1a000-9be1d000 ---p 00000000 00:00 0 
+9be1d000-9be6b000 rwxp 00000000 00:00 0 
+9be6b000-9be6e000 ---p 00000000 00:00 0 
+9be6e000-9bebc000 rwxp 00000000 00:00 0 
+9bebc000-9bebf000 ---p 00000000 00:00 0 
+9bebf000-9bf0d000 rwxp 00000000 00:00 0 
+9bf0d000-9bf10000 ---p 00000000 00:00 0 
+9bf10000-9bf5e000 rwxp 00000000 00:00 0 
+9bf5e000-9bf61000 ---p 00000000 00:00 0 
+9bf61000-9bfaf000 rwxp 00000000 00:00 0 
+9bfaf000-9bfb2000 ---p 00000000 00:00 0 
+9bfb2000-9c000000 rwxp 00000000 00:00 0 
+9c000000-9c09e000 rw-p 00000000 00:00 0 
+9c09e000-9c100000 ---p 00000000 00:00 0 
+9c10d000-9c110000 ---p 00000000 00:00 0 
+9c110000-9c15e000 rwxp 00000000 00:00 0                                  [stack:7045]
+9c15e000-9c161000 ---p 00000000 00:00 0 
+9c161000-9c1af000 rwxp 00000000 00:00 0 
+9c1af000-9c1b2000 ---p 00000000 00:00 0 
+9c1b2000-9c200000 rwxp 00000000 00:00 0 
+9c200000-9c2fb000 rw-p 00000000 00:00 0 
+9c2fb000-9c300000 ---p 00000000 00:00 0 
+9c326000-9c996000 r--p 00000000 08:05 131359                             /usr/share/icons/hicolor/icon-theme.cache
+9c996000-a0700000 r--p 00000000 08:05 195319                             /usr/share/icons/gnome/icon-theme.cache
+a0700000-a0800000 rw-p 00000000 00:00 0 
+a081a000-a081d000 ---p 00000000 00:00 0 
+a081d000-a086b000 rwxp 00000000 00:00 0 
+a086b000-a0900000 r--s 00929000 08:05 466305                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.jdt.ui_3.7.2.v20120109-1427.jar
+a0900000-a09ba000 rw-p 00000000 00:00 0 
+a09ba000-a0a00000 ---p 00000000 00:00 0 
+a0a34000-a0a37000 ---p 00000000 00:00 0 
+a0a37000-a0a85000 rwxp 00000000 00:00 0                                  [stack:6438]
+a0a85000-a0aaf000 r--s 0043b000 08:05 466277                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.jdt.core_3.7.3.v20120119-1537.jar
+a0aaf000-a0ab2000 ---p 00000000 00:00 0 
+a0ab2000-a0b00000 rwxp 00000000 00:00 0                                  [stack:7219]
+a0b00000-a0d00000 rw-p 00000000 00:00 0 
+a0d03000-a0d24000 r--s 00178000 08:05 466349                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.mylyn.tasks.ui_3.6.5.v20120215-0100.jar
+a0d24000-a0d27000 ---p 00000000 00:00 0 
+a0d27000-a0d75000 rwxp 00000000 00:00 0 
+a0d75000-a0d81000 r--s 00072000 08:05 465789                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.debug.core_7.1.0.201202111925.jar
+a0d81000-a0d9a000 r--s 00115000 08:05 465795                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.dsf.gdb_4.0.2.201202111925.jar
+a0d9a000-a0db6000 r--s 0011e000 08:05 465796                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.dsf.ui_2.2.1.201202111925.jar
+a0db6000-a0e00000 r--s 003c3000 08:05 466457                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.pde.ui_3.6.100.v20120103_r372.jar
+a0e00000-a0f00000 rw-p 00000000 00:00 0 
+a0f00000-a0ffc000 rw-p 00000000 00:00 0 
+a0ffc000-a1000000 ---p 00000000 00:00 0 
+a1000000-a1019000 r--s 00133000 08:05 466280                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.jdt.debug.ui_3.6.1.v20111006_r372.jar
+a1019000-a1032000 r--s 000ed000 08:05 465792                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.debug.ui_7.1.2.201202111925.jar
+a1032000-a1048000 r-xp 00000000 08:05 436894                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/com.mentor.nucleus.bp.core.linux.x86_4.1.0/os/linux/x86/libJetInitHeap.so
+a1048000-a104a000 rw-p 00016000 08:05 436894                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/com.mentor.nucleus.bp.core.linux.x86_4.1.0/os/linux/x86/libJetInitHeap.so
+a104a000-a1056000 rw-p 00000000 00:00 0 
+a1056000-a1100000 r--p 00000000 08:05 272122                             /usr/share/fonts/TTF/DejaVuSans-Bold.ttf
+a1100000-a1200000 rw-p 00000000 00:00 0 
+a1206000-a1212000 r--s 00079000 08:05 465790                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.debug.mi.core_7.1.1.201202111925.jar
+a1212000-a1231000 r--s 00000000 08:05 140305                             /usr/share/mime/mime.cache
+a1231000-a1247000 r--p 00000000 08:05 796794                             /usr/share/locale/en_GB/LC_MESSAGES/glib20.mo
+a125e000-a1261000 ---p 00000000 00:00 0 
+a1261000-a12af000 rwxp 00000000 00:00 0                                  [stack:5270]
+a12af000-a12b2000 ---p 00000000 00:00 0 
+a12b2000-a1300000 rwxp 00000000 00:00 0 
+a1300000-a1400000 rw-p 00000000 00:00 0 
+a140a000-a1415000 r--s 0006c000 08:05 465794                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.dsf.gdb.ui_2.2.1.201202111925.jar
+a1415000-a1418000 ---p 00000000 00:00 0 
+a1418000-a1466000 rwxp 00000000 00:00 0 
+a1466000-a14af000 r--s 0040a000 08:05 465788                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.core_5.3.2.201202111925.jar
+a14af000-a14b2000 ---p 00000000 00:00 0 
+a14b2000-a1500000 rwxp 00000000 00:00 0                                  [stack:5264]
+a1500000-a15d1000 rw-p 00000000 00:00 0 
+a15d1000-a1600000 ---p 00000000 00:00 0 
+a1606000-a1621000 r--s 00145000 08:05 466566                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.team.ui_3.6.101.R37x_v20111109-0800.jar
+a163c000-a163f000 ---p 00000000 00:00 0 
+a163f000-a168d000 rwxp 00000000 00:00 0                                  [stack:5263]
+a168d000-a1690000 ---p 00000000 00:00 0 
+a1690000-a16de000 rwxp 00000000 00:00 0                                  [stack:5809]
+a16de000-a18de000 rw-s 00000000 00:04 12386315                           /SYSV00000000 (deleted)
+a18e5000-a18ed000 r--s 00115000 08:05 439175                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/resources.jar
+a18ed000-a18f5000 r--s 00072000 08:05 437914                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/com.mentor.nucleus.bp.ui.properties_4.1.0/properties.jar
+a18f5000-a18fe000 r--s 0003f000 08:05 437909                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/com.mentor.nucleus.bp.ui.explorer_4.1.0/explorer.jar
+a18fe000-a190f000 r--s 000bc000 08:05 466175                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.gef_3.7.2.v20111106-2020.jar
+a190f000-a194a000 r--p 00000000 08:05 278172                             /usr/share/fonts/TTF/DejaVuSansMono-BoldOblique.ttf
+a194a000-a1987000 r--p 00000000 08:05 278173                             /usr/share/fonts/TTF/DejaVuSansMono-Oblique.ttf
+a1987000-a19d5000 r--p 00000000 08:05 278171                             /usr/share/fonts/TTF/DejaVuSansMono-Bold.ttf
+a19d5000-a19e2000 r--p 00000000 08:05 279416                             /usr/share/fonts/TTF/Cantarell-BoldOblique.ttf
+a19e3000-a19f3000 r--s 000db000 08:05 465779                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.ant.ui_3.5.101.v20120110-1739.jar
+a19f3000-a1a26000 r--s 0022f000 08:05 466563                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.team.svn.ui_0.7.9.I20110819-1700.jar
+a1a26000-a1a29000 ---p 00000000 00:00 0 
+a1a29000-a1a77000 rwxp 00000000 00:00 0 
+a1a77000-a1aa9000 r--s 00244000 08:05 465863                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.debug.ui_3.7.102.v20111129-1423_r372.jar
+a1aa9000-a1b00000 r--s 004b4000 08:05 465806                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.ui_5.3.2.201202111925.jar
+a1b00000-a1bfa000 rw-p 00000000 00:00 0 
+a1bfa000-a1c00000 ---p 00000000 00:00 0 
+a1c02000-a1c06000 r--s 00024000 08:05 466574                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.ui.console_3.5.100.v20111007_r372.jar
+a1c06000-a1c0a000 r--s 00013000 08:05 467006                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.ui.views_3.6.0.v20110928-1505.jar
+a1c0a000-a1c17000 r--p 00000000 08:05 279417                             /usr/share/fonts/TTF/Cantarell-Oblique.ttf
+a1c17000-a1c24000 r--p 00000000 08:05 279415                             /usr/share/fonts/TTF/Cantarell-Bold.ttf
+a1c27000-a1c30000 r--s 00058000 08:05 466554                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.team.core_3.6.0.I20110525-0800.jar
+a1c30000-a1c3c000 r--s 00083000 08:05 467018                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.ui.workbench.texteditor_3.7.0.v20110928-1504.jar
+a1c3c000-a1c48000 r--s 00081000 08:05 466576                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.ui.editors_3.7.0.v20110928-1504.jar
+a1c4f000-a1c62000 r--s 000dd000 08:05 466311                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.jface.text_3.7.2.v20111213-1208.jar
+a1c62000-a1c67000 r--s 00038000 08:05 466568                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.text_3.5.101.v20110928-1504.jar
+a1c67000-a1c7b000 r--s 00144000 08:05 437905                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/com.mentor.nucleus.bp.ui.canvas_4.1.0/canvas.jar
+a1c81000-a1c8f000 r--s 000a6000 08:05 465811                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.compare_3.5.202.R37x_v20111109-0800.jar
+a1c8f000-a1d0d000 r--s 009c6000 08:05 436897                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/com.mentor.nucleus.bp.core_4.1.0/core.jar
+a1d0e000-a1d16000 r--s 0005f000 08:05 466400                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.pde.api.tools.ui_1.0.301.v20110803_r371.jar
+a1d16000-a1d20000 r--s 00069000 08:05 466549                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.search_3.7.0.v20110928-1504.jar
+a1d24000-a1d2d000 r--s 0006a000 08:05 436853                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/com.mentor.nucleus.bp.als.oal_4.1.0/oal.jar
+a1d2d000-a1d36000 r--s 0007c000 08:05 437924                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/com.mentor.nucleus.bp.ui.text_4.1.0/text.jar
+a1d3c000-a1d41000 r--s 00053000 08:05 438825                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/org.antlr_2.7.2/antlr.jar
+a1d47000-a1d4b000 r--s 00021000 08:05 465791                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.debug.mi.ui_6.1.1.201202111925.jar
+a1d4b000-a1d51000 r--s 00086000 08:05 439106                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/jsse.jar
+a1d52000-a1d56000 r--s 00017000 08:05 465814                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.core.commands_3.6.0.I20110111-0800.jar
+a1d56000-a1d5d000 r--s 00038000 08:05 466334                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.mylyn.context.ui_3.6.1.v20120112-0100.jar
+a1d5d000-a1d60000 r--s 00013000 08:05 439104                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/jce.jar
+a1d6c000-a1d87000 r--s 0018f000 08:05 466313                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.jgit_2.3.1.201302201838-r.jar
+a1d87000-a1d94000 r--s 000c0000 08:05 466284                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.jdt.debug_3.7.1.v20111006_r372/jdimodel.jar
+a1d94000-a1d9e000 r-xp 00000000 08:05 431080                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/configuration/org.eclipse.osgi/bundles/441/1/.cp/libswt-cairo-gtk-3740.so
+a1d9e000-a1d9f000 rw-p 00009000 08:05 431080                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/configuration/org.eclipse.osgi/bundles/441/1/.cp/libswt-cairo-gtk-3740.so
+a1d9f000-a1da2000 rw-s 00000000 00:04 12353545                           /SYSV00000000 (deleted)
+a1dad000-a1db0000 r--s 00019000 08:05 466333                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.mylyn.context.core_3.6.1.v20110720-0100.jar
+a1db0000-a1db2000 r--s 00008000 08:05 466342                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.mylyn.monitor.core_3.6.0.v20110608-1400.jar
+a1db2000-a1db4000 r--s 0000b000 08:05 465833                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.core.filesystem_1.3.100.v20110423-0524.jar
+a1db6000-a1dc4000 r--s 0016c000 08:05 437631                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/com.mentor.nucleus.bp.io.mdl_4.1.0/mdl.jar
+a1dc9000-a1dcf000 r--s 00039000 08:05 466037                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.epp.mpc.ui_1.1.1.I20110907-0947.jar
+a1dcf000-a1dd9000 r--s 00080000 08:05 465866                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.draw2d_3.7.2.v20111017-2020.jar
+a1dd9000-a1de1000 r--s 00063000 08:05 437911                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/com.mentor.nucleus.bp.ui.graphics_4.1.0.jar
+a1de1000-a1de9000 r--s 0004d000 08:05 465861                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.debug.core_3.7.1.v20111129-2031.jar
+a1de9000-a1df3000 r--s 00085000 08:05 466556                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.team.cvs.core_3.3.400.I20110510-0800.jar
+a1df3000-a1e10000 r--s 0017c000 08:05 466560                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.team.cvs.ui_3.3.401.v20120126-1227.jar
+a1e10000-a1e13000 ---p 00000000 00:00 0 
+a1e13000-a1e61000 rwxp 00000000 00:00 0                                  [stack:7046]
+a1e61000-a1e6b000 r--s 00067000 08:05 465802                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.make.ui_7.1.2.201202111925.jar
+a1e6b000-a1e74000 r--s 00042000 08:05 465797                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.dsf_2.2.0.201202111925.jar
+a1e74000-a1e84000 r--s 00111000 08:05 465803                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.managedbuilder.core_8.0.2.201202111925.jar
+a1e84000-a1eaf000 r--s 00210000 08:05 465885                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.egit.ui_2.3.1.201302201838-r.jar
+a1eaf000-a1eb2000 ---p 00000000 00:00 0 
+a1eb2000-a1f00000 rwxp 00000000 00:00 0 
+a1f00000-a2000000 rw-p 00000000 00:00 0 
+a2000000-a2002000 r--s 00006000 08:05 437918                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/com.mentor.nucleus.bp.ui.sem_4.1.0/sem.jar
+a2003000-a2007000 r--s 00021000 08:05 466145                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.equinox.p2.ui.discovery_1.0.0.v20110502-1955.jar
+a2007000-a200a000 r--s 00019000 08:05 466159                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.equinox.preferences_3.4.2.v20120111-2020.jar
+a200a000-a200d000 r--s 00019000 08:05 465830                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.core.filebuffers_3.5.200.v20110928-1504.jar
+a200d000-a2010000 r--s 0001f000 08:05 467002                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.ui.views.log_1.0.200.v20110404.jar
+a2010000-a2015000 r--s 00020000 08:05 437920                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/com.mentor.nucleus.bp.ui.session_4.1.0/session.jar
+a2015000-a2019000 r--s 0001e000 08:05 466578                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.ui.externaltools_3.2.0.v20111007_r372.jar
+a2019000-a201f000 r--s 0004c000 08:05 465883                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.egit.core_2.3.1.201302201838-r.jar
+a201f000-a2023000 r--s 00025000 08:05 466341                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.mylyn.java.ui_3.6.0.v20110608-1400.jar
+a2023000-a202c000 r--s 0005e000 08:05 466300                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.jdt.junit_3.7.0.v20110928-1453.jar
+a202e000-a2031000 r--s 00019000 08:05 466446                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.pde.launching_3.6.0.v20110506.jar
+a2031000-a2034000 r--s 00013000 08:05 466275                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.jdt.core.manipulation_1.4.0.v20110928-1453.jar
+a2034000-a2036000 r--s 00004000 08:05 465784                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.codan.ui.cxx_2.0.0.201202111925.jar
+a2036000-a2039000 ---p 00000000 00:00 0 
+a2039000-a2087000 rwxp 00000000 00:00 0 
+a2087000-a2090000 r-xp 00000000 08:05 406422                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/configuration/org.eclipse.osgi/bundles/441/1/.cp/libswt-atk-gtk-3740.so
+a2090000-a2091000 rw-p 00009000 08:05 406422                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/configuration/org.eclipse.osgi/bundles/441/1/.cp/libswt-atk-gtk-3740.so
+a2091000-a2098000 r--s 00048000 08:05 466319                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.ltk.core.refactoring_3.5.201.r372_v20111101-0700.jar
+a2098000-a20a1000 r--s 0005e000 08:05 465801                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.make.core_7.1.2.201202111925.jar
+a20a1000-a20a3000 r--s 00003000 08:05 465786                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.core.linux.x86_5.2.0.201202111925.jar
+a20a3000-a20a6000 ---p 00000000 00:00 0 
+a20a6000-a20f4000 rwxp 00000000 00:00 0 
+a20f4000-a20f7000 r--s 00014000 08:05 465816                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.core.contenttype_3.4.100.v20110423-0524.jar
+a20f7000-a20f9000 r-xp 00000000 08:05 457720                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/configuration/org.eclipse.osgi/bundles/99/1/.cp/os/linux/x86/libunixfile_1_0_0.so
+a20f9000-a20fa000 rw-p 00001000 08:05 457720                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/configuration/org.eclipse.osgi/bundles/99/1/.cp/os/linux/x86/libunixfile_1_0_0.so
+a20fa000-a2106000 r--s 000ba000 08:05 465840                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.core.resources_3.7.101.v20120125-1505.jar
+a2106000-a212e000 r--s 00214000 08:05 466584                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.ui.ide_3.7.0.v20110928-1505.jar
+a212e000-a218e000 rw-s 00000000 00:04 12288006                           /SYSV00000000 (deleted)
+a218e000-a21e0000 r--p 00000000 08:05 278174                             /usr/share/fonts/TTF/DejaVuSansMono.ttf
+a21e0000-a21ec000 r--p 00000000 08:05 279418                             /usr/share/fonts/TTF/Cantarell-Regular.ttf
+a21ec000-a2200000 r--s 00000000 08:05 462021                             /home/rekoil/.cache/fontconfig/8d4af663993b81a124ee82e610bb31f9-le32d4.cache-4
+a2200000-a23a2000 r--s 00000000 08:05 531959                             /var/cache/fontconfig/f6b893a7224233d96cb72fd88691c0b4-le32d4.cache-4
+a23a2000-a23fd000 r-xp 00000000 08:05 405246                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/configuration/org.eclipse.osgi/bundles/441/1/.cp/libswt-pi-gtk-3740.so
+a23fd000-a23ff000 rw-p 0005a000 08:05 405246                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/configuration/org.eclipse.osgi/bundles/441/1/.cp/libswt-pi-gtk-3740.so
+a23ff000-a2400000 rw-p 00000000 00:00 0 
+a2400000-a245e000 rw-p 00000000 00:00 0 
+a245e000-a2500000 ---p 00000000 00:00 0 
+a2502000-a2508000 r-xp 00000000 08:05 840039                             /usr/lib32/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-gif.so
+a2508000-a2509000 r--p 00005000 08:05 840039                             /usr/lib32/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-gif.so
+a2509000-a250a000 rw-p 00006000 08:05 840039                             /usr/lib32/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-gif.so
+a250a000-a250c000 r--s 00000000 08:05 531965                             /var/cache/fontconfig/20e57e94045b5e8e621b9eef55f78e7f-le32d4.cache-4
+a250c000-a2514000 r--s 00000000 08:05 531964                             /var/cache/fontconfig/a98d8961fa319a64d3cfd8640c79e62d-le32d4.cache-4
+a2514000-a251c000 r--s 00000000 08:05 458195                             /home/rekoil/.cache/fontconfig/d62e99ef547d1d24cdb1bd22ec1a2976-le32d4.cache-4
+a251c000-a2520000 rwxp 00000000 00:00 0 
+a2520000-a2525000 r-xp 00000000 08:05 878306                             /usr/lib32/libXtst.so.6.1.0
+a2525000-a2526000 r--p 00004000 08:05 878306                             /usr/lib32/libXtst.so.6.1.0
+a2526000-a2527000 rw-p 00005000 08:05 878306                             /usr/lib32/libXtst.so.6.1.0
+a2527000-a252a000 r-xp 00000000 08:05 405239                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/configuration/org.eclipse.osgi/bundles/441/1/.cp/libswt-gtk-3740.so
+a252a000-a252b000 rw-p 00002000 08:05 405239                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/configuration/org.eclipse.osgi/bundles/441/1/.cp/libswt-gtk-3740.so
+a252b000-a252c000 rw-p 00000000 00:00 0 
+a252d000-a2530000 r--s 00014000 08:05 465835                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.core.jobs_3.5.101.v20120113-1953.jar
+a2530000-a2535000 r--s 00021000 08:05 467020                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.ui_3.7.0.v20110928-1505.jar
+a2535000-a2571000 r--s 00629000 08:05 465636                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/com.ibm.icu_4.4.2.v20110823.jar
+a2571000-a2585000 r--s 0021f000 08:05 466551                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.swt.gtk.linux.x86_3.7.2.v3740f.jar
+a2585000-a2599000 r--s 000f3000 08:05 466312                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.jface_3.7.0.v20110928-1505.jar
+a2599000-a25e0000 r--s 003b3000 08:05 467019                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.ui.workbench_3.7.1.v20120104-1859.jar
+a25e0000-a25e3000 ---p 00000000 00:00 0 
+a25e3000-a2631000 rwxp 00000000 00:00 0                                  [stack:5254]
+a2631000-a2634000 ---p 00000000 00:00 0 
+a2634000-a2682000 rwxp 00000000 00:00 0                                  [stack:5253]
+a2682000-a2685000 ---p 00000000 00:00 0 
+a2685000-a26d3000 rwxp 00000000 00:00 0 
+a26d3000-a26d6000 ---p 00000000 00:00 0 
+a26d6000-a2724000 rwxp 00000000 00:00 0                                  [stack:5251]
+a2724000-a2727000 ---p 00000000 00:00 0 
+a2727000-a2775000 rwxp 00000000 00:00 0                                  [stack:5250]
+a2775000-a2778000 ---p 00000000 00:00 0 
+a2778000-a27c6000 rwxp 00000000 00:00 0                                  [stack:5249]
+a27c6000-a27c9000 ---p 00000000 00:00 0 
+a27c9000-a2817000 rwxp 00000000 00:00 0                                  [stack:5248]
+a2817000-a281c000 r-xp 00000000 08:05 839189                             /usr/lib32/libnss_dns-2.18.so
+a281c000-a281d000 r--p 00004000 08:05 839189                             /usr/lib32/libnss_dns-2.18.so
+a281d000-a281e000 rw-p 00005000 08:05 839189                             /usr/lib32/libnss_dns-2.18.so
+a281e000-a281f000 r--s 00002000 08:05 465831                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.core.filesystem.linux.x86_1.4.0.v20110423-0524.jar
+a281f000-a2821000 r--s 00001000 08:05 467010                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.ui.workbench.compatibility_3.2.100.I20110413-1600/compatibility.jar
+a2821000-a2823000 r--s 00007000 08:05 466104                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.equinox.p2.discovery_1.0.100.v20110502-1955.jar
+a2823000-a2824000 r--s 00002000 08:05 465787                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.core.linux_5.2.0.201202111925.jar
+a2824000-a2825000 r--s 00006000 08:05 464072                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/dropins/com.mentor.nucleus.bp.qa.odometer_1.0.0.201105311153.jar
+a2825000-a2827000 r--s 0000e000 08:05 466582                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.ui.ide.application_1.0.300.I20110306-2000.jar
+a2827000-a282b000 r--s 00033000 08:05 465800                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.cdt.launch_7.0.0.201202111925.jar
+a282b000-a2831000 r--s 0004c000 08:05 437198                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/com.mentor.nucleus.bp.debug.ui_4.1.0/verifier.jar
+a2831000-a2833000 r--s 0000e000 08:05 466345                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.mylyn.resources.ui_3.6.0.v20110608-1400.jar
+a2833000-a2837000 r--s 00020000 08:05 466294                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.jdt.junit.core_3.7.0.v20110928-1453.jar
+a2837000-a2839000 r--s 0000e000 08:05 465809                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.compare.core_3.5.200.I20110208-0800.jar
+a2839000-a283a000 r--p 00000000 00:00 0 
+a283b000-a283f000 r--s 00047000 08:05 466302                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.jdt.launching_3.6.1.v20111006_r372.jar
+a283f000-a2843000 r--s 00029000 08:05 466161                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.equinox.registry_3.5.101.R37x_v20110810-1611.jar
+a2843000-a2845000 r--s 00010000 08:05 465855                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.core.runtime_3.7.0.v20110110.jar
+a2846000-a284a000 r--s 0000d000 08:05 466283                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.jdt.debug_3.7.1.v20111006_r372/jdi.jar
+a284a000-a284d000 r--s 00023000 08:05 466271                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.jdt.compiler.apt_1.0.400.v0110816-0800.jar
+a284d000-a2861000 r-xp 00000000 08:05 439074                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386/libnet.so
+a2861000-a2862000 rw-p 00013000 08:05 439074                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386/libnet.so
+a2862000-a2876000 r--s 0013a000 08:05 466397                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.osgi_3.7.2.v20120110-1415.jar
+a2876000-a28d6000 rw-s 00000000 00:04 12255237                           /SYSV00000000 (deleted)
+a28d6000-a2994000 rw-p 00000000 00:00 0 
+a2994000-a29ba000 r--p 00000000 08:05 816788                             /usr/share/locale/en_GB/LC_MESSAGES/gtk20-properties.mo
+a29ba000-a29d9000 r-xp 00000000 08:05 839877                             /usr/lib32/libatk-1.0.so.0.21009.1
+a29d9000-a29db000 r--p 0001e000 08:05 839877                             /usr/lib32/libatk-1.0.so.0.21009.1
+a29db000-a29dc000 rw-p 00020000 08:05 839877                             /usr/lib32/libatk-1.0.so.0.21009.1
+a29dc000-a2e38000 r-xp 00000000 08:05 846035                             /usr/lib32/libgtk-x11-2.0.so.0.2400.22
+a2e38000-a2e3c000 r--p 0045c000 08:05 846035                             /usr/lib32/libgtk-x11-2.0.so.0.2400.22
+a2e3c000-a2e3e000 rw-p 00460000 08:05 846035                             /usr/lib32/libgtk-x11-2.0.so.0.2400.22
+a2e3e000-a2e40000 rw-p 00000000 00:00 0 
+a2e40000-a2e44000 r-xp 00000000 08:05 839631                             /usr/lib32/libXxf86vm.so.1.0.0
+a2e44000-a2e45000 r--p 00004000 08:05 839631                             /usr/lib32/libXxf86vm.so.1.0.0
+a2e45000-a2e46000 rw-p 00005000 08:05 839631                             /usr/lib32/libXxf86vm.so.1.0.0
+a2e46000-a2e5d000 r-xp 00000000 08:05 839570                             /usr/lib32/libxcb-glx.so.0.0.0
+a2e5d000-a2e5e000 r--p 00017000 08:05 839570                             /usr/lib32/libxcb-glx.so.0.0.0
+a2e5e000-a2e5f000 rw-p 00018000 08:05 839570                             /usr/lib32/libxcb-glx.so.0.0.0
+a2e5f000-a2e64000 r-xp 00000000 08:05 839508                             /usr/lib32/libXdmcp.so.6.0.0
+a2e64000-a2e65000 r--p 00004000 08:05 839508                             /usr/lib32/libXdmcp.so.6.0.0
+a2e65000-a2e66000 rw-p 00005000 08:05 839508                             /usr/lib32/libXdmcp.so.6.0.0
+a2e66000-a2e68000 r-xp 00000000 08:05 839513                             /usr/lib32/libXau.so.6.0.0
+a2e68000-a2e69000 r--p 00001000 08:05 839513                             /usr/lib32/libXau.so.6.0.0
+a2e69000-a2e6a000 rw-p 00002000 08:05 839513                             /usr/lib32/libXau.so.6.0.0
+a2e6a000-a2e76000 r-xp 00000000 08:05 839483                             /usr/lib32/libdrm.so.2.4.0
+a2e76000-a2e77000 r--p 0000b000 08:05 839483                             /usr/lib32/libdrm.so.2.4.0
+a2e77000-a2e78000 rw-p 0000c000 08:05 839483                             /usr/lib32/libdrm.so.2.4.0
+a2e78000-a2e89000 r-xp 00000000 08:05 839780                             /usr/lib32/libudev.so.1.4.0
+a2e89000-a2e8a000 r--p 00010000 08:05 839780                             /usr/lib32/libudev.so.1.4.0
+a2e8a000-a2e8b000 rw-p 00011000 08:05 839780                             /usr/lib32/libudev.so.1.4.0
+a2e8b000-a2e9b000 r-xp 00000000 08:05 837092                             /usr/lib32/libglapi.so.0.0.0
+a2e9b000-a2e9d000 r--p 0000f000 08:05 837092                             /usr/lib32/libglapi.so.0.0.0
+a2e9d000-a2ea2000 rwxp 00011000 08:05 837092                             /usr/lib32/libglapi.so.0.0.0
+a2ea2000-a2ea7000 r-xp 00000000 08:05 837097                             /usr/lib32/libgbm.so.1.0.0
+a2ea7000-a2ea8000 r--p 00004000 08:05 837097                             /usr/lib32/libgbm.so.1.0.0
+a2ea8000-a2ea9000 rw-p 00005000 08:05 837097                             /usr/lib32/libgbm.so.1.0.0
+a2ea9000-a2eab000 r-xp 00000000 08:05 839576                             /usr/lib32/libxcb-shape.so.0.0.0
+a2eab000-a2eac000 r--p 00002000 08:05 839576                             /usr/lib32/libxcb-shape.so.0.0.0
+a2eac000-a2ead000 rw-p 00003000 08:05 839576                             /usr/lib32/libxcb-shape.so.0.0.0
+a2ead000-a2eb3000 r-xp 00000000 08:05 839581                             /usr/lib32/libxcb-xfixes.so.0.0.0
+a2eb3000-a2eb4000 r--p 00005000 08:05 839581                             /usr/lib32/libxcb-xfixes.so.0.0.0
+a2eb4000-a2eb5000 rw-p 00006000 08:05 839581                             /usr/lib32/libxcb-xfixes.so.0.0.0
+a2eb5000-a2eb9000 r-xp 00000000 08:05 839569                             /usr/lib32/libxcb-dri2.so.0.0.0
+a2eb9000-a2eba000 r--p 00003000 08:05 839569                             /usr/lib32/libxcb-dri2.so.0.0.0
+a2eba000-a2ebb000 rw-p 00004000 08:05 839569                             /usr/lib32/libxcb-dri2.so.0.0.0
+a2ebb000-a2eca000 r-xp 00000000 08:05 839898                             /usr/lib32/libbz2.so.1.0.6
+a2eca000-a2ecb000 rw-p 0000f000 08:05 839898                             /usr/lib32/libbz2.so.1.0.6
+a2ecb000-a2f1d000 r-xp 00000000 08:05 837099                             /usr/lib32/mesa-libGL.so.1.2.0
+a2f1d000-a2f1f000 r--p 00051000 08:05 837099                             /usr/lib32/mesa-libGL.so.1.2.0
+a2f1f000-a2f24000 rwxp 00053000 08:05 837099                             /usr/lib32/mesa-libGL.so.1.2.0
+a2f24000-a2f44000 r-xp 00000000 08:05 839565                             /usr/lib32/libxcb.so.1.1.0
+a2f44000-a2f45000 r--p 0001f000 08:05 839565                             /usr/lib32/libxcb.so.1.1.0
+a2f45000-a2f46000 rw-p 00020000 08:05 839565                             /usr/lib32/libxcb.so.1.1.0
+a2f46000-a2f4f000 r-xp 00000000 08:05 839573                             /usr/lib32/libxcb-render.so.0.0.0
+a2f4f000-a2f50000 r--p 00008000 08:05 839573                             /usr/lib32/libxcb-render.so.0.0.0
+a2f50000-a2f51000 rw-p 00009000 08:05 839573                             /usr/lib32/libxcb-render.so.0.0.0
+a2f51000-a2f6e000 r-xp 00000000 08:05 837098                             /usr/lib32/libEGL.so.1.0.0
+a2f6e000-a2f6f000 r--p 0001c000 08:05 837098                             /usr/lib32/libEGL.so.1.0.0
+a2f6f000-a2f70000 rw-p 0001d000 08:05 837098                             /usr/lib32/libEGL.so.1.0.0
+a2f70000-a3017000 r-xp 00000000 08:05 839913                             /usr/lib32/libpixman-1.so.0.32.2
+a3017000-a3018000 ---p 000a7000 08:05 839913                             /usr/lib32/libpixman-1.so.0.32.2
+a3018000-a301d000 r--p 000a7000 08:05 839913                             /usr/lib32/libpixman-1.so.0.32.2
+a301d000-a301e000 rw-p 000ac000 08:05 839913                             /usr/lib32/libpixman-1.so.0.32.2
+a301e000-a3055000 r-xp 00000000 08:05 839883                             /usr/lib32/libpng16.so.16.6.0
+a3055000-a3056000 r--p 00036000 08:05 839883                             /usr/lib32/libpng16.so.16.6.0
+a3056000-a3057000 rw-p 00037000 08:05 839883                             /usr/lib32/libpng16.so.16.6.0
+a3057000-a307d000 r-xp 00000000 08:05 839708                             /usr/lib32/libexpat.so.1.6.0
+a307d000-a307f000 r--p 00025000 08:05 839708                             /usr/lib32/libexpat.so.1.6.0
+a307f000-a3080000 rw-p 00027000 08:05 839708                             /usr/lib32/libexpat.so.1.6.0
+a3080000-a3093000 r-xp 00000000 08:05 839197                             /usr/lib32/libresolv-2.18.so
+a3093000-a3094000 ---p 00013000 08:05 839197                             /usr/lib32/libresolv-2.18.so
+a3094000-a3095000 r--p 00013000 08:05 839197                             /usr/lib32/libresolv-2.18.so
+a3095000-a3096000 rw-p 00014000 08:05 839197                             /usr/lib32/libresolv-2.18.so
+a3096000-a3098000 rw-p 00000000 00:00 0 
+a3098000-a30ad000 r-xp 00000000 08:05 839703                             /usr/lib32/libz.so.1.2.8
+a30ad000-a30ae000 r--p 00014000 08:05 839703                             /usr/lib32/libz.so.1.2.8
+a30ae000-a30af000 rw-p 00015000 08:05 839703                             /usr/lib32/libz.so.1.2.8
+a30af000-a3149000 r-xp 00000000 08:05 839902                             /usr/lib32/libfreetype.so.6.10.2
+a3149000-a314d000 r--p 00099000 08:05 839902                             /usr/lib32/libfreetype.so.6.10.2
+a314d000-a314e000 rw-p 0009d000 08:05 839902                             /usr/lib32/libfreetype.so.6.10.2
+a314e000-a319f000 r-xp 00000000 08:05 839993                             /usr/lib32/libharfbuzz.so.0.923.0
+a319f000-a31a0000 r--p 00051000 08:05 839993                             /usr/lib32/libharfbuzz.so.0.923.0
+a31a0000-a31a1000 rw-p 00052000 08:05 839993                             /usr/lib32/libharfbuzz.so.0.923.0
+a31a1000-a31b4000 r-xp 00000000 08:05 840012                             /usr/lib32/libpangoft2-1.0.so.0.3600.0
+a31b4000-a31b5000 r--p 00013000 08:05 840012                             /usr/lib32/libpangoft2-1.0.so.0.3600.0
+a31b5000-a31b6000 rw-p 00014000 08:05 840012                             /usr/lib32/libpangoft2-1.0.so.0.3600.0
+a31b6000-a31c7000 r-xp 00000000 08:05 839626                             /usr/lib32/libXext.so.6.4.0
+a31c7000-a31c8000 r--p 00010000 08:05 839626                             /usr/lib32/libXext.so.6.4.0
+a31c8000-a31c9000 rw-p 00011000 08:05 839626                             /usr/lib32/libXext.so.6.4.0
+a31c9000-a32fc000 r-xp 00000000 08:05 833171                             /usr/lib32/libX11.so.6.3.0
+a32fc000-a32fd000 r--p 00132000 08:05 833171                             /usr/lib32/libX11.so.6.3.0
+a32fd000-a3300000 rw-p 00133000 08:05 833171                             /usr/lib32/libX11.so.6.3.0
+a3300000-a3432000 r-xp 00000000 08:05 839920                             /usr/lib32/libcairo.so.2.11200.16
+a3432000-a3434000 r--p 00131000 08:05 839920                             /usr/lib32/libcairo.so.2.11200.16
+a3434000-a3435000 rw-p 00133000 08:05 839920                             /usr/lib32/libcairo.so.2.11200.16
+a3435000-a3436000 rw-p 00000000 00:00 0 
+a3436000-a346f000 r-xp 00000000 08:05 839909                             /usr/lib32/libfontconfig.so.1.8.0
+a346f000-a3470000 r--p 00039000 08:05 839909                             /usr/lib32/libfontconfig.so.1.8.0
+a3470000-a3471000 rw-p 0003a000 08:05 839909                             /usr/lib32/libfontconfig.so.1.8.0
+a3471000-a35db000 r-xp 00000000 08:05 839735                             /usr/lib32/libgio-2.0.so.0.3800.2
+a35db000-a35dc000 ---p 0016a000 08:05 839735                             /usr/lib32/libgio-2.0.so.0.3800.2
+a35dc000-a35de000 r--p 0016a000 08:05 839735                             /usr/lib32/libgio-2.0.so.0.3800.2
+a35de000-a35df000 rw-p 0016c000 08:05 839735                             /usr/lib32/libgio-2.0.so.0.3800.2
+a35df000-a35e0000 rw-p 00000000 00:00 0 
+a35e0000-a368c000 r-xp 00000000 08:05 846034                             /usr/lib32/libgdk-x11-2.0.so.0.2400.22
+a368c000-a368e000 r--p 000ab000 08:05 846034                             /usr/lib32/libgdk-x11-2.0.so.0.2400.22
+a368e000-a368f000 rw-p 000ad000 08:05 846034                             /usr/lib32/libgdk-x11-2.0.so.0.2400.22
+a368f000-a36fa000 r-xp 00000000 08:05 839684                             /usr/lib32/libpcre.so.1.2.1
+a36fa000-a36fb000 r--p 0006a000 08:05 839684                             /usr/lib32/libpcre.so.1.2.1
+a36fb000-a36fc000 rw-p 0006b000 08:05 839684                             /usr/lib32/libpcre.so.1.2.1
+a36fc000-a37fe000 r-xp 00000000 08:05 839731                             /usr/lib32/libglib-2.0.so.0.3800.2
+a37fe000-a37ff000 r--p 00101000 08:05 839731                             /usr/lib32/libglib-2.0.so.0.3800.2
+a37ff000-a3800000 rw-p 00102000 08:05 839731                             /usr/lib32/libglib-2.0.so.0.3800.2
+a3800000-a38ff000 rw-p 00000000 00:00 0 
+a38ff000-a3900000 ---p 00000000 00:00 0 
+a3900000-a39fc000 rw-p 00000000 00:00 0 
+a39fc000-a3a00000 ---p 00000000 00:00 0 
+a3a00000-a3a01000 r-xp 00000000 08:05 833172                             /usr/lib32/libX11-xcb.so.1.0.0
+a3a01000-a3a02000 r--p 00000000 08:05 833172                             /usr/lib32/libX11-xcb.so.1.0.0
+a3a02000-a3a03000 rw-p 00001000 08:05 833172                             /usr/lib32/libX11-xcb.so.1.0.0
+a3a03000-a3a26000 r-xp 00000000 08:05 839955                             /usr/lib32/libgdk_pixbuf-2.0.so.0.3000.0
+a3a26000-a3a27000 r--p 00022000 08:05 839955                             /usr/lib32/libgdk_pixbuf-2.0.so.0.3000.0
+a3a27000-a3a28000 rw-p 00023000 08:05 839955                             /usr/lib32/libgdk_pixbuf-2.0.so.0.3000.0
+a3a28000-a3a2c000 r-xp 00000000 08:05 816219                             /usr/lib32/libXfixes.so.3.1.0
+a3a2c000-a3a2d000 r--p 00003000 08:05 816219                             /usr/lib32/libXfixes.so.3.1.0
+a3a2d000-a3a2e000 rw-p 00004000 08:05 816219                             /usr/lib32/libXfixes.so.3.1.0
+a3a2e000-a3a7d000 r-xp 00000000 08:05 839734                             /usr/lib32/libgobject-2.0.so.0.3800.2
+a3a7d000-a3a7e000 r--p 0004e000 08:05 839734                             /usr/lib32/libgobject-2.0.so.0.3800.2
+a3a7e000-a3a7f000 rw-p 0004f000 08:05 839734                             /usr/lib32/libgobject-2.0.so.0.3800.2
+a3a7f000-a3a80000 ---p 00000000 00:00 0 
+a3a80000-a3b00000 rwxp 00000000 00:00 0                                  [stack:5247]
+a3b00000-a3bfb000 rw-p 00000000 00:00 0 
+a3bfb000-a3c00000 ---p 00000000 00:00 0 
+a3c00000-a3c21000 rw-p 00000000 00:00 0 
+a3c21000-a3d00000 ---p 00000000 00:00 0 
+a3d00000-a3d01000 r--s 00004000 08:05 466552                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.swt_3.7.2.v3740f.jar
+a3d01000-a3d03000 r-xp 00000000 08:05 839577                             /usr/lib32/libxcb-shm.so.0.0.0
+a3d03000-a3d04000 r--p 00001000 08:05 839577                             /usr/lib32/libxcb-shm.so.0.0.0
+a3d04000-a3d05000 rw-p 00002000 08:05 839577                             /usr/lib32/libxcb-shm.so.0.0.0
+a3d05000-a3d4d000 r-xp 00000000 08:05 840011                             /usr/lib32/libpango-1.0.so.0.3600.0
+a3d4d000-a3d4e000 ---p 00048000 08:05 840011                             /usr/lib32/libpango-1.0.so.0.3600.0
+a3d4e000-a3d4f000 r--p 00048000 08:05 840011                             /usr/lib32/libpango-1.0.so.0.3600.0
+a3d4f000-a3d50000 rw-p 00049000 08:05 840011                             /usr/lib32/libpango-1.0.so.0.3600.0
+a3d51000-a3d53000 r--s 00018000 08:05 466062                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.equinox.common_3.6.0.v20110523.jar
+a3d53000-a3d5a000 r-xp 00000000 08:05 439075                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386/libnio.so
+a3d5a000-a3d5b000 rw-p 00006000 08:05 439075                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386/libnio.so
+a3d5b000-a3d61000 r--p 00000000 08:05 814746                             /usr/share/locale/en_GB/LC_MESSAGES/gdk-pixbuf.mo
+a3d61000-a3d64000 r-xp 00000000 08:05 840037                             /usr/lib32/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-bmp.so
+a3d64000-a3d65000 r--p 00002000 08:05 840037                             /usr/lib32/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-bmp.so
+a3d65000-a3d66000 rw-p 00003000 08:05 840037                             /usr/lib32/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-bmp.so
+a3d66000-a3d6f000 r-xp 00000000 08:05 846045                             /usr/lib32/gtk-2.0/2.10.0/engines/libpixmap.so
+a3d6f000-a3d70000 r--p 00008000 08:05 846045                             /usr/lib32/gtk-2.0/2.10.0/engines/libpixmap.so
+a3d70000-a3d71000 rw-p 00009000 08:05 846045                             /usr/lib32/gtk-2.0/2.10.0/engines/libpixmap.so
+a3d71000-a3d7f000 r--p 00000000 08:05 816787                             /usr/share/locale/en_GB/LC_MESSAGES/gtk20.mo
+a3d7f000-a3d82000 ---p 00000000 00:00 0 
+a3d82000-a3e00000 rwxp 00000000 00:00 0                                  [stack:5245]
+a3e00000-a3e21000 rw-p 00000000 00:00 0 
+a3e21000-a3f00000 ---p 00000000 00:00 0 
+a3f00000-a3f33000 rw-p 00000000 00:00 0 
+a3f33000-a4000000 ---p 00000000 00:00 0 
+a4000000-a4003000 r-xp 00000000 08:05 839732                             /usr/lib32/libgmodule-2.0.so.0.3800.2
+a4003000-a4004000 r--p 00002000 08:05 839732                             /usr/lib32/libgmodule-2.0.so.0.3800.2
+a4004000-a4005000 rw-p 00003000 08:05 839732                             /usr/lib32/libgmodule-2.0.so.0.3800.2
+a4005000-a4007000 r-xp 00000000 08:05 839641                             /usr/lib32/libXdamage.so.1.1.0
+a4007000-a4008000 r--p 00001000 08:05 839641                             /usr/lib32/libXdamage.so.1.1.0
+a4008000-a4009000 rw-p 00002000 08:05 839641                             /usr/lib32/libXdamage.so.1.1.0
+a4009000-a400b000 r-xp 00000000 08:05 846032                             /usr/lib32/libXcomposite.so.1.0.0
+a400b000-a400c000 r--p 00001000 08:05 846032                             /usr/lib32/libXcomposite.so.1.0.0
+a400c000-a400d000 rw-p 00002000 08:05 846032                             /usr/lib32/libXcomposite.so.1.0.0
+a400d000-a4010000 ---p 00000000 00:00 0 
+a4010000-a405e000 rwxp 00000000 00:00 0                                  [stack:5246]
+a405e000-a4061000 ---p 00000000 00:00 0 
+a4061000-a40af000 rwxp 00000000 00:00 0                                  [stack:5244]
+a40af000-a40b2000 ---p 00000000 00:00 0 
+a40b2000-a4100000 rwxp 00000000 00:00 0                                  [stack:5243]
+a4100000-a41ff000 rw-p 00000000 00:00 0 
+a41ff000-a4200000 ---p 00000000 00:00 0 
+a4200000-a4201000 r-xp 00000000 08:05 839733                             /usr/lib32/libgthread-2.0.so.0.3800.2
+a4201000-a4202000 r--p 00000000 08:05 839733                             /usr/lib32/libgthread-2.0.so.0.3800.2
+a4202000-a4203000 rw-p 00001000 08:05 839733                             /usr/lib32/libgthread-2.0.so.0.3800.2
+a4203000-a420c000 r-xp 00000000 08:05 839636                             /usr/lib32/libXcursor.so.1.0.2
+a420c000-a420d000 r--p 00009000 08:05 839636                             /usr/lib32/libXcursor.so.1.0.2
+a420d000-a420e000 rw-p 0000a000 08:05 839636                             /usr/lib32/libXcursor.so.1.0.2
+a420e000-a4217000 r-xp 00000000 08:05 846015                             /usr/lib32/libXrandr.so.2.2.0
+a4217000-a4218000 r--p 00008000 08:05 846015                             /usr/lib32/libXrandr.so.2.2.0
+a4218000-a4219000 rw-p 00009000 08:05 846015                             /usr/lib32/libXrandr.so.2.2.0
+a4219000-a4228000 r-xp 00000000 08:05 846020                             /usr/lib32/libXi.so.6.1.0
+a4228000-a4229000 r--p 0000e000 08:05 846020                             /usr/lib32/libXi.so.6.1.0
+a4229000-a422a000 rw-p 0000f000 08:05 846020                             /usr/lib32/libXi.so.6.1.0
+a422a000-a422d000 ---p 00000000 00:00 0 
+a422d000-a427b000 rwxp 00000000 00:00 0                                  [stack:5242]
+a427b000-a427c000 ---p 00000000 00:00 0 
+a427c000-a42fc000 rwxp 00000000 00:00 0                                  [stack:5241]
+a42fc000-a4330000 rw-p 00000000 00:00 0 
+a4330000-a44c8000 r--s 02b5a000 08:05 439178                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/rt.jar
+a44c8000-a44f4000 rw-p 00000000 00:00 0 
+a44f4000-a4549000 rw-p 00000000 00:00 0 
+a4549000-a459f000 rw-p 00000000 00:00 0 
+a459f000-a469f000 rw-p 00000000 00:00 0 
+a469f000-a46ca000 rw-p 00000000 00:00 0 
+a46ca000-a4749000 rw-p 00000000 00:00 0 
+a4749000-a479f000 rw-p 00000000 00:00 0 
+a479f000-a489f000 rw-p 00000000 00:00 0 
+a489f000-a48cb000 rw-p 00000000 00:00 0 
+a48cb000-a491f000 rw-p 00000000 00:00 0 
+a491f000-a9e90000 rw-p 00000000 00:00 0 
+a9e90000-b9e70000 rw-p 00000000 00:00 0 
+b9e70000-c4920000 rw-p 00000000 00:00 0 
+c4920000-e4920000 rw-p 00000000 00:00 0 
+e4920000-ea060000 rw-p 00000000 00:00 0 
+ea060000-f4920000 rw-p 00000000 00:00 0 
+f4921000-f495f000 rw-p 00000000 00:00 0 
+f495f000-f49a1000 rw-p 00000000 00:00 0 
+f49a1000-f5919000 rwxp 00000000 00:00 0 
+f5919000-f69a1000 rw-p 00000000 00:00 0 
+f69a1000-f69ac000 r-xp 00000000 08:05 839190                             /usr/lib32/libnss_files-2.18.so
+f69ac000-f69ad000 r--p 0000a000 08:05 839190                             /usr/lib32/libnss_files-2.18.so
+f69ad000-f69ae000 rw-p 0000b000 08:05 839190                             /usr/lib32/libnss_files-2.18.so
+f69ae000-f69c4000 r-xp 00000000 08:05 839196                             /usr/lib32/libnsl-2.18.so
+f69c4000-f69c5000 r--p 00015000 08:05 839196                             /usr/lib32/libnsl-2.18.so
+f69c5000-f69c6000 rw-p 00016000 08:05 839196                             /usr/lib32/libnsl-2.18.so
+f69c6000-f69c8000 rw-p 00000000 00:00 0 
+f69c9000-f69ca000 r--s 00000000 08:05 437149                             /home/rekoil/MentorGraphics/BridgePoint/eclipse_extensions/BridgePoint/eclipse/plugins/com.mentor.nucleus.bp.core_4.1.0/jlc_2013_2.jar
+f69ca000-f69cc000 r-xp 00000000 08:05 846026                             /usr/lib32/libXinerama.so.1.0.0
+f69cc000-f69cd000 r--p 00001000 08:05 846026                             /usr/lib32/libXinerama.so.1.0.0
+f69cd000-f69ce000 rw-p 00002000 08:05 846026                             /usr/lib32/libXinerama.so.1.0.0
+f69ce000-f69d7000 r-xp 00000000 08:05 839893                             /usr/lib32/libXrender.so.1.3.0
+f69d7000-f69d8000 r--p 00008000 08:05 839893                             /usr/lib32/libXrender.so.1.3.0
+f69d8000-f69d9000 rw-p 00009000 08:05 839893                             /usr/lib32/libXrender.so.1.3.0
+f69d9000-f69e4000 r-xp 00000000 08:05 840014                             /usr/lib32/libpangocairo-1.0.so.0.3600.0
+f69e4000-f69e5000 r--p 0000a000 08:05 840014                             /usr/lib32/libpangocairo-1.0.so.0.3600.0
+f69e5000-f69e6000 rw-p 0000b000 08:05 840014                             /usr/lib32/libpangocairo-1.0.so.0.3600.0
+f69e6000-f69f5000 r-xp 00000000 08:05 439082                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386/libzip.so
+f69f5000-f69f7000 rw-p 0000e000 08:05 439082                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386/libzip.so
+f69f7000-f6a3b000 r-xp 00000000 08:05 839195                             /usr/lib32/libm-2.18.so
+f6a3b000-f6a3c000 r--p 00043000 08:05 839195                             /usr/lib32/libm-2.18.so
+f6a3c000-f6a3d000 rw-p 00044000 08:05 839195                             /usr/lib32/libm-2.18.so
+f6a3d000-f6a3e000 r--s 00002000 08:05 465851                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.core.runtime.compatibility.registry_3.5.0.v20110505/runtime_registry_compatibility.jar
+f6a3e000-f6a44000 r-xp 00000000 08:05 839720                             /usr/lib32/libffi.so.6.0.1
+f6a44000-f6a45000 r--p 00005000 08:05 839720                             /usr/lib32/libffi.so.6.0.1
+f6a45000-f6a46000 rw-p 00006000 08:05 839720                             /usr/lib32/libffi.so.6.0.1
+f6a46000-f6a6a000 r-xp 00000000 08:05 439058                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386/libjava.so
+f6a6a000-f6a6c000 rw-p 00023000 08:05 439058                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386/libjava.so
+f6a6c000-f6f4e000 r-xp 00000000 08:05 439040                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386/client/libjvm.so
+f6f4e000-f6f71000 rw-p 004e2000 08:05 439040                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386/client/libjvm.so
+f6f71000-f738d000 rw-p 00000000 00:00 0 
+f738d000-f7516000 r--p 00000000 08:05 899420                             /usr/lib/locale/locale-archive
+f7516000-f7518000 rw-p 00000000 00:00 0 
+f7518000-f76c1000 r-xp 00000000 08:05 839149                             /usr/lib32/libc-2.18.so
+f76c1000-f76c3000 r--p 001a9000 08:05 839149                             /usr/lib32/libc-2.18.so
+f76c3000-f76c4000 rw-p 001ab000 08:05 839149                             /usr/lib32/libc-2.18.so
+f76c4000-f76c7000 rw-p 00000000 00:00 0 
+f76c7000-f76ca000 r-xp 00000000 08:05 839194                             /usr/lib32/libdl-2.18.so
+f76ca000-f76cb000 r--p 00002000 08:05 839194                             /usr/lib32/libdl-2.18.so
+f76cb000-f76cc000 rw-p 00003000 08:05 839194                             /usr/lib32/libdl-2.18.so
+f76cc000-f76e4000 r-xp 00000000 08:05 839131                             /usr/lib32/libpthread-2.18.so
+f76e4000-f76e5000 r--p 00017000 08:05 839131                             /usr/lib32/libpthread-2.18.so
+f76e5000-f76e6000 rw-p 00018000 08:05 839131                             /usr/lib32/libpthread-2.18.so
+f76e6000-f76e8000 rw-p 00000000 00:00 0 
+f76e8000-f76e9000 r--s 0000d000 08:05 466273                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.jdt.compiler.tool_1.0.100.v_B79_R37x.jar
+f76e9000-f76ea000 r--p 00000000 08:05 790067                             /usr/share/locale/en_GB/LC_MESSAGES/libc.mo
+f76ea000-f76eb000 r--s 0000b000 08:05 466090                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.equinox.launcher_1.2.0.v20110502.jar
+f76eb000-f76f3000 rw-s 00000000 00:1f 42013                              /tmp/hsperfdata_rekoil/5003
+f76f3000-f76f4000 rw-p 00000000 00:00 0 
+f76f4000-f76f5000 r--p 00000000 00:00 0 
+f76f5000-f7700000 r-xp 00000000 08:05 439081                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386/libverify.so
+f7700000-f7701000 rw-p 0000b000 08:05 439081                             /home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386/libverify.so
+f7701000-f7708000 r-xp 00000000 08:05 839198                             /usr/lib32/librt-2.18.so
+f7708000-f7709000 r--p 00006000 08:05 839198                             /usr/lib32/librt-2.18.so
+f7709000-f770a000 rw-p 00007000 08:05 839198                             /usr/lib32/librt-2.18.so
+f770a000-f7716000 r-xp 00000000 08:05 466083                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_1.1.100.v20110505/eclipse_1407.so
+f7716000-f7717000 rw-p 0000c000 08:05 466083                             /home/rekoil/MentorGraphics/BridgePoint/eclipse/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_1.1.100.v20110505/eclipse_1407.so
+f7717000-f7718000 rw-p 00000000 00:00 0 
+f7718000-f7719000 r-xp 00000000 00:00 0                                  [vdso]
+f7719000-f7739000 r-xp 00000000 08:05 839148                             /usr/lib32/ld-2.18.so
+f7739000-f773a000 r--p 0001f000 08:05 839148                             /usr/lib32/ld-2.18.so
+f773a000-f773b000 rw-p 00020000 08:05 839148                             /usr/lib32/ld-2.18.so
+ffc36000-ffc39000 ---p 00000000 00:00 0 
+ffc3a000-ffc86000 rwxp 00000000 00:00 0                                  [stack]
+ffc86000-ffc88000 rw-p 00000000 00:00 0 
+
+VM Arguments:
+jvm_args: -Dosgi.requiredJavaVersion=1.5 -XX:MaxPermSize=256m -Xms256m -Xmx1g -Dosgi.splashLocation=/home/rekoil/MentorGraphics/BridgePoint/splash.bmp -Dfile.encoding=UTF-8 
+java_command: <unknown>
+Launcher Type: generic
+
+Environment Variables:
+JAVA_HOME=/usr/lib/jvm/java-7-openjdk
+PATH=/home/rekoil/.cabal/bin:/home/rekoil/bin/:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/build-tools/19/:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/rekoil/MentorGraphics/BridgePoint/tools/docgen/docbook
+LD_LIBRARY_PATH=/home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386/client:/home/rekoil/MentorGraphics/BridgePoint/jre/lib/i386:
+SHELL=/bin/zsh
+DISPLAY=:0.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x46a950], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x46a950], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x38c200], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: SIG_IGN, sa_mask[0]=0x00001000, sa_flags=0x10000000
+SIGXFSZ: [libjvm.so+0x38c200], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x38c200], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x38f460], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x38f040], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: SIG_IGN, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGTERM: [libjvm.so+0x38f040], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x38f040], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Linux
+uname:Linux 3.12.1-2-ck #1 SMP PREEMPT Thu Nov 21 16:12:16 EST 2013 x86_64
+libc:glibc 2.18 NPTL 2.18 
+rlimit: STACK 8192k, CORE 0k, NPROC 61024, NOFILE 4096, AS infinity
+load average:0.12 0.17 0.17
+
+/proc/meminfo:
+MemTotal:        8073204 kB
+MemFree:         5200508 kB
+Buffers:           82968 kB
+Cached:           729072 kB
+SwapCached:            0 kB
+Active:          2121500 kB
+Inactive:         552668 kB
+Active(anon):    1868284 kB
+Inactive(anon):    90956 kB
+Active(file):     253216 kB
+Inactive(file):   461712 kB
+Unevictable:          16 kB
+Mlocked:              16 kB
+SwapTotal:       4194300 kB
+SwapFree:        4194300 kB
+Dirty:               384 kB
+Writeback:             0 kB
+AnonPages:       1862628 kB
+Mapped:           206296 kB
+Shmem:             97072 kB
+Slab:              70484 kB
+SReclaimable:      45716 kB
+SUnreclaim:        24768 kB
+KernelStack:        3296 kB
+PageTables:        39516 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     8230900 kB
+Committed_AS:    4896544 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      453972 kB
+VmallocChunk:   34359263920 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    585728 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       31916 kB
+DirectMap2M:     8337408 kB
+
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 3000.000
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 4988.38
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 3029.785
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 4988.38
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 3000.000
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 4988.38
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 3009.667
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 4988.38
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 8073204k(5200508k free), swap 4194300k(4194300k free)
+
+vm_info: Java HotSpot(TM) Client VM (20.10-b01) for linux-x86 JRE (1.6.0_35-b10), built on Aug 28 2012 16:25:53 by "java_re" with gcc 3.2.1-7a (J2SE release)
+
+time: Wed Dec 11 16:10:51 2013
+elapsed time: 4975 seconds
+

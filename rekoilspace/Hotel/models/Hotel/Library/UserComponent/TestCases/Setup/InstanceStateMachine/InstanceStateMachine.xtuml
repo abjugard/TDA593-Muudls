@@ -14,7 +14,7 @@ INSERT INTO SM_EVTDI
 	"04df3e9d-5386-4a1e-befa-8ef3c8f1edb3",
 	'facilityType',
 	'',
-	"ba5eda7a-def5-0000-0000-000000000005",
+	"ba5eda7a-def5-0000-0000-000000000002",
 	'',
 	"7172f41b-b749-4042-97a8-a497e403224c",
 	"00000000-0000-0000-0000-000000000000");
@@ -178,8 +178,8 @@ INSERT INTO SM_ACT
 	"04df3e9d-5386-4a1e-befa-8ef3c8f1edb3",
 	1,
 	'
-send StaffInterface::addFacilityType(approximateArea: "10-12 m^2", name: "Single Room", price: 1500, description: "ASBRA");
-send StaffInterface::addFacilityType(approximateArea: "12-14 m^2", name: "Double Room", price: 2500, description: "DÅLIGT");
+send StaffInterface::addFacilityType(approximateArea: "10-12 m^2", name: "Single Room", price: 1500, description: "ASBRA", id:0);
+send StaffInterface::addFacilityType(approximateArea: "12-14 m^2", name: "Double Room", price: 2500, description: "DÅLIGT", id:1);
 ',
 	'');
 INSERT INTO SM_MOAH

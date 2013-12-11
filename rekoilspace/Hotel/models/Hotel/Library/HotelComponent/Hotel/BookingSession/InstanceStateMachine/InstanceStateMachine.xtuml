@@ -14,7 +14,7 @@ INSERT INTO SM_EVTDI
 	"c87b2dab-d00f-4d32-a5d3-d1e5b01c9cb3",
 	'id',
 	'',
-	"ba5eda7a-def5-0000-0000-000000000005",
+	"ba5eda7a-def5-0000-0000-000000000002",
 	'',
 	"463dc70c-f7bb-484c-8def-bd2056914139",
 	"00000000-0000-0000-0000-000000000000");
@@ -1582,7 +1582,6 @@ INSERT INTO SM_ACT
 	1,
 	'select any ft from instances of FACILITYTYPE where selected.id == rcvd_evt.id;
 select any f related by ft->FACILITY[R1];
-
 
 if(not_empty ft)
 	

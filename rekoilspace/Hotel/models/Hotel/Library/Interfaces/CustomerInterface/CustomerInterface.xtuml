@@ -39,14 +39,23 @@ INSERT INTO C_EP
 	VALUES ("b6421df2-c058-463a-8282-eefa32587ce7",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's2',
+	'endOfList',
 	'');
 INSERT INTO C_AS
 	VALUES ("b6421df2-c058-463a-8282-eefa32587ce7",
-	's2',
+	'endOfList',
+	'',
+	1,
+	"5a79bc11-70d7-456a-8187-45d268168aef");
+INSERT INTO C_PP
+	VALUES ("314080d8-a4bd-4f50-aa4b-c7da00e7a5bc",
+	"b6421df2-c058-463a-8282-eefa32587ce7",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'sessionID',
 	'',
 	0,
-	"5a79bc11-70d7-456a-8187-45d268168aef");
+	'',
+	"00000000-0000-0000-0000-000000000000");
 INSERT INTO C_EP
 	VALUES ("da9dc9a3-9bf8-4e9e-8d76-0469a00019ef",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",

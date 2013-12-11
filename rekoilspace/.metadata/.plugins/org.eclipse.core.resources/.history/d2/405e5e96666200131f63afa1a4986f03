@@ -1,0 +1,129 @@
+-- BP 7.1.6 content: Interface syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_I
+	VALUES ("7af64316-7236-4637-9c49-e47d2784ce9e",
+	"00000000-0000-0000-0000-000000000000",
+	'StaffInterface',
+	'');
+INSERT INTO C_EP
+	VALUES ("c86ea0b4-abc2-4994-bee2-500e130b8b73",
+	"7af64316-7236-4637-9c49-e47d2784ce9e",
+	-1,
+	'addFacility',
+	'');
+INSERT INTO C_AS
+	VALUES ("c86ea0b4-abc2-4994-bee2-500e130b8b73",
+	'addFacility',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("5055dfea-acfb-446f-9a4a-c84ab94fb0c6",
+	"c86ea0b4-abc2-4994-bee2-500e130b8b73",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'facilityID',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("3ed552e5-044a-477f-847c-2beaa7359a32",
+	"c86ea0b4-abc2-4994-bee2-500e130b8b73",
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'facilityType',
+	'',
+	0,
+	'',
+	"5055dfea-acfb-446f-9a4a-c84ab94fb0c6");
+INSERT INTO C_EP
+	VALUES ("19f06228-e268-4733-9af7-92f3f313ceff",
+	"7af64316-7236-4637-9c49-e47d2784ce9e",
+	-1,
+	'addFacilityType',
+	'');
+INSERT INTO C_AS
+	VALUES ("19f06228-e268-4733-9af7-92f3f313ceff",
+	'addFacilityType',
+	'',
+	0,
+	"c86ea0b4-abc2-4994-bee2-500e130b8b73");
+INSERT INTO C_PP
+	VALUES ("fc57c5a9-de76-4b8c-a1eb-66202621f92f",
+	"19f06228-e268-4733-9af7-92f3f313ceff",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'approximateArea',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("ffbe64fe-56a6-4c62-b5e4-b28648e78656",
+	"19f06228-e268-4733-9af7-92f3f313ceff",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'name',
+	'',
+	0,
+	'',
+	"fc57c5a9-de76-4b8c-a1eb-66202621f92f");
+INSERT INTO C_PP
+	VALUES ("de5edff6-21df-436a-baaf-ee1a13999228",
+	"19f06228-e268-4733-9af7-92f3f313ceff",
+	"ba5eda7a-def5-0000-0000-000000000003",
+	'price',
+	'',
+	0,
+	'',
+	"ffbe64fe-56a6-4c62-b5e4-b28648e78656");
+INSERT INTO C_PP
+	VALUES ("ae84f3b2-9628-4fe2-abfc-6630078db393",
+	"19f06228-e268-4733-9af7-92f3f313ceff",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'description',
+	'',
+	0,
+	'',
+	"de5edff6-21df-436a-baaf-ee1a13999228");
+INSERT INTO C_EP
+	VALUES ("cd0882a7-a468-425e-a99e-c9480ba64c90",
+	"7af64316-7236-4637-9c49-e47d2784ce9e",
+	-1,
+	'sendFacilityType',
+	'');
+INSERT INTO C_AS
+	VALUES ("cd0882a7-a468-425e-a99e-c9480ba64c90",
+	'sendFacilityType',
+	'',
+	1,
+	"19f06228-e268-4733-9af7-92f3f313ceff");
+INSERT INTO C_PP
+	VALUES ("f9b7191e-c871-410b-a95e-320c345ff717",
+	"cd0882a7-a468-425e-a99e-c9480ba64c90",
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'facilityTypeID',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("66f48a6d-8afc-4211-a78f-a96043aff758",
+	"cd0882a7-a468-425e-a99e-c9480ba64c90",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'name',
+	'',
+	0,
+	'',
+	"f9b7191e-c871-410b-a95e-320c345ff717");
+INSERT INTO PE_PE
+	VALUES ("7af64316-7236-4637-9c49-e47d2784ce9e",
+	1,
+	"182dfb43-4b42-4388-a888-adc923ffd180",
+	"00000000-0000-0000-0000-000000000000",
+	6);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("182dfb43-4b42-4388-a888-adc923ffd180",
+	"00000000-0000-0000-0000-000000000000",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Interfaces',
+	'',
+	0,
+	'../Interfaces.xtuml');

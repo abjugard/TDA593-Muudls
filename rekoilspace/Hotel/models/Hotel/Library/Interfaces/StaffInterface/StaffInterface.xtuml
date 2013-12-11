@@ -29,7 +29,7 @@ INSERT INTO C_PP
 INSERT INTO C_PP
 	VALUES ("3ed552e5-044a-477f-847c-2beaa7359a32",
 	"c86ea0b4-abc2-4994-bee2-500e130b8b73",
-	"ba5eda7a-def5-0000-0000-000000000005",
+	"ba5eda7a-def5-0000-0000-000000000002",
 	'facilityType',
 	'',
 	0,
@@ -83,6 +83,15 @@ INSERT INTO C_PP
 	0,
 	'',
 	"de5edff6-21df-436a-baaf-ee1a13999228");
+INSERT INTO C_PP
+	VALUES ("168a7192-30ca-4de0-bf9d-037a1494e638",
+	"19f06228-e268-4733-9af7-92f3f313ceff",
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'id',
+	'',
+	0,
+	'',
+	"ae84f3b2-9628-4fe2-abfc-6630078db393");
 INSERT INTO C_EP
 	VALUES ("cd0882a7-a468-425e-a99e-c9480ba64c90",
 	"7af64316-7236-4637-9c49-e47d2784ce9e",
@@ -98,7 +107,7 @@ INSERT INTO C_AS
 INSERT INTO C_PP
 	VALUES ("f9b7191e-c871-410b-a95e-320c345ff717",
 	"cd0882a7-a468-425e-a99e-c9480ba64c90",
-	"ba5eda7a-def5-0000-0000-000000000005",
+	"ba5eda7a-def5-0000-0000-000000000002",
 	'facilityTypeID',
 	'',
 	0,

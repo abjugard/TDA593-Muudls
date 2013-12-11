@@ -1,7 +1,5 @@
 #
-#Wed Dec 04 15:00:52 CET 2013
-Debug/GPSWatch.exe=1
-src/Tracking_TrackLog_class.c=1
+#Wed Dec 11 14:37:18 CET 2013
 src/UI_GuiBridge_bridge.c=1
-Debug/src/Tracking_TrackLog_class.o=1
+Debug/GPSWatch.exe=1
 Debug/src/UI_GuiBridge_bridge.o=1

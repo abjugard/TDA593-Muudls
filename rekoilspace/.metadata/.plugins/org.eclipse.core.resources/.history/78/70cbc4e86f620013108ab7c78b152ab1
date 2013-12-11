@@ -1,0 +1,1704 @@
+-- BP 7.1.6 content: Component syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_C
+	VALUES ("ab2192c8-8390-4631-9e2c-fca2a1f30c08",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'HotelComponent',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'');
+INSERT INTO GD_MD
+	VALUES ("846b2303-6b52-4914-8188-85dc5951f45b",
+	111,
+	"ab2192c8-8390-4631-9e2c-fca2a1f30c08",
+	98,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	200,
+	150,
+	0,
+	'4.1.0',
+	'Hotel::Library::HotelComponent');
+INSERT INTO GD_GE
+	VALUES ("ab764a5a-dd38-4fc0-85ce-ae92aa743990",
+	"846b2303-6b52-4914-8188-85dc5951f45b",
+	"ab2192c8-8390-4631-9e2c-fca2a1f30c08",
+	103,
+	0,
+	'Hotel::Library::HotelComponent');
+INSERT INTO GD_SHP
+	VALUES ("ab764a5a-dd38-4fc0-85ce-ae92aa743990");
+INSERT INTO GD_CTR
+	VALUES ("ab764a5a-dd38-4fc0-85ce-ae92aa743990");
+INSERT INTO DIM_ND
+	VALUES (613.000000,
+	266.000000,
+	"ab764a5a-dd38-4fc0-85ce-ae92aa743990");
+INSERT INTO DIM_GE
+	VALUES (4100.000000,
+	3100.000000,
+	"ab764a5a-dd38-4fc0-85ce-ae92aa743990",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("ab764a5a-dd38-4fc0-85ce-ae92aa743990",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_CON
+	VALUES ("902c8784-0c66-4fe5-b55d-b0fdf378009e",
+	4713.000000,
+	3180.000000,
+	"ab764a5a-dd38-4fc0-85ce-ae92aa743990");
+INSERT INTO DIM_CON
+	VALUES ("c8798a65-806a-407b-b7a8-52cfe08ca830",
+	4713.000000,
+	3251.000000,
+	"ab764a5a-dd38-4fc0-85ce-ae92aa743990");
+INSERT INTO DIM_CON
+	VALUES ("b2edf5ad-3be2-45d6-a25e-235fb3015113",
+	4713.000000,
+	3322.000000,
+	"ab764a5a-dd38-4fc0-85ce-ae92aa743990");
+INSERT INTO DIM_CON
+	VALUES ("938c8a69-b4ce-471b-a8f6-eb59e4a3dcc7",
+	4307.000000,
+	3100.000000,
+	"ab764a5a-dd38-4fc0-85ce-ae92aa743990");
+INSERT INTO GD_GE
+	VALUES ("55444e0a-a08b-4ecb-8a86-96fe136c3701",
+	"846b2303-6b52-4914-8188-85dc5951f45b",
+	"960454f9-cf5f-4331-88bf-8023709586b1",
+	108,
+	0,
+	'Hotel::Library::HotelComponent::Hotel');
+INSERT INTO GD_SHP
+	VALUES ("55444e0a-a08b-4ecb-8a86-96fe136c3701");
+INSERT INTO GD_NCS
+	VALUES ("55444e0a-a08b-4ecb-8a86-96fe136c3701");
+INSERT INTO DIM_ND
+	VALUES (200.000000,
+	150.000000,
+	"55444e0a-a08b-4ecb-8a86-96fe136c3701");
+INSERT INTO DIM_GE
+	VALUES (4164.000000,
+	3156.000000,
+	"55444e0a-a08b-4ecb-8a86-96fe136c3701",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("55444e0a-a08b-4ecb-8a86-96fe136c3701",
+	0,
+	"ab764a5a-dd38-4fc0-85ce-ae92aa743990");
+INSERT INTO GD_GE
+	VALUES ("2df49237-814e-40de-a046-59de057c75e4",
+	"846b2303-6b52-4914-8188-85dc5951f45b",
+	"36293ad6-77b6-4c0b-a2dd-f02064f6189a",
+	94,
+	0,
+	'Hotel::Library::HotelComponent::UserInterface::BookingProvider');
+INSERT INTO GD_CON
+	VALUES ("2df49237-814e-40de-a046-59de057c75e4",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("c14ca2ee-e424-4dbf-89df-8ca84d8ca044",
+	"2df49237-814e-40de-a046-59de057c75e4",
+	1,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"c14ca2ee-e424-4dbf-89df-8ca84d8ca044");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"c14ca2ee-e424-4dbf-89df-8ca84d8ca044",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("c14ca2ee-e424-4dbf-89df-8ca84d8ca044",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("c2aa7b9a-603e-4bba-a681-f17da80b144f",
+	"2df49237-814e-40de-a046-59de057c75e4",
+	3,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"c2aa7b9a-603e-4bba-a681-f17da80b144f");
+INSERT INTO DIM_GE
+	VALUES (4738.000000,
+	3113.000000,
+	"c2aa7b9a-603e-4bba-a681-f17da80b144f",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("c2aa7b9a-603e-4bba-a681-f17da80b144f",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("89a6d46c-0883-41c3-8cfe-2c38399c62ac",
+	"2df49237-814e-40de-a046-59de057c75e4",
+	2,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"89a6d46c-0883-41c3-8cfe-2c38399c62ac");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"89a6d46c-0883-41c3-8cfe-2c38399c62ac",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("89a6d46c-0883-41c3-8cfe-2c38399c62ac",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_LS
+	VALUES ("ea64bde6-64e5-453f-89ad-e52dd38a5b9a",
+	"2df49237-814e-40de-a046-59de057c75e4",
+	"00000000-0000-0000-0000-000000000000",
+	"278adf4b-1a57-4ace-b732-5c5ff1cbfcee",
+	"c529bbb9-77ee-4620-b53c-fe5b458b7627");
+INSERT INTO DIM_WAY
+	VALUES ("278adf4b-1a57-4ace-b732-5c5ff1cbfcee",
+	4713.000000,
+	3180.000000,
+	"2df49237-814e-40de-a046-59de057c75e4",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_WAY
+	VALUES ("c529bbb9-77ee-4620-b53c-fe5b458b7627",
+	4776.000000,
+	3180.000000,
+	"2df49237-814e-40de-a046-59de057c75e4",
+	"00000000-0000-0000-0000-000000000000",
+	"278adf4b-1a57-4ace-b732-5c5ff1cbfcee");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"2df49237-814e-40de-a046-59de057c75e4",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("2df49237-814e-40de-a046-59de057c75e4",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ED
+	VALUES ("902c8784-0c66-4fe5-b55d-b0fdf378009e",
+	"00000000-0000-0000-0000-000000000000",
+	"2df49237-814e-40de-a046-59de057c75e4");
+INSERT INTO GD_GE
+	VALUES ("2f9c0f5d-981d-4424-a609-749a8d089678",
+	"846b2303-6b52-4914-8188-85dc5951f45b",
+	"9d173fe3-55ba-463f-a9f9-a5b42dd200a2",
+	94,
+	0,
+	'Hotel::Library::HotelComponent::Port1::StaffInterface');
+INSERT INTO GD_CON
+	VALUES ("2f9c0f5d-981d-4424-a609-749a8d089678",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("b2dab9de-b42a-4433-8896-c7c7fb57a76c",
+	"2f9c0f5d-981d-4424-a609-749a8d089678",
+	1,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"b2dab9de-b42a-4433-8896-c7c7fb57a76c");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"b2dab9de-b42a-4433-8896-c7c7fb57a76c",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("b2dab9de-b42a-4433-8896-c7c7fb57a76c",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("47492783-4832-450e-9ef3-c6343d423e80",
+	"2f9c0f5d-981d-4424-a609-749a8d089678",
+	3,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"47492783-4832-450e-9ef3-c6343d423e80");
+INSERT INTO DIM_GE
+	VALUES (4737.000000,
+	3211.000000,
+	"47492783-4832-450e-9ef3-c6343d423e80",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("47492783-4832-450e-9ef3-c6343d423e80",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("ae67c238-bdfd-4706-8d5c-2104fe25afc9",
+	"2f9c0f5d-981d-4424-a609-749a8d089678",
+	2,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"ae67c238-bdfd-4706-8d5c-2104fe25afc9");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"ae67c238-bdfd-4706-8d5c-2104fe25afc9",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("ae67c238-bdfd-4706-8d5c-2104fe25afc9",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_LS
+	VALUES ("1443a990-fffc-4bf7-9612-2ea46eb3a324",
+	"2f9c0f5d-981d-4424-a609-749a8d089678",
+	"00000000-0000-0000-0000-000000000000",
+	"a324d6fb-2ad7-460b-898c-01f740d60755",
+	"d27b8dc1-724f-4cb0-a492-66767a48b786");
+INSERT INTO DIM_WAY
+	VALUES ("a324d6fb-2ad7-460b-898c-01f740d60755",
+	4713.000000,
+	3251.000000,
+	"2f9c0f5d-981d-4424-a609-749a8d089678",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_WAY
+	VALUES ("d27b8dc1-724f-4cb0-a492-66767a48b786",
+	4800.000000,
+	3251.000000,
+	"2f9c0f5d-981d-4424-a609-749a8d089678",
+	"00000000-0000-0000-0000-000000000000",
+	"a324d6fb-2ad7-460b-898c-01f740d60755");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"2f9c0f5d-981d-4424-a609-749a8d089678",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("2f9c0f5d-981d-4424-a609-749a8d089678",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ED
+	VALUES ("c8798a65-806a-407b-b7a8-52cfe08ca830",
+	"00000000-0000-0000-0000-000000000000",
+	"2f9c0f5d-981d-4424-a609-749a8d089678");
+INSERT INTO GD_GE
+	VALUES ("6c25a28c-266f-4a49-ad4e-a5b3357da019",
+	"846b2303-6b52-4914-8188-85dc5951f45b",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3",
+	94,
+	0,
+	'Hotel::Library::HotelComponent::Port2::CustomerInterface');
+INSERT INTO GD_CON
+	VALUES ("6c25a28c-266f-4a49-ad4e-a5b3357da019",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("917f3335-7a78-4cd1-b9b6-4f4725518a68",
+	"6c25a28c-266f-4a49-ad4e-a5b3357da019",
+	1,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"917f3335-7a78-4cd1-b9b6-4f4725518a68");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"917f3335-7a78-4cd1-b9b6-4f4725518a68",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("917f3335-7a78-4cd1-b9b6-4f4725518a68",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("557f6de7-91c1-4a2a-a8a4-96b1f2ef4600",
+	"6c25a28c-266f-4a49-ad4e-a5b3357da019",
+	3,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"557f6de7-91c1-4a2a-a8a4-96b1f2ef4600");
+INSERT INTO DIM_GE
+	VALUES (4721.000000,
+	3278.000000,
+	"557f6de7-91c1-4a2a-a8a4-96b1f2ef4600",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("557f6de7-91c1-4a2a-a8a4-96b1f2ef4600",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("383e6f64-ea8c-49f3-8f67-3136c3d21439",
+	"6c25a28c-266f-4a49-ad4e-a5b3357da019",
+	2,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"383e6f64-ea8c-49f3-8f67-3136c3d21439");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"383e6f64-ea8c-49f3-8f67-3136c3d21439",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("383e6f64-ea8c-49f3-8f67-3136c3d21439",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_LS
+	VALUES ("bdc4cc3e-ce0d-4867-a37d-e36ab5b5ba73",
+	"6c25a28c-266f-4a49-ad4e-a5b3357da019",
+	"00000000-0000-0000-0000-000000000000",
+	"58af42a1-064d-410b-b3e4-b0d22e527912",
+	"a4af5fb2-48c5-471e-bf64-2d104e8a4e40");
+INSERT INTO DIM_WAY
+	VALUES ("58af42a1-064d-410b-b3e4-b0d22e527912",
+	4713.000000,
+	3322.000000,
+	"6c25a28c-266f-4a49-ad4e-a5b3357da019",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_WAY
+	VALUES ("a4af5fb2-48c5-471e-bf64-2d104e8a4e40",
+	4811.000000,
+	3322.000000,
+	"6c25a28c-266f-4a49-ad4e-a5b3357da019",
+	"00000000-0000-0000-0000-000000000000",
+	"58af42a1-064d-410b-b3e4-b0d22e527912");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"6c25a28c-266f-4a49-ad4e-a5b3357da019",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("6c25a28c-266f-4a49-ad4e-a5b3357da019",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ED
+	VALUES ("b2edf5ad-3be2-45d6-a25e-235fb3015113",
+	"00000000-0000-0000-0000-000000000000",
+	"6c25a28c-266f-4a49-ad4e-a5b3357da019");
+INSERT INTO GD_GE
+	VALUES ("1cab9073-52b0-457a-95b0-fa6a1629ef07",
+	"846b2303-6b52-4914-8188-85dc5951f45b",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf",
+	93,
+	0,
+	'Hotel::Library::HotelComponent::Port3::PaymentProviderInterface');
+INSERT INTO GD_CON
+	VALUES ("1cab9073-52b0-457a-95b0-fa6a1629ef07",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("232a9d65-69a4-4436-9b3d-f5b198b2cef6",
+	"1cab9073-52b0-457a-95b0-fa6a1629ef07",
+	1,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"232a9d65-69a4-4436-9b3d-f5b198b2cef6");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"232a9d65-69a4-4436-9b3d-f5b198b2cef6",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("232a9d65-69a4-4436-9b3d-f5b198b2cef6",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("7c558d2f-49c3-4e7e-942b-5c71c83bf532",
+	"1cab9073-52b0-457a-95b0-fa6a1629ef07",
+	3,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"7c558d2f-49c3-4e7e-942b-5c71c83bf532");
+INSERT INTO DIM_GE
+	VALUES (4363.000000,
+	3062.000000,
+	"7c558d2f-49c3-4e7e-942b-5c71c83bf532",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("7c558d2f-49c3-4e7e-942b-5c71c83bf532",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("a81ce9ea-4e22-4db2-8a9b-b50907fa37d4",
+	"1cab9073-52b0-457a-95b0-fa6a1629ef07",
+	2,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"a81ce9ea-4e22-4db2-8a9b-b50907fa37d4");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"a81ce9ea-4e22-4db2-8a9b-b50907fa37d4",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("a81ce9ea-4e22-4db2-8a9b-b50907fa37d4",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_LS
+	VALUES ("9f3cffe6-734c-470d-b49c-b87ba01b493f",
+	"1cab9073-52b0-457a-95b0-fa6a1629ef07",
+	"00000000-0000-0000-0000-000000000000",
+	"ade0cf60-a359-4f46-8d6a-5d217479c850",
+	"1d3927ae-6093-4630-811b-59eeda587fd9");
+INSERT INTO DIM_WAY
+	VALUES ("ade0cf60-a359-4f46-8d6a-5d217479c850",
+	4307.000000,
+	3100.000000,
+	"1cab9073-52b0-457a-95b0-fa6a1629ef07",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_WAY
+	VALUES ("1d3927ae-6093-4630-811b-59eeda587fd9",
+	4307.000000,
+	3059.000000,
+	"1cab9073-52b0-457a-95b0-fa6a1629ef07",
+	"00000000-0000-0000-0000-000000000000",
+	"ade0cf60-a359-4f46-8d6a-5d217479c850");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"1cab9073-52b0-457a-95b0-fa6a1629ef07",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("1cab9073-52b0-457a-95b0-fa6a1629ef07",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ED
+	VALUES ("938c8a69-b4ce-471b-a8f6-eb59e4a3dcc7",
+	"00000000-0000-0000-0000-000000000000",
+	"1cab9073-52b0-457a-95b0-fa6a1629ef07");
+INSERT INTO DIM_DIA
+	VALUES ("846b2303-6b52-4914-8188-85dc5951f45b",
+	'',
+	1.000000,
+	4000.000000,
+	3000.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PO
+	VALUES ("54eb899f-f23f-4a84-8403-f0454a9283e7",
+	"ab2192c8-8390-4631-9e2c-fca2a1f30c08",
+	'UserInterface',
+	0,
+	0);
+INSERT INTO C_IR
+	VALUES ("36293ad6-77b6-4c0b-a2dd-f02064f6189a",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	"00000000-0000-0000-0000-000000000000",
+	"54eb899f-f23f-4a84-8403-f0454a9283e7");
+INSERT INTO C_P
+	VALUES ("36293ad6-77b6-4c0b-a2dd-f02064f6189a",
+	'BookingProvider',
+	'Unnamed Interface',
+	'',
+	'HotelComponent::UserInterface::BookingProvider');
+INSERT INTO SPR_PEP
+	VALUES ("ad67a789-a0d9-4e09-8c1b-cc137ff39554",
+	"8500002a-94f3-4a61-bfa8-32f8fd7d89b4",
+	"36293ad6-77b6-4c0b-a2dd-f02064f6189a");
+INSERT INTO SPR_PS
+	VALUES ("ad67a789-a0d9-4e09-8c1b-cc137ff39554",
+	'requestAvailableBookables',
+	'',
+	'select any session from instances of BOOKINGSESSION where (selected.ID == param.sessionID);
+
+if (not_empty session)
+	result = session.search(fromDate: param.fromDate, 
+							toDate: param.toDate);
+	if(empty result)
+		send BookingProvider::errorSignal(message: "H: requestAvail: No rooms found",
+											sessionID:param.sessionID);
+	
+	else
+		generate BOOKINGSESSION9:searchEvent(fromDate: param.fromDate,
+											 toDate: param.toDate) to session;
+		for each ft in result		
+			select one b related by ft->BOOKABLE[R2];
+			send BookingProvider::available(id: ft.id , 
+											price: b.price , 
+											description: b.description,
+											aproximateArea: ft.approximateArea,
+											independent: false,
+											sessionID:session.ID);
+		end for;
+		send CustomerInterface::endOfListSignal();
+	end if;
+		
+
+else
+	send BookingProvider::errorSignal(message: "H: requestAvail: Session not found",
+										sessionID:param.sessionID);
+end if;',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("8500002a-94f3-4a61-bfa8-32f8fd7d89b4",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'requestAvailableBookables',
+	'',
+	'../Interfaces/BookingProvider/BookingProvider.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("bd3fdb96-1c93-414b-9f1d-6b837b25374d",
+	"54d1cfcd-e847-40b5-be88-ddf038c56595",
+	"36293ad6-77b6-4c0b-a2dd-f02064f6189a");
+INSERT INTO SPR_PS
+	VALUES ("bd3fdb96-1c93-414b-9f1d-6b837b25374d",
+	'available',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("54d1cfcd-e847-40b5-be88-ddf038c56595",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'available',
+	'',
+	'../Interfaces/BookingProvider/BookingProvider.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("abc6b7f2-37a1-405e-a869-e8c1c3ff68f8",
+	"55b848f9-d68a-4698-bf86-446ac83e49f5",
+	"36293ad6-77b6-4c0b-a2dd-f02064f6189a");
+INSERT INTO SPR_PS
+	VALUES ("abc6b7f2-37a1-405e-a869-e8c1c3ff68f8",
+	'selectBookable',
+	'',
+	'select any bs from instances of BOOKINGSESSION where selected.ID == param.sessionID;
+
+if (not_empty bs)
+	LOG::LogInfo(message: "H: selectSignal: Generating select event.");
+	generate BOOKINGSESSION1:selectEvent(id:param.id) to bs;
+else
+	LOG::LogInfo(message: "H: selectSignal: Session not found.");
+end if;',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("55b848f9-d68a-4698-bf86-446ac83e49f5",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'selectBookable',
+	'',
+	'../Interfaces/BookingProvider/BookingProvider.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("e57ea280-c4da-4c33-a6bd-b5a55b1d476a",
+	"10d65452-16c4-45b0-ad3e-4dec03bb99a7",
+	"36293ad6-77b6-4c0b-a2dd-f02064f6189a");
+INSERT INTO SPR_PS
+	VALUES ("e57ea280-c4da-4c33-a6bd-b5a55b1d476a",
+	'extraServices',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("10d65452-16c4-45b0-ad3e-4dec03bb99a7",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'extraServices',
+	'',
+	'../Interfaces/BookingProvider/BookingProvider.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("f4f69049-a18c-40db-908e-fde4956ebd16",
+	"87ed1c56-1bee-4041-bca4-056967095bc2",
+	"36293ad6-77b6-4c0b-a2dd-f02064f6189a");
+INSERT INTO SPR_PS
+	VALUES ("f4f69049-a18c-40db-908e-fde4956ebd16",
+	'addServices',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("87ed1c56-1bee-4041-bca4-056967095bc2",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'addServices',
+	'',
+	'../Interfaces/BookingProvider/BookingProvider.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("bf9df925-e6b4-4ed6-80d9-5ccf5795e43b",
+	"57eb1124-4a29-48ad-8677-d8760788067a",
+	"36293ad6-77b6-4c0b-a2dd-f02064f6189a");
+INSERT INTO SPR_PS
+	VALUES ("bf9df925-e6b4-4ed6-80d9-5ccf5795e43b",
+	'customerDetails',
+	'',
+	'select any bs from instances of BOOKINGSESSION where selected.ID == param.sessionID;
+
+if (not_empty bs)
+	LOG::LogInfo(message: "H: customerDetailsSignal: Generating cusDet event.");
+	generate BOOKINGSESSION5:customerDetailsEvent(name:param.name,
+												  phoneNumber:param.phoneNumber) to bs;
+else
+	LOG::LogInfo(message: "H: customerDetailsSignal: Session not found.");
+end if;',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("57eb1124-4a29-48ad-8677-d8760788067a",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'customerDetails',
+	'',
+	'../Interfaces/BookingProvider/BookingProvider.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("0c0df819-2738-4521-8efe-cfb0e7d5f5ac",
+	"275df8ce-b628-4b96-85dd-66e9224fc9df",
+	"36293ad6-77b6-4c0b-a2dd-f02064f6189a");
+INSERT INTO SPR_PS
+	VALUES ("0c0df819-2738-4521-8efe-cfb0e7d5f5ac",
+	'addGuest',
+	'',
+	'select any bs from instances of BOOKINGSESSION where selected.ID == param.sessionID;
+
+if (not_empty bs)
+	LOG::LogInfo(message: "H: addGuestSignal: Generating addGuest event.");
+	generate BOOKINGSESSION2:addGuestEvent(name:param.guestName,
+										 age:param.guestAge) to bs;
+else
+	LOG::LogInfo(message: "H: addGuestSignal: Session not found.");
+end if;',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("275df8ce-b628-4b96-85dd-66e9224fc9df",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'addGuest',
+	'',
+	'../Interfaces/BookingProvider/BookingProvider.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("100207a1-8747-4b7c-a2b4-4b3cd928a7e1",
+	"40e06920-24e2-499d-b1c8-deb66c9637ec",
+	"36293ad6-77b6-4c0b-a2dd-f02064f6189a");
+INSERT INTO SPR_PS
+	VALUES ("100207a1-8747-4b7c-a2b4-4b3cd928a7e1",
+	'paymentInfo',
+	'',
+	'select any bs from instances of BOOKINGSESSION where selected.ID == param.sessionID;
+
+if (not_empty bs)
+	LOG::LogInfo(message: "H: paymentInfoSign: Generating paymentInfoEvent event.");
+	generate BOOKINGSESSION6:paymentInfoEvent(info:param.info) to bs;
+else
+	LOG::LogInfo(message: "H: paymentInfoSign: Session not found.");
+end if;',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("40e06920-24e2-499d-b1c8-deb66c9637ec",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'paymentInfo',
+	'',
+	'../Interfaces/BookingProvider/BookingProvider.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("adf84adb-26cf-413b-bd98-e3ff7028bfbd",
+	"19aa6808-338c-45b0-8a31-1b3efb70b47a",
+	"36293ad6-77b6-4c0b-a2dd-f02064f6189a");
+INSERT INTO SPR_PS
+	VALUES ("adf84adb-26cf-413b-bd98-e3ff7028bfbd",
+	'confirmSignal',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("19aa6808-338c-45b0-8a31-1b3efb70b47a",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'confirmSignal',
+	'',
+	'../Interfaces/BookingProvider/BookingProvider.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("6752f1fb-4d87-4e38-a4d2-a76b30240df9",
+	"89169ec3-d50b-4b5b-95fa-d95fb15c3f98",
+	"36293ad6-77b6-4c0b-a2dd-f02064f6189a");
+INSERT INTO SPR_PS
+	VALUES ("6752f1fb-4d87-4e38-a4d2-a76b30240df9",
+	'errorSignal',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("89169ec3-d50b-4b5b-95fa-d95fb15c3f98",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'errorSignal',
+	'',
+	'../Interfaces/BookingProvider/BookingProvider.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("52f59bac-a1c2-4318-a901-bbe93808d139",
+	"b21fad1b-897b-424f-84f8-01bdab76de49",
+	"36293ad6-77b6-4c0b-a2dd-f02064f6189a");
+INSERT INTO SPR_PS
+	VALUES ("52f59bac-a1c2-4318-a901-bbe93808d139",
+	'requestSession',
+	'',
+	'// Initialize a booking session
+LOG::LogInfo(message: "Recieved session request");
+create object instance session of BOOKINGSESSION;
+
+create object instance booking of BOOKING;
+relate session to booking across R26;
+
+send BookingProvider::session(sessionID: session.ID);',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("b21fad1b-897b-424f-84f8-01bdab76de49",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'requestSession',
+	'',
+	'../Interfaces/BookingProvider/BookingProvider.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("9a412571-97a5-4764-873e-18ee296bab0f",
+	"0a31b7ea-b3a4-43b3-bfab-1e664637468e",
+	"36293ad6-77b6-4c0b-a2dd-f02064f6189a");
+INSERT INTO SPR_PS
+	VALUES ("9a412571-97a5-4764-873e-18ee296bab0f",
+	'session',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("0a31b7ea-b3a4-43b3-bfab-1e664637468e",
+	"708e7060-3f4e-41ab-94ce-7b712ad36251",
+	-1,
+	'session',
+	'',
+	'../Interfaces/BookingProvider/BookingProvider.xtuml');
+INSERT INTO C_I_PROXY
+	VALUES ("708e7060-3f4e-41ab-94ce-7b712ad36251",
+	"00000000-0000-0000-0000-000000000000",
+	'BookingProvider',
+	'',
+	'../Interfaces/BookingProvider/BookingProvider.xtuml');
+INSERT INTO C_PO
+	VALUES ("60bda041-6be5-4a74-9de4-1a56d08a5972",
+	"ab2192c8-8390-4631-9e2c-fca2a1f30c08",
+	'Port1',
+	0,
+	0);
+INSERT INTO C_IR
+	VALUES ("9d173fe3-55ba-463f-a9f9-a5b42dd200a2",
+	"7af64316-7236-4637-9c49-e47d2784ce9e",
+	"00000000-0000-0000-0000-000000000000",
+	"60bda041-6be5-4a74-9de4-1a56d08a5972");
+INSERT INTO C_P
+	VALUES ("9d173fe3-55ba-463f-a9f9-a5b42dd200a2",
+	'StaffInterface',
+	'Unnamed Interface',
+	'',
+	'HotelComponent::Port1::StaffInterface');
+INSERT INTO SPR_PEP
+	VALUES ("5d4a4780-fc7a-4f75-b9f9-6ee7a5043833",
+	"c86ea0b4-abc2-4994-bee2-500e130b8b73",
+	"9d173fe3-55ba-463f-a9f9-a5b42dd200a2");
+INSERT INTO SPR_PS
+	VALUES ("5d4a4780-fc7a-4f75-b9f9-6ee7a5043833",
+	'addFacility',
+	'',
+	'create object instance f of FACILITY;
+select any ft from instances of FACILITYTYPE where (selected.id == param.facilityType);
+if(not_empty ft)
+	relate f to ft across R1;
+	f.facilityID = param.facilityID;
+end if;',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("c86ea0b4-abc2-4994-bee2-500e130b8b73",
+	"7af64316-7236-4637-9c49-e47d2784ce9e",
+	-1,
+	'addFacility',
+	'',
+	'../Interfaces/StaffInterface/StaffInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("1aee11b8-e562-4626-acc6-35cc36201bb3",
+	"19f06228-e268-4733-9af7-92f3f313ceff",
+	"9d173fe3-55ba-463f-a9f9-a5b42dd200a2");
+INSERT INTO SPR_PS
+	VALUES ("1aee11b8-e562-4626-acc6-35cc36201bb3",
+	'addFacilityType',
+	'',
+	'create object instance ft of FACILITYTYPE;
+create object instance b of BOOKABLE;
+
+relate ft to b across R2;
+
+select any h from instances of HOTEL;
+
+if(empty h)
+	create object instance h of HOTEL;
+end if;
+
+if(not_empty h)
+	relate b to h across R9;
+	b.price = param.price;
+	b.description = param.description;
+	ft.approximateArea = param.approximateArea;
+	b.name = param.name;
+	
+end if;
+
+send StaffInterface::sendFacilityType(facilityTypeID: ft.id, name: b.name);',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("19f06228-e268-4733-9af7-92f3f313ceff",
+	"7af64316-7236-4637-9c49-e47d2784ce9e",
+	-1,
+	'addFacilityType',
+	'',
+	'../Interfaces/StaffInterface/StaffInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("feb554a9-891f-4263-acc6-9505d061cdea",
+	"cd0882a7-a468-425e-a99e-c9480ba64c90",
+	"9d173fe3-55ba-463f-a9f9-a5b42dd200a2");
+INSERT INTO SPR_PS
+	VALUES ("feb554a9-891f-4263-acc6-9505d061cdea",
+	'sendFacilityType',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("cd0882a7-a468-425e-a99e-c9480ba64c90",
+	"7af64316-7236-4637-9c49-e47d2784ce9e",
+	-1,
+	'sendFacilityType',
+	'',
+	'../Interfaces/StaffInterface/StaffInterface.xtuml');
+INSERT INTO C_I_PROXY
+	VALUES ("7af64316-7236-4637-9c49-e47d2784ce9e",
+	"00000000-0000-0000-0000-000000000000",
+	'StaffInterface',
+	'',
+	'../Interfaces/StaffInterface/StaffInterface.xtuml');
+INSERT INTO C_PO
+	VALUES ("c939e81e-1c67-41b0-ae1e-c99bd6322c7e",
+	"ab2192c8-8390-4631-9e2c-fca2a1f30c08",
+	'Port2',
+	0,
+	0);
+INSERT INTO C_IR
+	VALUES ("45f6ed17-28eb-49b4-b51e-26daf29a0cb3",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	"00000000-0000-0000-0000-000000000000",
+	"c939e81e-1c67-41b0-ae1e-c99bd6322c7e");
+INSERT INTO C_P
+	VALUES ("45f6ed17-28eb-49b4-b51e-26daf29a0cb3",
+	'CustomerInterface',
+	'Unnamed Interface',
+	'',
+	'HotelComponent::Port2::CustomerInterface');
+INSERT INTO SPR_PEP
+	VALUES ("89a79606-4020-4623-982e-68f919e93d90",
+	"5a79bc11-70d7-456a-8187-45d268168aef",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("89a79606-4020-4623-982e-68f919e93d90",
+	'confirmSignal',
+	'',
+	'select any bs from instances of BOOKINGSESSION where selected.ID == param.sessionID;
+
+if (not_empty bs)
+	LOG::LogInfo(message: "H: confirmEvent: Generating confirm event.");
+	generate BOOKINGSESSION4:confirmEvent() to bs;
+else
+	LOG::LogInfo(message: "H: confirmEvent: Session not found.");
+end if;',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("5a79bc11-70d7-456a-8187-45d268168aef",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	'confirmSignal',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("ae34909a-eb30-4d15-b730-c28470c12f2c",
+	"b6421df2-c058-463a-8282-eefa32587ce7",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("ae34909a-eb30-4d15-b730-c28470c12f2c",
+	'endOfList',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("b6421df2-c058-463a-8282-eefa32587ce7",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	'endOfList',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("992e4bb7-56a3-4595-9f21-ea674ddf0832",
+	"da9dc9a3-9bf8-4e9e-8d76-0469a00019ef",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("992e4bb7-56a3-4595-9f21-ea674ddf0832",
+	's1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("da9dc9a3-9bf8-4e9e-8d76-0469a00019ef",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	's1',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("ed293131-e8e4-43ef-be8f-e13aa67ce7ca",
+	"895459b4-8cad-487c-ac02-41f7392c1417",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("ed293131-e8e4-43ef-be8f-e13aa67ce7ca",
+	's2',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("895459b4-8cad-487c-ac02-41f7392c1417",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	's2',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("553a7000-b47f-44e0-922e-6c1db19bff9a",
+	"b0219670-df70-4ff6-984b-04f391308d00",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("553a7000-b47f-44e0-922e-6c1db19bff9a",
+	's1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("b0219670-df70-4ff6-984b-04f391308d00",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	's1',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("ea81884e-62fa-4b89-8401-c96901c381b8",
+	"cb5b5b24-04f0-4601-b19b-0cf189cea793",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("ea81884e-62fa-4b89-8401-c96901c381b8",
+	's2',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("cb5b5b24-04f0-4601-b19b-0cf189cea793",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	's2',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("98ee248d-f2c3-4987-9796-a6754ee7bbc7",
+	"8328ef36-07dc-427a-b0b8-9f12e1b984b7",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("98ee248d-f2c3-4987-9796-a6754ee7bbc7",
+	's1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("8328ef36-07dc-427a-b0b8-9f12e1b984b7",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	's1',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("ec484fa9-0cef-4cc6-aa10-cc7d2ea7dd33",
+	"81dc0de0-c0d1-40f4-b861-04e7a9398949",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("ec484fa9-0cef-4cc6-aa10-cc7d2ea7dd33",
+	's2',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("81dc0de0-c0d1-40f4-b861-04e7a9398949",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	's2',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("72f1b7a4-8cde-4f9b-8aca-051e01bf62cd",
+	"748bf7ad-3d75-40b6-9747-281878d13d6b",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("72f1b7a4-8cde-4f9b-8aca-051e01bf62cd",
+	's1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("748bf7ad-3d75-40b6-9747-281878d13d6b",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	's1',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("93f154b9-bfb9-4a8d-9efe-e0a71925a78e",
+	"c446a9a5-de06-4b24-a8cc-957599ee3e34",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("93f154b9-bfb9-4a8d-9efe-e0a71925a78e",
+	's2',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("c446a9a5-de06-4b24-a8cc-957599ee3e34",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	's2',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("eb1e3070-efe5-4284-9896-719709614b7d",
+	"fa304608-7681-41c3-ad76-a0f6e8611f35",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("eb1e3070-efe5-4284-9896-719709614b7d",
+	's1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("fa304608-7681-41c3-ad76-a0f6e8611f35",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	's1',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("3141febd-97a7-423e-a7c2-fcecd63ab45e",
+	"0184b93d-0963-496f-b323-26d0404529d6",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("3141febd-97a7-423e-a7c2-fcecd63ab45e",
+	's2',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("0184b93d-0963-496f-b323-26d0404529d6",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	's2',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("a37e279b-5df3-4aa2-84a9-4f8e89d9191c",
+	"b6137a20-d83a-4130-90cf-4bbff803d680",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("a37e279b-5df3-4aa2-84a9-4f8e89d9191c",
+	's1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("b6137a20-d83a-4130-90cf-4bbff803d680",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	's1',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("d86011ae-176d-4bbf-a12d-3fe4def5b1a8",
+	"4955e92a-9d9e-450c-aa80-bb592becd350",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("d86011ae-176d-4bbf-a12d-3fe4def5b1a8",
+	's2',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("4955e92a-9d9e-450c-aa80-bb592becd350",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	's2',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("2fe988cc-8d04-4830-a961-332484bc4929",
+	"e13258fc-6b0d-44ea-8ef2-7a156ee15593",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("2fe988cc-8d04-4830-a961-332484bc4929",
+	's1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("e13258fc-6b0d-44ea-8ef2-7a156ee15593",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	's1',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("91e3a84d-95fa-410d-a683-fc7f264737b0",
+	"83944b64-b858-449a-8fc8-e20614b23693",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PS
+	VALUES ("91e3a84d-95fa-410d-a683-fc7f264737b0",
+	's2',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("83944b64-b858-449a-8fc8-e20614b23693",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	's2',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("ac25dae2-f502-49b0-a5b2-81e829899edb",
+	"6849e51f-02ea-4e23-9ba2-af67a12531d4",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PO
+	VALUES ("ac25dae2-f502-49b0-a5b2-81e829899edb",
+	'o1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("6849e51f-02ea-4e23-9ba2-af67a12531d4",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	'o1',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("f7a0d3cf-0d17-488b-aaa1-edb02933dc59",
+	"1a8e5c38-7020-4123-ba0e-67897534dc19",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PO
+	VALUES ("f7a0d3cf-0d17-488b-aaa1-edb02933dc59",
+	'o2',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("1a8e5c38-7020-4123-ba0e-67897534dc19",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	'o2',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("7048a6f5-d0a5-4d71-90ca-b723482f3a3f",
+	"83e74f67-f572-4d64-bf5f-6e4117a48ac4",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PO
+	VALUES ("7048a6f5-d0a5-4d71-90ca-b723482f3a3f",
+	'o1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("83e74f67-f572-4d64-bf5f-6e4117a48ac4",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	'o1',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("4fdd339a-da43-4b2c-a5d1-4df700bcaafb",
+	"ab21eaf4-6f87-4d16-adcd-35b43eab657c",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PO
+	VALUES ("4fdd339a-da43-4b2c-a5d1-4df700bcaafb",
+	'o2',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("ab21eaf4-6f87-4d16-adcd-35b43eab657c",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	'o2',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("48176279-df42-4996-8c21-1426ad44d4f7",
+	"249da9fe-e7f0-4173-8e09-ca48a3cd7d3c",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PO
+	VALUES ("48176279-df42-4996-8c21-1426ad44d4f7",
+	'o1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("249da9fe-e7f0-4173-8e09-ca48a3cd7d3c",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	'o1',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("16c3d116-faa6-48e8-80eb-3aaacc2af7f0",
+	"1bdb7028-c766-4634-b100-e21c9da8a53a",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PO
+	VALUES ("16c3d116-faa6-48e8-80eb-3aaacc2af7f0",
+	'o2',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("1bdb7028-c766-4634-b100-e21c9da8a53a",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	'o2',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("b3410308-deb9-4006-bb30-bb6c59000bce",
+	"c1390e36-a425-496e-8f3a-2c42ea4f65e0",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PO
+	VALUES ("b3410308-deb9-4006-bb30-bb6c59000bce",
+	'o1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("c1390e36-a425-496e-8f3a-2c42ea4f65e0",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	'o1',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("6f363673-7391-4ca9-8477-fbe082d6af20",
+	"ca27b2e6-6400-41c8-a5a6-65e00a685cfb",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PO
+	VALUES ("6f363673-7391-4ca9-8477-fbe082d6af20",
+	'o2',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("ca27b2e6-6400-41c8-a5a6-65e00a685cfb",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	'o2',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("bb1cf1ce-7590-4671-9e65-1495e2e4934f",
+	"f4160a28-9e80-4907-a5b7-dd7069143dd9",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PO
+	VALUES ("bb1cf1ce-7590-4671-9e65-1495e2e4934f",
+	'o1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("f4160a28-9e80-4907-a5b7-dd7069143dd9",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	'o1',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("85da1c4d-16c2-4326-a28c-44683118b637",
+	"df0ef208-77f8-42fc-9ff9-dc714e539856",
+	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
+INSERT INTO SPR_PO
+	VALUES ("85da1c4d-16c2-4326-a28c-44683118b637",
+	'o2',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("df0ef208-77f8-42fc-9ff9-dc714e539856",
+	"d3b89130-5e09-458f-8658-ed03578dbab3",
+	-1,
+	'o2',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO C_I_PROXY
+	VALUES ("d3b89130-5e09-458f-8658-ed03578dbab3",
+	"00000000-0000-0000-0000-000000000000",
+	'CustomerInterface',
+	'',
+	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
+INSERT INTO C_PO
+	VALUES ("f8523377-969b-4dac-8a14-33dec9b5257a",
+	"ab2192c8-8390-4631-9e2c-fca2a1f30c08",
+	'Port3',
+	0,
+	0);
+INSERT INTO C_IR
+	VALUES ("e5700c6d-f43b-47a0-ac2d-0a9428c49aaf",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	"00000000-0000-0000-0000-000000000000",
+	"f8523377-969b-4dac-8a14-33dec9b5257a");
+INSERT INTO C_R
+	VALUES ("e5700c6d-f43b-47a0-ac2d-0a9428c49aaf",
+	'PaymentProviderInterface',
+	'',
+	'Unnamed Interface',
+	'HotelComponent::Port3::PaymentProviderInterface');
+INSERT INTO SPR_REP
+	VALUES ("8d34f116-01ee-4538-8974-0d535305eaa6",
+	"7cafd22b-6779-4267-a861-d26be27bb0a1",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RS
+	VALUES ("8d34f116-01ee-4538-8974-0d535305eaa6",
+	'paymentInfo',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("7cafd22b-6779-4267-a861-d26be27bb0a1",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	'paymentInfo',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("0c4dde20-f824-4965-8ee8-1496b7c18b10",
+	"2d9cd3fd-553c-48ce-b032-46811da9d137",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RS
+	VALUES ("0c4dde20-f824-4965-8ee8-1496b7c18b10",
+	'paymentValid',
+	'',
+	'
+
+select any bs from instances of BOOKINGSESSION where selected.ID == param.sessionID;
+
+if (not_empty bs)
+	LOG::LogInfo(message: "H: paymentValidSignal: generating event");
+	generate BOOKINGSESSION7:paymentConfirmedEvent(valid:param.valid) to bs;
+else
+	LOG::LogInfo(message: "H: paymentValidSignal: Session not found.");
+end if;',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("2d9cd3fd-553c-48ce-b032-46811da9d137",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	'paymentValid',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("769a003e-0907-4779-aa49-c79490d48c5b",
+	"2a4861a8-ad7f-463c-8cd6-6e247346484f",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RS
+	VALUES ("769a003e-0907-4779-aa49-c79490d48c5b",
+	's1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("2a4861a8-ad7f-463c-8cd6-6e247346484f",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	's1',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("947a6a62-745b-4af5-8764-ff3a6cc96a6d",
+	"7d2bcad0-f2fe-466a-9f5c-5685971410a6",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RS
+	VALUES ("947a6a62-745b-4af5-8764-ff3a6cc96a6d",
+	's1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("7d2bcad0-f2fe-466a-9f5c-5685971410a6",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	's1',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("2e52824c-612c-4a51-b2ad-beccee855b1e",
+	"c99c125a-095f-4952-a629-0621c7dbdb11",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RS
+	VALUES ("2e52824c-612c-4a51-b2ad-beccee855b1e",
+	's1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("c99c125a-095f-4952-a629-0621c7dbdb11",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	's1',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("f4df6b21-18f4-4f8f-9f85-03750270796f",
+	"6ff3a8a7-9b80-439a-8fb0-f17f749b7d3c",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RS
+	VALUES ("f4df6b21-18f4-4f8f-9f85-03750270796f",
+	's1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("6ff3a8a7-9b80-439a-8fb0-f17f749b7d3c",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	's1',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("13f74118-1e32-41e1-a36f-e740de18768a",
+	"188f5759-e501-4f70-94fb-2bfb59a128ae",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RS
+	VALUES ("13f74118-1e32-41e1-a36f-e740de18768a",
+	's1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("188f5759-e501-4f70-94fb-2bfb59a128ae",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	's1',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("92d848c9-55c6-4705-b44d-66930b97563c",
+	"a9cff890-a2c5-4f18-8bf3-c9a31e0eefc9",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RS
+	VALUES ("92d848c9-55c6-4705-b44d-66930b97563c",
+	's1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("a9cff890-a2c5-4f18-8bf3-c9a31e0eefc9",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	's1',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("bd66d0f5-1377-433f-9430-e274eb4e9a08",
+	"503de9c4-232e-4cc9-a0f8-5ac6bffee450",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RS
+	VALUES ("bd66d0f5-1377-433f-9430-e274eb4e9a08",
+	's1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("503de9c4-232e-4cc9-a0f8-5ac6bffee450",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	's1',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("723ab550-e26b-4fa3-ac44-8a70c35b9b77",
+	"057381f7-153d-4176-80aa-f5f3b349020a",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RO
+	VALUES ("723ab550-e26b-4fa3-ac44-8a70c35b9b77",
+	'o1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("057381f7-153d-4176-80aa-f5f3b349020a",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	'o1',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("af3da670-e67b-4294-98da-8d0c284140dc",
+	"5fa0e52f-a290-4d43-b16c-693b93c717bd",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RO
+	VALUES ("af3da670-e67b-4294-98da-8d0c284140dc",
+	'o2',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("5fa0e52f-a290-4d43-b16c-693b93c717bd",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	'o2',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("5b579291-745c-4cdf-a381-25a601aba8e4",
+	"e5dd7715-d98a-4b18-8017-fb338c438e2a",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RO
+	VALUES ("5b579291-745c-4cdf-a381-25a601aba8e4",
+	'o3',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("e5dd7715-d98a-4b18-8017-fb338c438e2a",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	'o3',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("16e8b945-4151-4bd2-92a8-373b54c1dfb6",
+	"f35fc4e6-b36a-4435-8304-40b31cea0c6e",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RO
+	VALUES ("16e8b945-4151-4bd2-92a8-373b54c1dfb6",
+	'o4',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("f35fc4e6-b36a-4435-8304-40b31cea0c6e",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	'o4',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("f263fa51-938f-4861-be30-17b38e842a28",
+	"3fdee974-5494-4d1a-8172-e9db9f8ae18d",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RO
+	VALUES ("f263fa51-938f-4861-be30-17b38e842a28",
+	'o1',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("3fdee974-5494-4d1a-8172-e9db9f8ae18d",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	'o1',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("b456e48c-587e-427a-a32d-9988d2ae86dc",
+	"8b1a5345-340a-4d43-bb67-90ce4607fc5a",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RO
+	VALUES ("b456e48c-587e-427a-a32d-9988d2ae86dc",
+	'o2',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("8b1a5345-340a-4d43-bb67-90ce4607fc5a",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	'o2',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("b93a64f0-15d9-4369-ab10-63f0114791a8",
+	"2832886f-8f87-4313-99c5-547439cd85f3",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RO
+	VALUES ("b93a64f0-15d9-4369-ab10-63f0114791a8",
+	'o3',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("2832886f-8f87-4313-99c5-547439cd85f3",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	'o3',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("d4099d2b-6f63-4873-b495-2f39f28d542b",
+	"bf1855b8-817f-4c4d-9922-307c6ef9976e",
+	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf");
+INSERT INTO SPR_RO
+	VALUES ("d4099d2b-6f63-4873-b495-2f39f28d542b",
+	'o4',
+	'',
+	'',
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("bf1855b8-817f-4c4d-9922-307c6ef9976e",
+	"611bea7a-9387-43ea-ba5d-394798e936a3",
+	-1,
+	'o4',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO C_I_PROXY
+	VALUES ("611bea7a-9387-43ea-ba5d-394798e936a3",
+	"00000000-0000-0000-0000-000000000000",
+	'PaymentProviderInterface',
+	'',
+	'../Interfaces/PaymentProviderInterface/PaymentProviderInterface.xtuml');
+INSERT INTO PE_PE
+	VALUES ("ab2192c8-8390-4631-9e2c-fca2a1f30c08",
+	1,
+	"08644b1f-a992-4e52-8ec3-1f5eff4dec19",
+	"00000000-0000-0000-0000-000000000000",
+	2);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("08644b1f-a992-4e52-8ec3-1f5eff4dec19",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Library',
+	'',
+	0,
+	'../Library.xtuml');

@@ -1,0 +1,174 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
+	"00000000-0000-0000-0000-000000000000",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'TestCases',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("0fadd3f2-f2db-49eb-80eb-aa98f2ba6f8e",
+	112,
+	"dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	200,
+	150,
+	0,
+	'4.1.0',
+	'Hotel::Library::UserComponent::TestCases');
+INSERT INTO GD_GE
+	VALUES ("fec8d69f-6ef8-4ea7-8dc6-053d0772a6ef",
+	"0fadd3f2-f2db-49eb-80eb-aa98f2ba6f8e",
+	"1a7e6244-76d4-4656-b802-6270c53bb941",
+	21,
+	0,
+	'Hotel::Library::UserComponent::TestCases::Setup');
+INSERT INTO GD_SHP
+	VALUES ("fec8d69f-6ef8-4ea7-8dc6-053d0772a6ef");
+INSERT INTO GD_NCS
+	VALUES ("fec8d69f-6ef8-4ea7-8dc6-053d0772a6ef");
+INSERT INTO DIM_ND
+	VALUES (200.000000,
+	150.000000,
+	"fec8d69f-6ef8-4ea7-8dc6-053d0772a6ef");
+INSERT INTO DIM_GE
+	VALUES (4653.000000,
+	3084.000000,
+	"fec8d69f-6ef8-4ea7-8dc6-053d0772a6ef",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("fec8d69f-6ef8-4ea7-8dc6-053d0772a6ef",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_GE
+	VALUES ("fb581ded-8eb0-405d-9fd1-9d621b9a5b31",
+	"0fadd3f2-f2db-49eb-80eb-aa98f2ba6f8e",
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928",
+	21,
+	0,
+	'Hotel::Library::UserComponent::TestCases::SimpleTest');
+INSERT INTO GD_SHP
+	VALUES ("fb581ded-8eb0-405d-9fd1-9d621b9a5b31");
+INSERT INTO GD_NCS
+	VALUES ("fb581ded-8eb0-405d-9fd1-9d621b9a5b31");
+INSERT INTO DIM_ND
+	VALUES (529.000000,
+	301.000000,
+	"fb581ded-8eb0-405d-9fd1-9d621b9a5b31");
+INSERT INTO DIM_GE
+	VALUES (4104.000000,
+	3084.000000,
+	"fb581ded-8eb0-405d-9fd1-9d621b9a5b31",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("fb581ded-8eb0-405d-9fd1-9d621b9a5b31",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_DIA
+	VALUES ("0fadd3f2-f2db-49eb-80eb-aa98f2ba6f8e",
+	'',
+	1.000000,
+	4000.000000,
+	3000.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT
+	VALUES ("3b6ab3cd-ea6e-4950-b3b5-4414cd4a5d43",
+	"00000000-0000-0000-0000-000000000000",
+	'inst_ref_set<SimpleTest>',
+	'',
+	'');
+INSERT INTO S_IRDT
+	VALUES ("3b6ab3cd-ea6e-4950-b3b5-4414cd4a5d43",
+	1,
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
+INSERT INTO O_OBJ_PROXY
+	VALUES ("6daee5e1-aefd-49c8-b18d-234fb0eb1928",
+	'SimpleTest',
+	1,
+	'SIMPLETEST',
+	'
+
+This test is a (hopefully) success scenario of the Use Case "Customer creates a Booking"
+',
+	"00000000-0000-0000-0000-000000000000",
+	'./SimpleTest/SimpleTest.xtuml');
+INSERT INTO PE_PE
+	VALUES ("3b6ab3cd-ea6e-4950-b3b5-4414cd4a5d43",
+	1,
+	"dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
+	"00000000-0000-0000-0000-000000000000",
+	3);
+INSERT INTO S_DT
+	VALUES ("9db8c033-ff94-41f2-bd5c-36e5cdae0e4b",
+	"00000000-0000-0000-0000-000000000000",
+	'inst_ref<SimpleTest>',
+	'',
+	'');
+INSERT INTO S_IRDT
+	VALUES ("9db8c033-ff94-41f2-bd5c-36e5cdae0e4b",
+	0,
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
+INSERT INTO PE_PE
+	VALUES ("9db8c033-ff94-41f2-bd5c-36e5cdae0e4b",
+	1,
+	"dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
+	"00000000-0000-0000-0000-000000000000",
+	3);
+INSERT INTO S_SYNC
+	VALUES ("68467367-5409-4c38-b4e4-909abfbab8a5",
+	"00000000-0000-0000-0000-000000000000",
+	'startSimpleTest',
+	'',
+	'LOG::LogInfo(message: "Starting simpleTest ;");
+create object instance st of SIMPLETEST;
+create object instance setup of SETUP;
+generate SETUP2:createInstances to setup;
+LOG::LogInfo(message: "Setup sent, starting test");
+generate SIMPLETEST1:start(desiredType:1) to st;
+
+// Bajs //
+LOG::LogInfo(message: "Starting simpleTest 2;");
+create object instance st1 of SIMPLETEST;
+generate SIMPLETEST1:start(desiredType:1) to st;
+',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'');
+INSERT INTO PE_PE
+	VALUES ("68467367-5409-4c38-b4e4-909abfbab8a5",
+	1,
+	"dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO PE_PE
+	VALUES ("dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"0968771f-8553-4274-be70-86a03e4e6267",
+	7);
+INSERT INTO C_C_PROXY
+	VALUES ("0968771f-8553-4274-be70-86a03e4e6267",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'UserComponent',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'../UserComponent.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Hotel',
+	1,
+	'../../../Hotel.xtuml');

@@ -177,6 +177,7 @@ INSERT INTO O_TFR
 	"ebb6007c-c361-40c7-ad5b-5b07d6a01d41",
 	1,
 	'select many b from instances of FACILITYTYPE;
+//TODO: ...
 return b;',
 	1,
 	'',
@@ -198,15 +199,6 @@ INSERT INTO O_TPARM
 	0,
 	'',
 	"0ef9b8e6-8616-49fc-a1c9-9dac1dafd37d",
-	'');
-INSERT INTO O_TPARM
-	VALUES ("1e0989d6-5c1c-4a30-a265-acb6695e117b",
-	"ad7ec6a1-0909-48cc-8bb1-e07002fbff5e",
-	'facilityType',
-	"ba5eda7a-def5-0000-0000-000000000002",
-	0,
-	'',
-	"9aa4b7ff-c6de-49d7-9abf-090bc4abfc47",
 	'');
 INSERT INTO S_DT_PROXY
 	VALUES ("ebb6007c-c361-40c7-ad5b-5b07d6a01d41",

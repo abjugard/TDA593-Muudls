@@ -11,6 +11,24 @@ This test is a (hopefully) success scenario of the Use Case "Customer creates a 
 ',
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO O_NBATTR
+	VALUES ("10645a6f-534c-4e7d-84b2-77d94f3125c4",
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
+INSERT INTO O_BATTR
+	VALUES ("10645a6f-534c-4e7d-84b2-77d94f3125c4",
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
+INSERT INTO O_ATTR
+	VALUES ("10645a6f-534c-4e7d-84b2-77d94f3125c4",
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928",
+	"fa000d2e-0253-4293-bd82-1e0913c0904f",
+	'sessionID',
+	'',
+	'',
+	'sessionID',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'',
+	'');
+INSERT INTO O_NBATTR
 	VALUES ("fa000d2e-0253-4293-bd82-1e0913c0904f",
 	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
 INSERT INTO O_BATTR
@@ -29,31 +47,49 @@ INSERT INTO O_ATTR
 	'',
 	'');
 INSERT INTO O_NBATTR
-	VALUES ("10645a6f-534c-4e7d-84b2-77d94f3125c4",
+	VALUES ("aba71a03-0b8d-483b-a010-98e1110307e9",
 	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
 INSERT INTO O_BATTR
-	VALUES ("10645a6f-534c-4e7d-84b2-77d94f3125c4",
+	VALUES ("aba71a03-0b8d-483b-a010-98e1110307e9",
 	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
 INSERT INTO O_ATTR
-	VALUES ("10645a6f-534c-4e7d-84b2-77d94f3125c4",
+	VALUES ("aba71a03-0b8d-483b-a010-98e1110307e9",
 	"6daee5e1-aefd-49c8-b18d-234fb0eb1928",
-	"fa000d2e-0253-4293-bd82-1e0913c0904f",
-	'sessionID',
+	"10645a6f-534c-4e7d-84b2-77d94f3125c4",
+	'desiredType',
 	'',
 	'',
-	'sessionID',
+	'desiredType',
 	0,
-	"ba5eda7a-def5-0000-0000-000000000005",
+	"ba5eda7a-def5-0000-0000-000000000002",
 	'',
 	'');
+INSERT INTO O_NBATTR
+	VALUES ("7c32a24f-66a2-4ce6-a429-f3045074312c",
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
+INSERT INTO O_BATTR
+	VALUES ("7c32a24f-66a2-4ce6-a429-f3045074312c",
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
+INSERT INTO O_ATTR
+	VALUES ("7c32a24f-66a2-4ce6-a429-f3045074312c",
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928",
+	"aba71a03-0b8d-483b-a010-98e1110307e9",
+	'active',
+	'',
+	'',
+	'active',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'',
+	'false');
 INSERT INTO O_ID
-	VALUES (0,
+	VALUES (2,
 	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
 INSERT INTO O_ID
 	VALUES (1,
 	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
 INSERT INTO O_ID
-	VALUES (2,
+	VALUES (0,
 	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
 INSERT INTO PE_PE
 	VALUES ("6daee5e1-aefd-49c8-b18d-234fb0eb1928",
