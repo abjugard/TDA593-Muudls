@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ModelSearchPage">
+		<item value="false" key="CASE_SENSITIVE"/>
+		<item value="false" key="DESCRIPTION_SEARCH"/>
+		<item value="false" key="REG_EX_SEARCH"/>
+		<item value="false" key="ACTION_LANGUAGE_SEARCH"/>
+		<item value="0" key="HISTORY_SIZE"/>
+	</section>
+</section>

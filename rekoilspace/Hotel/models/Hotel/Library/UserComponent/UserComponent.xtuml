@@ -596,7 +596,15 @@ INSERT INTO SPR_RS
 	VALUES ("a8898a52-2111-40f1-9da3-70247604dd4d",
 	'errorSignal',
 	'',
-	'LOG::LogInfo(message: "ERROR: " + param.message);',
+	'LOG::LogInfo(message: "UC: errorSignal: ERROR: " + param.message);
+
+select any st from instances of SIMPLETEST where selected.sessionID == param.sessionID;
+
+if (not_empty st)
+	generate SIMPLETEST7:errorEvent(message:param.message) to st;
+else;
+	LOG::LogInfo(message: "UC: errorSignal:, no user session found");
+end if;',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("89169ec3-d50b-4b5b-95fa-d95fb15c3f98",

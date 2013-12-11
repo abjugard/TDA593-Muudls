@@ -7874,3 +7874,3072 @@ java.lang.ClassCastException: java.util.GregorianCalendar cannot be cast to java
 	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
 	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
 	at java.lang.Thread.run(Unknown Source)
+!SESSION 2013-12-11 20:09:45.526 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_35
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_GB
+Framework arguments:  -product com.mentor.nucleus.bp.pkg.BridgePoint
+Command-line arguments:  -os linux -ws gtk -arch x86 -product com.mentor.nucleus.bp.pkg.BridgePoint
+
+!ENTRY org.eclipse.core.resources 4 2 2013-12-11 20:54:27.509
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.TreeMap$PrivateEntryIterator.nextEntry(Unknown Source)
+	at java.util.TreeMap$ValueIterator.next(Unknown Source)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.findPlaceHolder(PlaceHolderManager.java:244)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager.access$000(PlaceHolderManager.java:57)
+	at com.mentor.nucleus.bp.ui.text.placeholder.PlaceHolderManager$PlaceHolderStateSynchronizer.handleResourceMarkersChanged(PlaceHolderManager.java:341)
+	at com.mentor.nucleus.bp.ui.text.AbstractModelElementListener.visit(AbstractModelElementListener.java:71)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:69)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:49)
+	at com.mentor.nucleus.bp.ui.text.AbstractModelElementListener.resourceChanged(AbstractModelElementListener.java:52)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2353)
+	at com.mentor.nucleus.bp.ui.text.annotation.ActivityProblem.createMarker(ActivityProblem.java:88)
+	at com.mentor.nucleus.bp.ui.text.DocumentProvider.doSaveDocument(DocumentProvider.java:119)
+	at org.eclipse.ui.texteditor.AbstractDocumentProvider$1$SaveOperation.execute(AbstractDocumentProvider.java:610)
+	at org.eclipse.ui.texteditor.AbstractDocumentProvider$DocumentProviderOperation.run(AbstractDocumentProvider.java:74)
+	at org.eclipse.ui.texteditor.AbstractDocumentProvider.executeOperation(AbstractDocumentProvider.java:553)
+	at org.eclipse.ui.texteditor.AbstractDocumentProvider.saveDocument(AbstractDocumentProvider.java:629)
+	at com.mentor.nucleus.bp.ui.text.activity.AllActivityModifier.doSaveDocument(AllActivityModifier.java:420)
+	at com.mentor.nucleus.bp.ui.text.activity.AllActivityModifier.parseAction(AllActivityModifier.java:387)
+	at com.mentor.nucleus.bp.ui.text.activity.AllActivityModifier.doForAll(AllActivityModifier.java:323)
+	at com.mentor.nucleus.bp.ui.text.activity.AllActivityModifier.processAllActivities(AllActivityModifier.java:293)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget.launchElement(BPDebugTarget.java:930)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget.launchImportedComponent(BPDebugTarget.java:919)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget.setupSelectedModels(BPDebugTarget.java:414)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget.init(BPDebugTarget.java:144)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget.<init>(BPDebugTarget.java:128)
+	at com.mentor.nucleus.bp.debug.ui.launch.BPLaunchDelegate.launch(BPLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 20:58:25.352
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 20:58:25.354
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 20:58:25.354
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 20:58:25.355
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 20:58:25.356
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 20:58:25.357
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 20:58:25.357
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 20:58:25.357
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 20:58:25.358
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:01:02.693
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:01:02.694
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:01:02.695
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:01:02.696
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:01:02.697
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:01:02.699
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:01:02.699
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:01:02.699
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:01:02.700
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:03:43.702
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:03:43.703
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:03:43.703
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:03:43.705
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:03:43.705
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:03:43.707
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:03:43.707
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:03:43.708
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:03:43.708
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:04:41.724
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:04:41.725
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:04:41.725
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:04:41.726
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:04:41.727
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:04:41.728
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:04:41.728
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:04:41.728
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:04:41.728
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:24:18.207
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:24:18.209
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:24:18.209
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:24:18.211
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:24:18.211
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:24:18.213
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:24:18.213
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:24:18.214
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:24:18.214
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:26:33.554
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:26:33.556
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:26:33.556
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:26:33.558
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:26:33.558
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:26:33.559
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:26:33.560
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:26:33.560
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:26:33.560
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:28:46.587
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:28:46.589
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:28:46.589
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:28:46.589
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:29:37.560
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:29:37.561
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:29:37.561
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:29:37.563
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:29:37.586
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:29:37.587
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:29:37.587
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:29:37.588
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:17.761
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:17.763
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:17.763
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:17.765
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:17.795
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:17.796
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:17.797
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:17.799
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:17.831
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:17.832
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:17.833
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:17.834
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:17.866
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:17.868
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:17.868
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:17.870
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:17.903
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:17.904
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:17.905
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:17.906
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:17.937
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:17.939
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:17.939
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:17.942
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:17.970
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:17.971
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:17.972
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:17.973
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:18.005
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:18.008
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:18.008
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:18.011
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:18.038
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:18.040
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:18.040
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:18.042
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:18.071
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:18.072
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:18.073
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:18.074
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:18.103
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:18.105
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:30:18.105
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:30:18.106
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.448
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.450
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.450
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.452
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.486
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.488
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.488
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.490
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.520
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.522
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.523
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.525
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.553
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.554
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.555
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.557
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.590
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.592
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.592
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.594
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.623
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.625
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.626
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.627
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.659
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.661
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.661
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.663
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.695
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.697
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.698
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.700
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.731
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.733
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.733
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.735
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.765
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.766
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.767
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.769
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.799
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.800
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:31:24.801
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:31:24.802
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:32:31.341
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:32:31.342
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:32:31.342
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:32:31.343
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:32:31.344
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:32:31.344
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:32:31.344
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:34:49.661
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:34:49.662
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:34:49.663
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:34:49.664
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:34:49.664
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:34:49.665
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:34:49.665
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:40:59.351
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:40:59.352
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:40:59.353
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:40:59.354
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:40:59.354
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:40:59.355
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:40:59.355
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:42:18.898
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:42:18.899
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:42:18.899
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:42:18.901
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:42:18.901
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:42:18.902
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:42:18.902
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:43:21.126
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:43:21.128
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:43:21.128
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:43:21.131
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:43:21.148
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:43:21.150
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:43:21.150
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:43:21.151
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:46:07.085
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:46:07.087
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:46:07.087
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:46:07.089
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:46:07.108
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:46:07.110
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:46:07.110
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:46:07.111
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:47:55.704
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:47:55.705
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:47:55.706
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:47:55.707
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:47:55.729
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1741)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:47:55.730
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-12-11 21:47:55.731
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at com.mentor.nucleus.bp.core.Gd_c.Compare_times(Gd_c.java:498)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getboolean(BinaryOperation_c.java:1970)
+	at com.mentor.nucleus.bp.core.BinaryOperation_c.Getvalue(BinaryOperation_c.java:1459)
+	at com.mentor.nucleus.bp.core.Value_c.Computevalue(Value_c.java:13300)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2233)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.mentor.nucleus.bp.core 4 4 2013-12-11 21:47:55.731
+!MESSAGE GD::instance_to_boolean exception: Exception
+!STACK 0
+java.lang.NullPointerException
+	at com.mentor.nucleus.bp.core.Gd_c.Instance_to_boolean(Gd_c.java:251)
+	at com.mentor.nucleus.bp.core.SelectFromInstancesWhere_c.Execute(SelectFromInstancesWhere_c.java:2290)
+	at com.mentor.nucleus.bp.core.Statement_c.Execute(Statement_c.java:8426)
+	at com.mentor.nucleus.bp.core.Stack_c.Execute(Stack_c.java:2149)
+	at com.mentor.nucleus.bp.core.Stack_c.Run(Stack_c.java:1704)
+	at com.mentor.nucleus.bp.debug.ui.model.BPDebugTarget$2.run(BPDebugTarget.java:595)
+	at java.lang.Thread.run(Unknown Source)

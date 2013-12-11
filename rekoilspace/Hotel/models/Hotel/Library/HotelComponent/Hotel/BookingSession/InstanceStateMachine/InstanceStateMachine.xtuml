@@ -1588,7 +1588,7 @@ if(not_empty ft)
 	select one booking related by self->BOOKING[R26];
 	LOG::LogInfo(message: "H: selected: ft not empty");
 	f = hotel.searchFacility(fromDate: booking.fromDate, toDate: booking.toDate, facilityType:rcvd_evt.id);	
-	LOG::LogInfo(message: "H: selected: f not empty");
+	LOG::LogInfo(message: "H selected: HERPADERP");
 	if(not_empty f)
 		LOG::LogInfo(message: "H: selected: f not empty");
 	 	//Make not available for booking to prevent others from booking facility

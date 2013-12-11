@@ -148,49 +148,22 @@ INSERT INTO O_TFR
 	'',
 	"bd43dc09-3be2-4ae8-806d-bedb08b1e03c",
 	1,
-	'LOG::LogInfo(message: "H: searchFacility: start of operation");
+	'
 select any ft from instances of FACILITYTYPE where selected.id == param.facilityType;
-LOG::LogInfo(message: "H: searchFacility: start of asdasdasdasd");
-//select many hb related by self->BOOKING[R13] 
-//				where 
-//				(((selected.toDate < param.toDate) 
-//				and (selected.toDate > param.fromDate))
-//				or ((selected.fromDate > param.toDate) 
-//				and (selected.fromDate < param.fromDate)));
-//select many bss from instances of BOOKINGSESSION;
-//
-//select many bsb related by bss->BOOKING[R26] 
-//				where 
-//				(((selected.toDate < param.toDate) 
-//				and (selected.toDate > param.fromDate))
-//				or ((selected.fromDate > param.toDate) 
-//				and (selected.fromDate < param.fromDate)));
 				
 select many allBookings from instances of BOOKING;
-			//where
-			//	(
-			//	((selected.toDate < param.toDate)));// and (selected.toDate > param.fromDate)))
-			//	or 
-			//	((selected.fromDate > param.toDate) and (selected.fromDate < param.fromDate))
-			//	);
-
-LOG::LogInfo(message: "H: searchFacility: select of d00000m");
-
-//conflictingBookings = hb + bsb;
-
 
 select many facilities related by ft->FACILITY[R1];
-LOG::LogInfo(message: "H: searchFacility: start of looooop");
 for each fc in facilities
 	take = true;
 	for each booking in allBookings
-		if( (0 >= ::compDate(d0: booking.toDate, d1:param.toDate)
+		if( (0 < ::compDate(d0: booking.toDate, d1:param.toDate)
 			and
-			0 <= ::compDate(d0: booking.toDate, d1:param.fromDate))
+			0 > ::compDate(d0: booking.toDate, d1:param.fromDate))
 			or
-			(0 <= ::compDate(d0: booking.fromDate, d1:param.toDate)
+			(0 > ::compDate(d0: booking.fromDate, d1:param.toDate)
 			and
-			0 >= ::compDate(d0: booking.fromDate, d1:param.fromDate))
+			0 < ::compDate(d0: booking.fromDate, d1:param.fromDate))
 		)
 			break;
 		end if;
@@ -202,19 +175,18 @@ for each fc in facilities
 			end if;
 		end for;
 		if(not take)
-			LOG::LogInfo(message: "H: searchFacility: not take");
 			break;
 		end if;
 	end for;
 	if(take)
-		LOG::LogInfo(message: "H: searchFacility: return of loooooop");
+		LOG::LogInfo(message: "H: searchFacility: return something not null");
 		return fc;
 	end if; 
 end for;
-LOG::LogInfo(message: "H: searchFacility: end of loooooop");
-nullCon = TIM::create_date(day:-1, month:-1, year:-1, second:-1,minute:-1,hour:-1);
+LOG::LogInfo(message: "H: searchFacility: about to return null");
 select any null from instances of FACILITY 
-	where selected.checkedIn == nullCon;
+	where selected.checkedIn == selected.checkedOut;
+	LOG::LogInfo(message: "H: searchFacility: return null");
 return null;
 ',
 	1,
