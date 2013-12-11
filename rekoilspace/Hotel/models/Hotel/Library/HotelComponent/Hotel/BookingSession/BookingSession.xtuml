@@ -223,6 +223,24 @@ INSERT INTO O_ATTR
 	"bd43dc09-3be2-4ae8-806d-bedb08b1e03c",
 	'',
 	'');
+INSERT INTO O_NBATTR
+	VALUES ("c891ea35-d39e-4dda-b8cb-bf7a5a9f3519",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_BATTR
+	VALUES ("c891ea35-d39e-4dda-b8cb-bf7a5a9f3519",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_ATTR
+	VALUES ("c891ea35-d39e-4dda-b8cb-bf7a5a9f3519",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	"498195f4-1880-4554-8893-31dababdda26",
+	'facilityTypeSelected',
+	'',
+	'',
+	'facilityTypeSelected',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
 INSERT INTO O_ID
 	VALUES (2,
 	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");

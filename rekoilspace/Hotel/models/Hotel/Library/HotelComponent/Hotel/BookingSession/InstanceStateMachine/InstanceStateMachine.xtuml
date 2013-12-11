@@ -1581,37 +1581,10 @@ INSERT INTO SM_ACT
 	"c87b2dab-d00f-4d32-a5d3-d1e5b01c9cb3",
 	1,
 	'select any ft from instances of FACILITYTYPE where selected.id == rcvd_evt.id;
-select one hotel related by self-> HOTEL[R17];
 
-LOG::LogInfo(message: "H: selected: Entered state.");
-if(not_empty ft)
-	select one booking related by self->BOOKING[R26];
-	LOG::LogInfo(message: "H: selected: ft not empty");
-	f = hotel.searchFacility(fromDate: booking.fromDate, toDate: booking.toDate, facilityType:rcvd_evt.id);	
-	LOG::LogInfo(message: "H selected: HERPADERP");
-	if(not_empty f)
-		LOG::LogInfo(message: "H: selected: f not empty");
-	 	//Make not available for booking to prevent others from booking facility
-	 	self.tmpFacility = f;
-	 	select one booking related by self->BOOKING[R26];
-	 	relate f to booking across R14;
-	 	LOG::LogInfo(message: "H: selected: Confirming facility.");
-	 	send BookingProvider::confirmSignal(message: "H: selected signal: Confirming facility",
-	 										sessionID: self.ID);
-	
-	else
-		send BookingProvider::errorSignal(	message: "H: selectted signal: Could not find any facilities",
-										sessionID:self.ID);
-		LOG::LogInfo(message: "H: selected: Could not find facility.");
-	end if;
-	
-	
 
-else
-	send BookingProvider::errorSignal(	message: "H: selectted signal: Could not find selected facility type",
-										sessionID:self.ID);
-	LOG::LogInfo(message: "H: selected: Could not find facility type.");
-end if;',
+
+//generate BOOKINGSESSION_A2:requestSelectEvent(sessionID:rcvd_evt.id) to  BookingSession;',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("2232bc33-de11-4ec7-b257-f8c79d218a20",
@@ -3844,7 +3817,7 @@ INSERT INTO DIM_ND
 	0.000000,
 	"37799e48-477d-402d-ab51-f204f5d91c97");
 INSERT INTO DIM_GE
-	VALUES (4800.000000,
+	VALUES (4820.000000,
 	3113.000000,
 	"37799e48-477d-402d-ab51-f204f5d91c97",
 	"00000000-0000-0000-0000-000000000000");

@@ -165,7 +165,7 @@ for each fc in facilities
 			and
 			0 < ::compDate(d0: booking.fromDate, d1:param.fromDate))
 		)
-			break;
+			continue;
 		end if;
 		select many fs related by booking->FACILITY[R14];
 		for each f in fs
@@ -179,7 +179,7 @@ for each fc in facilities
 		end if;
 	end for;
 	if(take)
-		LOG::LogInfo(message: "H: searchFacility: return something not null");
+		LOG::LogInfo(message: "H: searchFacility: return "+fc.facilityID);
 		return fc;
 	end if; 
 end for;
