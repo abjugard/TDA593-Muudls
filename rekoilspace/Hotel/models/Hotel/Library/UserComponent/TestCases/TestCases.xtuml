@@ -159,11 +159,10 @@ INSERT INTO S_SYNC
 	'create object instance setup of SETUP;
 generate SETUP2:createInstances to setup;
 
-::startSimpleTest(desiredType:1);
-::startSimpleTest(desiredType:1);
-::startSimpleTest(desiredType:1);
-::startSimpleTest(desiredType:1);
-::startSimpleTest(desiredType:1);
+::startSimpleTest(desiredType:0);
+::startSimpleTest(desiredType:0);
+::startSimpleTest(desiredType:0);
+::startSimpleTest(desiredType:0);
 ::startSimpleTest(desiredType:1);
 ::startSimpleTest(desiredType:1);
 ::startSimpleTest(desiredType:1);
