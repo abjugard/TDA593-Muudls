@@ -1000,7 +1000,24 @@ INSERT INTO SPR_PS
 	VALUES ("ed293131-e8e4-43ef-be8f-e13aa67ce7ca",
 	'checkOutGuest',
 	'',
-	'',
+	'
+select any booking from instances of BOOKING where selected.bookingNumber == param.bookingNumber;
+
+if(empty booking)
+	send CustomerInterface::checkOutReturn(bookingNumber: param.bookingNumber, success:false, message: "could not find booking");
+else
+	select any guest related by booking->GUEST[R15] where selected.name == param.name;
+	if(empty guest)
+		send CustomerInterface::checkOutReturn(bookingNumber: param.bookingNumber, success:false, message: "could not find guest with name "+param.name);
+	else
+		guest.checkedOut = TIM::current_date();
+		select many fset related by guest->FACILITY[R16];
+		for each f in fset
+			f.checkedOut = guest.checkedOut;
+		end for;
+		send CustomerInterface::checkOutReturn(bookingNumber: param.bookingNumber, success:true, message: "Successfully checked out "+param.name);
+	end if;
+end if;',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("895459b4-8cad-487c-ac02-41f7392c1417",

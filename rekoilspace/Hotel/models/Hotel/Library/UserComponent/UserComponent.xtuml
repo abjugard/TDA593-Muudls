@@ -830,7 +830,7 @@ INSERT INTO SPR_RS
 	VALUES ("a20e0278-2b71-4814-9b04-548e5dd1e2f6",
 	'checkInReturn',
 	'',
-	'
+	'//TODO not any
 select any t from instances of CHECKINTEST where selected.bookingNumber == param.bookingNumber;
 
 if(not param.success)
@@ -854,7 +854,14 @@ INSERT INTO SPR_RS
 	VALUES ("177c5d46-e467-4c97-8502-e9490287e6fd",
 	'checkOutReturn',
 	'',
-	'',
+	'
+select any ct from instances of CHECKOUTTEST where selected.bookingNumber==param.bookingNumber;
+
+if(not param.success)
+	LOG::LogInfo(message: "UC checkOutReturn signal: failure, "+param.message);
+end if;
+
+generate CHECKOUTTEST2:checkOutReturnEvent(success: param.success) to ct;',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("cb5b5b24-04f0-4601-b19b-0cf189cea793",
