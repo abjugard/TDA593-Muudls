@@ -184,10 +184,9 @@ for each fc in facilities
 	end if; 
 end for;
 LOG::LogInfo(message: "H: searchFacility: about to return null");
-select any null from instances of FACILITY 
-	where selected.checkedIn == selected.checkedOut;
+select any cpalbin from instances of FACILITY where false;
 	LOG::LogInfo(message: "H: searchFacility: return null");
-return null;
+return cpalbin;
 ',
 	1,
 	'',

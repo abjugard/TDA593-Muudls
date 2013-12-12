@@ -162,6 +162,12 @@ generate SETUP2:createInstances to setup;
 ::startSimpleTest(desiredType:1);
 ::startSimpleTest(desiredType:1);
 ::startSimpleTest(desiredType:1);
+::startSimpleTest(desiredType:1);
+::startSimpleTest(desiredType:1);
+::startSimpleTest(desiredType:1);
+::startSimpleTest(desiredType:1);
+::startSimpleTest(desiredType:1);
+::startSimpleTest(desiredType:1);
 
 ',
 	"ba5eda7a-def5-0000-0000-000000000000",
@@ -169,6 +175,21 @@ generate SETUP2:createInstances to setup;
 	'');
 INSERT INTO PE_PE
 	VALUES ("9ddde04f-5a51-4a29-b090-221a084b1875",
+	1,
+	"dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("49f70ff6-382b-4698-b113-fcbae0a4c2cd",
+	"00000000-0000-0000-0000-000000000000",
+	'startSingleSimpleTest',
+	'',
+	'::startSimpleTest(desiredType:1);',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'');
+INSERT INTO PE_PE
+	VALUES ("49f70ff6-382b-4698-b113-fcbae0a4c2cd",
 	1,
 	"dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
 	"00000000-0000-0000-0000-000000000000",

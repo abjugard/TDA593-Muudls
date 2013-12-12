@@ -1194,8 +1194,9 @@ INSERT INTO SM_ACT
 	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
 	1,
 	'LOG::LogInfo(message: "Session recieved");
+self.sessionID = param.sessionID;
 LOG::LogInfo(message: "Requesting available bookables...");
-send BookingProvider::requestAvailableBookables(sessionID: param.sessionID, 
+send BookingProvider::requestAvailableBookables(sessionID: self.sessionID, 
 												fromDate: TIM::create_date(day:1, month:1, year:2010, second:8, minute:12, hour:4),
 												toDate: TIM::create_date(day:1, month:1, year:2012, second:8, minute:12, hour:4));',
 	'');
@@ -1210,7 +1211,7 @@ INSERT INTO SM_ACT
 	VALUES ("dc6f4ce0-453b-4bad-b2e4-768df5994abc",
 	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
 	1,
-	'self.sessionID = param.sessionID;',
+	'',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("bae9a788-8cc5-4574-a62e-698711a495dc",
@@ -1226,9 +1227,6 @@ INSERT INTO SM_ACT
 	'LOG::LogInfo(message: "UC selectRooms: Received available, selecting...");
 
 id = rcvd_evt.id;
-
-
-
 
 if (id == self.desiredType)
 	LOG::LogInteger(message: id);
@@ -1996,8 +1994,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"cf512ff1-fd99-4faa-8a8c-178c7fdfb142");
 INSERT INTO DIM_GE
-	VALUES (3973.000000,
-	3903.000000,
+	VALUES (3988.000000,
+	3911.000000,
 	"cf512ff1-fd99-4faa-8a8c-178c7fdfb142",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -2532,8 +2530,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"708bb44d-eb10-4ffc-8c5f-9cbbe55e8d42");
 INSERT INTO DIM_GE
-	VALUES (3839.000000,
-	4023.000000,
+	VALUES (3850.000000,
+	4034.000000,
 	"708bb44d-eb10-4ffc-8c5f-9cbbe55e8d42",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -2697,8 +2695,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"50479da7-5120-4751-b5ab-ddd9ccd77939");
 INSERT INTO DIM_GE
-	VALUES (4479.000000,
-	4000.000000,
+	VALUES (4519.000000,
+	3997.000000,
 	"50479da7-5120-4751-b5ab-ddd9ccd77939",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -3136,8 +3134,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"d42228de-a386-4212-9578-a6e76178f5f2");
 INSERT INTO DIM_GE
-	VALUES (4860.000000,
-	3939.000000,
+	VALUES (4848.000000,
+	3956.000000,
 	"d42228de-a386-4212-9578-a6e76178f5f2",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE

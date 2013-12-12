@@ -22,7 +22,7 @@ INSERT INTO O_ATTR
 	'',
 	'customerID',
 	0,
-	"ba5eda7a-def5-0000-0000-000000000002",
+	"ba5eda7a-def5-0000-0000-000000000005",
 	'',
 	'');
 INSERT INTO O_NBATTR
@@ -39,6 +39,24 @@ INSERT INTO O_ATTR
 	'',
 	'',
 	'name',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("c9074fca-e1c8-401e-bb71-202eff064dc4",
+	"bd271967-a0a4-4bd7-9783-303111ffdc9b");
+INSERT INTO O_BATTR
+	VALUES ("c9074fca-e1c8-401e-bb71-202eff064dc4",
+	"bd271967-a0a4-4bd7-9783-303111ffdc9b");
+INSERT INTO O_ATTR
+	VALUES ("c9074fca-e1c8-401e-bb71-202eff064dc4",
+	"bd271967-a0a4-4bd7-9783-303111ffdc9b",
+	"d7ab9c18-4a8e-4361-919f-bf2193fc4147",
+	'phoneNumber',
+	'',
+	'',
+	'phoneNumber',
 	0,
 	"ba5eda7a-def5-0000-0000-000000000004",
 	'',

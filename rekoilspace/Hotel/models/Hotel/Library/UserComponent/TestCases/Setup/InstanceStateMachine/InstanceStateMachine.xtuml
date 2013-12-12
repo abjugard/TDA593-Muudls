@@ -197,7 +197,8 @@ INSERT INTO SM_ACT
 LOG::LogInfo(message: "creating facilities");
 send StaffInterface::addFacility(facilityID: "1215D", facilityType: param.facilityType);
 send StaffInterface::addFacility(facilityID: "1215A", facilityType: param.facilityType);
-//send StaffInterface::addFacility(facilityID: "1215C", facilityType: param.facilityType);',
+send StaffInterface::addFacility(facilityID: "1215C", facilityType: param.facilityType);
+send StaffInterface::addFacility(facilityID: "1215B", facilityType: param.facilityType);',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("732839b4-cd9d-475d-acf4-742320f0882e",

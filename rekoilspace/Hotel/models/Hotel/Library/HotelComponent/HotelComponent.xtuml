@@ -761,7 +761,6 @@ INSERT INTO SPR_PS
 	'// Initialize a booking session
 LOG::LogInfo(message: "Recieved session request");
 create object instance session of BOOKINGSESSION;
-
 create object instance booking of BOOKING;
 relate session to booking across R26;
 
