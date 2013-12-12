@@ -1691,23 +1691,7 @@ create object instance c of CUSTOMER;
 c.name = rcvd_evt.name;
 c.phoneNumber = rcvd_evt.phoneNumber;
 
-//Relate customer to booking properly
-create object instance bill of BILLING;
-bill.isPayed = false;
-
-select one b related by self->BOOKING[R26];
-
-select many facilities related by b->FACILITY[R14];
-
-for each fac in facilities
-	select one bookable related by fac->FACILITYTYPE[R1]->BOOKABLE[R2];
-	create object instance billItem of BILLINGITEM;
-	billItem.cost = bookable.price;
-	billItem.description = bookable.name + " " + bookable.description; 
-	relate billItem to bill across R20;
-end for;
-
-relate c to b across R22 using bill;
+relate self to c across R27;
 
 send BookingProvider::confirmSignal(sessionID:self.ID,
 									message:"Confirmed");',
@@ -1958,11 +1942,31 @@ INSERT INTO SM_ACT
 	"c87b2dab-d00f-4d32-a5d3-d1e5b01c9cb3",
 	1,
 	'
+//Relate customer to booking properly
+create object instance bill of BILLING;
+bill.isPayed = false;
+
+select one b related by self->BOOKING[R26];
+
+select many facilities related by b->FACILITY[R14];
+
+for each fac in facilities
+	select one bookable related by fac->FACILITYTYPE[R1]->BOOKABLE[R2];
+	create object instance billItem of BILLINGITEM;
+	billItem.cost = bookable.price;
+	billItem.description = bookable.name + " " + bookable.description; 
+	relate billItem to bill across R20;
+end for;
+
+select one c related by self->CUSTOMER[R27];
+relate c to b across R22 using bill;
+
 select one b related by self->BOOKING[R26];
 select any h from instances of HOTEL;
 relate b to h across R13;
-
-LOG::LogInfo(message: "H: WOHO BOOKING DONE!!!!!!!!!!!");',
+LOG::LogInfo(message: "H: WOHO BOOKING DONE!!!!!!!!!!!");
+self.destroySession();
+',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("4502ef61-4af2-442a-a088-8a6f6b5ca707",
@@ -1988,7 +1992,7 @@ INSERT INTO SM_ACT
 	VALUES ("d79ba01f-2e1e-40c4-bf30-bf8ccd739bb5",
 	"c87b2dab-d00f-4d32-a5d3-d1e5b01c9cb3",
 	1,
-	'',
+	'self.undoBookingSession();',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("0cc5fd5d-78d3-43df-82b9-4ff8797f6f75",
@@ -2357,8 +2361,8 @@ INSERT INTO DIM_ND
 	150.000000,
 	"daca1e47-b170-40c3-8d8f-f0a3d730b176");
 INSERT INTO DIM_GE
-	VALUES (4596.000000,
-	3144.000000,
+	VALUES (4848.000000,
+	3180.000000,
 	"daca1e47-b170-40c3-8d8f-f0a3d730b176",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -2372,18 +2376,23 @@ INSERT INTO DIM_CON
 	"daca1e47-b170-40c3-8d8f-f0a3d730b176");
 INSERT INTO DIM_CON
 	VALUES ("f1559e11-ab5f-4e39-b614-ed1a48da8613",
-	4668.000000,
-	3294.000000,
+	4920.000000,
+	3330.000000,
 	"daca1e47-b170-40c3-8d8f-f0a3d730b176");
 INSERT INTO DIM_CON
 	VALUES ("af2969a3-2feb-4b72-bed5-d16cf7a5c6b5",
-	4596.000000,
-	3273.000000,
+	4848.000000,
+	3312.000000,
 	"daca1e47-b170-40c3-8d8f-f0a3d730b176");
 INSERT INTO DIM_CON
 	VALUES ("3b014e65-2d36-41db-9bf2-ef053e28848f",
-	4677.000000,
-	3144.000000,
+	4932.000000,
+	3180.000000,
+	"daca1e47-b170-40c3-8d8f-f0a3d730b176");
+INSERT INTO DIM_CON
+	VALUES ("175a2694-d5d8-42e7-9b4f-a05d03436ca6",
+	5036.000000,
+	3330.000000,
 	"daca1e47-b170-40c3-8d8f-f0a3d730b176");
 INSERT INTO GD_GE
 	VALUES ("b1910aca-5937-4402-9111-60ab7a6f58f2",
@@ -2518,8 +2527,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"47f45a27-c1e1-44e8-b39a-017af67c40a5");
 INSERT INTO DIM_GE
-	VALUES (4760.000000,
-	3314.000000,
+	VALUES (4543.000000,
+	3305.000000,
 	"47f45a27-c1e1-44e8-b39a-017af67c40a5",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -2553,8 +2562,8 @@ INSERT INTO GD_LS
 	"16ab821d-8501-46dd-97b2-119c3a02a277");
 INSERT INTO DIM_WAY
 	VALUES ("47f3acd8-c993-4d5d-b76e-c9c1d1182f87",
-	4668.000000,
-	3294.000000,
+	4920.000000,
+	3330.000000,
 	"e95c12e9-dbfa-4893-8b34-000374af73fc",
 	"00000000-0000-0000-0000-000000000000",
 	"00000000-0000-0000-0000-000000000000");
@@ -3661,8 +3670,8 @@ INSERT INTO DIM_ND
 	144.000000,
 	"58ef63bf-d3c4-4d24-afb3-9b073ce0fbfa");
 INSERT INTO DIM_GE
-	VALUES (4320.000000,
-	4368.000000,
+	VALUES (4500.000000,
+	4392.000000,
 	"58ef63bf-d3c4-4d24-afb3-9b073ce0fbfa",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -3671,8 +3680,13 @@ INSERT INTO DIM_ELE
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_CON
 	VALUES ("d604cdd8-4bbb-4684-bd14-5c83eb1e2d60",
-	4396.000000,
-	4368.000000,
+	4578.000000,
+	4392.000000,
+	"58ef63bf-d3c4-4d24-afb3-9b073ce0fbfa");
+INSERT INTO DIM_CON
+	VALUES ("9c947e20-c932-40f5-912f-9f5ffe28719e",
+	5147.000000,
+	4356.000000,
 	"58ef63bf-d3c4-4d24-afb3-9b073ce0fbfa");
 INSERT INTO GD_GE
 	VALUES ("2ebfa55f-4a70-431e-8180-b9d5fdc8a172",
@@ -3714,8 +3728,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"af88e3d6-d691-479b-8998-8433ab320f23");
 INSERT INTO DIM_GE
-	VALUES (4381.000000,
-	4287.000000,
+	VALUES (4493.000000,
+	4305.000000,
 	"af88e3d6-d691-479b-8998-8433ab320f23",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -3756,8 +3770,8 @@ INSERT INTO DIM_WAY
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_WAY
 	VALUES ("31438813-3d92-4583-83c6-06259d8c375c",
-	4396.000000,
-	4368.000000,
+	4578.000000,
+	4392.000000,
 	"2ebfa55f-4a70-431e-8180-b9d5fdc8a172",
 	"00000000-0000-0000-0000-000000000000",
 	"8b9454fe-3ec4-4d10-ad80-9cc1dae962e6");
@@ -3814,8 +3828,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"9b04991a-704b-466b-b571-a42fb36ef7f2");
 INSERT INTO DIM_GE
-	VALUES (4057.000000,
-	3362.000000,
+	VALUES (4183.000000,
+	3381.500000,
 	"9b04991a-704b-466b-b571-a42fb36ef7f2",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -3862,8 +3876,8 @@ INSERT INTO DIM_WAY
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_WAY
 	VALUES ("a7345c97-d30d-4c81-b6e1-c5059d0834fc",
-	4596.000000,
-	3273.000000,
+	4848.000000,
+	3312.000000,
 	"3fcccbb8-0dda-46b8-9ea8-55bf6b8cf07f",
 	"00000000-0000-0000-0000-000000000000",
 	"8d85ca0d-1ba2-4f20-b46d-6330cfe5e311");
@@ -3971,8 +3985,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"37799e48-477d-402d-ab51-f204f5d91c97");
 INSERT INTO DIM_GE
-	VALUES (4814.000000,
-	3101.000000,
+	VALUES (4941.500000,
+	3119.000000,
 	"37799e48-477d-402d-ab51-f204f5d91c97",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -4013,8 +4027,8 @@ INSERT INTO DIM_WAY
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_WAY
 	VALUES ("13bb2039-30e1-43c6-ade6-4913e3630787",
-	4677.000000,
-	3144.000000,
+	4932.000000,
+	3180.000000,
 	"8ada7574-2775-43f7-8c8c-548cb9f2e515",
 	"00000000-0000-0000-0000-000000000000",
 	"31434397-236d-4df7-882b-4b57250e8296");

@@ -169,6 +169,63 @@ INSERT INTO O_TPARM
 	'',
 	"00000000-0000-0000-0000-000000000000",
 	'');
+INSERT INTO O_TFR
+	VALUES ("faff47c6-f77e-472d-b239-9cfba6db36c7",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	'destroySession',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'
+select one booking related by self->BOOKING[R26];
+unrelate booking from self across R26;
+
+select one customer related by self->CUSTOMER[R27];
+unrelate customer from self across R27;
+
+select one hotel related by self->HOTEL[R17];
+unrelate hotel from self across R17;
+
+delete object instance self;',
+	1,
+	'',
+	"05de7466-0a07-4b67-9ee8-5f366e9f9749");
+INSERT INTO O_TFR
+	VALUES ("8a869324-4507-4c19-8d93-a0cb8bac1c84",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	'undoBookingSession',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'
+select one booking related by self->BOOKING[R26];
+
+select many bookables related by booking->BOOKABLE[R12];
+
+for each b in bookables
+	unrelate b from booking across R12;
+end for;
+
+select many facilities related by booking->FACILITY[R14];
+
+for each f in facilities
+	unrelate f from booking across R14;
+end for;
+
+select many guests related by booking->GUEST[R15];
+
+for each g in guests
+	unrelate g from booking across R15;
+	g.destroyGuest();
+end for;
+
+select one customer related by self->CUSTOMER[R27];
+unrelate customer from self across R27;
+
+self.destroySession();',
+	1,
+	'',
+	"faff47c6-f77e-472d-b239-9cfba6db36c7");
 INSERT INTO O_NBATTR
 	VALUES ("df46d3b5-7060-4611-8908-d535d035865a",
 	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");

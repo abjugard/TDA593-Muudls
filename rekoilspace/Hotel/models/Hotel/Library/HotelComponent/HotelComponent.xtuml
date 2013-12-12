@@ -764,6 +764,10 @@ create object instance session of BOOKINGSESSION;
 create object instance booking of BOOKING;
 relate session to booking across R26;
 
+seconds = 60;
+create event instance cancel of BOOKINGSESSION8:cancelEvent to session;
+//bu = TIM::timer_start(microseconds: 1000*seconds, event_inst: cancel); 
+
 send BookingProvider::session(sessionID: session.ID, bookingNumber: booking.bookingNumber);',
 	1);
 INSERT INTO C_EP_PROXY
@@ -1001,7 +1005,7 @@ INSERT INTO SPR_PS
 	'checkOutGuest',
 	'',
 	'
-select any booking from instances of BOOKING where selected.bookingNumber == param.bookingNumber;
+select any booking from instances of BOOKING where (selected.bookingNumber == param.bookingNumber);
 
 if(empty booking)
 	send CustomerInterface::checkOutReturn(bookingNumber: param.bookingNumber, success:false, message: "could not find booking");

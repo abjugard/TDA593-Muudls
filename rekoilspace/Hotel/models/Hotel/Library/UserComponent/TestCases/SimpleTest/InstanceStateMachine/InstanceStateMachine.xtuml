@@ -115,7 +115,7 @@ INSERT INTO SM_EVT
 	'start',
 	0,
 	'',
-	'SIMPLETEST1',
+	'SIMPLETESTP1',
 	'');
 INSERT INTO SM_LEVT
 	VALUES ("2a21dfc2-cf8a-496d-91fa-d6cd6995d113",
@@ -133,7 +133,7 @@ INSERT INTO SM_EVT
 	'sessionEvent',
 	0,
 	'',
-	'SIMPLETEST2',
+	'SIMPLETESTP2',
 	'');
 INSERT INTO SM_LEVT
 	VALUES ("eb6c99e7-c09f-4c32-96ec-e77623146056",
@@ -151,7 +151,7 @@ INSERT INTO SM_EVT
 	'availableEvent',
 	0,
 	'',
-	'SIMPLETEST3',
+	'SIMPLETESTP3',
 	'');
 INSERT INTO SM_LEVT
 	VALUES ("e60d8278-0abd-4435-be30-5fb8266237ab",
@@ -169,7 +169,7 @@ INSERT INTO SM_EVT
 	'confirmEvent',
 	0,
 	'',
-	'SIMPLETEST4',
+	'SIMPLETESTP4',
 	'');
 INSERT INTO SM_LEVT
 	VALUES ("a8d07c15-c55f-45d9-899b-3d15c92b3882",
@@ -187,7 +187,7 @@ INSERT INTO SM_EVT
 	'endOfListEvent',
 	0,
 	'',
-	'SIMPLETEST5',
+	'SIMPLETESTP5',
 	'');
 INSERT INTO SM_LEVT
 	VALUES ("b215e1a1-e928-44a2-b827-815cde5d4b84",
@@ -205,7 +205,7 @@ INSERT INTO SM_EVT
 	'foundDesiredRoomEvent',
 	0,
 	'',
-	'SIMPLETEST6',
+	'SIMPLETESTP6',
 	'');
 INSERT INTO SM_LEVT
 	VALUES ("db689256-8056-41cd-abf0-1804a111281b",
@@ -223,7 +223,7 @@ INSERT INTO SM_EVT
 	'errorEvent',
 	0,
 	'',
-	'SIMPLETEST7',
+	'SIMPLETESTP7',
 	'');
 INSERT INTO SM_STATE
 	VALUES ("ff3aa0df-09b3-4d91-b2a7-212ccf415d16",
@@ -1678,7 +1678,7 @@ INSERT INTO GD_GE
 	"37a78df7-872d-4fbf-908e-618445b592ba",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::entryPoint::SIMPLETEST1: start');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::entryPoint::SIMPLETESTP1: start');
 INSERT INTO GD_CON
 	VALUES ("856b84ad-ea03-4a9e-85d8-ddada6f16587",
 	"00000000-0000-0000-0000-000000000000");
@@ -1817,7 +1817,7 @@ INSERT INTO GD_GE
 	"0f04dfa6-dac0-47a0-b8c3-d4d13cc2f1f7",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::requestSession::SIMPLETEST2: sessionEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::requestSession::SIMPLETESTP2: sessionEvent');
 INSERT INTO GD_CON
 	VALUES ("9856ba86-fb0d-408a-a7ed-0a8fe0438cf8",
 	"00000000-0000-0000-0000-000000000000");
@@ -1971,7 +1971,7 @@ INSERT INTO GD_GE
 	"a1bc1e29-b89e-488f-84a8-4c76ca6e4597",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::requestAvailableBookables::SIMPLETEST3: availableEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::requestAvailableBookables::SIMPLETESTP3: availableEvent');
 INSERT INTO GD_CON
 	VALUES ("102867e4-e137-4228-9764-faa489be726c",
 	"00000000-0000-0000-0000-000000000000");
@@ -2144,7 +2144,7 @@ INSERT INTO GD_GE
 	"c627585d-b335-4f81-b781-0a8d1a635ce9",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::addGuest::SIMPLETEST4: confirmEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::addGuest::SIMPLETESTP4: confirmEvent');
 INSERT INTO GD_CON
 	VALUES ("0598a279-3b72-4331-a795-2c212efaa2e8",
 	"00000000-0000-0000-0000-000000000000");
@@ -2278,7 +2278,7 @@ INSERT INTO GD_GE
 	"0c0a89c3-1ff1-4829-a55f-236f4f330127",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::confirmBooking::SIMPLETEST4: confirmEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::confirmBooking::SIMPLETESTP4: confirmEvent');
 INSERT INTO GD_CON
 	VALUES ("211224f9-e912-4e3c-99bb-7cc66418f1c2",
 	"00000000-0000-0000-0000-000000000000");
@@ -2407,7 +2407,7 @@ INSERT INTO GD_GE
 	"90d0d201-9bb1-42f3-b08a-bf0e27f130ba",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::sendCustomerDetails::SIMPLETEST4: confirmEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::sendCustomerDetails::SIMPLETESTP4: confirmEvent');
 INSERT INTO GD_CON
 	VALUES ("5d183092-c045-470c-8587-93d402717cec",
 	"00000000-0000-0000-0000-000000000000");
@@ -2507,7 +2507,7 @@ INSERT INTO GD_GE
 	"2afdb634-f1ff-4d67-bc4a-fea9a8bccb8a",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::selectRooms::SIMPLETEST3: availableEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::selectRooms::SIMPLETESTP3: availableEvent');
 INSERT INTO GD_CON
 	VALUES ("0a27c32a-e1ba-40e1-be8c-21092ff284b1",
 	"00000000-0000-0000-0000-000000000000");
@@ -2672,7 +2672,7 @@ INSERT INTO GD_GE
 	"e9d07d8a-71d6-4c3f-80a0-de836564a794",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::selectRooms::SIMPLETEST6: foundDesiredRoomEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::selectRooms::SIMPLETESTP6: foundDesiredRoomEvent');
 INSERT INTO GD_CON
 	VALUES ("d19b1b5f-db4e-42f3-9dfb-0c5a9afa9922",
 	"00000000-0000-0000-0000-000000000000");
@@ -2772,7 +2772,7 @@ INSERT INTO GD_GE
 	"0536e29a-68fa-4fe6-b40c-a256690d123a",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::endOfListState::SIMPLETEST4: confirmEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::endOfListState::SIMPLETESTP4: confirmEvent');
 INSERT INTO GD_CON
 	VALUES ("c3045f26-f35a-42ed-af4e-feba0c00d540",
 	"00000000-0000-0000-0000-000000000000");
@@ -2911,7 +2911,7 @@ INSERT INTO GD_GE
 	"a5e89887-c2a8-4cd6-9dfc-80c9018022f1",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::requestAvailableBookables::SIMPLETEST5: endOfListEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::requestAvailableBookables::SIMPLETESTP5: endOfListEvent');
 INSERT INTO GD_CON
 	VALUES ("c46d20da-b202-4d7d-bc6c-0179d406813a",
 	"00000000-0000-0000-0000-000000000000");
@@ -3011,7 +3011,7 @@ INSERT INTO GD_GE
 	"9446fdee-595d-4440-831e-e886e5102cb7",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::selectRooms::SIMPLETEST5: endOfListEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::selectRooms::SIMPLETESTP5: endOfListEvent');
 INSERT INTO GD_CON
 	VALUES ("70b1c925-d998-4087-b969-926ee05d4330",
 	"00000000-0000-0000-0000-000000000000");
@@ -3111,7 +3111,7 @@ INSERT INTO GD_GE
 	"e1683c46-caf0-435b-98da-69a7e420dd4b",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::endOfListState::SIMPLETEST7: errorEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::endOfListState::SIMPLETESTP7: errorEvent');
 INSERT INTO GD_CON
 	VALUES ("6ff96cdb-a0ff-4160-9337-bb9528edfddd",
 	"00000000-0000-0000-0000-000000000000");
@@ -3216,7 +3216,7 @@ INSERT INTO O_OBJ_PROXY
 	VALUES ("6daee5e1-aefd-49c8-b18d-234fb0eb1928",
 	'SimpleTest',
 	1,
-	'SIMPLETEST',
+	'SIMPLETESTP',
 	'
 
 This test is a (hopefully) success scenario of the Use Case "Customer creates a Booking"

@@ -122,6 +122,30 @@ INSERT INTO DIM_ELE
 	VALUES ("2ae65b58-2a39-40d2-9044-e559ea644bf4",
 	0,
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_GE
+	VALUES ("d22ea14b-7c51-4386-b60b-9256756c87e5",
+	"0fadd3f2-f2db-49eb-80eb-aa98f2ba6f8e",
+	"8c11c5c0-c3b5-4800-8e4c-b1dd4ad597c2",
+	21,
+	0,
+	'Hotel::Library::UserComponent::TestCases::BPUnit');
+INSERT INTO GD_SHP
+	VALUES ("d22ea14b-7c51-4386-b60b-9256756c87e5");
+INSERT INTO GD_NCS
+	VALUES ("d22ea14b-7c51-4386-b60b-9256756c87e5");
+INSERT INTO DIM_ND
+	VALUES (200.000000,
+	150.000000,
+	"d22ea14b-7c51-4386-b60b-9256756c87e5");
+INSERT INTO DIM_GE
+	VALUES (5093.000000,
+	3084.000000,
+	"d22ea14b-7c51-4386-b60b-9256756c87e5",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("d22ea14b-7c51-4386-b60b-9256756c87e5",
+	0,
+	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_DIA
 	VALUES ("0fadd3f2-f2db-49eb-80eb-aa98f2ba6f8e",
 	'',
@@ -204,10 +228,7 @@ INSERT INTO S_SYNC
 	"00000000-0000-0000-0000-000000000000",
 	'initBookingConcurrencyTest',
 	'',
-	'create object instance setup of SETUP;
-generate SETUP2:createInstances to setup;
-
-::startSimpleTest(desiredType:0);
+	'::startSimpleTest(desiredType:0);
 ::startSimpleTest(desiredType:0);
 ::startSimpleTest(desiredType:0);
 ::startSimpleTest(desiredType:0);
@@ -278,6 +299,22 @@ generate CHECKOUTTEST1:start(bookingNumber: st.bookingNumber, name: name, age: a
 	'');
 INSERT INTO PE_PE
 	VALUES ("43b76d01-6573-4c8e-a92a-81838016a915",
+	1,
+	"dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("a790572e-d006-40cf-8a64-2476c3cda8c2",
+	"00000000-0000-0000-0000-000000000000",
+	'init',
+	'',
+	'create object instance setup of SETUP;
+generate SETUP2:createInstances to setup;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'');
+INSERT INTO PE_PE
+	VALUES ("a790572e-d006-40cf-8a64-2476c3cda8c2",
 	1,
 	"dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
 	"00000000-0000-0000-0000-000000000000",

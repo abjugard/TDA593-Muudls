@@ -34,6 +34,23 @@ INSERT INTO S_DT_PROXY
 	'',
 	'',
 	'../Hotel.xtuml');
+INSERT INTO O_TFR
+	VALUES ("70d4e1e2-0f88-432e-9d6c-8f2f70b3a58d",
+	"9309978f-bd81-4f9f-96e9-b124c945fbf1",
+	'destroyGuest',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'select many facilities related by self->FACILITY[R16];
+
+for each f in facilities
+	unrelate f from self across R16;
+end for;
+
+delete object instance self;',
+	1,
+	'',
+	"0ad92127-a4ab-45f8-845e-1d70fa15b0c5");
 INSERT INTO O_NBATTR
 	VALUES ("d5229f3c-55dc-4032-9fbc-8fa747fca3f4",
 	"9309978f-bd81-4f9f-96e9-b124c945fbf1");
