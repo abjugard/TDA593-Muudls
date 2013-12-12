@@ -60,50 +60,158 @@ INSERT INTO C_EP
 	VALUES ("da9dc9a3-9bf8-4e9e-8d76-0469a00019ef",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's1',
+	'checkInGuest',
 	'');
 INSERT INTO C_AS
 	VALUES ("da9dc9a3-9bf8-4e9e-8d76-0469a00019ef",
-	's1',
+	'checkInGuest',
 	'',
 	0,
 	"b6421df2-c058-463a-8282-eefa32587ce7");
+INSERT INTO C_PP
+	VALUES ("325866d1-7daa-466e-84d1-e7a3f9920766",
+	"da9dc9a3-9bf8-4e9e-8d76-0469a00019ef",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'bookingNumber',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("581f6b8c-1d3b-4e04-b7f8-ed71e76de333",
+	"da9dc9a3-9bf8-4e9e-8d76-0469a00019ef",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'name',
+	'',
+	0,
+	'',
+	"325866d1-7daa-466e-84d1-e7a3f9920766");
+INSERT INTO C_PP
+	VALUES ("8cdbdf2b-4b9e-4052-a9e9-163e24fb88be",
+	"da9dc9a3-9bf8-4e9e-8d76-0469a00019ef",
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'age',
+	'',
+	0,
+	'',
+	"581f6b8c-1d3b-4e04-b7f8-ed71e76de333");
 INSERT INTO C_EP
 	VALUES ("895459b4-8cad-487c-ac02-41f7392c1417",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's2',
+	'checkOutGuest',
 	'');
 INSERT INTO C_AS
 	VALUES ("895459b4-8cad-487c-ac02-41f7392c1417",
-	's2',
+	'checkOutGuest',
 	'',
 	0,
 	"da9dc9a3-9bf8-4e9e-8d76-0469a00019ef");
+INSERT INTO C_PP
+	VALUES ("4befec9f-399a-4670-b8e7-c15d5a08d5a1",
+	"895459b4-8cad-487c-ac02-41f7392c1417",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'bookingNumber',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("4b7c1627-118a-492a-a2b1-e54e635b8a98",
+	"895459b4-8cad-487c-ac02-41f7392c1417",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'name',
+	'',
+	0,
+	'',
+	"4befec9f-399a-4670-b8e7-c15d5a08d5a1");
+INSERT INTO C_PP
+	VALUES ("42eb7d72-49f9-49e7-a574-f7ab3ebacc84",
+	"895459b4-8cad-487c-ac02-41f7392c1417",
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'age',
+	'',
+	0,
+	'',
+	"4b7c1627-118a-492a-a2b1-e54e635b8a98");
 INSERT INTO C_EP
 	VALUES ("b0219670-df70-4ff6-984b-04f391308d00",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's1',
+	'checkInReturn',
 	'');
 INSERT INTO C_AS
 	VALUES ("b0219670-df70-4ff6-984b-04f391308d00",
-	's1',
+	'checkInReturn',
 	'',
-	0,
+	1,
 	"895459b4-8cad-487c-ac02-41f7392c1417");
+INSERT INTO C_PP
+	VALUES ("b15a444c-ef6e-480d-8661-659427d36335",
+	"b0219670-df70-4ff6-984b-04f391308d00",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'bookingNumber',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("bef0a46b-55c0-43c3-8c23-a3d7786777c7",
+	"b0219670-df70-4ff6-984b-04f391308d00",
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'success',
+	'',
+	0,
+	'',
+	"b15a444c-ef6e-480d-8661-659427d36335");
+INSERT INTO C_PP
+	VALUES ("15de035f-2dd5-4d8a-8c45-816e8b6b36c8",
+	"b0219670-df70-4ff6-984b-04f391308d00",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'message',
+	'',
+	0,
+	'',
+	"bef0a46b-55c0-43c3-8c23-a3d7786777c7");
 INSERT INTO C_EP
 	VALUES ("cb5b5b24-04f0-4601-b19b-0cf189cea793",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's2',
+	'checkOutReturn',
 	'');
 INSERT INTO C_AS
 	VALUES ("cb5b5b24-04f0-4601-b19b-0cf189cea793",
-	's2',
+	'checkOutReturn',
+	'',
+	1,
+	"b0219670-df70-4ff6-984b-04f391308d00");
+INSERT INTO C_PP
+	VALUES ("da2c2598-decc-4a40-b7fa-af1086c3027d",
+	"cb5b5b24-04f0-4601-b19b-0cf189cea793",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'bookingNumber',
 	'',
 	0,
-	"b0219670-df70-4ff6-984b-04f391308d00");
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("98a9d3ad-9f9c-40fa-9d4c-bc36ba5e6503",
+	"cb5b5b24-04f0-4601-b19b-0cf189cea793",
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'success',
+	'',
+	0,
+	'',
+	"da2c2598-decc-4a40-b7fa-af1086c3027d");
+INSERT INTO C_PP
+	VALUES ("c8e18d2c-0176-4ad6-b936-a14b1bf4a9a6",
+	"cb5b5b24-04f0-4601-b19b-0cf189cea793",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'message',
+	'',
+	0,
+	'',
+	"98a9d3ad-9f9c-40fa-9d4c-bc36ba5e6503");
 INSERT INTO C_EP
 	VALUES ("8328ef36-07dc-427a-b0b8-9f12e1b984b7",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",

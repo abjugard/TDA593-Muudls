@@ -764,7 +764,7 @@ create object instance session of BOOKINGSESSION;
 create object instance booking of BOOKING;
 relate session to booking across R26;
 
-send BookingProvider::session(sessionID: session.ID);',
+send BookingProvider::session(sessionID: session.ID, bookingNumber: booking.bookingNumber);',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("b21fad1b-897b-424f-84f8-01bdab76de49",
@@ -961,15 +961,35 @@ INSERT INTO SPR_PEP
 	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
 INSERT INTO SPR_PS
 	VALUES ("992e4bb7-56a3-4595-9f21-ea674ddf0832",
-	's1',
+	'checkInGuest',
 	'',
-	'',
+	'
+select any booking from instances of BOOKING where selected.bookingNumber == param.bookingNumber;
+
+if(empty booking)
+	send CustomerInterface::checkInReturn(success: false, bookingNumber: param.bookingNumber, message: "no booking found with that number");
+else
+	select any g related by booking->GUEST[R15] where selected.name==param.name;
+	if(empty g)
+		send CustomerInterface::checkInReturn(success: false, bookingNumber: param.bookingNumber, message: "could not find guest with name "+param.name);
+	else
+		g.checkedIn = TIM::current_date();
+		
+		select many fs related by g->FACILITY[R16];
+		for each f in fs
+			f.checkedIn = g.checkedIn;
+		end for;
+		
+		send CustomerInterface::checkInReturn(success: true, bookingNumber: param.bookingNumber, message: "success");
+		
+	end if;
+end if;',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("da9dc9a3-9bf8-4e9e-8d76-0469a00019ef",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's1',
+	'checkInGuest',
 	'',
 	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_PEP
@@ -978,7 +998,7 @@ INSERT INTO SPR_PEP
 	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
 INSERT INTO SPR_PS
 	VALUES ("ed293131-e8e4-43ef-be8f-e13aa67ce7ca",
-	's2',
+	'checkOutGuest',
 	'',
 	'',
 	1);
@@ -986,7 +1006,7 @@ INSERT INTO C_EP_PROXY
 	VALUES ("895459b4-8cad-487c-ac02-41f7392c1417",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's2',
+	'checkOutGuest',
 	'',
 	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_PEP
@@ -995,7 +1015,7 @@ INSERT INTO SPR_PEP
 	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
 INSERT INTO SPR_PS
 	VALUES ("553a7000-b47f-44e0-922e-6c1db19bff9a",
-	's1',
+	'checkInReturn',
 	'',
 	'',
 	1);
@@ -1003,7 +1023,7 @@ INSERT INTO C_EP_PROXY
 	VALUES ("b0219670-df70-4ff6-984b-04f391308d00",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's1',
+	'checkInReturn',
 	'',
 	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_PEP
@@ -1012,7 +1032,7 @@ INSERT INTO SPR_PEP
 	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3");
 INSERT INTO SPR_PS
 	VALUES ("ea81884e-62fa-4b89-8401-c96901c381b8",
-	's2',
+	'checkOutReturn',
 	'',
 	'',
 	1);
@@ -1020,7 +1040,7 @@ INSERT INTO C_EP_PROXY
 	VALUES ("cb5b5b24-04f0-4601-b19b-0cf189cea793",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's2',
+	'checkOutReturn',
 	'',
 	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_PEP

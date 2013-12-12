@@ -641,7 +641,7 @@ INSERT INTO SPR_RS
 	'LOG::LogInfo(message: "Got session ID");
 select any st from instances of SIMPLETEST where selected.active==false;
 st.active=true;
-generate SIMPLETEST2:sessionEvent(sessionID: param.sessionID) to st;
+generate SIMPLETEST2:sessionEvent(sessionID: param.sessionID, bookingNumber: param.bookingNumber) to st;
 ',
 	1);
 INSERT INTO C_EP_PROXY
@@ -794,7 +794,7 @@ INSERT INTO SPR_REP
 	"76f56aa8-4b72-455e-9cb5-fde86fd2a663");
 INSERT INTO SPR_RS
 	VALUES ("f30c2881-8a51-4b19-bb97-f0eda8311ba9",
-	's1',
+	'checkInGuest',
 	'',
 	'',
 	1);
@@ -802,7 +802,7 @@ INSERT INTO C_EP_PROXY
 	VALUES ("da9dc9a3-9bf8-4e9e-8d76-0469a00019ef",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's1',
+	'checkInGuest',
 	'',
 	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_REP
@@ -811,7 +811,7 @@ INSERT INTO SPR_REP
 	"76f56aa8-4b72-455e-9cb5-fde86fd2a663");
 INSERT INTO SPR_RS
 	VALUES ("8c254f78-9738-4981-b276-cb82fcc5f912",
-	's2',
+	'checkOutGuest',
 	'',
 	'',
 	1);
@@ -819,7 +819,7 @@ INSERT INTO C_EP_PROXY
 	VALUES ("895459b4-8cad-487c-ac02-41f7392c1417",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's2',
+	'checkOutGuest',
 	'',
 	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_REP
@@ -828,15 +828,22 @@ INSERT INTO SPR_REP
 	"76f56aa8-4b72-455e-9cb5-fde86fd2a663");
 INSERT INTO SPR_RS
 	VALUES ("a20e0278-2b71-4814-9b04-548e5dd1e2f6",
-	's1',
+	'checkInReturn',
 	'',
-	'',
+	'
+select any t from instances of CHECKINTEST where selected.bookingNumber == param.bookingNumber;
+
+if(not param.success)
+	LOG::LogInfo(message: "UC checkInReturn singal: failure, "+param.message);
+end if;
+
+generate CHECKINTEST3:checkInReturnEvent(success: param.success) to t;',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("b0219670-df70-4ff6-984b-04f391308d00",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's1',
+	'checkInReturn',
 	'',
 	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_REP
@@ -845,7 +852,7 @@ INSERT INTO SPR_REP
 	"76f56aa8-4b72-455e-9cb5-fde86fd2a663");
 INSERT INTO SPR_RS
 	VALUES ("177c5d46-e467-4c97-8502-e9490287e6fd",
-	's2',
+	'checkOutReturn',
 	'',
 	'',
 	1);
@@ -853,7 +860,7 @@ INSERT INTO C_EP_PROXY
 	VALUES ("cb5b5b24-04f0-4601-b19b-0cf189cea793",
 	"d3b89130-5e09-458f-8658-ed03578dbab3",
 	-1,
-	's2',
+	'checkOutReturn',
 	'',
 	'../Interfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_REP

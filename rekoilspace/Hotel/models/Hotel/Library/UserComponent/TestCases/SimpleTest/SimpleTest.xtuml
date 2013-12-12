@@ -82,6 +82,24 @@ INSERT INTO O_ATTR
 	"ba5eda7a-def5-0000-0000-000000000001",
 	'',
 	'false');
+INSERT INTO O_NBATTR
+	VALUES ("77000cab-0612-4e4f-84c3-348ad71a5fed",
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
+INSERT INTO O_BATTR
+	VALUES ("77000cab-0612-4e4f-84c3-348ad71a5fed",
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");
+INSERT INTO O_ATTR
+	VALUES ("77000cab-0612-4e4f-84c3-348ad71a5fed",
+	"6daee5e1-aefd-49c8-b18d-234fb0eb1928",
+	"7c32a24f-66a2-4ce6-a429-f3045074312c",
+	'bookingNumber',
+	'',
+	'',
+	'bookingNumber',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'',
+	'');
 INSERT INTO O_ID
 	VALUES (2,
 	"6daee5e1-aefd-49c8-b18d-234fb0eb1928");

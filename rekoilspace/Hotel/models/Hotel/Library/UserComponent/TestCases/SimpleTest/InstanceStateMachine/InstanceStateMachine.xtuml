@@ -90,6 +90,15 @@ INSERT INTO SM_EVTDI
 	'',
 	"db689256-8056-41cd-abf0-1804a111281b",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_EVTDI
+	VALUES ("5c347094-0c57-4230-873c-144361e3bd3b",
+	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
+	'bookingNumber',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'',
+	"2a21dfc2-cf8a-496d-91fa-d6cd6995d113",
+	"cf45ac62-45f1-44bc-b7a3-c755aacea2a2");
 INSERT INTO SM_LEVT
 	VALUES ("571ae000-303e-4af6-9350-7f3c94749e60",
 	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
@@ -1195,6 +1204,8 @@ INSERT INTO SM_ACT
 	1,
 	'LOG::LogInfo(message: "Session recieved");
 self.sessionID = param.sessionID;
+self.bookingNumber = param.bookingNumber;
+
 LOG::LogInfo(message: "Requesting available bookables...");
 send BookingProvider::requestAvailableBookables(sessionID: self.sessionID, 
 												fromDate: TIM::create_date(day:1, month:1, year:2010, second:8, minute:12, hour:4),

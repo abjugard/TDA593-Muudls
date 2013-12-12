@@ -428,6 +428,15 @@ INSERT INTO C_PP
 	0,
 	'',
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("af240464-b25e-4de2-b8fb-ea32808b1dde",
+	"0a31b7ea-b3a4-43b3-bfab-1e664637468e",
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'bookingNumber',
+	'',
+	0,
+	'',
+	"fec1123c-a15a-45df-adbc-758261d72c0f");
 INSERT INTO PE_PE
 	VALUES ("708e7060-3f4e-41ab-94ce-7b712ad36251",
 	1,

@@ -1,0 +1,68 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("168d7ccc-518f-47eb-b748-33ae3e10fea1",
+	'CheckInTest',
+	3,
+	'CHECKINTEST',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("0d59ee65-f2db-4e24-9c1b-b36c8f4b9238",
+	"168d7ccc-518f-47eb-b748-33ae3e10fea1");
+INSERT INTO O_BATTR
+	VALUES ("0d59ee65-f2db-4e24-9c1b-b36c8f4b9238",
+	"168d7ccc-518f-47eb-b748-33ae3e10fea1");
+INSERT INTO O_ATTR
+	VALUES ("0d59ee65-f2db-4e24-9c1b-b36c8f4b9238",
+	"168d7ccc-518f-47eb-b748-33ae3e10fea1",
+	"00000000-0000-0000-0000-000000000000",
+	'bookingNumber',
+	'',
+	'',
+	'bookingNumber',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("f091d73c-fe3e-4d75-9c76-e1f148bd54ff",
+	"168d7ccc-518f-47eb-b748-33ae3e10fea1");
+INSERT INTO O_BATTR
+	VALUES ("f091d73c-fe3e-4d75-9c76-e1f148bd54ff",
+	"168d7ccc-518f-47eb-b748-33ae3e10fea1");
+INSERT INTO O_ATTR
+	VALUES ("f091d73c-fe3e-4d75-9c76-e1f148bd54ff",
+	"168d7ccc-518f-47eb-b748-33ae3e10fea1",
+	"0d59ee65-f2db-4e24-9c1b-b36c8f4b9238",
+	'current_state',
+	'',
+	'',
+	'current_state',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000006",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"168d7ccc-518f-47eb-b748-33ae3e10fea1");
+INSERT INTO O_ID
+	VALUES (1,
+	"168d7ccc-518f-47eb-b748-33ae3e10fea1");
+INSERT INTO O_ID
+	VALUES (2,
+	"168d7ccc-518f-47eb-b748-33ae3e10fea1");
+INSERT INTO PE_PE
+	VALUES ("168d7ccc-518f-47eb-b748-33ae3e10fea1",
+	1,
+	"dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("dcd45889-1e8f-44ce-a0ac-90e67ced68c3",
+	"00000000-0000-0000-0000-000000000000",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'TestCases',
+	'',
+	0,
+	'../TestCases.xtuml');
