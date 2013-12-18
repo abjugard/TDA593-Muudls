@@ -27,6 +27,24 @@ INSERT INTO SM_EVTDI
 	'',
 	"1e137fa3-e8d3-4b29-91fd-68571509b34f",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_EVTDI
+	VALUES ("d444bc69-f399-4e67-a762-66f308fb302d",
+	"d15dcff0-0ef5-4680-be8b-e7b74ce307be",
+	'name',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	"d54bbb50-1cf8-4d66-ba71-88f824f1afac",
+	"8df5979a-ceee-40df-8765-65bd78b1353f");
+INSERT INTO SM_EVTDI
+	VALUES ("847c76cb-ab16-46ec-a82e-ad4ae82d344e",
+	"d15dcff0-0ef5-4680-be8b-e7b74ce307be",
+	'age',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	"d54bbb50-1cf8-4d66-ba71-88f824f1afac",
+	"d444bc69-f399-4e67-a762-66f308fb302d");
 INSERT INTO SM_LEVT
 	VALUES ("6b1758a7-67cc-4e54-9326-1526e2200e19",
 	"d15dcff0-0ef5-4680-be8b-e7b74ce307be",
@@ -429,7 +447,7 @@ INSERT INTO SM_ACT
 	'
 self.bookingNumber = rcvd_evt.bookingNumber;
 
-send CustomerInterface::checkInGuest(name: "Glenn Goe",age:13, bookingNumber: self.bookingNumber);',
+send CustomerInterface::checkInGuest(name: rcvd_evt.name, age: rcvd_evt.age, bookingNumber: self.bookingNumber);',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("fb9eefcb-366d-43d0-bb39-690313a05144",
@@ -462,7 +480,8 @@ INSERT INTO SM_ACT
 	VALUES ("bd4aceac-ae83-4087-8f9f-d012fa7283a1",
 	"d15dcff0-0ef5-4680-be8b-e7b74ce307be",
 	1,
-	'',
+	'
+LOG::LogInfo(message: "CheckInTest succeeded");',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("f2b261aa-4c28-4259-aae3-165966d26a71",
@@ -539,7 +558,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("2b99786a-996f-4742-8160-708c916571a1",
 	"d15dcff0-0ef5-4680-be8b-e7b74ce307be",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO GD_MD
@@ -1076,8 +1095,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"7f3b135b-68fa-46a6-90f7-023e00140c4b");
 INSERT INTO DIM_GE
-	VALUES (4445.000000,
-	3761.500000,
+	VALUES (4573.000000,
+	3748.000000,
 	"7f3b135b-68fa-46a6-90f7-023e00140c4b",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -1176,8 +1195,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"6c0deb39-8aba-4eaa-a731-3cc5827e92e5");
 INSERT INTO DIM_GE
-	VALUES (4248.000000,
-	3761.500000,
+	VALUES (4204.000000,
+	3750.000000,
 	"6c0deb39-8aba-4eaa-a731-3cc5827e92e5",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE

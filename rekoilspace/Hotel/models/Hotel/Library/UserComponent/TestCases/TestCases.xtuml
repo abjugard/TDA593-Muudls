@@ -297,8 +297,11 @@ INSERT INTO S_SYNC
 	'',
 	'select any st from instances of SIMPLETEST;
 
+name = "Glenn Goe";
+age = 13;
+
 create object instance ct of CHECKINTEST;
-generate CHECKINTEST4:start(bookingNumber: st.bookingNumber) to ct;',
+generate CHECKINTEST4:start(bookingNumber: st.bookingNumber, name: name, age: age) to ct;',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'');

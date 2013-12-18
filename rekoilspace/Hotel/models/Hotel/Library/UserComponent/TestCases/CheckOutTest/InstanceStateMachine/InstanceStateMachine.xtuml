@@ -480,7 +480,8 @@ INSERT INTO SM_ACT
 	VALUES ("d5c6545d-320c-4f17-9e8f-81c484eeee5b",
 	"861334a9-d973-426f-8e84-cf45da0a1aa8",
 	1,
-	'',
+	'
+LOG::LogInfo(message: "CheckOutTest succeeded");',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("d4a8b083-85ed-486f-9ab7-c35d47197807",
@@ -557,7 +558,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("7602c7ca-6898-4e95-a5a9-4adcef429213",
 	"861334a9-d973-426f-8e84-cf45da0a1aa8",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO GD_MD
