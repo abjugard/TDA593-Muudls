@@ -7,37 +7,6 @@ INSERT INTO O_OBJ
 	'BOOKABLE',
 	'',
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_TFR
-	VALUES ("3a9b4376-648e-4e0e-91f4-8c8ff2abb7f5",
-	"803702ba-1594-4405-b96a-8c76b6ef1c69",
-	'isAvailable',
-	'',
-	"ba5eda7a-def5-0000-0000-000000000001",
-	1,
-	'',
-	1,
-	'',
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_TPARM
-	VALUES ("07f1bda8-87af-4b8f-b9ca-15c0105e80e3",
-	"3a9b4376-648e-4e0e-91f4-8c8ff2abb7f5",
-	'filter',
-	"ba5eda7a-def5-0000-0000-000000000002",
-	0,
-	'',
-	"00000000-0000-0000-0000-000000000000",
-	'');
-INSERT INTO O_TFR
-	VALUES ("f5d8d2fd-312b-4ac1-b4e3-55f4241a2d58",
-	"803702ba-1594-4405-b96a-8c76b6ef1c69",
-	'getBookableRepresentation',
-	'',
-	"ba5eda7a-def5-0000-0000-000000000000",
-	1,
-	'',
-	1,
-	'',
-	"3a9b4376-648e-4e0e-91f4-8c8ff2abb7f5");
 INSERT INTO O_NBATTR
 	VALUES ("7edb737c-eda0-435c-ab44-20ad0293ebdb",
 	"803702ba-1594-4405-b96a-8c76b6ef1c69");

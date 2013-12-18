@@ -87,7 +87,7 @@ INSERT INTO C_PP
 	VALUES ("168a7192-30ca-4de0-bf9d-037a1494e638",
 	"19f06228-e268-4733-9af7-92f3f313ceff",
 	"ba5eda7a-def5-0000-0000-000000000002",
-	'id',
+	'facilityTypeID',
 	'',
 	0,
 	'',

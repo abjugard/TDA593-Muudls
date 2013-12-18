@@ -2831,8 +2831,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"904163fa-1df1-4589-9a74-194c7278573e");
 INSERT INTO DIM_GE
-	VALUES (4050.000000,
-	2760.000000,
+	VALUES (4126.000000,
+	2848.000000,
 	"904163fa-1df1-4589-9a74-194c7278573e",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -6066,98 +6066,6 @@ INSERT INTO PE_PE
 	"00000000-0000-0000-0000-000000000000",
 	9);
 INSERT INTO S_SYNC
-	VALUES ("19b27525-ef50-4d33-ab2c-8b7895f454e1",
-	"00000000-0000-0000-0000-000000000000",
-	'PopulateFacilityTypes',
-	'',
-	'
-create object instance ft of FACILITYTYPE;
-create object instance b of BOOKABLE;
-relate ft to b across R2;
-
-ft.approximateArea = "About 20 square meters";
-b.price = 100;
-b.description = "A double bed room";
-
-
-create object instance f1 of FACILITY;
-relate f1 to ft across R1;
-f1.facilityID = "Room1";
-
-create object instance f2 of FACILITY;
-relate f2 to ft across R1;
-f2.facilityID = "Room2";
-
-create object instance f3 of FACILITY;
-relate f3 to ft across R1;
-f3.facilityID = "Room3";
-
-
-
-
-	
-
-
-
-',
-	"ba5eda7a-def5-0000-0000-000000000000",
-	1,
-	'');
-INSERT INTO PE_PE
-	VALUES ("19b27525-ef50-4d33-ab2c-8b7895f454e1",
-	1,
-	"960454f9-cf5f-4331-88bf-8023709586b1",
-	"00000000-0000-0000-0000-000000000000",
-	1);
-INSERT INTO S_SYNC
-	VALUES ("f225c177-c732-48ac-9a07-38cf87d924ac",
-	"00000000-0000-0000-0000-000000000000",
-	'TestDateCompare',
-	'',
-	'select any b from instances of BOOKING;
-
-select any bb from instances of BOOKING;
-
-LOG::LogInfo(message: "Less success");
-LOG::LogDate(d:b.toDate, message: "herp");
-LOG::LogDate(d:bb.toDate, message: "herp1");
-
-if(0 == ::compDate(d0:b.toDate,d1:bb.toDate))
-
-	LOG::LogInfo(message: "our success");
-
-end if;
-
-LOG::LogInfo(message: "after our or not success");
-
-if(b.toDate <= bb.toDate)
-
-	LOG::LogInfo(message: "Less success");
-
-end if;
-
-	LOG::LogInfo(message: "derp  success");
-
-select many testbs from instances of BOOKING;
-			//where
-			//	(
-			//	((selected.toDate < b.toDate)));// and (selected.toDate > param.fromDate)))
-			//	or 
-			//	((selected.fromDate > param.toDate) and (selected.fromDate < param.fromDate))
-			//	);
-
-LOG::LogInfo(message: "after quarrrrrry success");
-	',
-	"ba5eda7a-def5-0000-0000-000000000000",
-	1,
-	'');
-INSERT INTO PE_PE
-	VALUES ("f225c177-c732-48ac-9a07-38cf87d924ac",
-	1,
-	"960454f9-cf5f-4331-88bf-8023709586b1",
-	"00000000-0000-0000-0000-000000000000",
-	1);
-INSERT INTO S_SYNC
 	VALUES ("52572cbd-c389-40eb-b763-ffc8f3afbb15",
 	"00000000-0000-0000-0000-000000000000",
 	'compDate',
@@ -6212,34 +6120,6 @@ INSERT INTO S_SPARM
 	'');
 INSERT INTO PE_PE
 	VALUES ("52572cbd-c389-40eb-b763-ffc8f3afbb15",
-	1,
-	"960454f9-cf5f-4331-88bf-8023709586b1",
-	"00000000-0000-0000-0000-000000000000",
-	1);
-INSERT INTO S_SYNC
-	VALUES ("cb5b6927-9dc4-40ee-95b9-44fa0ec712f8",
-	"00000000-0000-0000-0000-000000000000",
-	'TestIsAcceptableBooking',
-	'',
-	'create object instance  h of HOTEL;
-create object instance bs of BOOKINGSESSION;
-relate h to bs across R17;
-
-f = TIM::create_date(day:1, month:1, year:2010, second:8, minute:12, hour:4);
-t = TIM::create_date(day:3, month:2, year:2010, second:8, minute:12, hour:4);
-
-bol = bs.isBookingTimeAcceptable(fromDate:f, toDate:t);
-
-if(bol)
-	LOG::LogInfo(message: "date okay");
-else
-	LOG::LogInfo(message: "date not okay");
-end if;',
-	"ba5eda7a-def5-0000-0000-000000000000",
-	1,
-	'');
-INSERT INTO PE_PE
-	VALUES ("cb5b6927-9dc4-40ee-95b9-44fa0ec712f8",
 	1,
 	"960454f9-cf5f-4331-88bf-8023709586b1",
 	"00000000-0000-0000-0000-000000000000",

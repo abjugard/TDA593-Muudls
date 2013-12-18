@@ -198,7 +198,7 @@ INSERT INTO GD_GE
 	"9a341639-f7bf-4aa4-8144-2c10b6728e8f",
 	93,
 	0,
-	'Hotel::Library::UserComponent::Port1::StaffInterface');
+	'Hotel::Library::UserComponent::StaffPort::StaffInterface');
 INSERT INTO GD_CON
 	VALUES ("90d8e52e-b567-44e3-ba12-740e191fad11",
 	"00000000-0000-0000-0000-000000000000");
@@ -298,7 +298,7 @@ INSERT INTO GD_GE
 	"76f56aa8-4b72-455e-9cb5-fde86fd2a663",
 	93,
 	0,
-	'Hotel::Library::UserComponent::Port2::CustomerInterface');
+	'Hotel::Library::UserComponent::CustomerPort::CustomerInterface');
 INSERT INTO GD_CON
 	VALUES ("083832fc-842e-4a82-a3bc-971bd02b4b98",
 	"00000000-0000-0000-0000-000000000000");
@@ -660,7 +660,7 @@ INSERT INTO C_I_PROXY
 INSERT INTO C_PO
 	VALUES ("1b3b7d15-d7bf-4f0c-bb84-bd2864dd8865",
 	"0968771f-8553-4274-be70-86a03e4e6267",
-	'Port1',
+	'StaffPort',
 	0,
 	0);
 INSERT INTO C_IR
@@ -673,7 +673,7 @@ INSERT INTO C_R
 	'StaffInterface',
 	'',
 	'Unnamed Interface',
-	'UserComponent::Port1::StaffInterface');
+	'UserComponent::StaffPort::StaffInterface');
 INSERT INTO SPR_REP
 	VALUES ("e6181567-d769-42fe-9d0b-d198e6a37dc0",
 	"c86ea0b4-abc2-4994-bee2-500e130b8b73",
@@ -736,7 +736,7 @@ INSERT INTO C_I_PROXY
 INSERT INTO C_PO
 	VALUES ("e4f85bb6-3043-429a-abd9-ee2300a56812",
 	"0968771f-8553-4274-be70-86a03e4e6267",
-	'Port2',
+	'CustomerPort',
 	0,
 	0);
 INSERT INTO C_IR
@@ -749,7 +749,7 @@ INSERT INTO C_R
 	'CustomerInterface',
 	'',
 	'Unnamed Interface',
-	'UserComponent::Port2::CustomerInterface');
+	'UserComponent::CustomerPort::CustomerInterface');
 INSERT INTO SPR_REP
 	VALUES ("86e438a6-c8b8-4441-85d1-42be6446724a",
 	"5a79bc11-70d7-456a-8187-45d268168aef",

@@ -203,7 +203,7 @@ INSERT INTO GD_GE
 	"9d173fe3-55ba-463f-a9f9-a5b42dd200a2",
 	94,
 	0,
-	'Hotel::Library::HotelComponent::Port1::StaffInterface');
+	'Hotel::Library::HotelComponent::StaffPort::StaffInterface');
 INSERT INTO GD_CON
 	VALUES ("2f9c0f5d-981d-4424-a609-749a8d089678",
 	"00000000-0000-0000-0000-000000000000");
@@ -303,7 +303,7 @@ INSERT INTO GD_GE
 	"45f6ed17-28eb-49b4-b51e-26daf29a0cb3",
 	94,
 	0,
-	'Hotel::Library::HotelComponent::Port2::CustomerInterface');
+	'Hotel::Library::HotelComponent::CustomerPort::CustomerInterface');
 INSERT INTO GD_CON
 	VALUES ("6c25a28c-266f-4a49-ad4e-a5b3357da019",
 	"00000000-0000-0000-0000-000000000000");
@@ -403,7 +403,7 @@ INSERT INTO GD_GE
 	"e5700c6d-f43b-47a0-ac2d-0a9428c49aaf",
 	93,
 	0,
-	'Hotel::Library::HotelComponent::Port3::PaymentProviderInterface');
+	'Hotel::Library::HotelComponent::PaymentProviderPort::PaymentProviderInterface');
 INSERT INTO GD_CON
 	VALUES ("1cab9073-52b0-457a-95b0-fa6a1629ef07",
 	"00000000-0000-0000-0000-000000000000");
@@ -815,7 +815,7 @@ INSERT INTO C_I_PROXY
 INSERT INTO C_PO
 	VALUES ("60bda041-6be5-4a74-9de4-1a56d08a5972",
 	"ab2192c8-8390-4631-9e2c-fca2a1f30c08",
-	'Port1',
+	'StaffPort',
 	0,
 	0);
 INSERT INTO C_IR
@@ -828,7 +828,7 @@ INSERT INTO C_P
 	'StaffInterface',
 	'Unnamed Interface',
 	'',
-	'HotelComponent::Port1::StaffInterface');
+	'HotelComponent::StaffPort::StaffInterface');
 INSERT INTO SPR_PEP
 	VALUES ("5d4a4780-fc7a-4f75-b9f9-6ee7a5043833",
 	"c86ea0b4-abc2-4994-bee2-500e130b8b73",
@@ -837,12 +837,8 @@ INSERT INTO SPR_PS
 	VALUES ("5d4a4780-fc7a-4f75-b9f9-6ee7a5043833",
 	'addFacility',
 	'',
-	'create object instance f of FACILITY;
-select any ft from instances of FACILITYTYPE where (selected.id == param.facilityType);
-if(not_empty ft)
-	relate f to ft across R1;
-	f.facilityID = param.facilityID;
-end if;',
+	'generate STAFF_A2:addFacilityEvent(facilityID:param.facilityID,
+									facilityType:param.facilityType) to STAFF class;',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("c86ea0b4-abc2-4994-bee2-500e130b8b73",
@@ -859,29 +855,12 @@ INSERT INTO SPR_PS
 	VALUES ("1aee11b8-e562-4626-acc6-35cc36201bb3",
 	'addFacilityType',
 	'',
-	'create object instance ft of FACILITYTYPE;
-create object instance b of BOOKABLE;
-
-ft.id = param.id;
-
-relate ft to b across R2;
-
-select any h from instances of HOTEL;
-
-if(empty h)
-	create object instance h of HOTEL;
-end if;
-
-if(not_empty h)
-	relate b to h across R9;
-	b.price = param.price;
-	b.description = param.description;
-	ft.approximateArea = param.approximateArea;
-	b.name = param.name;
-	
-end if;
-
-send StaffInterface::sendFacilityType(facilityTypeID: ft.id, name: b.name);',
+	'generate STAFF_A1:addFacilityTypeEvent(facilityTypeID:param.facilityTypeID,
+										name:param.name,
+										price:param.price,
+										description:param.description,
+										approximateArea:param.approximateArea
+										) to STAFF class;',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("19f06228-e268-4733-9af7-92f3f313ceff",
@@ -916,7 +895,7 @@ INSERT INTO C_I_PROXY
 INSERT INTO C_PO
 	VALUES ("c939e81e-1c67-41b0-ae1e-c99bd6322c7e",
 	"ab2192c8-8390-4631-9e2c-fca2a1f30c08",
-	'Port2',
+	'CustomerPort',
 	0,
 	0);
 INSERT INTO C_IR
@@ -929,7 +908,7 @@ INSERT INTO C_P
 	'CustomerInterface',
 	'Unnamed Interface',
 	'',
-	'HotelComponent::Port2::CustomerInterface');
+	'HotelComponent::CustomerPort::CustomerInterface');
 INSERT INTO SPR_PEP
 	VALUES ("89a79606-4020-4623-982e-68f919e93d90",
 	"5a79bc11-70d7-456a-8187-45d268168aef",
@@ -979,27 +958,9 @@ INSERT INTO SPR_PS
 	VALUES ("992e4bb7-56a3-4595-9f21-ea674ddf0832",
 	'checkInGuest',
 	'',
-	'
-select any booking from instances of BOOKING where selected.bookingNumber == param.bookingNumber;
-
-if(empty booking)
-	send CustomerInterface::checkInReturn(success: false, bookingNumber: param.bookingNumber, message: "no booking found with that number");
-else
-	select any g related by booking->GUEST[R15] where selected.name==param.name;
-	if(empty g)
-		send CustomerInterface::checkInReturn(success: false, bookingNumber: param.bookingNumber, message: "could not find guest with name "+param.name);
-	else
-		g.checkedIn = TIM::current_date();
-		
-		select many fs related by g->FACILITY[R16];
-		for each f in fs
-			f.checkedIn = g.checkedIn;
-		end for;
-		
-		send CustomerInterface::checkInReturn(success: true, bookingNumber: param.bookingNumber, message: "success");
-		
-	end if;
-end if;',
+	'generate STAFF_A4:checkInGuestEvent(bookingNumber:param.bookingNumber,
+									name:param.name,
+									age:param.age) to STAFF class;',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("da9dc9a3-9bf8-4e9e-8d76-0469a00019ef",
@@ -1016,24 +977,9 @@ INSERT INTO SPR_PS
 	VALUES ("ed293131-e8e4-43ef-be8f-e13aa67ce7ca",
 	'checkOutGuest',
 	'',
-	'
-select any booking from instances of BOOKING where (selected.bookingNumber == param.bookingNumber);
-
-if(empty booking)
-	send CustomerInterface::checkOutReturn(bookingNumber: param.bookingNumber, success:false, message: "could not find booking");
-else
-	select any guest related by booking->GUEST[R15] where selected.name == param.name;
-	if(empty guest)
-		send CustomerInterface::checkOutReturn(bookingNumber: param.bookingNumber, success:false, message: "could not find guest with name "+param.name);
-	else
-		guest.checkedOut = TIM::current_date();
-		select many fset related by guest->FACILITY[R16];
-		for each f in fset
-			f.checkedOut = guest.checkedOut;
-		end for;
-		send CustomerInterface::checkOutReturn(bookingNumber: param.bookingNumber, success:true, message: "Successfully checked out "+param.name);
-	end if;
-end if;',
+	'generate STAFF_A3:checkOutGuestEvent(bookingNumber:param.bookingNumber,
+									name:param.name,
+									age:param.age) to STAFF class;',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("895459b4-8cad-487c-ac02-41f7392c1417",
@@ -1425,7 +1371,7 @@ INSERT INTO C_I_PROXY
 INSERT INTO C_PO
 	VALUES ("f8523377-969b-4dac-8a14-33dec9b5257a",
 	"ab2192c8-8390-4631-9e2c-fca2a1f30c08",
-	'Port3',
+	'PaymentProviderPort',
 	0,
 	0);
 INSERT INTO C_IR
@@ -1438,7 +1384,7 @@ INSERT INTO C_R
 	'PaymentProviderInterface',
 	'',
 	'Unnamed Interface',
-	'HotelComponent::Port3::PaymentProviderInterface');
+	'HotelComponent::PaymentProviderPort::PaymentProviderInterface');
 INSERT INTO SPR_REP
 	VALUES ("8d34f116-01ee-4538-8974-0d535305eaa6",
 	"7cafd22b-6779-4267-a861-d26be27bb0a1",
