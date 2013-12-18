@@ -17,7 +17,7 @@ INSERT INTO O_TFR
 	'',
 	1,
 	'',
-	"00000000-0000-0000-0000-000000000000");
+	"70d4e1e2-0f88-432e-9d6c-8f2f70b3a58d");
 INSERT INTO O_TPARM
 	VALUES ("c1538823-c1f1-44b9-aaaf-e434940cf412",
 	"0ad92127-a4ab-45f8-845e-1d70fa15b0c5",
@@ -50,7 +50,73 @@ end for;
 delete object instance self;',
 	1,
 	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("1220d696-0a01-445d-99ea-cf6bbede3dd9",
+	"9309978f-bd81-4f9f-96e9-b124c945fbf1",
+	'setCheckedIn',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'
+self.checkedIn = param.date;',
+	1,
+	'',
 	"0ad92127-a4ab-45f8-845e-1d70fa15b0c5");
+INSERT INTO O_TPARM
+	VALUES ("24e62341-b66c-46e3-aa04-85e7847fdf08",
+	"1220d696-0a01-445d-99ea-cf6bbede3dd9",
+	'date',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TFR
+	VALUES ("71fc2369-2d7f-47d3-b0f2-948636fa6d75",
+	"9309978f-bd81-4f9f-96e9-b124c945fbf1",
+	'setCheckedOut',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'
+self.checkedOut = param.date;',
+	1,
+	'',
+	"1220d696-0a01-445d-99ea-cf6bbede3dd9");
+INSERT INTO O_TPARM
+	VALUES ("f41ac531-6036-4da7-b43f-1ddf530b4dcb",
+	"71fc2369-2d7f-47d3-b0f2-948636fa6d75",
+	'date',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TFR
+	VALUES ("97bc59c6-47fb-4d0b-8b80-8f9e4e59d9ac",
+	"9309978f-bd81-4f9f-96e9-b124c945fbf1",
+	'getCheckedOut',
+	'',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	1,
+	'
+return self.checkedOut;',
+	1,
+	'',
+	"71fc2369-2d7f-47d3-b0f2-948636fa6d75");
+INSERT INTO O_TFR
+	VALUES ("e342dc6b-3f88-47de-8a2d-59683fd43def",
+	"9309978f-bd81-4f9f-96e9-b124c945fbf1",
+	'getCheckedIn',
+	'',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	1,
+	'
+return self.checkedIn;',
+	1,
+	'',
+	"97bc59c6-47fb-4d0b-8b80-8f9e4e59d9ac");
 INSERT INTO O_NBATTR
 	VALUES ("d5229f3c-55dc-4032-9fbc-8fa747fca3f4",
 	"9309978f-bd81-4f9f-96e9-b124c945fbf1");

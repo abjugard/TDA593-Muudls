@@ -7,6 +7,48 @@ INSERT INTO O_OBJ
 	'CUSTOMER',
 	'',
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("35db6b4f-bafb-49bc-b767-a7ce9fc054cd",
+	"bd271967-a0a4-4bd7-9783-303111ffdc9b",
+	'setName',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'
+self.name = param.name;',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TPARM
+	VALUES ("2b2e08dc-df41-400e-8f47-1f1cef83ee77",
+	"35db6b4f-bafb-49bc-b767-a7ce9fc054cd",
+	'name',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TFR
+	VALUES ("739e5d91-8cdb-47cc-b324-4db4acb0eac2",
+	"bd271967-a0a4-4bd7-9783-303111ffdc9b",
+	'setPhoneNumber',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'
+self.phoneNumber = param.phoneNumber;',
+	1,
+	'',
+	"35db6b4f-bafb-49bc-b767-a7ce9fc054cd");
+INSERT INTO O_TPARM
+	VALUES ("9b1f99bd-f4c1-40f5-9f94-ec3e8e879c90",
+	"739e5d91-8cdb-47cc-b324-4db4acb0eac2",
+	'phoneNumber',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
 INSERT INTO O_NBATTR
 	VALUES ("d7ab9c18-4a8e-4361-919f-bf2193fc4147",
 	"bd271967-a0a4-4bd7-9783-303111ffdc9b");

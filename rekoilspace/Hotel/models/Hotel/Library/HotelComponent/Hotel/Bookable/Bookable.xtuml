@@ -7,6 +7,105 @@ INSERT INTO O_OBJ
 	'BOOKABLE',
 	'',
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("e24aaa81-8268-4b9d-9407-32efe73cf816",
+	"803702ba-1594-4405-b96a-8c76b6ef1c69",
+	'getPrice',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000003",
+	1,
+	'
+return self.price;',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("2ec9bfd9-e209-4a0d-b815-1230acf2b6ba",
+	"803702ba-1594-4405-b96a-8c76b6ef1c69",
+	'getDescription',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	1,
+	'
+return self.description;',
+	1,
+	'',
+	"e24aaa81-8268-4b9d-9407-32efe73cf816");
+INSERT INTO O_TFR
+	VALUES ("e5d518cf-3cb4-4c44-889e-c952e6c5268f",
+	"803702ba-1594-4405-b96a-8c76b6ef1c69",
+	'getName',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	1,
+	'
+return self.name;',
+	1,
+	'',
+	"2ec9bfd9-e209-4a0d-b815-1230acf2b6ba");
+INSERT INTO O_TFR
+	VALUES ("9e8ce745-9a75-46e0-8035-a585289d08b3",
+	"803702ba-1594-4405-b96a-8c76b6ef1c69",
+	'setPrice',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'
+self.price = param.price;',
+	1,
+	'',
+	"e5d518cf-3cb4-4c44-889e-c952e6c5268f");
+INSERT INTO O_TPARM
+	VALUES ("a819c457-6312-4c7e-93c1-f63d3bc349c1",
+	"9e8ce745-9a75-46e0-8035-a585289d08b3",
+	'price',
+	"ba5eda7a-def5-0000-0000-000000000003",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TFR
+	VALUES ("4cb56254-9ea9-4fd3-ba99-0c74af224d1e",
+	"803702ba-1594-4405-b96a-8c76b6ef1c69",
+	'setDescription',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'
+self.description = param.description;',
+	1,
+	'',
+	"9e8ce745-9a75-46e0-8035-a585289d08b3");
+INSERT INTO O_TPARM
+	VALUES ("58576eec-e23a-4884-b15e-74ce033483b9",
+	"4cb56254-9ea9-4fd3-ba99-0c74af224d1e",
+	'description',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TFR
+	VALUES ("78cc2976-d299-47e4-bd54-6a667186c753",
+	"803702ba-1594-4405-b96a-8c76b6ef1c69",
+	'setName',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'
+self.name = param.name;',
+	1,
+	'',
+	"4cb56254-9ea9-4fd3-ba99-0c74af224d1e");
+INSERT INTO O_TPARM
+	VALUES ("971941fc-3b5a-4327-ba72-1a48ed0133ec",
+	"78cc2976-d299-47e4-bd54-6a667186c753",
+	'name',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
 INSERT INTO O_NBATTR
 	VALUES ("7edb737c-eda0-435c-ab44-20ad0293ebdb",
 	"803702ba-1594-4405-b96a-8c76b6ef1c69");

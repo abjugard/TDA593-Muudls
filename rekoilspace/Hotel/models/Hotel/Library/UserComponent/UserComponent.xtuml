@@ -74,7 +74,7 @@ INSERT INTO GD_GE
 	"59710e0c-1d62-4800-a82b-b80bbaed4667",
 	93,
 	0,
-	'Hotel::Library::UserComponent::UserInterface::BookingProvider');
+	'Hotel::Library::UserComponent::BookingPort::BookingProvider');
 INSERT INTO GD_CON
 	VALUES ("1f36a874-df12-475e-9d32-55219d81be8e",
 	"00000000-0000-0000-0000-000000000000");
@@ -402,7 +402,7 @@ INSERT INTO DIM_DIA
 INSERT INTO C_PO
 	VALUES ("187ffcd4-1a0a-4d08-9368-d7eb60024fef",
 	"0968771f-8553-4274-be70-86a03e4e6267",
-	'UserInterface',
+	'BookingPort',
 	0,
 	0);
 INSERT INTO C_IR
@@ -415,7 +415,7 @@ INSERT INTO C_R
 	'BookingProvider',
 	'',
 	'Unnamed Interface',
-	'UserComponent::UserInterface::BookingProvider');
+	'UserComponent::BookingPort::BookingProvider');
 INSERT INTO SPR_REP
 	VALUES ("0f4f0c74-9081-4693-8692-8e7887366c52",
 	"8500002a-94f3-4a61-bfa8-32f8fd7d89b4",

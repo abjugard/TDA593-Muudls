@@ -101,6 +101,18 @@ INSERT INTO O_TPARM
 	'',
 	"a69548d1-8fa0-49ff-a4b6-83fca9757491",
 	'');
+INSERT INTO O_TFR
+	VALUES ("55f3e96d-afbd-41f4-813e-0a76dbaf392e",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	'getID',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000005",
+	1,
+	'
+return self.ID;',
+	1,
+	'',
+	"771633a1-fc2a-417f-bc87-3c56b179c251");
 INSERT INTO O_NBATTR
 	VALUES ("df46d3b5-7060-4611-8908-d535d035865a",
 	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");

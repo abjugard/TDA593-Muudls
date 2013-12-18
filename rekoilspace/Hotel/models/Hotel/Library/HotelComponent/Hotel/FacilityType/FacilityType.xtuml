@@ -25,6 +25,51 @@ INSERT INTO S_DT_PROXY
 	'',
 	'',
 	'../Hotel.xtuml');
+INSERT INTO O_TFR
+	VALUES ("74bd6112-d038-48ee-a136-053b12f2bd0a",
+	"bafdc953-1881-43a3-a5f1-9dcc7e2d60c3",
+	'getID',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	1,
+	'
+return self.id;',
+	1,
+	'',
+	"7c6f1c17-66e4-4037-8be9-f2078ba06981");
+INSERT INTO O_TFR
+	VALUES ("c906fb68-fad5-478a-a7a9-34470f003a4e",
+	"bafdc953-1881-43a3-a5f1-9dcc7e2d60c3",
+	'getApproximateArea',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	1,
+	'
+return self.approximateArea;',
+	1,
+	'',
+	"74bd6112-d038-48ee-a136-053b12f2bd0a");
+INSERT INTO O_TFR
+	VALUES ("460b0247-5093-4eef-94cf-df51eb7e9fb1",
+	"bafdc953-1881-43a3-a5f1-9dcc7e2d60c3",
+	'setApproximateArea',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'
+self.approximateArea = param.approximateArea;',
+	1,
+	'',
+	"c906fb68-fad5-478a-a7a9-34470f003a4e");
+INSERT INTO O_TPARM
+	VALUES ("07e0d7bd-249e-4165-a8b8-d89e1dc1c843",
+	"460b0247-5093-4eef-94cf-df51eb7e9fb1",
+	'approximateArea',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
 INSERT INTO O_NBATTR
 	VALUES ("839b61ce-d63e-49ba-a0ae-d1b0093bb680",
 	"bafdc953-1881-43a3-a5f1-9dcc7e2d60c3");

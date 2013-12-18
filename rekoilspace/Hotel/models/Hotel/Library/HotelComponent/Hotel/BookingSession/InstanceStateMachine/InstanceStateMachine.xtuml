@@ -1846,8 +1846,8 @@ INSERT INTO SM_ACT
 	'LOG::LogInfo(message: "H: customerProvided: Confirming...");
 
 create object instance c of CUSTOMER;
-c.name = rcvd_evt.name;
-c.phoneNumber = rcvd_evt.phoneNumber;
+c.setName(name: rcvd_evt.name);
+c.setPhoneNumber(phoneNumber: rcvd_evt.phoneNumber);
 
 relate self to c across R27;
 

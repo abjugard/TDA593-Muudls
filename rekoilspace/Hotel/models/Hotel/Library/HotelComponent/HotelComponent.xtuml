@@ -103,7 +103,7 @@ INSERT INTO GD_GE
 	"36293ad6-77b6-4c0b-a2dd-f02064f6189a",
 	94,
 	0,
-	'Hotel::Library::HotelComponent::UserInterface::BookingProvider');
+	'Hotel::Library::HotelComponent::BookingPort::BookingProvider');
 INSERT INTO GD_CON
 	VALUES ("2df49237-814e-40de-a046-59de057c75e4",
 	"00000000-0000-0000-0000-000000000000");
@@ -507,7 +507,7 @@ INSERT INTO DIM_DIA
 INSERT INTO C_PO
 	VALUES ("54eb899f-f23f-4a84-8403-f0454a9283e7",
 	"ab2192c8-8390-4631-9e2c-fca2a1f30c08",
-	'UserInterface',
+	'BookingPort',
 	0,
 	0);
 INSERT INTO C_IR
@@ -520,7 +520,7 @@ INSERT INTO C_P
 	'BookingProvider',
 	'Unnamed Interface',
 	'',
-	'HotelComponent::UserInterface::BookingProvider');
+	'HotelComponent::BookingPort::BookingProvider');
 INSERT INTO SPR_PEP
 	VALUES ("ad67a789-a0d9-4e09-8c1b-cc137ff39554",
 	"8500002a-94f3-4a61-bfa8-32f8fd7d89b4",
@@ -529,44 +529,13 @@ INSERT INTO SPR_PS
 	VALUES ("ad67a789-a0d9-4e09-8c1b-cc137ff39554",
 	'requestAvailableBookables',
 	'',
-	'select any session from instances of BOOKINGSESSION where (selected.ID == param.sessionID);
+	'
+select any h from instances of HOTEL;
 
-if (not_empty session)
-	if(session.isBookingTimeAcceptable(fromDate:param.fromDate, 
-									   toDate:param.toDate))
-		select one booking related by session->BOOKING[R26];
-		booking.setFromDate(fromDate: param.fromDate);
-		booking.setToDate(toDate: param.toDate);
-		select one hotel related by session->HOTEL[R17];
-		
-		result = hotel.searchFacilityTypes(fromDate: param.fromDate, 
-										   toDate: param.toDate);
-		if(empty result)
-			send BookingProvider::errorSignal(message: "H: requestAvail: No rooms found",
-												sessionID:param.sessionID);
-		else
-			generate BOOKINGSESSION9:searchEvent(fromDate: param.fromDate,
-												 toDate: param.toDate) to session;
-			for each ft in result		
-				select one b related by ft->BOOKABLE[R2];
-				send BookingProvider::available(id: ft.id , 
-												price: b.price , 
-												description: b.description,
-												aproximateArea: ft.approximateArea,
-												independent: false,
-												sessionID:session.ID);
-			end for;
-			send CustomerInterface::endOfList(sessionID: session.ID);
-		end if;
-	else
-		generate BOOKINGSESSION11:errorEvent(
-					message: "Too long booking period selected") to session;
-		send BookingProvider::errorSignal(message: "H: Too long booking period selected",
-											sessionID:param.sessionID);
-	end if;
+if(not_empty h)
+	h.requestAvailableBookables(sessionID: param.sessionID, fromDate: param.fromDate, toDate: param.toDate);
 else
-	send BookingProvider::errorSignal(message: "H: requestAvail: Session not found",
-										sessionID:param.sessionID);
+	LOG::LogInfo(message: "Should never happen: No instance of Hotel found. Request failed.");
 end if;',
 	1);
 INSERT INTO C_EP_PROXY
@@ -767,20 +736,12 @@ INSERT INTO SPR_PS
 	VALUES ("52f59bac-a1c2-4318-a901-bbe93808d139",
 	'requestSession',
 	'',
-	'// Initialize a booking session
-LOG::LogInfo(message: "Recieved session request");
-create object instance session of BOOKINGSESSION;
-create object instance booking of BOOKING;
-relate session to booking across R26;
-
+	'
 select any h from instances of HOTEL;
-relate session to h across R17;
 
-seconds = 60;
-create event instance cancel of BOOKINGSESSION8:cancelEvent to session;
-//bu = TIM::timer_start(microseconds: 1000*seconds, event_inst: cancel); 
-
-send BookingProvider::session(sessionID: session.ID, bookingNumber: booking.bookingNumber);',
+if(not_empty h)
+	h.requestSession();
+end if;',
 	1);
 INSERT INTO C_EP_PROXY
 	VALUES ("b21fad1b-897b-424f-84f8-01bdab76de49",

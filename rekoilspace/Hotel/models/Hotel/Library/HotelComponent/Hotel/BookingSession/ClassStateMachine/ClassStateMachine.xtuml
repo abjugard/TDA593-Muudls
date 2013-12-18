@@ -308,7 +308,7 @@ if(not_empty session)
 		LOG::LogInfo(message: "H: BusyClassMachine: ft not empty");
 		
 		
-		f = hotel.searchFacility(fromDate: booking.getFromDate(), toDate: booking.getToDate(), facilityType:ft.id);
+		f = hotel.searchFacility(fromDate: booking.getFromDate(), toDate: booking.getToDate(), facilityType: ft.getID());
 			LOG::LogInfo(message: "H: BusyClassMachine: after serachFacility");
 		if(not_empty f)
 			LOG::LogInfo(message: "H: BusyClassMachine: found room");
@@ -319,21 +319,21 @@ if(not_empty session)
 		 	relate booking to bookable across R12;
 		 	LOG::LogInfo(message: "H: BusyClassMachine: Confirming facility.");
 		 	send BookingProvider::confirmSignal(message: "H: BusyClassMachine signal: Confirming facility",
-		 										sessionID: session.ID);
+		 										sessionID: session.getID());
 		
 		else
 			send BookingProvider::errorSignal(	message: "H: BusyClassMachine signal: Could not find any facilities",
-											sessionID:session.ID);
+											sessionID:session.getID());
 			LOG::LogInfo(message: "H: BusyClassMachine: Could not find facility.");
 		end if;
 	else
 		send BookingProvider::errorSignal(	message: "H: BusyClassMachine signal: Could not find selected facility type",
-											sessionID:session.ID);
+											sessionID:session.getID());
 		LOG::LogInfo(message: "H: BusyClassMachine: Could not find facility type.");
 	end if;
 else
 	send BookingProvider::errorSignal(	message: "H: selectted signal: Session not found",
-											sessionID:session.ID);
+											sessionID:session.getID());
 	LOG::LogInfo(message: "H: BusyClassMachine: Could not find session");
 end if;
 generate BOOKINGSESSION_A3:taskDoneEvent to BOOKINGSESSION class;',
@@ -353,7 +353,7 @@ INSERT INTO SM_ACT
 
 if(not_empty session)
 	session.waiting = false;
-	generate BOOKINGSESSION_A5:taskFoundEvent(sessionID:session.ID) to BOOKINGSESSION class;
+	generate BOOKINGSESSION_A5:taskFoundEvent(sessionID:session.getID()) to BOOKINGSESSION class;
 else
 	generate BOOKINGSESSION_A4:emptyQueueEvent() to BOOKINGSESSION class;
 end if;',

@@ -308,14 +308,14 @@ end if;
 
 if(not_empty h)
 	relate b to h across R9;
-	b.price = param.price;
-	b.description = param.description;
-	ft.approximateArea = param.approximateArea;
-	b.name = param.name;
+	b.setPrice(price: param.price);
+	b.setDescription(description: param.description);
+	ft.setApproximateArea(approximateArea: param.approximateArea);
+	b.setName(name: param.name);
 	
 end if;
 
-send StaffInterface::sendFacilityType(facilityTypeID: ft.id, name: b.name);',
+send StaffInterface::sendFacilityType(facilityTypeID: ft.getID(), name: b.getName());',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("c04c7885-2d74-46a2-899a-513418d43378",
@@ -332,7 +332,7 @@ INSERT INTO SM_ACT
 select any ft from instances of FACILITYTYPE where (selected.id == param.facilityType);
 if(not_empty ft)
 	relate f to ft across R1;
-	f.facilityID = param.facilityID;
+	f.setFacilityID(facilityID: param.facilityID);
 end if;',
 	'');
 INSERT INTO SM_TAH
@@ -349,7 +349,6 @@ INSERT INTO SM_ACT
 	'
 select any h from instances of HOTEL;
 
-//select any booking from instances of BOOKING where (selected.bookingNumber == param.bookingNumber);
 select any booking related by h->BOOKING[R13] where (selected.bookingNumber == param.bookingNumber);
 
 if(empty booking)
@@ -359,10 +358,12 @@ else
 	if(empty guest)
 		send CustomerInterface::checkOutReturn(bookingNumber: param.bookingNumber, success:false, message: "could not find guest with name "+param.name);
 	else
-		guest.checkedOut = TIM::current_date();
+		guest.setCheckedOut(date: TIM::current_date());
 		select many fset related by guest->FACILITY[R16];
 		for each f in fset
-			f.checkedOut = guest.checkedOut;
+			if(f.isCurrentlyCheckedIn())
+				f.setCheckedOut(date: guest.getCheckedOut());
+			end if;
 		end for;
 		send CustomerInterface::checkOutReturn(bookingNumber: param.bookingNumber, success:true, message: "Successfully checked out "+param.name);
 	end if;
@@ -380,7 +381,9 @@ INSERT INTO SM_ACT
 	"85c46c78-f658-4590-b9c6-934a395d96e7",
 	1,
 	'
-select any booking from instances of BOOKING where selected.bookingNumber == param.bookingNumber;
+select any h from instances of HOTEL;
+
+select any booking related by h->BOOKING[R13] where (selected.bookingNumber == param.bookingNumber);
 
 if(empty booking)
 	send CustomerInterface::checkInReturn(success: false, bookingNumber: param.bookingNumber, message: "no booking found with that number");
@@ -389,11 +392,14 @@ else
 	if(empty g)
 		send CustomerInterface::checkInReturn(success: false, bookingNumber: param.bookingNumber, message: "could not find guest with name "+param.name);
 	else
-		g.checkedIn = TIM::current_date();
+		//successful checkIn
+		g.setCheckedIn( date: TIM::current_date() );
 		
 		select many fs related by g->FACILITY[R16];
 		for each f in fs
-			f.checkedIn = g.checkedIn;
+			if(not f.isCurrentlyCheckedIn())
+				f.setCheckedIn(date: g.getCheckedIn());
+			end if;
 		end for;
 		
 		send CustomerInterface::checkInReturn(success: true, bookingNumber: param.bookingNumber, message: "success");
