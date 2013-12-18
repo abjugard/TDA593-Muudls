@@ -306,7 +306,9 @@ if(not_empty session)
 	if(not_empty ft)
 		select one booking related by session->BOOKING[R26];
 		LOG::LogInfo(message: "H: BusyClassMachine: ft not empty");
-		f = hotel.searchFacility(fromDate: booking.fromDate, toDate: booking.toDate, facilityType:ft.id);
+		
+		
+		f = hotel.searchFacility(fromDate: booking.getFromDate(), toDate: booking.getToDate(), facilityType:ft.id);
 			LOG::LogInfo(message: "H: BusyClassMachine: after serachFacility");
 		if(not_empty f)
 			LOG::LogInfo(message: "H: BusyClassMachine: found room");
@@ -729,8 +731,8 @@ INSERT INTO DIM_ND
 	40.000000,
 	"9f282920-033f-4d19-8d82-999591a16be1");
 INSERT INTO DIM_GE
-	VALUES (4296.000000,
-	3407.000000,
+	VALUES (4342.000000,
+	3424.000000,
 	"9f282920-033f-4d19-8d82-999591a16be1",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -929,8 +931,8 @@ INSERT INTO DIM_ND
 	40.000000,
 	"50ade460-3768-4642-b007-513a67b482f8");
 INSERT INTO DIM_GE
-	VALUES (4075.000000,
-	3344.000000,
+	VALUES (4058.000000,
+	3314.000000,
 	"50ade460-3768-4642-b007-513a67b482f8",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE

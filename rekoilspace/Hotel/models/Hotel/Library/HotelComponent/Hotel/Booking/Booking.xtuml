@@ -121,6 +121,68 @@ INSERT INTO O_TPARM
 	'',
 	"00000000-0000-0000-0000-000000000000",
 	'');
+INSERT INTO O_TFR
+	VALUES ("1f8ef3ba-9fc3-4d16-9f6c-2174a21ee4ac",
+	"9a41fe9e-f547-4cde-b68d-f7db43c904dc",
+	'getFromDate',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	1,
+	'return self.fromDate;',
+	1,
+	'',
+	"11a60648-7f28-4e24-93de-4da0ae187839");
+INSERT INTO O_TFR
+	VALUES ("7503e4da-392a-4558-818f-2a672534716b",
+	"9a41fe9e-f547-4cde-b68d-f7db43c904dc",
+	'getToDate',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	1,
+	'return self.toDate;',
+	1,
+	'',
+	"1f8ef3ba-9fc3-4d16-9f6c-2174a21ee4ac");
+INSERT INTO O_TFR
+	VALUES ("4390b438-a057-41d2-8fa5-6fa878c01048",
+	"9a41fe9e-f547-4cde-b68d-f7db43c904dc",
+	'setFromDate',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'self.fromDate = param.fromDate;',
+	1,
+	'',
+	"7503e4da-392a-4558-818f-2a672534716b");
+INSERT INTO O_TPARM
+	VALUES ("6ad1cb3d-fa30-4ed7-bb6f-940de2ca223f",
+	"4390b438-a057-41d2-8fa5-6fa878c01048",
+	'fromDate',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TFR
+	VALUES ("5db01331-c943-4eb1-85fc-74511c86b2e8",
+	"9a41fe9e-f547-4cde-b68d-f7db43c904dc",
+	'setToDate',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'self.toDate = param.toDate;',
+	1,
+	'',
+	"4390b438-a057-41d2-8fa5-6fa878c01048");
+INSERT INTO O_TPARM
+	VALUES ("485a6f9f-11bf-4ba4-a6e4-f3d6b98d10b3",
+	"5db01331-c943-4eb1-85fc-74511c86b2e8",
+	'toDate',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'self.toDate = param.toDate;');
 INSERT INTO O_NBATTR
 	VALUES ("de30d967-1c94-45a4-8e5f-b18dc80d1e04",
 	"9a41fe9e-f547-4cde-b68d-f7db43c904dc");

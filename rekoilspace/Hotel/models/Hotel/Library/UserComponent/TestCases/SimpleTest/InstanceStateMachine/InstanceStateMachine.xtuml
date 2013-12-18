@@ -99,6 +99,24 @@ INSERT INTO SM_EVTDI
 	'',
 	"2a21dfc2-cf8a-496d-91fa-d6cd6995d113",
 	"cf45ac62-45f1-44bc-b7a3-c755aacea2a2");
+INSERT INTO SM_EVTDI
+	VALUES ("37b76012-8c26-4cab-96fa-88f20fd0f56b",
+	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
+	'fromDate',
+	'',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	'',
+	"571ae000-303e-4af6-9350-7f3c94749e60",
+	"9f777d81-28c8-4dc2-869b-a98bc7abfa52");
+INSERT INTO SM_EVTDI
+	VALUES ("bf8aafa0-e9e0-4667-aba0-cf6ab6f69282",
+	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
+	'toDate',
+	'',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	'',
+	"571ae000-303e-4af6-9350-7f3c94749e60",
+	"37b76012-8c26-4cab-96fa-88f20fd0f56b");
 INSERT INTO SM_LEVT
 	VALUES ("571ae000-303e-4af6-9350-7f3c94749e60",
 	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
@@ -115,7 +133,7 @@ INSERT INTO SM_EVT
 	'start',
 	0,
 	'',
-	'SIMPLETESTP1',
+	'SIMPLETEST1',
 	'');
 INSERT INTO SM_LEVT
 	VALUES ("2a21dfc2-cf8a-496d-91fa-d6cd6995d113",
@@ -133,7 +151,7 @@ INSERT INTO SM_EVT
 	'sessionEvent',
 	0,
 	'',
-	'SIMPLETESTP2',
+	'SIMPLETEST2',
 	'');
 INSERT INTO SM_LEVT
 	VALUES ("eb6c99e7-c09f-4c32-96ec-e77623146056",
@@ -151,7 +169,7 @@ INSERT INTO SM_EVT
 	'availableEvent',
 	0,
 	'',
-	'SIMPLETESTP3',
+	'SIMPLETEST3',
 	'');
 INSERT INTO SM_LEVT
 	VALUES ("e60d8278-0abd-4435-be30-5fb8266237ab",
@@ -169,7 +187,7 @@ INSERT INTO SM_EVT
 	'confirmEvent',
 	0,
 	'',
-	'SIMPLETESTP4',
+	'SIMPLETEST4',
 	'');
 INSERT INTO SM_LEVT
 	VALUES ("a8d07c15-c55f-45d9-899b-3d15c92b3882",
@@ -187,7 +205,7 @@ INSERT INTO SM_EVT
 	'endOfListEvent',
 	0,
 	'',
-	'SIMPLETESTP5',
+	'SIMPLETEST5',
 	'');
 INSERT INTO SM_LEVT
 	VALUES ("b215e1a1-e928-44a2-b827-815cde5d4b84",
@@ -205,7 +223,7 @@ INSERT INTO SM_EVT
 	'foundDesiredRoomEvent',
 	0,
 	'',
-	'SIMPLETESTP6',
+	'SIMPLETEST6',
 	'');
 INSERT INTO SM_LEVT
 	VALUES ("db689256-8056-41cd-abf0-1804a111281b",
@@ -223,7 +241,7 @@ INSERT INTO SM_EVT
 	'errorEvent',
 	0,
 	'',
-	'SIMPLETESTP7',
+	'SIMPLETEST7',
 	'');
 INSERT INTO SM_STATE
 	VALUES ("ff3aa0df-09b3-4d91-b2a7-212ccf415d16",
@@ -442,12 +460,6 @@ INSERT INTO SM_SEME
 	"b215e1a1-e928-44a2-b827-815cde5d4b84",
 	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_CH
-	VALUES ("8fac4aec-97cb-4a48-8f6e-ef08889c723a",
-	"db689256-8056-41cd-abf0-1804a111281b",
-	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
-	"00000000-0000-0000-0000-000000000000",
-	'');
 INSERT INTO SM_SEME
 	VALUES ("8fac4aec-97cb-4a48-8f6e-ef08889c723a",
 	"db689256-8056-41cd-abf0-1804a111281b",
@@ -1135,6 +1147,17 @@ INSERT INTO SM_TXN
 	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
 	"2efccd73-deb5-49ea-8acc-51942953d608",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_NSTXN
+	VALUES ("254c4367-179d-4ea0-a689-a31d23de1fbb",
+	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
+	"8fac4aec-97cb-4a48-8f6e-ef08889c723a",
+	"db689256-8056-41cd-abf0-1804a111281b",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_TXN
+	VALUES ("254c4367-179d-4ea0-a689-a31d23de1fbb",
+	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
+	"2efccd73-deb5-49ea-8acc-51942953d608",
+	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_MOAH
 	VALUES ("cb212bf5-d2bb-45da-8e27-c663ec05029f",
 	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
@@ -1175,6 +1198,8 @@ INSERT INTO SM_ACT
 	1,
 	'LOG::LogInfo(message: "Starting simple test... requesting session");
 self.desiredType = rcvd_evt.desiredType;
+self.fromDate = param.fromDate;
+self.toDate = param.toDate;
 
 send BookingProvider::requestSession();',
 	'');
@@ -1207,9 +1232,10 @@ self.sessionID = param.sessionID;
 self.bookingNumber = param.bookingNumber;
 
 LOG::LogInfo(message: "Requesting available bookables...");
-send BookingProvider::requestAvailableBookables(sessionID: self.sessionID, 
-												fromDate: TIM::create_date(day:1, month:1, year:2010, second:8, minute:12, hour:4),
-												toDate: TIM::create_date(day:1, month:1, year:2012, second:8, minute:12, hour:4));',
+send BookingProvider::requestAvailableBookables(sessionID: self.sessionID,
+												fromDate: self.fromDate,
+												toDate: self.toDate); 
+												',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("dc6f4ce0-453b-4bad-b2e4-768df5994abc",
@@ -1475,6 +1501,19 @@ INSERT INTO SM_ACT
 	1,
 	'',
 	'');
+INSERT INTO SM_TAH
+	VALUES ("67c0de52-46e5-49cf-bc17-16f08a694067",
+	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
+	"254c4367-179d-4ea0-a689-a31d23de1fbb");
+INSERT INTO SM_AH
+	VALUES ("67c0de52-46e5-49cf-bc17-16f08a694067",
+	"ff73a57e-de54-43da-89b9-7fc18e7e85a5");
+INSERT INTO SM_ACT
+	VALUES ("67c0de52-46e5-49cf-bc17-16f08a694067",
+	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
+	1,
+	'',
+	'');
 INSERT INTO GD_MD
 	VALUES ("f6155447-8b20-47ad-84eb-70dbe9b935ce",
 	8,
@@ -1672,13 +1711,18 @@ INSERT INTO DIM_CON
 	4360.000000,
 	3648.000000,
 	"dc816597-4405-4e03-adec-bb8ada29227a");
+INSERT INTO DIM_CON
+	VALUES ("87e2d459-3019-4877-9b4b-cb6dfce43cb6",
+	4464.000000,
+	3607.000000,
+	"dc816597-4405-4e03-adec-bb8ada29227a");
 INSERT INTO GD_GE
 	VALUES ("856b84ad-ea03-4a9e-85d8-ddada6f16587",
 	"f6155447-8b20-47ad-84eb-70dbe9b935ce",
 	"37a78df7-872d-4fbf-908e-618445b592ba",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::entryPoint::SIMPLETESTP1: start');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::entryPoint::SIMPLETEST1: start');
 INSERT INTO GD_CON
 	VALUES ("856b84ad-ea03-4a9e-85d8-ddada6f16587",
 	"00000000-0000-0000-0000-000000000000");
@@ -1811,13 +1855,18 @@ INSERT INTO DIM_CON
 	4464.000000,
 	3828.000000,
 	"e5a3120a-1988-47b2-80e9-282620f0baf4");
+INSERT INTO DIM_CON
+	VALUES ("3cea3142-3d6a-4dac-81d3-c49cce594e2d",
+	4464.000000,
+	3766.000000,
+	"e5a3120a-1988-47b2-80e9-282620f0baf4");
 INSERT INTO GD_GE
 	VALUES ("9856ba86-fb0d-408a-a7ed-0a8fe0438cf8",
 	"f6155447-8b20-47ad-84eb-70dbe9b935ce",
 	"0f04dfa6-dac0-47a0-b8c3-d4d13cc2f1f7",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::requestSession::SIMPLETESTP2: sessionEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::requestSession::SIMPLETEST2: sessionEvent');
 INSERT INTO GD_CON
 	VALUES ("9856ba86-fb0d-408a-a7ed-0a8fe0438cf8",
 	"00000000-0000-0000-0000-000000000000");
@@ -1851,8 +1900,8 @@ INSERT INTO DIM_ND
 	25.000000,
 	"d936fa3e-310c-414d-8d36-fb3fd2b26bdb");
 INSERT INTO DIM_GE
-	VALUES (4138.000000,
-	3671.000000,
+	VALUES (4101.000000,
+	3685.000000,
 	"d936fa3e-310c-414d-8d36-fb3fd2b26bdb",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -1971,7 +2020,7 @@ INSERT INTO GD_GE
 	"a1bc1e29-b89e-488f-84a8-4c76ca6e4597",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::requestAvailableBookables::SIMPLETESTP3: availableEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::requestAvailableBookables::SIMPLETEST3: availableEvent');
 INSERT INTO GD_CON
 	VALUES ("102867e4-e137-4228-9764-faa489be726c",
 	"00000000-0000-0000-0000-000000000000");
@@ -2144,7 +2193,7 @@ INSERT INTO GD_GE
 	"c627585d-b335-4f81-b781-0a8d1a635ce9",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::addGuest::SIMPLETESTP4: confirmEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::addGuest::SIMPLETEST4: confirmEvent');
 INSERT INTO GD_CON
 	VALUES ("0598a279-3b72-4331-a795-2c212efaa2e8",
 	"00000000-0000-0000-0000-000000000000");
@@ -2278,7 +2327,7 @@ INSERT INTO GD_GE
 	"0c0a89c3-1ff1-4829-a55f-236f4f330127",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::confirmBooking::SIMPLETESTP4: confirmEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::confirmBooking::SIMPLETEST4: confirmEvent');
 INSERT INTO GD_CON
 	VALUES ("211224f9-e912-4e3c-99bb-7cc66418f1c2",
 	"00000000-0000-0000-0000-000000000000");
@@ -2407,7 +2456,7 @@ INSERT INTO GD_GE
 	"90d0d201-9bb1-42f3-b08a-bf0e27f130ba",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::sendCustomerDetails::SIMPLETESTP4: confirmEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::sendCustomerDetails::SIMPLETEST4: confirmEvent');
 INSERT INTO GD_CON
 	VALUES ("5d183092-c045-470c-8587-93d402717cec",
 	"00000000-0000-0000-0000-000000000000");
@@ -2507,7 +2556,7 @@ INSERT INTO GD_GE
 	"2afdb634-f1ff-4d67-bc4a-fea9a8bccb8a",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::selectRooms::SIMPLETESTP3: availableEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::selectRooms::SIMPLETEST3: availableEvent');
 INSERT INTO GD_CON
 	VALUES ("0a27c32a-e1ba-40e1-be8c-21092ff284b1",
 	"00000000-0000-0000-0000-000000000000");
@@ -2672,7 +2721,7 @@ INSERT INTO GD_GE
 	"e9d07d8a-71d6-4c3f-80a0-de836564a794",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::selectRooms::SIMPLETESTP6: foundDesiredRoomEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::selectRooms::SIMPLETEST6: foundDesiredRoomEvent');
 INSERT INTO GD_CON
 	VALUES ("d19b1b5f-db4e-42f3-9dfb-0c5a9afa9922",
 	"00000000-0000-0000-0000-000000000000");
@@ -2772,7 +2821,7 @@ INSERT INTO GD_GE
 	"0536e29a-68fa-4fe6-b40c-a256690d123a",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::endOfListState::SIMPLETESTP4: confirmEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::endOfListState::SIMPLETEST4: confirmEvent');
 INSERT INTO GD_CON
 	VALUES ("c3045f26-f35a-42ed-af4e-feba0c00d540",
 	"00000000-0000-0000-0000-000000000000");
@@ -2905,13 +2954,23 @@ INSERT INTO DIM_CON
 	4824.000000,
 	3888.000000,
 	"cf0b871b-fc91-48d7-a558-aa6ad25e2d22");
+INSERT INTO DIM_CON
+	VALUES ("3d29f84c-136b-4107-8d8b-0422cf42bee6",
+	4704.000000,
+	3735.000000,
+	"cf0b871b-fc91-48d7-a558-aa6ad25e2d22");
+INSERT INTO DIM_CON
+	VALUES ("b69036a2-e638-4e87-afea-8f15608f8abc",
+	4704.000000,
+	3746.000000,
+	"cf0b871b-fc91-48d7-a558-aa6ad25e2d22");
 INSERT INTO GD_GE
 	VALUES ("c46d20da-b202-4d7d-bc6c-0179d406813a",
 	"f6155447-8b20-47ad-84eb-70dbe9b935ce",
 	"a5e89887-c2a8-4cd6-9dfc-80c9018022f1",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::requestAvailableBookables::SIMPLETESTP5: endOfListEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::requestAvailableBookables::SIMPLETEST5: endOfListEvent');
 INSERT INTO GD_CON
 	VALUES ("c46d20da-b202-4d7d-bc6c-0179d406813a",
 	"00000000-0000-0000-0000-000000000000");
@@ -3011,7 +3070,7 @@ INSERT INTO GD_GE
 	"9446fdee-595d-4440-831e-e886e5102cb7",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::selectRooms::SIMPLETESTP5: endOfListEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::selectRooms::SIMPLETEST5: endOfListEvent');
 INSERT INTO GD_CON
 	VALUES ("70b1c925-d998-4087-b969-926ee05d4330",
 	"00000000-0000-0000-0000-000000000000");
@@ -3111,7 +3170,7 @@ INSERT INTO GD_GE
 	"e1683c46-caf0-435b-98da-69a7e420dd4b",
 	42,
 	0,
-	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::endOfListState::SIMPLETESTP7: errorEvent');
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::endOfListState::SIMPLETEST7: errorEvent');
 INSERT INTO GD_CON
 	VALUES ("6ff96cdb-a0ff-4160-9337-bb9528edfddd",
 	"00000000-0000-0000-0000-000000000000");
@@ -3205,6 +3264,106 @@ INSERT INTO DIM_ED
 	VALUES ("72c7df09-85a2-4cf4-bc90-b84e09d6d22c",
 	"89eee190-31a3-481b-8832-32163f8f3e4f",
 	"6ff96cdb-a0ff-4160-9337-bb9528edfddd");
+INSERT INTO GD_GE
+	VALUES ("37041ce7-9b2c-45aa-a344-bee0b5642367",
+	"f6155447-8b20-47ad-84eb-70dbe9b935ce",
+	"254c4367-179d-4ea0-a689-a31d23de1fbb",
+	42,
+	0,
+	'Hotel::Library::UserComponent::TestCases::SimpleTest::Instance State Machine::requestAvailableBookables::SIMPLETEST7: errorEvent');
+INSERT INTO GD_CON
+	VALUES ("37041ce7-9b2c-45aa-a344-bee0b5642367",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("67be0f95-63c6-4417-8904-e28aa97a6812",
+	"37041ce7-9b2c-45aa-a344-bee0b5642367",
+	1,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"67be0f95-63c6-4417-8904-e28aa97a6812");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"67be0f95-63c6-4417-8904-e28aa97a6812",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("67be0f95-63c6-4417-8904-e28aa97a6812",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("10277388-c9cf-460d-8553-93db00cc24b9",
+	"37041ce7-9b2c-45aa-a344-bee0b5642367",
+	3,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"10277388-c9cf-460d-8553-93db00cc24b9");
+INSERT INTO DIM_GE
+	VALUES (4458.000000,
+	3687.000000,
+	"10277388-c9cf-460d-8553-93db00cc24b9",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("10277388-c9cf-460d-8553-93db00cc24b9",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("3a9f429d-c53d-43dc-89db-2368d7f40480",
+	"37041ce7-9b2c-45aa-a344-bee0b5642367",
+	2,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"3a9f429d-c53d-43dc-89db-2368d7f40480");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"3a9f429d-c53d-43dc-89db-2368d7f40480",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("3a9f429d-c53d-43dc-89db-2368d7f40480",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_LS
+	VALUES ("c0672fdb-1022-411f-82b9-de01c05d2af3",
+	"37041ce7-9b2c-45aa-a344-bee0b5642367",
+	"00000000-0000-0000-0000-000000000000",
+	"03886a42-9e80-4b0a-ba2f-d0c294cbb9c7",
+	"dc76e3d7-8b0d-4cf8-80c0-69723b33525d");
+INSERT INTO DIM_WAY
+	VALUES ("03886a42-9e80-4b0a-ba2f-d0c294cbb9c7",
+	4464.000000,
+	3766.000000,
+	"37041ce7-9b2c-45aa-a344-bee0b5642367",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_WAY
+	VALUES ("dc76e3d7-8b0d-4cf8-80c0-69723b33525d",
+	4704.000000,
+	3746.000000,
+	"37041ce7-9b2c-45aa-a344-bee0b5642367",
+	"00000000-0000-0000-0000-000000000000",
+	"03886a42-9e80-4b0a-ba2f-d0c294cbb9c7");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"37041ce7-9b2c-45aa-a344-bee0b5642367",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("37041ce7-9b2c-45aa-a344-bee0b5642367",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ED
+	VALUES ("3cea3142-3d6a-4dac-81d3-c49cce594e2d",
+	"b69036a2-e638-4e87-afea-8f15608f8abc",
+	"37041ce7-9b2c-45aa-a344-bee0b5642367");
 INSERT INTO DIM_DIA
 	VALUES ("f6155447-8b20-47ad-84eb-70dbe9b935ce",
 	'',
@@ -3216,7 +3375,7 @@ INSERT INTO O_OBJ_PROXY
 	VALUES ("6daee5e1-aefd-49c8-b18d-234fb0eb1928",
 	'SimpleTest',
 	1,
-	'SIMPLETESTP',
+	'SIMPLETEST',
 	'
 
 This test is a (hopefully) success scenario of the Use Case "Customer creates a Booking"

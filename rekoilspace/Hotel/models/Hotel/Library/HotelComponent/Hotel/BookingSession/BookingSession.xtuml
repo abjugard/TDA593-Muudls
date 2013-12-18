@@ -226,6 +226,43 @@ self.destroySession();',
 	1,
 	'',
 	"faff47c6-f77e-472d-b239-9cfba6db36c7");
+INSERT INTO O_TFR
+	VALUES ("771633a1-fc2a-417f-bc87-3c56b179c251",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	'isBookingTimeAcceptable',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'
+
+select one h related by self->HOTEL[R17];
+
+day0 = ::dateToInt(date:param.fromDate);
+day1 = ::dateToInt(date:param.toDate);
+
+return (day1 - day0 <= h.getMaxBookingLength());
+',
+	1,
+	'',
+	"8a869324-4507-4c19-8d93-a0cb8bac1c84");
+INSERT INTO O_TPARM
+	VALUES ("a69548d1-8fa0-49ff-a4b6-83fca9757491",
+	"771633a1-fc2a-417f-bc87-3c56b179c251",
+	'fromDate',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("4b368e3d-3ce9-46d6-bbae-5cee6f541999",
+	"771633a1-fc2a-417f-bc87-3c56b179c251",
+	'toDate',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"a69548d1-8fa0-49ff-a4b6-83fca9757491",
+	'');
 INSERT INTO O_NBATTR
 	VALUES ("df46d3b5-7060-4611-8908-d535d035865a",
 	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");

@@ -6216,6 +6216,62 @@ INSERT INTO PE_PE
 	"960454f9-cf5f-4331-88bf-8023709586b1",
 	"00000000-0000-0000-0000-000000000000",
 	1);
+INSERT INTO S_SYNC
+	VALUES ("cb5b6927-9dc4-40ee-95b9-44fa0ec712f8",
+	"00000000-0000-0000-0000-000000000000",
+	'TestIsAcceptableBooking',
+	'',
+	'create object instance  h of HOTEL;
+create object instance bs of BOOKINGSESSION;
+relate h to bs across R17;
+
+f = TIM::create_date(day:1, month:1, year:2010, second:8, minute:12, hour:4);
+t = TIM::create_date(day:3, month:2, year:2010, second:8, minute:12, hour:4);
+
+bol = bs.isBookingTimeAcceptable(fromDate:f, toDate:t);
+
+if(bol)
+	LOG::LogInfo(message: "date okay");
+else
+	LOG::LogInfo(message: "date not okay");
+end if;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'');
+INSERT INTO PE_PE
+	VALUES ("cb5b6927-9dc4-40ee-95b9-44fa0ec712f8",
+	1,
+	"960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("beeab516-6327-474a-ba57-051f94e39bf7",
+	"00000000-0000-0000-0000-000000000000",
+	'dateToInt',
+	'',
+	'd = 365 * TIM::get_year(date:param.date);
+d = d + 31 * TIM::get_month(date:param.date);
+d = d + TIM::get_day(date:param.date);
+
+return d;',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	1,
+	'');
+INSERT INTO S_SPARM
+	VALUES ("6ca9cac9-932f-4315-a10f-d7a7de85d263",
+	"beeab516-6327-474a-ba57-051f94e39bf7",
+	'date',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO PE_PE
+	VALUES ("beeab516-6327-474a-ba57-051f94e39bf7",
+	1,
+	"960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	1);
 INSERT INTO PE_PE
 	VALUES ("960454f9-cf5f-4331-88bf-8023709586b1",
 	1,

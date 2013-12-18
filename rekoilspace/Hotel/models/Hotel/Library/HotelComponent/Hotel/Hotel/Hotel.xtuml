@@ -226,61 +226,6 @@ INSERT INTO S_DT_PROXY
 	'',
 	'../Hotel.xtuml');
 INSERT INTO O_TFR
-	VALUES ("bc1f21df-7746-48d7-8508-3fbe480f6fb1",
-	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
-	'compareDate',
-	'',
-	"ba5eda7a-def5-0000-0000-000000000002",
-	1,
-	'y0 = TIM::get_year(date:param.d0);
-y1 = TIM::get_year(date:param.d1);
-if(y0 == y1)
-	m0 = TIM::get_month(date:param.d0);
-	m1 = TIM::get_month(date:param.d1);
-	if(m0 == m1)
-		day0 = TIM::get_day(date:param.d0);
-		day1 = TIM::get_day(date:param.d1);
-		if(day0 == day1)
-			h0 = TIM::get_hour(date:param.d0);
-			h1 = TIM::get_hour(date:param.d1);
-			if(h0 == h1)
-				return 0;
-			else
-				return h0 - h1;
-			end if;
-		else
-			return day0 - day1;
-		end if;
-	else
-		return m0 - m1;
-	end if;
-else
-	return y0 - y1;
-end if;
-
-',
-	1,
-	'',
-	"4607eedb-0ca4-43c8-aec8-28b9eb9efb11");
-INSERT INTO O_TPARM
-	VALUES ("d74060cb-209b-4518-92c2-d29b9eb37d9e",
-	"bc1f21df-7746-48d7-8508-3fbe480f6fb1",
-	'd0',
-	"ba5eda7a-def5-0000-0000-00000000000e",
-	0,
-	'',
-	"00000000-0000-0000-0000-000000000000",
-	'');
-INSERT INTO O_TPARM
-	VALUES ("3bba6ec1-4fbe-4261-9a29-87241b6dcb81",
-	"bc1f21df-7746-48d7-8508-3fbe480f6fb1",
-	'd1',
-	"ba5eda7a-def5-0000-0000-00000000000e",
-	0,
-	'',
-	"d74060cb-209b-4518-92c2-d29b9eb37d9e",
-	'');
-INSERT INTO O_TFR
 	VALUES ("0cc47a0b-bb48-479c-ba44-ff9a0520b24e",
 	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
 	'searchFacilityTypes',
@@ -300,7 +245,7 @@ return ft;
 ',
 	1,
 	'',
-	"bc1f21df-7746-48d7-8508-3fbe480f6fb1");
+	"4607eedb-0ca4-43c8-aec8-28b9eb9efb11");
 INSERT INTO O_TPARM
 	VALUES ("1970dbbb-58b9-4420-a8f6-ac912307a8ab",
 	"0cc47a0b-bb48-479c-ba44-ff9a0520b24e",
@@ -326,6 +271,18 @@ INSERT INTO S_DT_PROXY
 	'',
 	'',
 	'../Hotel.xtuml');
+INSERT INTO O_TFR
+	VALUES ("ff22ccea-0178-466e-9918-c381c8b1fe20",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'getMaxBookingLength',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	1,
+	'
+return self.maxBookingLength;',
+	1,
+	'',
+	"0cc47a0b-bb48-479c-ba44-ff9a0520b24e");
 INSERT INTO O_NBATTR
 	VALUES ("dd0944e9-2b79-4b67-b2d3-6a3f90157086",
 	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
@@ -362,6 +319,24 @@ INSERT INTO O_ATTR
 	"ba5eda7a-def5-0000-0000-000000000004",
 	'',
 	'');
+INSERT INTO O_NBATTR
+	VALUES ("9a6fc67d-1823-4e7b-98c9-54c29c188af4",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_BATTR
+	VALUES ("9a6fc67d-1823-4e7b-98c9-54c29c188af4",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_ATTR
+	VALUES ("9a6fc67d-1823-4e7b-98c9-54c29c188af4",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	"dd0944e9-2b79-4b67-b2d3-6a3f90157086",
+	'maxBookingLength',
+	'',
+	'',
+	'maxBookingLength',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'28');
 INSERT INTO O_ID
 	VALUES (2,
 	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");

@@ -204,7 +204,9 @@ INSERT INTO S_SYNC
 	'LOG::LogInfo(message: "Starting simpleTest ;");
 create object instance st of SIMPLETEST;
 LOG::LogInfo(message: "Setup sent, starting test");
-generate SIMPLETEST1:start(desiredType: param.desiredType) to st;',
+
+
+generate SIMPLETEST1:start(desiredType: param.desiredType, fromDate: param.fromDate, toDate: param.toDate) to st;',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'');
@@ -217,6 +219,24 @@ INSERT INTO S_SPARM
 	'',
 	"00000000-0000-0000-0000-000000000000",
 	'');
+INSERT INTO S_SPARM
+	VALUES ("30f6ce3b-2cb7-41d4-90d7-9f7bfdebf872",
+	"68467367-5409-4c38-b4e4-909abfbab8a5",
+	'toDate',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"03a5bcda-103d-4d12-8978-58ea020445d9",
+	'');
+INSERT INTO S_SPARM
+	VALUES ("69675680-e238-4d3b-85b4-e8ce4b07af8a",
+	"68467367-5409-4c38-b4e4-909abfbab8a5",
+	'fromDate',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"30f6ce3b-2cb7-41d4-90d7-9f7bfdebf872",
+	'');
 INSERT INTO PE_PE
 	VALUES ("68467367-5409-4c38-b4e4-909abfbab8a5",
 	1,
@@ -228,14 +248,19 @@ INSERT INTO S_SYNC
 	"00000000-0000-0000-0000-000000000000",
 	'initBookingConcurrencyTest',
 	'',
-	'::startSimpleTest(desiredType:0);
-::startSimpleTest(desiredType:0);
-::startSimpleTest(desiredType:0);
-::startSimpleTest(desiredType:0);
-::startSimpleTest(desiredType:1);
-::startSimpleTest(desiredType:1);
-::startSimpleTest(desiredType:1);
-::startSimpleTest(desiredType:1);
+	'
+fromDate = TIM::create_date(day:1, month:1, year:2010, second:8, minute:12, hour:4);
+toDate = TIM::create_date(day:2, month:1, year:2010, second:8, minute:12, hour:4);
+
+::startSimpleTest(desiredType:0, fromDate: fromDate, toDate: toDate);
+::startSimpleTest(desiredType:0, fromDate: fromDate, toDate: toDate);
+::startSimpleTest(desiredType:0, fromDate: fromDate, toDate: toDate);
+::startSimpleTest(desiredType:0, fromDate: fromDate, toDate: toDate);
+
+::startSimpleTest(desiredType:1, fromDate: fromDate, toDate: toDate);
+::startSimpleTest(desiredType:1, fromDate: fromDate, toDate: toDate);
+::startSimpleTest(desiredType:1, fromDate: fromDate, toDate: toDate);
+::startSimpleTest(desiredType:1, fromDate: fromDate, toDate: toDate);
 
 ',
 	"ba5eda7a-def5-0000-0000-000000000000",
@@ -252,7 +277,11 @@ INSERT INTO S_SYNC
 	"00000000-0000-0000-0000-000000000000",
 	'startSingleSimpleTest',
 	'',
-	'::startSimpleTest(desiredType:1);',
+	'
+fromDate = TIM::create_date(day:1, month:1, year:2010, second:8, minute:12, hour:4);
+toDate = TIM::create_date(day:2, month:1, year:2010, second:8, minute:12, hour:4);
+
+::startSimpleTest(desiredType:1, fromDate: fromDate, toDate: toDate);',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'');
