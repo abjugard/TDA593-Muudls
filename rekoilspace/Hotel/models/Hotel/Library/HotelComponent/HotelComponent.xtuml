@@ -573,7 +573,6 @@ INSERT INTO SPR_PS
 	'select any bs from instances of BOOKINGSESSION where selected.ID == param.sessionID;
 
 if (not_empty bs)
-	LOG::LogInfo(message: "H: selectSignal: Generating select event.");
 	generate BOOKINGSESSION1:selectEvent(id:param.id) to bs;
 else
 	LOG::LogInfo(message: "H: selectSignal: Session not found.");
@@ -631,7 +630,6 @@ INSERT INTO SPR_PS
 	'select any bs from instances of BOOKINGSESSION where selected.ID == param.sessionID;
 
 if (not_empty bs)
-	LOG::LogInfo(message: "H: customerDetailsSignal: Generating cusDet event.");
 	generate BOOKINGSESSION5:customerDetailsEvent(name:param.name,
 												  phoneNumber:param.phoneNumber) to bs;
 else
@@ -656,7 +654,6 @@ INSERT INTO SPR_PS
 	'select any bs from instances of BOOKINGSESSION where selected.ID == param.sessionID;
 
 if (not_empty bs)
-	LOG::LogInfo(message: "H: addGuestSignal: Generating addGuest event.");
 	generate BOOKINGSESSION2:addGuestEvent(name:param.guestName,
 										 age:param.guestAge) to bs;
 else
@@ -681,7 +678,6 @@ INSERT INTO SPR_PS
 	'select any bs from instances of BOOKINGSESSION where selected.ID == param.sessionID;
 
 if (not_empty bs)
-	LOG::LogInfo(message: "H: paymentInfoSign: Generating paymentInfoEvent event.");
 	generate BOOKINGSESSION6:paymentInfoEvent(info:param.info) to bs;
 else
 	LOG::LogInfo(message: "H: paymentInfoSign: Session not found.");
@@ -881,7 +877,6 @@ INSERT INTO SPR_PS
 	'select any bs from instances of BOOKINGSESSION where selected.ID == param.sessionID;
 
 if (not_empty bs)
-	LOG::LogInfo(message: "H: confirmEvent: Generating confirm event.");
 	generate BOOKINGSESSION4:confirmEvent() to bs;
 else
 	LOG::LogInfo(message: "H: confirmEvent: Session not found.");
@@ -1376,7 +1371,6 @@ INSERT INTO SPR_RS
 select any bs from instances of BOOKINGSESSION where selected.ID == param.sessionID;
 
 if (not_empty bs)
-	LOG::LogInfo(message: "H: paymentValidSignal: generating event");
 	generate BOOKINGSESSION7:paymentConfirmedEvent(valid:param.valid) to bs;
 else
 	LOG::LogInfo(message: "H: paymentValidSignal: Session not found.");

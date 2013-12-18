@@ -358,14 +358,22 @@ else
 	if(empty guest)
 		send CustomerInterface::checkOutReturn(bookingNumber: param.bookingNumber, success:false, message: "could not find guest with name "+param.name);
 	else
+		alreadyCheckedOut = false;
+		
 		guest.setCheckedOut(date: TIM::current_date());
 		select many fset related by guest->FACILITY[R16];
 		for each f in fset
 			if(f.isCurrentlyCheckedIn())
 				f.setCheckedOut(date: guest.getCheckedOut());
+			else
+				alreadyCheckedOut = true;
+				send CustomerInterface::checkOutReturn(bookingNumber: param.bookingNumber, success:false, message: "Facility already checked out "+f.getFacilityID());
 			end if;
 		end for;
-		send CustomerInterface::checkOutReturn(bookingNumber: param.bookingNumber, success:true, message: "Successfully checked out "+param.name);
+		
+		if(not alreadyCheckedOut)
+			send CustomerInterface::checkOutReturn(bookingNumber: param.bookingNumber, success:true, message: "Successfully checked out "+param.name);
+		end if;
 	end if;
 end if;',
 	'');
@@ -392,6 +400,8 @@ else
 	if(empty g)
 		send CustomerInterface::checkInReturn(success: false, bookingNumber: param.bookingNumber, message: "could not find guest with name "+param.name);
 	else
+		alreadyCheckedIn = false;
+	
 		//successful checkIn
 		g.setCheckedIn( date: TIM::current_date() );
 		
@@ -399,10 +409,15 @@ else
 		for each f in fs
 			if(not f.isCurrentlyCheckedIn())
 				f.setCheckedIn(date: g.getCheckedIn());
+			else
+				alreadyCheckedIn = true;
+				send CustomerInterface::checkInReturn(success: false, bookingNumber: param.bookingNumber, message: "Facility already checked in "+f.getFacilityID());
 			end if;
 		end for;
 		
-		send CustomerInterface::checkInReturn(success: true, bookingNumber: param.bookingNumber, message: "success");
+		if(not alreadyCheckedIn)
+			send CustomerInterface::checkInReturn(success: true, bookingNumber: param.bookingNumber, message: "success");
+		end if;
 		
 	end if;
 end if;',

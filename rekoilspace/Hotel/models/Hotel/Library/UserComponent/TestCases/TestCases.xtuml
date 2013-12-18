@@ -201,10 +201,8 @@ INSERT INTO S_SYNC
 	"00000000-0000-0000-0000-000000000000",
 	'startSimpleTest',
 	'',
-	'LOG::LogInfo(message: "Starting simpleTest ;");
+	'
 create object instance st of SIMPLETEST;
-LOG::LogInfo(message: "Setup sent, starting test");
-
 
 generate SIMPLETEST1:start(desiredType: param.desiredType, fromDate: param.fromDate, toDate: param.toDate) to st;',
 	"ba5eda7a-def5-0000-0000-000000000000",
@@ -278,8 +276,9 @@ INSERT INTO S_SYNC
 	'startSingleSimpleTest',
 	'',
 	'
+//For BusinessRule 28 days
 fromDate = TIM::create_date(day:1, month:1, year:2010, second:8, minute:12, hour:4);
-toDate = TIM::create_date(day:2, month:1, year:2010, second:8, minute:12, hour:4);
+toDate = TIM::create_date(day:10, month:1, year:2010, second:8, minute:12, hour:4);
 
 ::startSimpleTest(desiredType:1, fromDate: fromDate, toDate: toDate);',
 	"ba5eda7a-def5-0000-0000-000000000000",

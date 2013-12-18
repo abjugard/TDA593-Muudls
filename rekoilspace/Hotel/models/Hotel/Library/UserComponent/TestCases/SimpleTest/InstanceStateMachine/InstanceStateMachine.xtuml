@@ -1169,7 +1169,7 @@ INSERT INTO SM_ACT
 	VALUES ("cb212bf5-d2bb-45da-8e27-c663ec05029f",
 	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
 	1,
-	'LOG::LogInfo(message: "Starting simple test... woopido");
+	'
 ',
 	'');
 INSERT INTO SM_TAH
@@ -1227,7 +1227,7 @@ INSERT INTO SM_ACT
 	VALUES ("e12e3fe8-5c7c-4fbf-8611-5a11885ce338",
 	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
 	1,
-	'LOG::LogInfo(message: "Session recieved");
+	'
 self.sessionID = param.sessionID;
 self.bookingNumber = param.bookingNumber;
 
@@ -1261,12 +1261,10 @@ INSERT INTO SM_ACT
 	VALUES ("bae9a788-8cc5-4574-a62e-698711a495dc",
 	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
 	1,
-	'LOG::LogInfo(message: "UC selectRooms: Received available, selecting...");
-
+	'
 id = rcvd_evt.id;
 
 if (id == self.desiredType)
-	LOG::LogInteger(message: id);
 	generate SIMPLETEST6:foundDesiredRoomEvent to self;
 end if;',
 	'');
@@ -1295,7 +1293,7 @@ INSERT INTO SM_ACT
 	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
 	1,
 	'
-LOG::LogInfo(message: "UC ST, adding guest");
+//LOG::LogInfo(message: "UC ST, adding guest");
 send BookingProvider::addGuest(sessionID:self.sessionID,
 								guestName: "Glenn Goe",
 								guestAge: 13);
@@ -1313,7 +1311,7 @@ INSERT INTO SM_ACT
 	"ff73a57e-de54-43da-89b9-7fc18e7e85a5",
 	1,
 	'
-LOG::LogInfo(message: "UC confirmBooking, sending confirm back");
+//LOG::LogInfo(message: "UC confirmBooking, sending confirm back");
 
 send CustomerInterface::confirmSignal(sessionID: self.sessionID,
 										message: "Confirmed!");

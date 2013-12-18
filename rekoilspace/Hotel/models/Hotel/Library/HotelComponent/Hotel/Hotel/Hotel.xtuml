@@ -154,9 +154,9 @@ for each fc in facilities
 	if(take)
 		LOG::LogInfo(message: "H: searchFacility: return "+fc.facilityID);
 		return fc;
-	end if; 
+	end if;
 end for;
-LOG::LogInfo(message: "H: searchFacility: about to return null");
+
 select any cpalbin from instances of FACILITY where false;
 	LOG::LogInfo(message: "H: searchFacility: return null");
 return cpalbin;
@@ -340,7 +340,6 @@ INSERT INTO O_TFR
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'// Initialize a booking session
-LOG::LogInfo(message: "Recieved session request");
 create object instance session of BOOKINGSESSION;
 create object instance booking of BOOKING;
 relate session to booking across R26;

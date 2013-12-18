@@ -570,7 +570,7 @@ INSERT INTO SPR_RS
 	VALUES ("562d9bef-da1e-4569-aa14-e81b3c6803b7",
 	'confirmSignal',
 	'',
-	'LOG::LogInfo(message: "UC confSig: " + param.message);
+	'
 select any st from instances of SIMPLETEST where selected.sessionID == param.sessionID;
 
 if(not_empty st)
@@ -638,7 +638,7 @@ INSERT INTO SPR_RS
 	VALUES ("8a7f3173-16b8-460c-b31e-aab059b3d85e",
 	'session',
 	'',
-	'LOG::LogInfo(message: "Got session ID");
+	'
 select any st from instances of SIMPLETEST where selected.active==false;
 st.active=true;
 generate SIMPLETEST2:sessionEvent(sessionID: param.sessionID, bookingNumber: param.bookingNumber) to st;

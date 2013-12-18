@@ -302,39 +302,36 @@ select any ft from instances of FACILITYTYPE where selected.id == session.facili
 select one hotel related by session-> HOTEL[R17];
 if(not_empty session)
 	session.waiting = false;
-	LOG::LogInfo(message: "H: BusyClassMachine: Found session");
+	//LOG::LogInfo(message: "H: BusyClassMachine: Found session");
 	if(not_empty ft)
 		select one booking related by session->BOOKING[R26];
-		LOG::LogInfo(message: "H: BusyClassMachine: ft not empty");
+		//LOG::LogInfo(message: "H: BusyClassMachine: ft not empty");
 		
 		
 		f = hotel.searchFacility(fromDate: booking.getFromDate(), toDate: booking.getToDate(), facilityType: ft.getID());
-			LOG::LogInfo(message: "H: BusyClassMachine: after serachFacility");
+			//LOG::LogInfo(message: "H: BusyClassMachine: after serachFacility");
 		if(not_empty f)
-			LOG::LogInfo(message: "H: BusyClassMachine: found room");
+			//LOG::LogInfo(message: "H: BusyClassMachine: found room");
 		 	session.tmpFacility = f;
 		 	select one booking related by session->BOOKING[R26];
 		 	relate f to booking across R14;
 		 	select one bookable related by f->FACILITYTYPE[R1]->BOOKABLE[R2]; 
 		 	relate booking to bookable across R12;
-		 	LOG::LogInfo(message: "H: BusyClassMachine: Confirming facility.");
+		 	//LOG::LogInfo(message: "H: BusyClassMachine: Confirming facility.");
 		 	send BookingProvider::confirmSignal(message: "H: BusyClassMachine signal: Confirming facility",
 		 										sessionID: session.getID());
 		
 		else
 			send BookingProvider::errorSignal(	message: "H: BusyClassMachine signal: Could not find any facilities",
 											sessionID:session.getID());
-			LOG::LogInfo(message: "H: BusyClassMachine: Could not find facility.");
 		end if;
 	else
 		send BookingProvider::errorSignal(	message: "H: BusyClassMachine signal: Could not find selected facility type",
 											sessionID:session.getID());
-		LOG::LogInfo(message: "H: BusyClassMachine: Could not find facility type.");
 	end if;
 else
 	send BookingProvider::errorSignal(	message: "H: selectted signal: Session not found",
 											sessionID:session.getID());
-	LOG::LogInfo(message: "H: BusyClassMachine: Could not find session");
 end if;
 generate BOOKINGSESSION_A3:taskDoneEvent to BOOKINGSESSION class;',
 	'');
