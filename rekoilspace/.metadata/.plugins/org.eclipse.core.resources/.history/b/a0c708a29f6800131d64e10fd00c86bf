@@ -1,0 +1,216 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'Hotel',
+	7,
+	'HOTEL',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("314bfd58-83f9-4991-98e8-ce0b92f901a4",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'createStaff',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TPARM
+	VALUES ("fd291d23-a18f-4184-8351-7d2208f8d37f",
+	"314bfd58-83f9-4991-98e8-ce0b92f901a4",
+	'name',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TFR
+	VALUES ("ff22ccea-0178-466e-9918-c381c8b1fe20",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'getMaxBookingLength',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	1,
+	'
+return self.maxBookingLength;',
+	1,
+	'',
+	"314bfd58-83f9-4991-98e8-ce0b92f901a4");
+INSERT INTO O_TFR
+	VALUES ("3341196c-af97-409a-9153-92937b57761d",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'requestAvailableBookables',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'select any session from instances of BOOKINGSESSION where (selected.ID == param.sessionID);
+
+if (not_empty session)
+	if(session.isBookingTimeAcceptable(fromDate:param.fromDate, 
+									   toDate:param.toDate))
+		select one booking related by session->BOOKING[R26];
+		booking.setFromDate(fromDate: param.fromDate);
+		booking.setToDate(toDate: param.toDate);
+		select one hotel related by session->HOTEL[R17];
+		
+		result = hotel.searchFacilityTypes(fromDate: param.fromDate, 
+										   toDate: param.toDate);
+		if(empty result)
+			send BookingProvider::errorSignal(message: "H: requestAvail: No rooms found",
+												sessionID:param.sessionID);
+		else
+			generate BOOKINGSESSION9:searchEvent(fromDate: param.fromDate,
+												 toDate: param.toDate) to session;
+			for each ft in result		
+				select one b related by ft->BOOKABLE[R2];
+				send BookingProvider::available(id: ft.getID() , 
+												price: b.getPrice() , 
+												description: b.getDescription(),
+												aproximateArea: ft.getApproximateArea(),
+												independent: false,
+												sessionID:session.getID());
+			end for;
+			send CustomerInterface::endOfList(sessionID: session.getID());
+		end if;
+	else
+		generate BOOKINGSESSION11:errorEvent(
+					message: "Too long booking period selected") to session;
+		send BookingProvider::errorSignal(message: "H: Too long booking period selected",
+											sessionID:param.sessionID);
+	end if;
+else
+	send BookingProvider::errorSignal(message: "H: requestAvail: Session not found",
+										sessionID:param.sessionID);
+end if;',
+	1,
+	'',
+	"ff22ccea-0178-466e-9918-c381c8b1fe20");
+INSERT INTO O_TPARM
+	VALUES ("99921da2-f581-4689-a5c0-1505f5e298db",
+	"3341196c-af97-409a-9153-92937b57761d",
+	'sessionID',
+	"ba5eda7a-def5-0000-0000-000000000005",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("c471ba37-f4e4-4cfc-9cef-d17f67a9eb2c",
+	"3341196c-af97-409a-9153-92937b57761d",
+	'fromDate',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"99921da2-f581-4689-a5c0-1505f5e298db",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("5585f86e-ba15-4c57-a748-a0ff99fb6a64",
+	"3341196c-af97-409a-9153-92937b57761d",
+	'toDate',
+	"ba5eda7a-def5-0000-0000-00000000000e",
+	0,
+	'',
+	"c471ba37-f4e4-4cfc-9cef-d17f67a9eb2c",
+	'');
+INSERT INTO O_TFR
+	VALUES ("14b52bcb-dc95-45f8-8457-cd6efc146372",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	'requestSession',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'// Initialize a booking session
+create object instance session of BOOKINGSESSION;
+create object instance booking of BOOKING;
+
+relate session to booking across R26;
+relate session to self across R17;
+
+seconds = 60;
+create event instance cancel of BOOKINGSESSION8:cancelEvent to session;
+//bu = TIM::timer_start(microseconds: 1000*seconds, event_inst: cancel); 
+
+send BookingProvider::session(sessionID: session.ID, bookingNumber: booking.bookingNumber);',
+	1,
+	'',
+	"3341196c-af97-409a-9153-92937b57761d");
+INSERT INTO O_NBATTR
+	VALUES ("dd0944e9-2b79-4b67-b2d3-6a3f90157086",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_BATTR
+	VALUES ("dd0944e9-2b79-4b67-b2d3-6a3f90157086",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_ATTR
+	VALUES ("dd0944e9-2b79-4b67-b2d3-6a3f90157086",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	"40bf02d7-fb68-44d4-98e2-ed5237db8d14",
+	'description',
+	'',
+	'',
+	'description',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("40bf02d7-fb68-44d4-98e2-ed5237db8d14",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_BATTR
+	VALUES ("40bf02d7-fb68-44d4-98e2-ed5237db8d14",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_ATTR
+	VALUES ("40bf02d7-fb68-44d4-98e2-ed5237db8d14",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	"00000000-0000-0000-0000-000000000000",
+	'adress',
+	'',
+	'',
+	'adress',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("9a6fc67d-1823-4e7b-98c9-54c29c188af4",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_BATTR
+	VALUES ("9a6fc67d-1823-4e7b-98c9-54c29c188af4",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_ATTR
+	VALUES ("9a6fc67d-1823-4e7b-98c9-54c29c188af4",
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	"dd0944e9-2b79-4b67-b2d3-6a3f90157086",
+	'maxBookingLength',
+	'',
+	'',
+	'maxBookingLength',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'28');
+INSERT INTO O_ID
+	VALUES (2,
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_ID
+	VALUES (1,
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO O_ID
+	VALUES (0,
+	"daf3cea3-b187-4d6a-9517-f12785ae9b3a");
+INSERT INTO PE_PE
+	VALUES ("daf3cea3-b187-4d6a-9517-f12785ae9b3a",
+	1,
+	"960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Hotel',
+	'',
+	0,
+	'../Hotel.xtuml');

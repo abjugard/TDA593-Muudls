@@ -301,13 +301,18 @@ ft.id = param.facilityTypeID;
 relate ft to b across R2;
 
 select any h from instances of HOTEL;
+select any fc from instances of FACILITYCONTROLLER;
 
 if(empty h)
 	create object instance h of HOTEL;
-end if;
+end if;	
+
+if(empty fc)
+	create object instance fc of FACILITYCONTROLLER;
+end if;	
 
 if(not_empty h)
-	relate b to h across R9;
+	relate b to fc across R29;
 	b.setPrice(price: param.price);
 	b.setDescription(description: param.description);
 	ft.setApproximateArea(approximateArea: param.approximateArea);

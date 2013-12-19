@@ -1915,7 +1915,8 @@ if(not empty f)
 else
 	send BookingProvider::errorSignal(sessionID:self.ID,
 									  message: "H: guestAddedEvent: no facility selected, should never happen");
-									  
+				
+								  
 end if;',
 	'');
 INSERT INTO SM_MOAH

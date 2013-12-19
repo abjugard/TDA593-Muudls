@@ -300,6 +300,8 @@ INSERT INTO SM_ACT
 
 select any ft from instances of FACILITYTYPE where selected.id == session.facilityTypeSelected;
 select one hotel related by session-> HOTEL[R17];
+select one fc related by session-> FACILITYCONTROLLER[R28];
+
 if(not_empty session)
 	session.waiting = false;
 	//LOG::LogInfo(message: "H: BusyClassMachine: Found session");
@@ -308,7 +310,7 @@ if(not_empty session)
 		//LOG::LogInfo(message: "H: BusyClassMachine: ft not empty");
 		
 		
-		f = hotel.searchFacility(fromDate: booking.getFromDate(), toDate: booking.getToDate(), facilityType: ft.getID());
+		f = fc.searchFacility(fromDate: booking.getFromDate(), toDate: booking.getToDate(), facilityType: ft.getID());
 			//LOG::LogInfo(message: "H: BusyClassMachine: after serachFacility");
 		if(not_empty f)
 			//LOG::LogInfo(message: "H: BusyClassMachine: found room");

@@ -1,0 +1,235 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	'BookingSession',
+	12,
+	'BOOKINGSESSION',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("faff47c6-f77e-472d-b239-9cfba6db36c7",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	'destroySession',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'
+select one booking related by self->BOOKING[R26];
+unrelate booking from self across R26;
+
+select one customer related by self->CUSTOMER[R27];
+unrelate customer from self across R27;
+
+select one hotel related by self->HOTEL[R17];
+unrelate hotel from self across R17;
+
+delete object instance self;',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("8a869324-4507-4c19-8d93-a0cb8bac1c84",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	'undoBookingSession',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'
+select one booking related by self->BOOKING[R26];
+
+select many bookables related by booking->BOOKABLE[R12];
+
+for each b in bookables
+	unrelate b from booking across R12;
+end for;
+
+select many facilities related by booking->FACILITY[R14];
+
+for each f in facilities
+	unrelate f from booking across R14;
+end for;
+
+select many guests related by booking->GUEST[R15];
+
+for each g in guests
+	unrelate g from booking across R15;
+	g.destroyGuest();
+end for;
+
+select one customer related by self->CUSTOMER[R27];
+unrelate customer from self across R27;
+
+self.destroySession();',
+	1,
+	'',
+	"faff47c6-f77e-472d-b239-9cfba6db36c7");
+INSERT INTO O_TFR
+	VALUES ("771633a1-fc2a-417f-bc87-3c56b179c251",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	'isBookingTimeAcceptable',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'
+select one h related by self->HOTEL[R17];
+
+day0 = ::dateToInt(date:param.fromDate);
+day1 = ::dateToInt(date:param.toDate);
+//Makes sure the desired booking time is valid accoding to hotel policy
+//of max booking length
+return (day1 - day0 <= h.getMaxBookingLength());
+',
+	1,
+	'',
+	"8a869324-4507-4c19-8d93-a0cb8bac1c84");
+INSERT INTO O_TPARM
+	VALUES ("a69548d1-8fa0-49ff-a4b6-83fca9757491",
+	"771633a1-fc2a-417f-bc87-3c56b179c251",
+	'fromDate',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("4b368e3d-3ce9-46d6-bbae-5cee6f541999",
+	"771633a1-fc2a-417f-bc87-3c56b179c251",
+	'toDate',
+	"ba5eda7a-def5-0000-0000-000000000010",
+	0,
+	'',
+	"a69548d1-8fa0-49ff-a4b6-83fca9757491",
+	'');
+INSERT INTO O_TFR
+	VALUES ("55f3e96d-afbd-41f4-813e-0a76dbaf392e",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	'getID',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000005",
+	1,
+	'
+return self.ID;',
+	1,
+	'',
+	"771633a1-fc2a-417f-bc87-3c56b179c251");
+INSERT INTO O_NBATTR
+	VALUES ("df46d3b5-7060-4611-8908-d535d035865a",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_BATTR
+	VALUES ("df46d3b5-7060-4611-8908-d535d035865a",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_ATTR
+	VALUES ("df46d3b5-7060-4611-8908-d535d035865a",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	"00000000-0000-0000-0000-000000000000",
+	'ID',
+	'',
+	'',
+	'ID',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("3a14ca04-48d1-4f7a-ae3f-730f9dcf0f47",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_BATTR
+	VALUES ("3a14ca04-48d1-4f7a-ae3f-730f9dcf0f47",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_ATTR
+	VALUES ("3a14ca04-48d1-4f7a-ae3f-730f9dcf0f47",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	"df46d3b5-7060-4611-8908-d535d035865a",
+	'current_state',
+	'',
+	'',
+	'current_state',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000006",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("498195f4-1880-4554-8893-31dababdda26",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_BATTR
+	VALUES ("498195f4-1880-4554-8893-31dababdda26",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_ATTR
+	VALUES ("498195f4-1880-4554-8893-31dababdda26",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	"3a14ca04-48d1-4f7a-ae3f-730f9dcf0f47",
+	'tmpFacility',
+	'',
+	'',
+	'tmpFacility',
+	0,
+	"bd43dc09-3be2-4ae8-806d-bedb08b1e03c",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("bd43dc09-3be2-4ae8-806d-bedb08b1e03c",
+	"00000000-0000-0000-0000-000000000000",
+	'inst_ref<Facility>',
+	'',
+	'',
+	'../Hotel.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("c891ea35-d39e-4dda-b8cb-bf7a5a9f3519",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_BATTR
+	VALUES ("c891ea35-d39e-4dda-b8cb-bf7a5a9f3519",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_ATTR
+	VALUES ("c891ea35-d39e-4dda-b8cb-bf7a5a9f3519",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	"498195f4-1880-4554-8893-31dababdda26",
+	'facilityTypeSelected',
+	'',
+	'',
+	'facilityTypeSelected',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("44019c1a-e63b-47df-ae57-90e39e485288",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_BATTR
+	VALUES ("44019c1a-e63b-47df-ae57-90e39e485288",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_ATTR
+	VALUES ("44019c1a-e63b-47df-ae57-90e39e485288",
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	"c891ea35-d39e-4dda-b8cb-bf7a5a9f3519",
+	'waiting',
+	'',
+	'',
+	'waiting',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (2,
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_ID
+	VALUES (1,
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO O_ID
+	VALUES (0,
+	"7137c09d-ba0e-406b-b3b5-76bb3cc48f3d");
+INSERT INTO PE_PE
+	VALUES ("7137c09d-ba0e-406b-b3b5-76bb3cc48f3d",
+	1,
+	"960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("960454f9-cf5f-4331-88bf-8023709586b1",
+	"00000000-0000-0000-0000-000000000000",
+	"77552e13-265a-4a67-beca-bb6af5f15d0b",
+	'Hotel',
+	'',
+	0,
+	'../Hotel.xtuml');

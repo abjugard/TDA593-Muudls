@@ -2,9 +2,19 @@
 <section name="Workbench">
 	<section name="ModelSearchPage">
 		<item value="false" key="CASE_SENSITIVE"/>
-		<item value="false" key="DESCRIPTION_SEARCH"/>
 		<item value="false" key="REG_EX_SEARCH"/>
+		<item value="false" key="DESCRIPTION_SEARCH"/>
 		<item value="false" key="ACTION_LANGUAGE_SEARCH"/>
-		<item value="0" key="HISTORY_SIZE"/>
+		<item value="1" key="HISTORY_SIZE"/>
+		<section name="HISTORY0">
+			<item value="false" key="isRegExSearch"/>
+			<item value="0" key="scope"/>
+			<item value="addFacilityTypeEvent" key="pattern"/>
+			<item value="false" key="caseSensitive"/>
+			<item value="false" key="actionLanguageSearch"/>
+			<item value="false" key="descriptionSearch"/>
+			<list key="workingSets">
+			</list>
+		</section>
 	</section>
 </section>

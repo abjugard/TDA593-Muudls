@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="DialogBounds_SearchDialog">
-		<item value="864" key="DIALOG_WIDTH"/>
-		<item value="149" key="DIALOG_Y_ORIGIN"/>
-		<item value="439" key="DIALOG_HEIGHT"/>
-		<item value="287" key="DIALOG_X_ORIGIN"/>
+		<item value="813" key="DIALOG_WIDTH"/>
+		<item value="352" key="DIALOG_Y_ORIGIN"/>
+		<item value="295" key="DIALOG_X_ORIGIN"/>
+		<item value="449" key="DIALOG_HEIGHT"/>
 		<item value="1|Cantarell|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="Search">
@@ -26,6 +26,8 @@
 			<item value="org.eclipse.jdt.ui.JavaSearchPage"/>
 			<item value="org.eclipse.pde.internal.ui.search.SearchPage"/>
 		</list>
+	</section>
+	<section name="com.mentor.nucleus.bp.ui.search.modelSearchResultPage">
 	</section>
 	<section name="SearchDialog.ScopePart">
 		<item value="0" key="scope"/>

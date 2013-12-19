@@ -24,6 +24,9 @@ unrelate customer from self across R27;
 select one hotel related by self->HOTEL[R17];
 unrelate hotel from self across R17;
 
+select one fc related by self->FACILITYCONTROLLER[R28];
+unrelate fc from self across R28;
+
 delete object instance self;',
 	1,
 	'',

@@ -530,10 +530,10 @@ INSERT INTO SPR_PS
 	'requestAvailableBookables',
 	'',
 	'
-select any h from instances of HOTEL;
+select any fc from instances of FACILITYCONTROLLER;
 
-if(not_empty h)
-	h.requestAvailableBookables(sessionID: param.sessionID, fromDate: param.fromDate, toDate: param.toDate);
+if(not_empty fc)
+	fc.requestAvailableBookables(sessionID: param.sessionID, fromDate: param.fromDate, toDate: param.toDate);
 else
 	LOG::LogInfo(message: "Should never happen: No instance of Hotel found. Request failed.");
 end if;',
